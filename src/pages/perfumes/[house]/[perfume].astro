@@ -21,13 +21,16 @@ const sameInspo = d.inspiredBy ? perfumes.filter((x) => x !== p && x.data.inspir
 // Most shared notes, from any house, excluding the ones already shown above
 const shown = new Set([p, ...sameInspo]);
 const freq = new Map(await noteCounts());
-const telling = new Set([...mine].filter((n) => (freq.get(n) ?? 0) <= perfumes.length * 0.15));
+// Compare what a scent dries down to: heart and base notes when the brand gives a pyramid
+const body = (x: typeof p) => { const ls = pyramid(x); return ls.length === 3 ? [...new Set([...ls[1].notes, ...ls[2].notes])] : allNotes(x); };
+const telling = new Set(body(p).filter((n) => (freq.get(n) ?? 0) <= perfumes.length * 0.15));
 const similar = telling.size >= 2
   ? perfumes.filter((x) => !shown.has(x))
       .map((x) => {
-        const shared = allNotes(x).filter((n) => telling.has(n));
+        const notesX = body(x);
+        const shared = notesX.filter((n) => telling.has(n));
         // rarity-weighted overlap, divided by list length so 60-note perfumes do not match everything
-        const size = allNotes(x).length;
+        const size = notesX.length;
         return { x, shared, size, s: shared.reduce((t, n) => t + 1 / Math.log(1 + (freq.get(n) ?? 1)), 0) / Math.sqrt(size) };
       })
       .filter((r) => r.shared.length >= (r.size > 20 ? 3 : 2)).sort((a, b) => b.s - a.s || a.x.data.name.localeCompare(b.x.data.name)).slice(0, 5)
@@ -86,7 +89,7 @@ const desc = `${d.name} by ${house.data.name}${d.inspiredBy ? `, inspired by ${d
     )}
     {similar.length > 0 && (
       <section class="section" aria-labelledby="h-sim">
-        <div class="section-head"><h2 id="h-sim">Similar notes</h2><span class="muted">Local perfumes that share the less common notes of {d.name}. Very common notes such as musk are ignored.</span></div>
+        <div class="section-head"><h2 id="h-sim">Similar notes</h2><span class="muted">Local perfumes that share the less common heart and base notes of {d.name}. Very common notes such as musk are ignored.</span></div>
         <ul class="plist">{similar.map(({ x, shared }) => <PerfumeRow p={x} houseName={houseName(x.data.house)} shared={shared} />)}</ul>
       </section>
     )}

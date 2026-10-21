@@ -11,7 +11,7 @@ const letter = (s: string) => (/[a-z]/i.test(s[0]) ? s[0].toUpperCase() : '#');
 const letters = [...new Set(list.map(([n]) => letter(n)))];
 ---
 <Base title="Inspired by" description="Designer and niche scents that Malaysian houses say their perfumes are inspired by, A to Z.">
-  <div class="wrap">
+  <div class="wrap"><div class="inspired">
     <header class="page-head">
       <h1 class="x">Inspired by</h1>
       <p>{list.length} designer and niche scents, and the local perfumes made after them. Only listed where the brand itself names the inspiration.</p>
@@ -35,7 +35,7 @@ const letters = [...new Set(list.map(([n]) => letter(n)))];
         </dl>
       </section>
     ))}
-  </div>
+  </div></div>
 </Base>
 
 <script>
@@ -46,7 +46,10 @@ const letters = [...new Set(list.map(([n]) => letter(n)))];
     const t = fold(input.value.trim());
     let n = 0;
     for (const r of rows) { const show = !t || fold(r.dataset.k ?? '').includes(t); r.hidden = !show; if (show) n++; }
-    document.querySelectorAll<HTMLElement>('.letter').forEach((s) => { s.hidden = !s.querySelector('.row:not([hidden])'); });
+    document.querySelectorAll<HTMLElement>('.letter').forEach((s) => {
+      s.hidden = !s.querySelector('.row:not([hidden])');
+      document.querySelector(`.az a[href="#${s.id}"]`)?.toggleAttribute('aria-disabled', s.hidden);
+    });
     document.getElementById('count')!.textContent = `${n} scent${n === 1 ? '' : 's'}`;
   });
 </script>
@@ -58,8 +61,10 @@ const letters = [...new Set(list.map(([n]) => letter(n)))];
   .n { font-weight: 400; font-size: 14px; white-space: nowrap; }
   .az a { min-width: 36px; min-height: 36px; display: grid; place-items: center; text-decoration: none; font-weight: 700; border: 1px solid var(--rule); border-radius: var(--radius); }
   .az a:hover { border-color: var(--ink); }
-  .letter { padding-top: 24px; scroll-margin-top: 56px; max-width: 980px; }
-  @media (max-width: 640px) { .az { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; } .az a { flex: none; } .filter { min-width: 0; flex: 1; } }
+  .az a[aria-disabled] { opacity: .3; pointer-events: none; }
+  .inspired { max-width: 980px; }
+  .letter { padding-top: 24px; scroll-margin-top: 56px; }
+  @media (max-width: 640px) { .az { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); padding-right: 32px; } .az a { flex: none; } .filter { min-width: 0; flex: 1; } }
   .letter h2 { font-size: 32px; font-weight: 800; border-bottom: var(--line); padding-bottom: 6px; }
   dl { margin: 0; }
   .row { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 4px 24px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
