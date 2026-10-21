@@ -24,7 +24,7 @@ const tips = (await noteCounts()).slice(0, 8).map(([n]) => n);
       <select class="select" id="f-gender">
         <option value="">Anyone</option><option value="masculine">Masculine</option><option value="feminine">Feminine</option><option value="unisex">Unisex</option><option value="none">Not stated</option>
       </select>
-      <label class="check"><input type="checkbox" id="f-disc" /> Include discontinued</label>
+      <label class="check"><input type="checkbox" id="f-disc" /> Hide discontinued</label>
       <span class="count" id="count" aria-live="polite"></span>
     </div>
 
@@ -73,21 +73,23 @@ const tips = (await noteCounts()).slice(0, 8).map(([n]) => n);
   function run(push = true) {
     const q = input.value.trim();
     const terms = fold(q).replace(/[^a-z0-9]+/g, ' ').split(' ').filter((t) => t.length > 1);
-    const list = rows.filter((r, i) => (!house.value || r.h === house.value) && (!gender.value || r.g === gender.value || (gender.value === 'none' && !r.g)) && (disc.checked || !r.d) && terms.every((t) => hay[i].includes(' ' + t)));
+    const list = rows.filter((r, i) => (!house.value || r.h === house.value) && (!gender.value || r.g === gender.value || (gender.value === 'none' && !r.g)) && (!disc.checked || !r.d) && terms.every((t) => hay[i].includes(' ' + t)));
     // Name matches first, then inspiration, then notes
     if (terms.length) {
       const has = (s: string, t: string) => (' ' + fold(s).replace(/[^a-z0-9]+/g, ' ')).includes(' ' + t);
       const whole = (r: Row) => terms.every((t) => (' ' + fold([r.n, r.hn, r.i ?? '', r.f, ...r.l.flatMap(([, ns]) => ns)].join(' ')).replace(/[^a-z0-9]+/g, ' ') + ' ').includes(' ' + t + ' ')) ? 0 : 3;
       const score = (r: Row) => whole(r) + (terms.some((t) => has(r.n, t)) ? 0 : r.i && terms.some((t) => has(r.i!, t)) ? 1 : 2);
-      list.sort((a, b) => score(a) - score(b) || a.n.localeCompare(b.n));
-    }
-    out.innerHTML = list.slice(0, limit).map((r) => row(r, terms)).join('');
+      list.sort((a, b) => a.d - b.d || score(a) - score(b) || a.n.localeCompare(b.n));
+    } else list.sort((a, b) => a.d - b.d);
+    const OUD = ['oud', 'agarwood', 'gaharu', 'kyara', 'jinkoh', 'qinan', 'qi nan'];
+    const marks = terms.some((t) => OUD.includes(t)) ? [...new Set([...terms, ...OUD])] : terms;
+    out.innerHTML = list.slice(0, limit).map((r) => row(r, marks)).join('');
     count.textContent = `${list.length} perfume${list.length === 1 ? '' : 's'}`;
     empty.hidden = list.length > 0;
     moreWrap.hidden = list.length <= limit;
     if (push) {
       const u = new URL(location.href);
-      for (const [k, v] of [['q', q], ['house', house.value], ['for', gender.value], ['disc', disc.checked ? '1' : '']] as const) v ? u.searchParams.set(k, v) : u.searchParams.delete(k);
+      for (const [k, v] of [['q', q], ['house', house.value], ['for', gender.value], ['hidedisc', disc.checked ? '1' : '']] as const) v ? u.searchParams.set(k, v) : u.searchParams.delete(k);
       history.replaceState(null, '', u);
     }
   }
@@ -96,7 +98,7 @@ const tips = (await noteCounts()).slice(0, 8).map(([n]) => n);
   input.value = p.get('q') ?? '';
   house.value = p.get('house') ?? '';
   gender.value = p.get('for') ?? '';
-  disc.checked = p.get('disc') === '1';
+  disc.checked = p.get('hidedisc') === '1';
   input.form!.addEventListener('submit', (e) => { e.preventDefault(); limit = PAGE; run(); });
   let t: number;
   input.addEventListener('input', () => { clearTimeout(t); t = window.setTimeout(() => { limit = PAGE; run(); }, 120); });

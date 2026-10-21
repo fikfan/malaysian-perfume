@@ -25,7 +25,8 @@ const coverOf = (id: string) => byHouse.get(id)?.find((p) => p.data.image && !p.
     </dl>
   </section>
 
-  <section class="section wrap" aria-labelledby="h-houses">
+  <div class="wrap">
+  <section class="section" aria-labelledby="h-houses">
     <div class="section-head"><h2 id="h-houses">Houses</h2><a href="/houses/">All houses and who is coming next</a></div>
     <ul class="houses">
       {houses.map((h) => (
@@ -41,7 +42,7 @@ const coverOf = (id: string) => byHouse.get(id)?.find((p) => p.data.image && !p.
     </ul>
   </section>
 
-  <section class="section wrap" aria-labelledby="h-notes">
+  <section class="section" aria-labelledby="h-notes">
     <div class="section-head"><h2 id="h-notes">Find by note</h2><span class="muted">The number shows how many perfumes have that note.</span></div>
     <ul class="chips">
       {notes.slice(0, 36).map(([n, c]) => <li><a class="chip" href={searchUrl(n)}>{n} <small>{c}</small></a></li>)}
@@ -49,18 +50,19 @@ const coverOf = (id: string) => byHouse.get(id)?.find((p) => p.data.image && !p.
   </section>
 
   {inspired.length > 0 && (
-    <section class="section wrap" aria-labelledby="h-insp">
+    <section class="section" aria-labelledby="h-insp">
       <div class="section-head"><h2 id="h-insp">Local takes on designer scents</h2><span class="muted">Only where the brand itself names the inspiration.</span></div>
       <ul class="chips">
         {inspired.map(([n, c]) => <li><a class="chip" href={searchUrl(n)}>{n} <small>{c}</small></a></li>)}
       </ul>
     </section>
   )}
+  </div>
 </Base>
 
 <style>
   .hero { padding: 56px var(--gutter) 40px; }
-  .hero h1 { font-weight: 800; font-size: clamp(38px, 6.2vw, 84px); line-height: .95; letter-spacing: -.03em; max-width: 15ch; }
+  .hero h1 { font-weight: 800; font-size: clamp(38px, 6.2vw, 84px); line-height: .95; letter-spacing: -.03em; max-width: 11ch; }
   .lede { font-size: 19px; color: var(--muted); max-width: 56ch; margin: 18px 0 26px; }
   .hero :global(.searchbox) { max-width: 640px; }
   .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 160px)); margin: 32px 0 0; border-top: var(--line); }

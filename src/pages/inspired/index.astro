@@ -16,14 +16,19 @@ const letters = [...new Set(list.map(([n]) => letter(n)))];
       <h1 class="x">Inspired by</h1>
       <p>{list.length} designer and niche scents, and the local perfumes made after them. Only listed where the brand itself names the inspiration.</p>
     </header>
+    <div class="tools">
+      <label class="sr" for="filter">Filter inspirations</label>
+      <input class="filter" id="filter" type="search" placeholder="Filter, e.g. Dior or Aventus" autocomplete="off" />
+      <span class="count" id="count" aria-live="polite">{list.length} scents</span>
+    </div>
     <nav class="az" aria-label="Jump to letter">{letters.map((l) => <a href={`#l-${l}`}>{l}</a>)}</nav>
     {letters.map((l) => (
-      <section class="letter" aria-labelledby={`l-${l}`}>
-        <h2 id={`l-${l}`} class="x">{l}</h2>
+      <section class="letter" id={`l-${l}`} aria-labelledby={`h-${l}`}>
+        <h2 id={`h-${l}`} class="x">{l}</h2>
         <dl>
           {list.filter(([n]) => letter(n) === l).map(([name, ps]) => (
-            <div class="row">
-              <dt>{name}</dt>
+            <div class="row" data-k={`${name} ${ps.map((p) => p.data.name + ' ' + hn.get(p.data.house)).join(' ')}`.toLowerCase()}>
+              <dt>{name} <span class="muted n">{ps.length} local {ps.length === 1 ? 'take' : 'takes'}</span></dt>
               <dd>{ps.map((p, i) => <>{i > 0 && ', '}<a href={perfumeUrl(p)}>{p.data.name}</a> <span class="muted">({hn.get(p.data.house)})</span></>)}</dd>
             </div>
           ))}
@@ -33,11 +38,28 @@ const letters = [...new Set(list.map(([n]) => letter(n)))];
   </div>
 </Base>
 
+<script>
+  const input = document.getElementById('filter') as HTMLInputElement;
+  const rows = [...document.querySelectorAll<HTMLElement>('.row')];
+  const fold = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  input.addEventListener('input', () => {
+    const t = fold(input.value.trim());
+    let n = 0;
+    for (const r of rows) { const show = !t || fold(r.dataset.k ?? '').includes(t); r.hidden = !show; if (show) n++; }
+    document.querySelectorAll<HTMLElement>('.letter').forEach((s) => { s.hidden = !s.querySelector('.row:not([hidden])'); });
+    document.getElementById('count')!.textContent = `${n} scent${n === 1 ? '' : 's'}`;
+  });
+</script>
+
 <style>
+  .tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-bottom: 12px; }
   .az { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; position: sticky; top: 0; background: #fff; padding: 8px 0; z-index: 5; border-bottom: 1px solid var(--rule); }
+  .filter { -webkit-appearance: none; appearance: none; height: 42px; border: var(--line); border-radius: var(--radius); padding: 0 12px; min-width: 260px; font-size: 16px; }
+  .n { font-weight: 400; font-size: 14px; white-space: nowrap; }
   .az a { min-width: 36px; min-height: 36px; display: grid; place-items: center; text-decoration: none; font-weight: 700; border: 1px solid var(--rule); border-radius: var(--radius); }
   .az a:hover { border-color: var(--ink); }
-  .letter { padding-top: 24px; scroll-margin-top: 64px; }
+  .letter { padding-top: 24px; scroll-margin-top: 56px; max-width: 980px; }
+  @media (max-width: 640px) { .az { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; } .az a { flex: none; } .filter { min-width: 0; flex: 1; } }
   .letter h2 { font-size: 32px; font-weight: 800; border-bottom: var(--line); padding-bottom: 6px; }
   dl { margin: 0; }
   .row { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 4px 24px; padding: 12px 0; border-bottom: 1px solid var(--rule); }

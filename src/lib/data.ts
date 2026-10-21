@@ -20,11 +20,14 @@ export const DATA_CHECKED = 'October 2026';
 
 // Words brands put in front of a note ("Juicy Pineapple") and entries that are not notes at all
 const ADJ = /^(juicy|sparkling|zesty|velvety|warm|subtle|crisp|bright|soft|smooth|creamy|rich|deep|refreshing|refined|sensual|elegant|fiery|bold|delicate|luscious|lush|vibrant|sweet and|spiced)\s+/i;
-const DROP = new Set(['Masculine Florals', 'Fresh Accords', 'Fresh', 'Oriental', 'Gourmand', 'Notes', 'Accords', 'Fresh Accord']);
+const DROP = new Set(['Masculine Florals', 'Fresh Accords', 'Fresh', 'Oriental', 'Gourmand', 'Notes', 'Accords', 'Fresh Accord', 'Sweetness', 'Amber Heart',
+  'Golden Fur', 'Honeyed Blood', 'Carnal Blooms', 'Obscure Elements', 'Melon-Like Seeds', 'Gourd-Like Fruits']);
 const aliases = ALIAS as Record<string, string>;
 // "Imperial Incense (Agarwood, White Sandalwood)" -> ["Agarwood", "White Sandalwood"]; Chinese names in brackets are dropped
 function expand(raw: string): string[] {
-  const s = raw.replace(/[\u3000-\u9fff\uff00-\uffef]+/g, '').replace(/[“”"‘’]/g, '').trim();
+  const s = raw.replace(/[\u3000-\u9fff\uff00-\uffef]+/g, '')
+    .replace(/[“"‘][^”"’]*[”"’]\s*/g, '')          // quoted foreign names: drop the whole segment
+    .replace(/\s*\([^,()]*\)/g, '').trim();        // "(Kin Mokusei)": a bracket without a list is an aside
   const inner = s.match(/[(\[]([^()\[\]]*,[^()\[\]]*)[)\]]/);
   return (inner ? inner[1].split(/[,;]/) : [s]).map((x) => x.replace(/\(\s*\)/g, '').trim()).filter(Boolean);
 }
@@ -40,7 +43,7 @@ export function cleanNote(raw: string): string[] {
 }
 // Search also finds oud under its other names, and the other way round
 export const searchFamilies = (notes: string[]) =>
-  notes.some((n) => /agarwood|gaharu|jinkoh|kyara|qi-?nan|\boud\b/i.test(n)) ? ' oud agarwood gaharu' : '';
+  notes.some((n) => /agarwood|gaharu|jinkoh|kyara|qi-?nan|\boud\b/i.test(n)) ? ' oud agarwood gaharu kyara' : '';
 
 export const pyramid = (p: Perfume): { label: string; notes: string[] }[] => {
   const n = p.data.notes;

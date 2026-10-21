@@ -14,7 +14,7 @@ export async function GET() {
     d: p.data.discontinued ? 1 : 0,
     img: imgUrl(p.data.image, 352),
     l: pyramid(p).map((l) => [l.label, l.notes]),
-    f: searchFamilies(allNotes(p)),
+    f: searchFamilies([p.data.name, p.data.inspiredBy ?? '', ...allNotes(p)]),
   }));
   return new Response(JSON.stringify(rows), { headers: { 'Content-Type': 'application/json' } });
 }
