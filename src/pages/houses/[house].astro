@@ -34,7 +34,7 @@ const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
         <dt>Makes</dt><dd>{TYPE_LABEL[d.type]}</dd>
         <dt>Founded</dt><dd>{d.founded ?? <span class="muted">Not stated</span>}</dd>
         <dt>Based in</dt><dd>{d.location ?? <span class="muted">Not stated</span>}</dd>
-        <dt>Listed here</dt><dd>{list.length} perfumes{discontinued > 0 && <span class="muted"> ({discontinued} discontinued)</span>}</dd>
+        <dt>Listed here</dt><dd>{list.length} perfumes{discontinued > 0 && <span class="muted"> ({discontinued} discontinued)</span>}{d.partial && <span class="muted">. The brand sells more; they are being added.</span>}</dd>
       </dl>
       {links.length > 0 && (
         <div>
@@ -91,9 +91,7 @@ const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
 </script>
 
 <style>
-  .top { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 48px; align-items: start; }
-  .top .facts { max-width: 560px; }
+  .top { display: grid; gap: 16px; margin-bottom: 40px; max-width: 640px; }
   .sources { font-size: 14px; margin-top: 24px; overflow-wrap: anywhere; }
   .sources a { color: var(--muted); }
-  @media (max-width: 760px) { .top { grid-template-columns: 1fr; } }
 </style>

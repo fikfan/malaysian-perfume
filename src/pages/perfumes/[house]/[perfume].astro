@@ -2,7 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import Thumb from '../../../components/Thumb.astro';
 import PerfumeRow from '../../../components/PerfumeRow.astro';
-import { load, pyramid, allNotes, perfumeSlug, houseUrl, searchUrl, fmtSizes, GENDER_LABEL } from '../../../lib/data';
+import { load, pyramid, allNotes, perfumeSlug, houseUrl, searchUrl, fmtSizes, noteCounts, GENDER_LABEL, DATA_CHECKED } from '../../../lib/data';
 
 export async function getStaticPaths() {
   const { perfumes } = await load();
@@ -20,10 +20,15 @@ const houseName = (id: string) => houses.find((h) => h.id === id)?.data.name ?? 
 const sameInspo = d.inspiredBy ? perfumes.filter((x) => x !== p && x.data.inspiredBy === d.inspiredBy) : [];
 // Most shared notes, from any house, excluding the ones already shown above
 const shown = new Set([p, ...sameInspo]);
-const similar = mine.size >= 3
+const freq = new Map(await noteCounts());
+const telling = new Set([...mine].filter((n) => (freq.get(n) ?? 0) <= perfumes.length * 0.15));
+const similar = telling.size >= 2
   ? perfumes.filter((x) => !shown.has(x))
-      .map((x) => ({ x, n: allNotes(x).filter((n) => mine.has(n)).length }))
-      .filter((r) => r.n >= 3).sort((a, b) => b.n - a.n || a.x.data.name.localeCompare(b.x.data.name)).slice(0, 5)
+      .map((x) => {
+        const shared = allNotes(x).filter((n) => telling.has(n));
+        return { x, shared, s: shared.reduce((t, n) => t + 1 / Math.log(1 + (freq.get(n) ?? 1)), 0) };
+      })
+      .filter((r) => r.shared.length >= 2).sort((a, b) => b.s - a.s || a.x.data.name.localeCompare(b.x.data.name)).slice(0, 5)
   : [];
 const more = (byHouse.get(d.house) ?? []).filter((x) => x !== p && !shown.has(x) && !similar.some((s) => s.x === x)).slice(0, 4);
 const host = new URL(d.source).hostname.replace(/^www\./, '');
@@ -39,6 +44,7 @@ const desc = `${d.name} by ${house.data.name}${d.inspiredBy ? `, inspired by ${d
         <p class="by"><a href={houseUrl(d.house)}>{house.data.name}</a></p>
         <h1 class="x">{d.name}</h1>
         {d.inspiredBy && <p class="insp">Inspired by <a href={searchUrl(d.inspiredBy)}>{d.inspiredBy}</a></p>}
+        <p class="src muted">Notes and details from <a href={d.source} rel="noopener" target="_blank">{host}<span class="sr"> (opens in a new tab)</span></a>, checked {DATA_CHECKED}.</p>
         {d.discontinued && <p><span class="tag warn">Discontinued by the brand</span></p>}
 
         <h2 class="label">Notes</h2>
@@ -62,10 +68,7 @@ const desc = `${d.name} by ${house.data.name}${d.inspiredBy ? `, inspired by ${d
           <dt>Source</dt><dd><a href={d.source} rel="noopener" target="_blank">{host}<span class="sr"> (opens in a new tab)</span></a></dd>
         </dl>
 
-        <div class="reviews">
-          <h2>Reviews</h2>
-          <p class="muted">Reviews are coming later. For now this page shows only what {house.data.name} publishes.</p>
-        </div>
+        <p class="reviews muted">Reviews are coming later.</p>
       </div>
     </article>
 
@@ -77,8 +80,8 @@ const desc = `${d.name} by ${house.data.name}${d.inspiredBy ? `, inspired by ${d
     )}
     {similar.length > 0 && (
       <section class="section" aria-labelledby="h-sim">
-        <div class="section-head"><h2 id="h-sim">Shares the most notes with</h2><span class="muted">Local perfumes with 3 or more of the same notes.</span></div>
-        <ul class="plist">{similar.map(({ x }) => <PerfumeRow p={x} houseName={houseName(x.data.house)} />)}</ul>
+        <div class="section-head"><h2 id="h-sim">Similar notes</h2><span class="muted">Local perfumes that share the less common notes of {d.name}. Very common notes such as musk are ignored.</span></div>
+        <ul class="plist">{similar.map(({ x, shared }) => <PerfumeRow p={x} houseName={houseName(x.data.house)} shared={shared} />)}</ul>
       </section>
     )}
     {more.length > 0 && (
@@ -100,15 +103,15 @@ const desc = `${d.name} by ${house.data.name}${d.inspiredBy ? `, inspired by ${d
   h1 { font-weight: 800; font-size: clamp(34px, 4.6vw, 60px); }
   .insp { font-size: 18px; margin: 12px 0 0; }
   .insp a { font-weight: 600; }
-  .label { font-size: 14px; font-weight: 700; margin: 28px 0 10px; letter-spacing: 0; }
+  .label { font-size: 16px; font-weight: 750; margin: 28px 0 10px; letter-spacing: 0; }
   .pyramid { margin: 0; border-top: var(--line); }
   .pyramid > div { display: grid; grid-template-columns: 76px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
   .pyramid dt { font-weight: 700; padding-top: 5px; }
   .pyramid dd { margin: 0; }
   .hint { font-size: 14px; margin: 8px 0 0; }
-  .reviews { margin-top: 28px; padding: 16px; background: var(--soft); border-radius: var(--radius); }
-  .reviews h2 { font-size: 16px; font-weight: 700; letter-spacing: 0; }
-  .reviews p { margin: 4px 0 0; font-size: 15px; }
+  .reviews { margin: 16px 0 0; font-size: 14.5px; }
+  .src { margin: 10px 0 0; font-size: 14.5px; }
+  .src a { color: inherit; }
   @media (max-width: 860px) {
     .perfume { grid-template-columns: 1fr; gap: 20px; }
     .photo { position: static; max-width: 420px; }

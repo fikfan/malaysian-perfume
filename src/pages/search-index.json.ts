@@ -1,4 +1,4 @@
-import { load, pyramid, perfumeUrl, imgUrl } from '../lib/data';
+import { load, pyramid, perfumeUrl, imgUrl, allNotes, searchFamilies } from '../lib/data';
 
 // One small JSON file the search page loads; built at build time.
 export async function GET() {
@@ -14,6 +14,7 @@ export async function GET() {
     d: p.data.discontinued ? 1 : 0,
     img: imgUrl(p.data.image, 352),
     l: pyramid(p).map((l) => [l.label, l.notes]),
+    f: searchFamilies(allNotes(p)),
   }));
   return new Response(JSON.stringify(rows), { headers: { 'Content-Type': 'application/json' } });
 }

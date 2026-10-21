@@ -11,5 +11,6 @@
   "sources": [
     "https://dexandra.com",
     "https://dexandra.com/products.json"
-  ]
+  ],
+  "partial": true
 }

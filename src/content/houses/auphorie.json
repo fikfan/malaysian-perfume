@@ -8,5 +8,9 @@
   "instagram": "auphorie",
   "tiktok": null,
   "shopee": null,
-  "sources": ["https://auphorie.com", "https://auphorie.com/products.json"]
+  "sources": [
+    "https://auphorie.com",
+    "https://auphorie.com/products.json"
+  ],
+  "partial": true
 }

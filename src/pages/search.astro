@@ -22,12 +22,13 @@ const tips = (await noteCounts()).slice(0, 8).map(([n]) => n);
       </select>
       <label class="sr" for="f-gender">For</label>
       <select class="select" id="f-gender">
-        <option value="">Anyone</option><option value="masculine">Masculine</option><option value="feminine">Feminine</option><option value="unisex">Unisex</option>
+        <option value="">Anyone</option><option value="masculine">Masculine</option><option value="feminine">Feminine</option><option value="unisex">Unisex</option><option value="none">Not stated</option>
       </select>
       <label class="check"><input type="checkbox" id="f-disc" /> Include discontinued</label>
       <span class="count" id="count" aria-live="polite"></span>
     </div>
 
+    <h2 class="sr">Results</h2>
     <ul class="plist" id="results"></ul>
     <div id="empty" class="empty" hidden>
       <h2>No perfume matches that.</h2>
@@ -40,7 +41,7 @@ const tips = (await noteCounts()).slice(0, 8).map(([n]) => n);
 </Base>
 
 <script>
-  type Row = { n: string; h: string; hn: string; u: string; i: string | null; g: string | null; d: number; img: string | null; l: [string, string[]][] };
+  type Row = { n: string; h: string; hn: string; u: string; i: string | null; g: string | null; d: number; img: string | null; l: [string, string[]][]; f: string };
   const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
   const input = $<HTMLInputElement>('search-q'), house = $<HTMLSelectElement>('f-house'), gender = $<HTMLSelectElement>('f-gender'), disc = $<HTMLInputElement>('f-disc');
   const out = $('results'), count = $('count'), empty = $('empty'), moreWrap = $('more-wrap');
@@ -72,11 +73,12 @@ const tips = (await noteCounts()).slice(0, 8).map(([n]) => n);
   function run(push = true) {
     const q = input.value.trim();
     const terms = fold(q).replace(/[^a-z0-9]+/g, ' ').split(' ').filter((t) => t.length > 1);
-    const list = rows.filter((r, i) => (!house.value || r.h === house.value) && (!gender.value || r.g === gender.value) && (disc.checked || !r.d || house.value) && terms.every((t) => hay[i].includes(' ' + t)));
+    const list = rows.filter((r, i) => (!house.value || r.h === house.value) && (!gender.value || r.g === gender.value || (gender.value === 'none' && !r.g)) && (disc.checked || !r.d) && terms.every((t) => hay[i].includes(' ' + t)));
     // Name matches first, then inspiration, then notes
     if (terms.length) {
       const has = (s: string, t: string) => (' ' + fold(s).replace(/[^a-z0-9]+/g, ' ')).includes(' ' + t);
-      const score = (r: Row) => (terms.some((t) => has(r.n, t)) ? 0 : r.i && terms.some((t) => has(r.i!, t)) ? 1 : 2);
+      const whole = (r: Row) => terms.every((t) => (' ' + fold([r.n, r.hn, r.i ?? '', r.f, ...r.l.flatMap(([, ns]) => ns)].join(' ')).replace(/[^a-z0-9]+/g, ' ') + ' ').includes(' ' + t + ' ')) ? 0 : 3;
+      const score = (r: Row) => whole(r) + (terms.some((t) => has(r.n, t)) ? 0 : r.i && terms.some((t) => has(r.i!, t)) ? 1 : 2);
       list.sort((a, b) => score(a) - score(b) || a.n.localeCompare(b.n));
     }
     out.innerHTML = list.slice(0, limit).map((r) => row(r, terms)).join('');
@@ -85,7 +87,7 @@ const tips = (await noteCounts()).slice(0, 8).map(([n]) => n);
     moreWrap.hidden = list.length <= limit;
     if (push) {
       const u = new URL(location.href);
-      for (const [k, v] of [['q', q], ['house', house.value], ['for', gender.value]] as const) v ? u.searchParams.set(k, v) : u.searchParams.delete(k);
+      for (const [k, v] of [['q', q], ['house', house.value], ['for', gender.value], ['disc', disc.checked ? '1' : '']] as const) v ? u.searchParams.set(k, v) : u.searchParams.delete(k);
       history.replaceState(null, '', u);
     }
   }
@@ -94,23 +96,24 @@ const tips = (await noteCounts()).slice(0, 8).map(([n]) => n);
   input.value = p.get('q') ?? '';
   house.value = p.get('house') ?? '';
   gender.value = p.get('for') ?? '';
+  disc.checked = p.get('disc') === '1';
   input.form!.addEventListener('submit', (e) => { e.preventDefault(); limit = PAGE; run(); });
   let t: number;
   input.addEventListener('input', () => { clearTimeout(t); t = window.setTimeout(() => { limit = PAGE; run(); }, 120); });
   [house, gender, disc].forEach((el) => el.addEventListener('change', () => { limit = PAGE; run(); }));
-  $('more').addEventListener('click', () => { limit += PAGE; run(false); });
+  $('more').addEventListener('click', () => { limit += PAGE; run(false); out.children[limit - PAGE]?.querySelector('a')?.focus(); });
 
   count.textContent = 'Loading…';
   fetch('/search-index.json').then((r) => r.json()).then((data: Row[]) => {
     rows = data;
-    hay = rows.map((r) => ' ' + fold([r.n, r.hn, r.i ?? '', ...r.l.flatMap(([, ns]) => ns)].join(' ')).replace(/[^a-z0-9]+/g, ' '));
+    hay = rows.map((r) => ' ' + fold([r.n, r.hn, r.i ?? '', r.f, ...r.l.flatMap(([, ns]) => ns)].join(' ')).replace(/[^a-z0-9]+/g, ' '));
     run(false);
     if (!input.value) input.focus();
   }).catch(() => { count.textContent = 'Search could not load. Refresh the page to try again.'; });
 </script>
 
 <style>
-  :global(.searchbox) { max-width: 680px; margin-bottom: 18px; }
+  :global(.searchbox) { max-width: 640px; margin-bottom: 18px; }
   #results :global(.thumb-wrap) { width: 88px; }
   @media (max-width: 860px) { #results :global(.thumb-wrap) { width: 72px; grid-row: span 2; } }
 </style>

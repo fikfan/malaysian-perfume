@@ -1,0 +1,47 @@
+---
+import Base from '../../layouts/Base.astro';
+import { load, perfumeUrl } from '../../lib/data';
+
+const { houses, perfumes } = await load();
+const hn = new Map(houses.map((h) => [h.id, h.data.name]));
+const groups = new Map<string, typeof perfumes>();
+for (const p of perfumes) if (p.data.inspiredBy) groups.set(p.data.inspiredBy, [...(groups.get(p.data.inspiredBy) ?? []), p]);
+const list = [...groups].sort((a, b) => a[0].localeCompare(b[0]));
+const letter = (s: string) => (/[a-z]/i.test(s[0]) ? s[0].toUpperCase() : '#');
+const letters = [...new Set(list.map(([n]) => letter(n)))];
+---
+<Base title="Inspired by" description="Designer and niche scents that Malaysian houses say their perfumes are inspired by, A to Z.">
+  <div class="wrap">
+    <header class="page-head">
+      <h1 class="x">Inspired by</h1>
+      <p>{list.length} designer and niche scents, and the local perfumes made after them. Only listed where the brand itself names the inspiration.</p>
+    </header>
+    <nav class="az" aria-label="Jump to letter">{letters.map((l) => <a href={`#l-${l}`}>{l}</a>)}</nav>
+    {letters.map((l) => (
+      <section class="letter" aria-labelledby={`l-${l}`}>
+        <h2 id={`l-${l}`} class="x">{l}</h2>
+        <dl>
+          {list.filter(([n]) => letter(n) === l).map(([name, ps]) => (
+            <div class="row">
+              <dt>{name}</dt>
+              <dd>{ps.map((p, i) => <>{i > 0 && ', '}<a href={perfumeUrl(p)}>{p.data.name}</a> <span class="muted">({hn.get(p.data.house)})</span></>)}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    ))}
+  </div>
+</Base>
+
+<style>
+  .az { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; position: sticky; top: 0; background: #fff; padding: 8px 0; z-index: 5; border-bottom: 1px solid var(--rule); }
+  .az a { min-width: 36px; min-height: 36px; display: grid; place-items: center; text-decoration: none; font-weight: 700; border: 1px solid var(--rule); border-radius: var(--radius); }
+  .az a:hover { border-color: var(--ink); }
+  .letter { padding-top: 24px; scroll-margin-top: 64px; }
+  .letter h2 { font-size: 32px; font-weight: 800; border-bottom: var(--line); padding-bottom: 6px; }
+  dl { margin: 0; }
+  .row { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 4px 24px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  dt { font-weight: 700; }
+  dd { margin: 0; }
+  @media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
+</style>

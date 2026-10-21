@@ -5,6 +5,6 @@ const { big = false, value = '', id = 'q' } = Astro.props;
 <form class:list={['searchbox', { big }]} action="/search/" method="get" role="search">
   <label class="sr" for={id}>Search perfumes, houses, notes or inspirations</label>
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-  <input id={id} name="q" type="search" value={value} autocomplete="off" placeholder="Try oud, vanilla, Sauvage or Emajie" />
+  <input id={id} name="q" type="search" value={value} autocomplete="off" placeholder="Oud, vanilla, Sauvage…" />
   <button type="submit">Search</button>
 </form>

@@ -8,6 +8,7 @@ const path = Astro.url.pathname;
 const full = title === 'Malaysian Perfumes' ? title : `${title} | Malaysian Perfumes`;
 const nav = [
   { href: '/houses/', label: 'Houses' },
+  { href: '/inspired/', label: 'Inspired by' },
   { href: '/search/', label: 'Search' },
 ];
 ---
@@ -37,7 +38,7 @@ const nav = [
       </nav>
     </div>
   </header>
-  {showSearch && <div class="wrap head-search"><SearchBox /></div>}
+  {showSearch && <div class="head-search-band"><div class="wrap head-search"><SearchBox /></div></div>}
   <main id="main"><slot /></main>
   <footer class="site-foot">
     <div class="wrap">
@@ -55,6 +56,7 @@ const nav = [
 </html>
 
 <style>
-  .head-search { padding-top: 14px; max-width: calc(var(--wrap)); }
-  .head-search :global(.searchbox) { max-width: 560px; }
+  .head-search-band { border-bottom: 1px solid var(--rule); }
+  .head-search { padding-block: 14px; }
+  .head-search :global(.searchbox) { max-width: 640px; }
 </style>

@@ -8,5 +8,9 @@
   "instagram": "blancofragrancemalaysia",
   "tiktok": "blanco.fragrance.my",
   "shopee": null,
-  "sources": ["https://blancofragrance.com.my/", "https://blancofragrance.com.my/wp-json/wc/store/v1/products"]
+  "sources": [
+    "https://blancofragrance.com.my/",
+    "https://blancofragrance.com.my/wp-json/wc/store/v1/products"
+  ],
+  "partial": true
 }

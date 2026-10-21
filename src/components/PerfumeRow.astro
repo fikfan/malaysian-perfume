@@ -2,8 +2,9 @@
 import Thumb from './Thumb.astro';
 import { pyramid, perfumeUrl, GENDER_LABEL, type Perfume } from '../lib/data';
 
-interface Props { p: Perfume; houseName?: string }
-const { p, houseName } = Astro.props;
+interface Props { p: Perfume; houseName?: string; shared?: string[] }
+const { p, houseName, shared = [] } = Astro.props;
+const on = new Set(shared);
 const layers = pyramid(p);
 const d = p.data;
 ---
@@ -19,7 +20,7 @@ const d = p.data;
     </div>
   </div>
   {layers.length ? (
-    <p class="notes-line">{layers.map((l, i) => <>{i > 0 && ' '}<span>{l.label}:</span> {l.notes.join(', ')}.</>)}</p>
+    <p class="notes-line">{layers.map((l, i) => <>{i > 0 && ' '}<span>{l.label}:</span> {l.notes.map((n, j) => <>{j > 0 && ', '}{on.has(n) ? <strong>{n}</strong> : n}</>)}.</>)}</p>
   ) : (
     <p class="notes-line"><span>The brand does not list notes for this one.</span></p>
   )}

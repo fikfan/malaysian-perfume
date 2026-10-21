@@ -26,6 +26,7 @@ button, input, select { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 ::selection { background: var(--accent); }
 mark { background: var(--accent); color: inherit; padding: 0 1px; }
+p { text-wrap: pretty; }
 h1, h2, h3 { margin: 0; line-height: 1.05; letter-spacing: -0.02em; text-wrap: balance; }
 
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
@@ -71,7 +72,7 @@ h1, h2, h3 { margin: 0; line-height: 1.05; letter-spacing: -0.02em; text-wrap: b
 .crumbs a { color: var(--muted); }
 .crumbs span[aria-hidden] { margin: 0 6px; }
 
-.section { padding: 32px 0; border-top: var(--line); }
+.section { padding-block: 32px; border-top: var(--line); }
 .section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 18px; flex-wrap: wrap; }
 .section-head h2 { font-weight: 800; font-size: 24px; }
 .section-head a { font-weight: 600; font-size: 15px; }
@@ -97,15 +98,16 @@ a.chip:hover { border-color: var(--ink); background: var(--soft); }
 .prow h3 a { text-decoration: none; }
 .prow h3 a::after { content: ""; position: absolute; inset: 0; }
 .prow:hover h3 a { text-decoration: underline; text-decoration-thickness: 2px; }
-.prow:hover { background: linear-gradient(90deg, var(--soft), transparent 75%); }
+.prow:hover { background: var(--soft); }
 .prow .meta { margin: 4px 0 0; font-size: 14.5px; color: var(--muted); }
 .prow .meta b { color: var(--ink); font-weight: 500; }
 .prow .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
 .prow .notes-line { font-size: 14.5px; line-height: 1.45; margin: 0; }
 .prow .notes-line span { color: var(--muted); }
 
-.thumb { aspect-ratio: 1; background: #fff; border: 1px solid var(--rule); display: grid; place-items: center; overflow: hidden; border-radius: var(--radius); }
-.thumb img { width: 100%; height: 100%; object-fit: contain; }
+/* brand photos vary; a soft tile plus multiply makes white backgrounds sit on the same grey */
+.thumb { aspect-ratio: 1; background: var(--soft); display: grid; place-items: center; overflow: hidden; border-radius: var(--radius); outline: 1px solid rgb(0 0 0 / .08); outline-offset: -1px; }
+.thumb img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
 .thumb.noimg::before { content: attr(data-initial); font-weight: 800; font-size: 28px; color: var(--muted); }
 
 /* tables of facts */
@@ -155,12 +157,13 @@ a.chip:hover { border-color: var(--ink); background: var(--soft); }
 @media (max-width: 640px) {
   :root { --gutter: 16px; }
   .site-head .wrap { gap: 8px 16px; padding-block: 10px; }
-  .site-nav { margin-left: 0; width: 100%; }
+  .site-nav { margin-left: auto; }
+  .site-nav a { padding: 10px 8px; }
   .logo { font-size: 17px; }
   .page-head { padding: 26px 0 18px; }
   .searchbox button { padding: 0 14px; }
   .searchbox.big button { padding: 0 16px; }
-  .facts { grid-template-columns: 1fr; }
-  .facts dt { padding-bottom: 0; border-bottom: 0; font-size: 13.5px; }
+  .facts { grid-template-columns: 84px 1fr; }
+  .facts dt { padding-right: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }

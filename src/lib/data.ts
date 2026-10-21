@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import ALIAS from '../data/note-aliases.json';
 
 export type House = CollectionEntry<'houses'>;
 export type Perfume = CollectionEntry<'perfumes'>;
@@ -15,9 +16,35 @@ export const slug = (s: string) =>
 export const TYPE_LABEL = { original: 'Original scents', inspired: 'Inspired-by scents', both: 'Original and inspired-by' } as const;
 export const GENDER_LABEL = { masculine: 'Masculine', feminine: 'Feminine', unisex: 'Unisex' } as const;
 
+export const DATA_CHECKED = 'October 2026';
+
+// Words brands put in front of a note ("Juicy Pineapple") and entries that are not notes at all
+const ADJ = /^(juicy|sparkling|zesty|velvety|warm|subtle|crisp|bright|soft|smooth|creamy|rich|deep|refreshing|refined|sensual|elegant|fiery|bold|delicate|luscious|lush|vibrant|sweet and|spiced)\s+/i;
+const DROP = new Set(['Masculine Florals', 'Fresh Accords', 'Fresh', 'Oriental', 'Gourmand', 'Notes', 'Accords', 'Fresh Accord']);
+const aliases = ALIAS as Record<string, string>;
+// "Imperial Incense (Agarwood, White Sandalwood)" -> ["Agarwood", "White Sandalwood"]; Chinese names in brackets are dropped
+function expand(raw: string): string[] {
+  const s = raw.replace(/[\u3000-\u9fff\uff00-\uffef]+/g, '').replace(/[“”"‘’]/g, '').trim();
+  const inner = s.match(/[(\[]([^()\[\]]*,[^()\[\]]*)[)\]]/);
+  return (inner ? inner[1].split(/[,;]/) : [s]).map((x) => x.replace(/\(\s*\)/g, '').trim()).filter(Boolean);
+}
+export function cleanNote(raw: string): string[] {
+  return expand(raw).flatMap((x) => {
+    let n = noteName(x);
+    if (DROP.has(n)) return [];
+    if (n.split(' ').length > 1) n = n.replace(ADJ, '');
+    n = aliases[n] ?? n;
+    n = n[0].toUpperCase() + n.slice(1);
+    return DROP.has(n) || !n ? [] : [n];
+  });
+}
+// Search also finds oud under its other names, and the other way round
+export const searchFamilies = (notes: string[]) =>
+  notes.some((n) => /agarwood|gaharu|jinkoh|kyara|qi-?nan|\boud\b/i.test(n)) ? ' oud agarwood gaharu' : '';
+
 export const pyramid = (p: Perfume): { label: string; notes: string[] }[] => {
   const n = p.data.notes;
-  const clean = (a: string[]) => [...new Set(a.map(noteName).filter(Boolean))];
+  const clean = (a: string[]) => [...new Set(a.flatMap(cleanNote))];
   if ('all' in n) return n.all.length ? [{ label: 'Notes', notes: clean(n.all) }] : [];
   return [
     { label: 'Top', notes: clean(n.top) },
