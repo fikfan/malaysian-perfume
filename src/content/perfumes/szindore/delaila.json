@@ -1,0 +1,31 @@
+{
+  "name": "Delaila",
+  "house": "szindore",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    15,
+    32
+  ],
+  "inspiredBy": "Parfums de Marly Delina",
+  "notes": {
+    "top": [
+      "Rose",
+      "Litchi",
+      "Peony"
+    ],
+    "heart": [
+      "Pear",
+      "Bergamot",
+      "Citrus"
+    ],
+    "base": [
+      "Vetiver",
+      "Ambergris",
+      "Woody Notes",
+      "Black Orchid"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2021/04/76-scaled.jpg",
+  "source": "https://perfumemalaya.com/product/delaila-refined-series-perfume/"
+}

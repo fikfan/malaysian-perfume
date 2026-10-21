@@ -1,0 +1,29 @@
+{
+  "name": "Immaculate Absolute",
+  "house": "house-of-amar",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lemon",
+      "Pineapple",
+      "Bergamot",
+      "Blackcurrant",
+      "Pink Pepper"
+    ],
+    "heart": [
+      "Cinnamon",
+      "Ginger"
+    ],
+    "base": [
+      "Patchouli",
+      "Vetiver"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7157935/0S7x0ehz6a1012058579b_1779438085.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-immaculate-absolute-extrait-de-parfume-100ml"
+}

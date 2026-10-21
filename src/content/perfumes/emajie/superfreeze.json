@@ -1,0 +1,26 @@
+{
+  "name": "Superfreeze",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Maison Francis Kurkdjian Aqua Celestia",
+  "notes": {
+    "top": [
+      "Sparkly Lime",
+      "Cool Mint"
+    ],
+    "heart": [
+      "Soft Florals",
+      "Airy Notes"
+    ],
+    "base": [
+      "White Musk",
+      "Fresh Accord"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/102213715.jpeg?width=800",
+  "source": "https://www.emajie.com/products/emajie-superfreeze"
+}

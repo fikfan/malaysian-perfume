@@ -1,0 +1,25 @@
+{
+  "name": "Tabac Vanille",
+  "house": "szindore",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [],
+  "inspiredBy": "Tom Ford Tobacco Vanille",
+  "notes": {
+    "top": [
+      "Tobacco Leaf",
+      "Ambergris"
+    ],
+    "heart": [
+      "Vanilla",
+      "Tonka Bean"
+    ],
+    "base": [
+      "Woody",
+      "Citrus",
+      "Fruity Notes"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2021/02/80-scaled.jpg",
+  "source": "https://perfumemalaya.com/product/tabac-vanille-refined-series-perfume-copy/"
+}

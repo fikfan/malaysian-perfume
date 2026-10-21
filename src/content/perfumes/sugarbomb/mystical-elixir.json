@@ -1,0 +1,26 @@
+{
+  "name": "Mystical Elixir",
+  "house": "sugarbomb",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Pink Pepper"
+    ],
+    "heart": [
+      "Rose",
+      "Osmanthus"
+    ],
+    "base": [
+      "Sandalwood",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305690.jpg",
+  "source": "https://sugarbombgroup.com/products/mystical-elixir-edp-by-sugarbomb"
+}

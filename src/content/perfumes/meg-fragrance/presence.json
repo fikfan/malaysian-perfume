@@ -1,0 +1,27 @@
+{
+  "name": "Presence",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Violet",
+      "Bergamot"
+    ],
+    "heart": [
+      "Orris Root",
+      "Moxalone",
+      "Civettone"
+    ],
+    "base": [
+      "Akigalawood",
+      "Sesame",
+      "Ambrettolide",
+      "Sandalwood"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913282.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-presence-perfume-for-unisex"
+}

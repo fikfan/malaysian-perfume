@@ -1,0 +1,29 @@
+{
+  "name": "Ondeh Delights",
+  "house": "legendary",
+  "gender": "unisex",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Orris",
+      "Rice",
+      "Bergamot"
+    ],
+    "heart": [
+      "Geranium",
+      "Vanilla",
+      "Rose"
+    ],
+    "base": [
+      "Ambergris",
+      "Pandan",
+      "Sandalwood"
+    ]
+  },
+  "image": "https://www.legendary.com.my/assets/client/p-ondeh-delights-life.webp",
+  "source": "https://www.legendary.com.my/product/ondeh-delights"
+}

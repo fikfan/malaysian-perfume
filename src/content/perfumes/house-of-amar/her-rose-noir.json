@@ -1,0 +1,30 @@
+{
+  "name": "Her Rose Noir",
+  "house": "house-of-amar",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Jasmine",
+      "Sicilian Orange",
+      "Ginger"
+    ],
+    "heart": [
+      "Powdery Notes",
+      "Vanilla Bean",
+      "Sea Notes"
+    ],
+    "base": [
+      "Musk",
+      "Sandalwood",
+      "Ambergris",
+      "Cashmeran"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7495811/GBTk1Uhh6a3512c67dec9_1781863110.png",
+  "source": "https://hoaperfumes.com/product/hoa-her-rose-noir-30ml-extrait-de-parfum"
+}

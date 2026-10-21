@@ -1,0 +1,27 @@
+{
+  "name": "Rizwan",
+  "house": "blanco",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pine Needles",
+      "Olibanum"
+    ],
+    "heart": [
+      "Benzoin",
+      "Incense"
+    ],
+    "base": [
+      "Atlas Cedar",
+      "Himalayan Cedar",
+      "Virginia Cedar"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/RIZWAN-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/rizwan/"
+}

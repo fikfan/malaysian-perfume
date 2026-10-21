@@ -1,0 +1,21 @@
+{
+  "name": "Deep",
+  "house": "dexandra",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot"
+    ],
+    "heart": [
+      "Rose"
+    ],
+    "base": [
+      "Vanilla"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/3052/1898/files/deepweb.jpg?v=1749196564",
+  "source": "https://dexandra.com/products/deep"
+}

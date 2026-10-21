@@ -1,0 +1,28 @@
+{
+  "name": "The Power of You",
+  "house": "house-of-amar",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Passionfruit",
+      "Bitter Orange",
+      "Lemon"
+    ],
+    "heart": [
+      "Frangipani",
+      "Solar Notes"
+    ],
+    "base": [
+      "Madagascar Vanilla",
+      "Benzoin",
+      "Labdanum"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7899763/KL7ceY3A6a9e670992778_1788765961.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-the-power-of-you-extrait-de-parfum-100ml"
+}

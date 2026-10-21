@@ -1,0 +1,26 @@
+{
+  "name": "Axis",
+  "house": "emajie",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Ingenious Ginger",
+  "notes": {
+    "top": [
+      "Sparkling Citrus",
+      "Fresh Ginger"
+    ],
+    "heart": [
+      "Aromatic Spices",
+      "Clean Woods"
+    ],
+    "base": [
+      "Soft Musk",
+      "Dry Woods"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99753797.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-axis"
+}

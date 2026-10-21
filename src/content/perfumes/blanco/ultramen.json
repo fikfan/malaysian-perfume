@@ -1,0 +1,32 @@
+{
+  "name": "Ultramen",
+  "house": "blanco",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pear",
+      "Lavender",
+      "Mint",
+      "Bergamot",
+      "Lemon"
+    ],
+    "heart": [
+      "Cinnamon",
+      "Clary Sage",
+      "Caraway"
+    ],
+    "base": [
+      "Black Vanilla Husk",
+      "Amber",
+      "Patchouli",
+      "Cedar"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/ULTRAMEN-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/ultramen/"
+}

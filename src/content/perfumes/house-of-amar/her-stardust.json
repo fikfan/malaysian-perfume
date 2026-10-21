@@ -1,0 +1,25 @@
+{
+  "name": "Her Stardust",
+  "house": "house-of-amar",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Cherry Blossom",
+      "Aldehydes"
+    ],
+    "heart": [
+      "Iris",
+      "Heliotrope"
+    ],
+    "base": [
+      "Musk"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7621838/sGzd0edG6a37cbfa4f584_1782041594.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-her-stardust-extrait-de-parfum-30ml"
+}

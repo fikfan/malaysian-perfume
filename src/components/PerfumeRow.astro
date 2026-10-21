@@ -1,0 +1,30 @@
+---
+import Thumb from './Thumb.astro';
+import { pyramid, perfumeUrl, GENDER_LABEL, type Perfume } from '../lib/data';
+
+interface Props { p: Perfume; houseName?: string }
+const { p, houseName } = Astro.props;
+const layers = pyramid(p);
+const d = p.data;
+---
+<li class="prow" data-gender={d.gender ?? ''} data-discontinued={d.discontinued ? '1' : ''}>
+  <div class="thumb-wrap"><Thumb src={d.image} name={d.name} size={176} /></div>
+  <div>
+    <h3><a href={perfumeUrl(p)}>{d.name}</a></h3>
+    {houseName && <p class="meta">by <b>{houseName}</b></p>}
+    {d.inspiredBy && <p class="meta">Inspired by <b>{d.inspiredBy}</b></p>}
+    <div class="tags">
+      {d.gender && <span class="tag">{GENDER_LABEL[d.gender]}</span>}
+      {d.discontinued && <span class="tag warn">Discontinued</span>}
+    </div>
+  </div>
+  {layers.length ? (
+    <p class="notes-line">{layers.map((l, i) => <>{i > 0 && ' '}<span>{l.label}:</span> {l.notes.join(', ')}.</>)}</p>
+  ) : (
+    <p class="notes-line"><span>The brand does not list notes for this one.</span></p>
+  )}
+</li>
+<style>
+  .thumb-wrap { width: 88px; }
+  @media (max-width: 860px) { .thumb-wrap { width: 72px; grid-row: span 2; } }
+</style>

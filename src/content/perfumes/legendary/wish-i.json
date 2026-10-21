@@ -1,0 +1,23 @@
+{
+  "name": "Wish I",
+  "house": "legendary",
+  "gender": "unisex",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    15
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Tangerine"
+    ],
+    "heart": [
+      "Peony"
+    ],
+    "base": [
+      "Musk"
+    ]
+  },
+  "image": "https://www.legendary.com.my/assets/client/p-wish-i-life.webp",
+  "source": "https://www.legendary.com.my/product/wish-i"
+}

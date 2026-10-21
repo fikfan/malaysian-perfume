@@ -1,0 +1,29 @@
+{
+  "name": "Meliha Intense",
+  "house": "szindore",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    15,
+    32
+  ],
+  "inspiredBy": "Gucci Flora",
+  "notes": {
+    "top": [
+      "Rose",
+      "Peony",
+      "Peach"
+    ],
+    "heart": [
+      "Citrus",
+      "Osmanthus",
+      "Violet"
+    ],
+    "base": [
+      "Pink Pepper",
+      "Patchouli"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2021/02/78-scaled.jpg",
+  "source": "https://perfumemalaya.com/product/meliha-intense-refined-series-perfume/"
+}

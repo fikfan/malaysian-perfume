@@ -1,0 +1,26 @@
+{
+  "name": "The Vertiver",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Mandarin Orange",
+      "Ginger"
+    ],
+    "heart": [
+      "Haitian Vetiver",
+      "Sandalwood",
+      "Iris"
+    ],
+    "base": [
+      "White Musk",
+      "Ambergris"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/106910432.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-the-vertiver-perfume-for-unisex"
+}

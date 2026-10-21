@@ -1,0 +1,28 @@
+{
+  "name": "Crème La Crème",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Cassis",
+      "Peach"
+    ],
+    "heart": [
+      "Jasmine Sambac",
+      "Peony",
+      "Lily"
+    ],
+    "base": [
+      "Amber",
+      "Woody Notes",
+      "Tonka Bean"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/CLC-50_c729c154-284d-421e-90a6-d5d64bc4d888.png",
+  "source": "https://malayaperfumery.com/products/creme-la-creme"
+}

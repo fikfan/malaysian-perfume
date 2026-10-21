@@ -1,0 +1,31 @@
+{
+  "name": "Green Fougere",
+  "house": "sugarbomb",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lemon",
+      "Elemi",
+      "Juniper Berry",
+      "Blackcurrant Buds",
+      "Cardamom"
+    ],
+    "heart": [
+      "Thyme",
+      "Lavender",
+      "Geranium"
+    ],
+    "base": [
+      "Tonka",
+      "Patchouli",
+      "Moss"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305191.jpg",
+  "source": "https://sugarbombgroup.com/products/green-fougere-edp-by-sugarbomb"
+}

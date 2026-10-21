@@ -1,0 +1,30 @@
+{
+  "name": "Fleur",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Aldehydes",
+      "Pink Pepper",
+      "Angelica",
+      "Bergamot"
+    ],
+    "heart": [
+      "Iris",
+      "Turkish Rose"
+    ],
+    "base": [
+      "Musk",
+      "Ambrette",
+      "Ambergris",
+      "Sandalwood",
+      "Leather",
+      "Amberwood"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913158.png",
+  "source": "https://megfragrance.com/products/mf-fleur-perfume-for-unisex"
+}

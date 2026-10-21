@@ -1,0 +1,35 @@
+{
+  "name": "Gowther of Fire",
+  "house": "house-of-amar",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    18,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Mandarin Orange",
+      "Madagascar Pepper",
+      "Lemon",
+      "Chinotto",
+      "Rosemary"
+    ],
+    "heart": [
+      "Geranium",
+      "Rose",
+      "Pepperwood"
+    ],
+    "base": [
+      "Vanilla",
+      "Tonka Bean",
+      "Sandalwood",
+      "Texas Cedar",
+      "Patchouli",
+      "Oakmoss"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-6945496/ihGLHxiT6a1562c77653f_1779786439.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-gowther-of-fire-extrait-de-parfum-100ml"
+}

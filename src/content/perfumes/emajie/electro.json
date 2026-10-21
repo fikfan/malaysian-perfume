@@ -1,0 +1,26 @@
+{
+  "name": "Electro",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Bvlgari Tygar",
+  "notes": {
+    "top": [
+      "Sparkling Grapefruit",
+      "Bright Citrus"
+    ],
+    "heart": [
+      "Elegant Ambrox",
+      "Mineral Woods"
+    ],
+    "base": [
+      "Warm Woody Accord",
+      "Soft Musk"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/106261895.jpeg?width=800",
+  "source": "https://www.emajie.com/products/emajie-electro"
+}

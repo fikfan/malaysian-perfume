@@ -1,0 +1,28 @@
+{
+  "name": "Illusion",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Citron",
+      "Calabrian Bergamot",
+      "Sicilian Orange"
+    ],
+    "heart": [
+      "Tunisian Neroli",
+      "Nigerian Ginger",
+      "Ceylon Cinnamon"
+    ],
+    "base": [
+      "Chinese Black Tea",
+      "Ambroxan",
+      "Olibanum",
+      "Guaiac Wood"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/106328731.png",
+  "source": "https://megfragrance.com/products/mf-illusion-perfume-for-unisex"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Fir & Vetiver",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot"
+    ],
+    "heart": [
+      "Orange Blossom"
+    ],
+    "base": [
+      "Fir",
+      "Vetiver"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/FIR-50_ee9d7f56-a19a-4be6-a58c-40a5e28c7720.png",
+  "source": "https://malayaperfumery.com/products/fir-vetiver"
+}

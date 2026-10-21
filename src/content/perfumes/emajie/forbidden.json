@@ -1,0 +1,26 @@
+{
+  "name": "Forbidden",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Dior Homme Intense",
+  "notes": {
+    "top": [
+      "Fresh Lavender",
+      "Bright Citrus"
+    ],
+    "heart": [
+      "Warm Iris",
+      "Rich Amber"
+    ],
+    "base": [
+      "Creamy Vanilla",
+      "Deep Woods"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/109420321.jpeg?width=800",
+  "source": "https://www.emajie.com/products/emajie-forbidden"
+}

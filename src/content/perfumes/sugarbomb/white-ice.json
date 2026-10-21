@@ -1,0 +1,28 @@
+{
+  "name": "White Ice",
+  "house": "sugarbomb",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Mandarin Orange"
+    ],
+    "heart": [
+      "Green Tea",
+      "Blackcurrant",
+      "Aldehyde"
+    ],
+    "base": [
+      "Musk",
+      "Sandalwood",
+      "Galbanum"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305879.jpg",
+  "source": "https://sugarbombgroup.com/products/white-ice-edp-by-sugarbomb"
+}

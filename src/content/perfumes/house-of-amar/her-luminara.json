@@ -1,0 +1,32 @@
+{
+  "name": "Her Luminara",
+  "house": "house-of-amar",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pear",
+      "Hazelnut",
+      "Olibanum"
+    ],
+    "heart": [
+      "Osmanthus",
+      "Rose",
+      "Saffron",
+      "Jasmine Sambac"
+    ],
+    "base": [
+      "Sandalwood",
+      "Vanilla",
+      "Akigalawood",
+      "Ambergris",
+      "Labdanum"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7495804/wwLcn5LE6a3222a6a0826_1781670566.png",
+  "source": "https://hoaperfumes.com/product/hoa-her-luminara-extrait-de-parfum-30ml"
+}

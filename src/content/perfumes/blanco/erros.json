@@ -1,0 +1,31 @@
+{
+  "name": "Erros",
+  "house": "blanco",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Mint",
+      "Green Apple",
+      "Lemon"
+    ],
+    "heart": [
+      "Tonka Bean",
+      "Ambroxan",
+      "Geranium"
+    ],
+    "base": [
+      "Madagascar Vanilla",
+      "Virginian Cedar",
+      "Atlas Cedar",
+      "Vetiver",
+      "Oakmoss"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/ERROS-JOHNY-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/erros/"
+}

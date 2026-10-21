@@ -1,0 +1,26 @@
+{
+  "name": "Raptor",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Lacoste L.12.12 Blanc",
+  "notes": {
+    "top": [
+      "Grapefruit",
+      "Cardamom"
+    ],
+    "heart": [
+      "Tuberose",
+      "Ylang - Ylang"
+    ],
+    "base": [
+      "Cedarwood",
+      "Suede"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99753662.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-raptor"
+}

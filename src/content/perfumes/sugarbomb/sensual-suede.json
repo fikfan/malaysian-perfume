@@ -1,0 +1,30 @@
+{
+  "name": "Sensual Suede",
+  "house": "sugarbomb",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pink Pepper",
+      "Cherry",
+      "Saffron"
+    ],
+    "heart": [
+      "Rose",
+      "Violet",
+      "Cashmeran"
+    ],
+    "base": [
+      "Musk",
+      "Myrrh",
+      "Ambergris",
+      "Incense"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107443950.jpeg",
+  "source": "https://sugarbombgroup.com/products/sensual-suede-edp-100ml"
+}

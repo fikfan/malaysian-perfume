@@ -1,0 +1,28 @@
+{
+  "name": "Compliment",
+  "house": "szindore",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Lemon",
+      "Grape Fruit",
+      "Petit Grain"
+    ],
+    "heart": [
+      "Green Apple",
+      "Juniper Berries",
+      "Pink Pepper"
+    ],
+    "base": [
+      "Black Currant",
+      "Benzoin",
+      "Cedar"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2021/06/23-scaled.jpg",
+  "source": "https://perfumemalaya.com/product/compliment/"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Apple & Vanilla",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    50,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Candy Apple"
+    ],
+    "heart": [
+      "Rose"
+    ],
+    "base": [
+      "Whipped Cream",
+      "Vanilla"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/AV-50_ba1e0550-4c29-4d41-a537-0eaa61d1e8cf.png",
+  "source": "https://malayaperfumery.com/products/apple-vanilla"
+}

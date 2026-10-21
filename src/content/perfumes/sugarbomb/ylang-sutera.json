@@ -1,0 +1,31 @@
+{
+  "name": "Ylang Sutera",
+  "house": "sugarbomb",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pear",
+      "Lemon",
+      "Pink Pepper",
+      "Green",
+      "Ylang-ylang"
+    ],
+    "heart": [
+      "Narcissus Chinese",
+      "Orange Flower",
+      "Jasmine Egyptian"
+    ],
+    "base": [
+      "Musk",
+      "Amber",
+      "Patchouli"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305364.jpg",
+  "source": "https://sugarbombgroup.com/products/ylang-sutera-100ml"
+}

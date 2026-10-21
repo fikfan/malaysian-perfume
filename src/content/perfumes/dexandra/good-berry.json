@@ -1,0 +1,21 @@
+{
+  "name": "Good Berry",
+  "house": "dexandra",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot"
+    ],
+    "heart": [
+      "Lavender"
+    ],
+    "base": [
+      "Vanilla"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/3052/1898/files/goodberryweb.jpg?v=1749200842",
+  "source": "https://dexandra.com/products/good-berry"
+}

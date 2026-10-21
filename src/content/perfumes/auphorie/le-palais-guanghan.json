@@ -1,0 +1,29 @@
+{
+  "name": "Le Palais Guanghan",
+  "house": "auphorie",
+  "gender": null,
+  "concentration": "Extrait",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Golden Osmanthus",
+      "Red Osmanthus",
+      "Silver Osmanthus",
+      "Chinese Rice Wine",
+      "Chinese Amur Grape Wine",
+      "Pomelo",
+      "Qi-Nan Oils",
+      "White Sandalwood",
+      "Oakwood",
+      "Orris Butter",
+      "Ambergris",
+      "Musk",
+      "Amber",
+      "Jiangzhenxiang"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0009/5440/0804/files/LePalaisGuanghan_bottle_02_700x800_d6aed091-3131-49c2-ba24-c0e978f5bf4f.jpg?v=1720767092",
+  "source": "https://auphorie.com/products/le-palais-guanghan",
+  "discontinued": true
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Tabac Cha Cha",
+  "house": "auphorie",
+  "gender": null,
+  "concentration": "Extrait",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Finely-Aged Tobacco",
+      "Tobacco Flower",
+      "Malt Whisky",
+      "Sherry-Seasoned Oak",
+      "French Oak",
+      "Bourbon Oak",
+      "Fresh Pandan Leaf",
+      "Old-Fashioned Coconut Milk",
+      "Banana",
+      "Sweet Potato",
+      "Taro Yam",
+      "Coconut Nectar Caramel",
+      "Pearl Sago",
+      "Agarwood Oud",
+      "White Sandalwood",
+      "Orris Butter",
+      "Creamy Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0009/5440/0804/files/TabacChaCha_bottle_02_700x800_b61a6b1f-9cea-46f0-ba21-1739ea09f114.jpg?v=1695969382",
+  "source": "https://auphorie.com/products/tabac-cha-cha",
+  "discontinued": true
+}

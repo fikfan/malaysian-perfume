@@ -1,0 +1,29 @@
+{
+  "name": "Dream",
+  "house": "legendary",
+  "gender": "unisex",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    15,
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lotus",
+      "Freesia"
+    ],
+    "heart": [
+      "Muguet",
+      "White Lily",
+      "Peony"
+    ],
+    "base": [
+      "White Musk",
+      "Amber",
+      "Cedar"
+    ]
+  },
+  "image": "https://www.legendary.com.my/assets/client/p-dream-life.webp",
+  "source": "https://www.legendary.com.my/product/dream"
+}

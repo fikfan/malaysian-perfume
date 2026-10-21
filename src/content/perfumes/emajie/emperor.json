@@ -1,0 +1,26 @@
+{
+  "name": "Emperor",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "YSL L'Homme",
+  "notes": {
+    "top": [
+      "Neroli",
+      "Bright Citrus"
+    ],
+    "heart": [
+      "Fresh Iris",
+      "Subtle Spices"
+    ],
+    "base": [
+      "Soft Woods",
+      "Amber"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/100017810.jpeg?width=800",
+  "source": "https://www.emajie.com/products/emajie-emperor"
+}

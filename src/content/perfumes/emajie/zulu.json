@@ -1,0 +1,26 @@
+{
+  "name": "Zulu",
+  "house": "emajie",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Ex Nihilo Blue Talisman",
+  "notes": {
+    "top": [
+      "Crisp Citrus",
+      "Fresh Accords"
+    ],
+    "heart": [
+      "Soft Florals",
+      "Smooth Musk"
+    ],
+    "base": [
+      "Amber Woods",
+      "Subtle Sweetness"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/103200721.jpeg?width=800",
+  "source": "https://www.emajie.com/products/emajie-zulu"
+}

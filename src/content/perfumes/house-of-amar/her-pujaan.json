@@ -1,0 +1,34 @@
+{
+  "name": "Her Pujaan",
+  "house": "house-of-amar",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Litchi",
+      "Pear",
+      "Bergamot",
+      "Grapefruit",
+      "Pink Pepper"
+    ],
+    "heart": [
+      "Turkish Rose",
+      "Agarwood (Oud)",
+      "Incense"
+    ],
+    "base": [
+      "Vanilla",
+      "Amber",
+      "Woody Notes",
+      "Musk",
+      "Vetiver",
+      "Evernyl"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7619246/ZfbHaUsc6a87c781b3a1f_1787283329.png",
+  "source": "https://hoaperfumes.com/product/hoa-her-pujaan-extrait-de-parfum-30ml"
+}

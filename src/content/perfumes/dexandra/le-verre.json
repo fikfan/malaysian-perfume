@@ -1,0 +1,21 @@
+{
+  "name": "Le Verre",
+  "house": "dexandra",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pomegranate"
+    ],
+    "heart": [
+      "Lotus"
+    ],
+    "base": [
+      "Amber"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/3052/1898/files/HER_1_d9471aa9-8e60-4582-ad9d-4abb4df3a277.png?v=1690267907",
+  "source": "https://dexandra.com/products/le-verre"
+}

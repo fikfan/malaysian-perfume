@@ -1,0 +1,26 @@
+{
+  "name": "Innocent",
+  "house": "emajie",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Hermès Twilly d'Hermès",
+  "notes": {
+    "top": [
+      "Spicy Ginger",
+      "Sparkling Citrus"
+    ],
+    "heart": [
+      "Tuberose",
+      "Orange Blossom"
+    ],
+    "base": [
+      "Sandalwood",
+      "Vanilla"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/107975145.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-innocent"
+}

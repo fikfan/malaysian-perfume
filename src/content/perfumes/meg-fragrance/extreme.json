@@ -1,0 +1,28 @@
+{
+  "name": "Extreme",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": "Spicebomb Extreme",
+  "notes": {
+    "top": [
+      "Black Pepper",
+      "Grapefruit",
+      "Lavender"
+    ],
+    "heart": [
+      "Cinnamon",
+      "Cumin",
+      "Saffron"
+    ],
+    "base": [
+      "Tobacco",
+      "Bourbon Vanilla",
+      "Amber",
+      "Woody Notes"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913238.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-extreme-perfume-for-unisex"
+}

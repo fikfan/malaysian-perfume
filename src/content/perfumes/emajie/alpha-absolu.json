@@ -1,0 +1,26 @@
+{
+  "name": "Alpha Absolu",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Creed Absolu Aventus",
+  "notes": {
+    "top": [
+      "Vibrant Citrus",
+      "Juicy Fruits"
+    ],
+    "heart": [
+      "Refined Woods",
+      "Smoky Depth"
+    ],
+    "base": [
+      "Sensual Musk",
+      "Ambergris"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99653898.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-alpha-absolu"
+}

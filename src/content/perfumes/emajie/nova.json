@@ -1,0 +1,27 @@
+{
+  "name": "Nova",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Baccarat Rouge 540 Extrait x Creed Aventus",
+  "notes": {
+    "top": [
+      "Saffron",
+      "Bitter Almond"
+    ],
+    "heart": [
+      "Fruity Citrus",
+      "Birch Smoke"
+    ],
+    "base": [
+      "Ambergris",
+      "Musk",
+      "Oakmoss"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749340.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-nova"
+}

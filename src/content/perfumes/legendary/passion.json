@@ -1,0 +1,28 @@
+{
+  "name": "Passion",
+  "house": "legendary",
+  "gender": "unisex",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    15,
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Red Berries",
+      "Blackcurrant"
+    ],
+    "heart": [
+      "Rose",
+      "Muguet",
+      "Ylang Ylang"
+    ],
+    "base": [
+      "Vanilla",
+      "Musk"
+    ]
+  },
+  "image": "https://www.legendary.com.my/assets/client/p-passion-life.webp",
+  "source": "https://www.legendary.com.my/product/passion"
+}

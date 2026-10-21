@@ -1,0 +1,32 @@
+{
+  "name": "Summer Paradise",
+  "house": "house-of-amar",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Mango",
+      "Pineapple",
+      "Coconut",
+      "Bergamot",
+      "White Rum"
+    ],
+    "heart": [
+      "Coconut Milk",
+      "White Flowers",
+      "Marine Notes"
+    ],
+    "base": [
+      "Musk",
+      "Sandalwood",
+      "Amber",
+      "Vetiver"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7902760/d8iXH8Pr6a9f7899c7963_1788835993.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-summer-paradise-extrait-de-parfum-100ml"
+}

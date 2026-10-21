@@ -1,0 +1,29 @@
+{
+  "name": "Love Sick",
+  "house": "sugarbomb",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Black Cherry",
+      "Plum",
+      "Raspberry"
+    ],
+    "heart": [
+      "Freesia",
+      "Orris",
+      "Orchid"
+    ],
+    "base": [
+      "Amber",
+      "Musk",
+      "Vanilla"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305696.jpg",
+  "source": "https://sugarbombgroup.com/products/love-sick-edp-by-sugarbomb"
+}

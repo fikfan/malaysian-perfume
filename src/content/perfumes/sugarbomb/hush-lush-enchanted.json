@@ -1,0 +1,28 @@
+{
+  "name": "Hush Lush Enchanted",
+  "house": "sugarbomb",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Apple",
+      "Pear"
+    ],
+    "heart": [
+      "Rose",
+      "White Flower"
+    ],
+    "base": [
+      "Sandalwood",
+      "Musk",
+      "Vanilla",
+      "Gourmand"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305838.jpg",
+  "source": "https://sugarbombgroup.com/products/hush-lush-enchanted-edp-by-sugarbomb"
+}

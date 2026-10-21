@@ -1,0 +1,30 @@
+{
+  "name": "Rage",
+  "house": "szindore",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [],
+  "inspiredBy": "Montblanc Legend",
+  "notes": {
+    "top": [
+      "Orange",
+      "Lemon",
+      "Cardamom",
+      "Jasmine"
+    ],
+    "heart": [
+      "Fir",
+      "Rosemary",
+      "Petit Grain",
+      "Sea Note"
+    ],
+    "base": [
+      "Sage",
+      "Vetiver",
+      "Oakmoss",
+      "Rosewood"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2021/05/92-scaled.jpg",
+  "source": "https://perfumemalaya.com/product/rage-refined-series-perfume/"
+}

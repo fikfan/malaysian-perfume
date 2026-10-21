@@ -1,0 +1,28 @@
+{
+  "name": "Her Parvana",
+  "house": "house-of-amar",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pear",
+      "Gardenia",
+      "Jasmine"
+    ],
+    "heart": [
+      "Honeysuckle",
+      "Orange Flower",
+      "Lily of the Valley"
+    ],
+    "base": [
+      "Vanilla",
+      "Amber Vanilla"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7495107/RAmWHOVv6a32231f4d012_1781670687.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-her-parvana-extrait-de-parfum-30ml"
+}

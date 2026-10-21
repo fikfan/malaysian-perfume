@@ -1,0 +1,21 @@
+{
+  "name": "Peach",
+  "house": "dexandra",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Peach"
+    ],
+    "heart": [
+      "Jasmine"
+    ],
+    "base": [
+      "Patchouli"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/3052/1898/files/peachweb.jpg?v=1749519173",
+  "source": "https://dexandra.com/products/peach"
+}

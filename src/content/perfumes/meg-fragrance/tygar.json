@@ -1,0 +1,25 @@
+{
+  "name": "Tygar",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Grapefruit"
+    ],
+    "heart": [
+      "Ginger",
+      "Ambrette"
+    ],
+    "base": [
+      "Ambroxan",
+      "Musk",
+      "Vetiver",
+      "Patchouli"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/106081242.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-tygar-perfume-for-unisex"
+}

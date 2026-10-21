@@ -1,0 +1,22 @@
+{
+  "name": "Strawberry Milkshake",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Strawberry"
+    ],
+    "heart": [
+      "Marshmallow"
+    ],
+    "base": [
+      "Vanilla",
+      "Milk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/SM-50_7dcbb947-0527-45c7-b0bc-ed897cec0b82.png",
+  "source": "https://malayaperfumery.com/products/strawberry-milkshake"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Luxe Paradise Island",
+  "house": "house-of-amar",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Coconut",
+      "Bergamot",
+      "Tropical Fruit",
+      "Melon"
+    ],
+    "heart": [
+      "Jasmine",
+      "Orange",
+      "Aquatic Notes"
+    ],
+    "base": [
+      "Sandalwood",
+      "Musk",
+      "Amber",
+      "Cedarwood"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7722089/7WL1Sa8C6a5da2a944adc_1784521385.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-luxe-paradise-island-extrait-de-parfum"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Meli*D*S",
+  "house": "house-of-amar",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    18,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Cardamom"
+    ],
+    "heart": [
+      "Iris",
+      "Lavender"
+    ],
+    "base": [
+      "Vanilla",
+      "Amber"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7651347/x56qNmSD6a76d9f96ed3e_1786173945.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-melids--extrait-de-parfum"
+}

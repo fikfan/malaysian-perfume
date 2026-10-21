@@ -1,0 +1,26 @@
+{
+  "name": "Bayu Wangi",
+  "house": "malaya-perfumery",
+  "gender": "unisex",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Sea Notes",
+      "Salt"
+    ],
+    "heart": [
+      "Rosemary",
+      "Cypress",
+      "Myrrh"
+    ],
+    "base": [
+      "Patchouli",
+      "Musk",
+      "Sandalwood"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/BAYU-50_b814b9cb-c653-4b41-b694-e27afd5ac3a9.png",
+  "source": "https://malayaperfumery.com/products/bayu-wangi"
+}

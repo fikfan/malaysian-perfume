@@ -1,0 +1,21 @@
+{
+  "name": "Eyelish",
+  "house": "dexandra",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Berries"
+    ],
+    "heart": [
+      "Cacao"
+    ],
+    "base": [
+      "Vanilla"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/3052/1898/files/eyelishweb.jpg?v=1749201387",
+  "source": "https://dexandra.com/products/eyelish"
+}

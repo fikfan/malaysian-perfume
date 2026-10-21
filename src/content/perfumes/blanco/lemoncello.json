@@ -1,0 +1,20 @@
+{
+  "name": "Lemoncello",
+  "house": "blanco",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": "Louis Vuitton Symphony",
+  "notes": {
+    "all": [
+      "Bergamot",
+      "Grapefruit",
+      "Ginger",
+      "Orange"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/LEMONCELLO-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/lemoncello/"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Stardust",
+  "house": "emajie",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "BE No.1",
+  "notes": {
+    "top": [
+      "Sugared Vanilla",
+      "Decadent Cocoa"
+    ],
+    "heart": [
+      "Ethereal Rose",
+      "Subtle Spices"
+    ],
+    "base": [
+      "Creamy Musk",
+      "Woody Accents"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749114.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-stardust"
+}

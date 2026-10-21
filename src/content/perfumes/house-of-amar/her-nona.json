@@ -1,0 +1,27 @@
+{
+  "name": "Her Nona",
+  "house": "house-of-amar",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Aldehydes",
+      "White Bergamot",
+      "Mandarin Orange"
+    ],
+    "heart": [
+      "Orange Blossom",
+      "Lily of the Valley",
+      "Petalia"
+    ],
+    "base": [
+      "Vanilla Musk"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7495960/pc0ryS6v6a322042c7f3d_1781669954.png",
+  "source": "https://hoaperfumes.com/product/hoa-her-nona-30ml-extrait-de-parfum"
+}

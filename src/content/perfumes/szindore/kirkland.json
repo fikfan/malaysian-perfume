@@ -1,0 +1,27 @@
+{
+  "name": "Kirkland",
+  "house": "szindore",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [],
+  "inspiredBy": "Tiziana Terenzi Kirke",
+  "notes": {
+    "top": [
+      "Peach",
+      "Raspberry"
+    ],
+    "heart": [
+      "Pear",
+      "Passionfruit",
+      "Vanilla",
+      "Citrus"
+    ],
+    "base": [
+      "Patchouli",
+      "Oakmoss",
+      "Sandalwood"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2021/05/kirkland-scaled.jpg",
+  "source": "https://perfumemalaya.com/product/kirkland-refined-series-perfume/"
+}

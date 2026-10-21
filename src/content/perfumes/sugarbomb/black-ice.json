@@ -1,0 +1,29 @@
+{
+  "name": "Black Ice",
+  "house": "sugarbomb",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pineapple",
+      "Bergamot",
+      "Pink Pepper"
+    ],
+    "heart": [
+      "Jasmine",
+      "Amber",
+      "Thyme"
+    ],
+    "base": [
+      "Cedarwood",
+      "Incense",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107306941.jpg",
+  "source": "https://sugarbombgroup.com/products/black-ice-edp-by-sugarbomb"
+}

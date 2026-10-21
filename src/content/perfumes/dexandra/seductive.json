@@ -1,0 +1,21 @@
+{
+  "name": "Seductive",
+  "house": "dexandra",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Raspberry"
+    ],
+    "heart": [
+      "Rose"
+    ],
+    "base": [
+      "Amber"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/3052/1898/files/seductiveweb.jpg?v=1749525081",
+  "source": "https://dexandra.com/products/seductive"
+}

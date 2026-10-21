@@ -1,0 +1,21 @@
+{
+  "name": "La Femme",
+  "house": "dexandra",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Sicilian Orange"
+    ],
+    "heart": [
+      "Jasmine"
+    ],
+    "base": [
+      "Vanilla"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/3052/1898/files/HER_1_c3486f4a-1e75-40d7-87df-e235fbbe8e0a.png?v=1690267884",
+  "source": "https://dexandra.com/products/le-femme"
+}

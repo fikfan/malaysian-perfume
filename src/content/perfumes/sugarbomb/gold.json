@@ -1,0 +1,29 @@
+{
+  "name": "Gold",
+  "house": "sugarbomb",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lavender",
+      "Bergamot",
+      "Mint"
+    ],
+    "heart": [
+      "Benzoin",
+      "Vanilla",
+      "Cinnamon"
+    ],
+    "base": [
+      "Patchouli",
+      "Cigar",
+      "Tonka Bean"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305876.jpg",
+  "source": "https://sugarbombgroup.com/products/gold-edp-by-sugarbomb"
+}

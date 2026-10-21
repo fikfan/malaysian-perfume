@@ -1,0 +1,26 @@
+{
+  "name": "Superclean",
+  "house": "emajie",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Maison Francis Kurkdjian Aqua Universalis",
+  "notes": {
+    "top": [
+      "Lemon",
+      "Bergamot"
+    ],
+    "heart": [
+      "White Flowers",
+      "Lily Of The Valley"
+    ],
+    "base": [
+      "Musk",
+      "Light Woods"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749422.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-superclean"
+}

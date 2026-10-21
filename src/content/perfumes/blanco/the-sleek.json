@@ -1,0 +1,27 @@
+{
+  "name": "The Sleek",
+  "house": "blanco",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": "Jean Paul Gaultier Le Male Elixir",
+  "notes": {
+    "top": [
+      "Lavender",
+      "Mint"
+    ],
+    "heart": [
+      "Vanilla",
+      "Benzoin"
+    ],
+    "base": [
+      "Honey",
+      "Tonka Bean",
+      "Tobacco"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/THE-SLEEK-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/the-sleek/"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Eternal",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Parfums de Marly Althaïr",
+  "notes": {
+    "top": [
+      "Bright Citrus",
+      "Spicy Cardamom"
+    ],
+    "heart": [
+      "Smooth Vanilla",
+      "Tonka Bean"
+    ],
+    "base": [
+      "Velvety Amber",
+      "Woody Accords"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749186.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-eternal"
+}

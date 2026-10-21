@@ -1,0 +1,29 @@
+{
+  "name": "Angelic",
+  "house": "blanco",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Cognac"
+    ],
+    "heart": [
+      "Cinnamon",
+      "Tonka Bean",
+      "Oak",
+      "Hedione"
+    ],
+    "base": [
+      "Vanilla",
+      "Praline",
+      "Sandalwood",
+      "Candied Almond"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/ANGELIC.jpg",
+  "source": "https://blancofragrance.com.my/product/angelic/"
+}

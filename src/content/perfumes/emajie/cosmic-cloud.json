@@ -1,0 +1,27 @@
+{
+  "name": "Cosmic Cloud",
+  "house": "emajie",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Ariana Grande Cloud",
+  "notes": {
+    "top": [
+      "Lavender",
+      "Pear Blossom"
+    ],
+    "heart": [
+      "Whipped Cream",
+      "Coconut"
+    ],
+    "base": [
+      "Vanilla",
+      "Musk",
+      "Blonde Woods"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749362.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-cosmic-cloud"
+}

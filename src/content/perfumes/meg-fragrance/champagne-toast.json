@@ -1,0 +1,29 @@
+{
+  "name": "Champagne Toast",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Champagne",
+      "Berries",
+      "Tangerine"
+    ],
+    "heart": [
+      "Nectarine",
+      "Passionfruit",
+      "Black Currant",
+      "Hibiscus"
+    ],
+    "base": [
+      "Sugar",
+      "Vanilla",
+      "Musk",
+      "Plum Tree"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/106892410.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-champagne-toast-for-unisex"
+}

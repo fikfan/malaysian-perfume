@@ -1,0 +1,26 @@
+{
+  "name": "Cuir Oud Padishah",
+  "house": "auphorie",
+  "gender": null,
+  "concentration": "Extrait",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Saffron",
+      "Leather",
+      "Peppercorns",
+      "Jasmine",
+      "Rose",
+      "Real Oud Oils",
+      "Amber",
+      "Sandalwood",
+      "Musk",
+      "Civet",
+      "Ambergris"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0009/5440/0804/products/CuirOudPadishah_bottle_02_700x800_bd917e8c-4c37-4c3a-a572-d84b7bb2a915.jpg?v=1611905680",
+  "source": "https://auphorie.com/products/cuir-oud-padishah",
+  "discontinued": true
+}

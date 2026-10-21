@@ -1,0 +1,27 @@
+{
+  "name": "Marfa",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Orange Blossom",
+      "Mandarin"
+    ],
+    "heart": [
+      "Tuberose",
+      "Agave",
+      "Ylang-Ylang"
+    ],
+    "base": [
+      "Sandalwood",
+      "Cedar",
+      "Vanilla",
+      "White Musk"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913190.png",
+  "source": "https://megfragrance.com/products/mf-marfa-perfume-for-unisex-"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Gowther",
+  "house": "house-of-amar",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    18,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Mint",
+      "Green Apple",
+      "Lemon"
+    ],
+    "heart": [
+      "Tonka Bean",
+      "Ambroxan",
+      "Geranium"
+    ],
+    "base": [
+      "Madagascar Vanilla",
+      "Virginian Cedar",
+      "Atlas Cedar",
+      "Vetiver",
+      "Oakmoss"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-6945474/qOThltxg6a1561d5db56a_1779786197.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-gowther-extrait-de-parfum-100ml"
+}

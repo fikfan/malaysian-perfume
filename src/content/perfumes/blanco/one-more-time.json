@@ -1,0 +1,26 @@
+{
+  "name": "One More Time",
+  "house": "blanco",
+  "gender": "feminine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Sugar Frosted Blackberries",
+      "Italian Bergamot"
+    ],
+    "heart": [
+      "Cassis Cream",
+      "Marshmallow Accord"
+    ],
+    "base": [
+      "Vanilla",
+      "Precious Woods"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/ONE-MORE-TIME-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/one-more-time/"
+}

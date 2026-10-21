@@ -1,0 +1,27 @@
+{
+  "name": "Bewitched Aurora",
+  "house": "sugarbomb",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lemon",
+      "Bergamot"
+    ],
+    "heart": [
+      "Rose",
+      "Osmanthus"
+    ],
+    "base": [
+      "Sandalwood",
+      "Cedarwood",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107309183.jpg",
+  "source": "https://sugarbombgroup.com/products/bewitched-aurora-edp-by-sugarbomb"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Forbidden Kiss",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Rum",
+      "Cinnamon",
+      "Nutmeg",
+      "Saffron",
+      "Pear"
+    ],
+    "heart": [
+      "Damask Rose",
+      "Osmanthus",
+      "Heliotrope",
+      "Tobacco",
+      "Sandalwood"
+    ],
+    "base": [
+      "Vanilla Absolute",
+      "Labdanum",
+      "Incense",
+      "Ambergris",
+      "Akigalawood"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913166.jpg",
+  "source": "https://megfragrance.com/products/mf-forbidden-kiss-for-unisex"
+}

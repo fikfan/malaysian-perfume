@@ -1,0 +1,24 @@
+{
+  "name": "Antidote Gal",
+  "house": "szindore",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [],
+  "inspiredBy": "Dior Poison Girl",
+  "notes": {
+    "top": [
+      "Lemon",
+      "Vanilla"
+    ],
+    "heart": [
+      "Rose",
+      "Bitter Orange"
+    ],
+    "base": [
+      "Almond",
+      "Sandalwood"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2021/03/87-scaled.jpg",
+  "source": "https://perfumemalaya.com/product/antidote-gal-refined-series-perfume/"
+}

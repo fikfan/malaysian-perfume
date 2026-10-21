@@ -1,0 +1,26 @@
+{
+  "name": "AHKB",
+  "house": "szindore",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Berry",
+      "Coconut",
+      "Pineapple"
+    ],
+    "heart": [
+      "Amber",
+      "Watermelon"
+    ],
+    "base": [
+      "Sandalwood",
+      "Cedar",
+      "Musk"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2021/02/2-scaled.jpg",
+  "source": "https://perfumemalaya.com/product/ahkb-handcrafted-perfume/"
+}

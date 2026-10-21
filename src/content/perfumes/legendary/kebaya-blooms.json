@@ -1,0 +1,29 @@
+{
+  "name": "Kebaya Blooms",
+  "house": "legendary",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Ambrette",
+      "Leafy",
+      "Lemon"
+    ],
+    "heart": [
+      "Orange Blossom",
+      "Violet",
+      "Ylang Ylang"
+    ],
+    "base": [
+      "Musk",
+      "Powdery",
+      "Vetiver"
+    ]
+  },
+  "image": "https://www.legendary.com.my/assets/client/p-kebaya-blooms-life.webp",
+  "source": "https://www.legendary.com.my/product/kebaya-blooms"
+}

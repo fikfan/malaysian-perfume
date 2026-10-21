@@ -1,0 +1,32 @@
+{
+  "name": "Heatwave Intensely",
+  "house": "house-of-amar",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    18,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pink Pepper",
+      "Juniper",
+      "Violet"
+    ],
+    "heart": [
+      "Toffee",
+      "Cinnamon",
+      "Lavender",
+      "Sage"
+    ],
+    "base": [
+      "Vanilla",
+      "Amber",
+      "Tonka Bean",
+      "Suede"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7036171/JikzLnTj6a1557d20efcb_1779783634.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-heatwave-intensely-100ml-extrait-de-parfum"
+}

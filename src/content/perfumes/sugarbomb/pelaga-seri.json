@@ -1,0 +1,36 @@
+{
+  "name": "Pelaga Seri",
+  "house": "sugarbomb",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pink Pepper",
+      "Bergamot",
+      "Pine Needle",
+      "Galbanum",
+      "Coriander",
+      "Tea"
+    ],
+    "heart": [
+      "Orange Flower",
+      "Juniper Berry",
+      "Cedar",
+      "Cardamom",
+      "Neroli",
+      "Iris"
+    ],
+    "base": [
+      "Guaiac Wood",
+      "Sandalwood",
+      "Musky",
+      "Amber"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305372.jpg",
+  "source": "https://sugarbombgroup.com/products/pelaga-seri-100ml"
+}

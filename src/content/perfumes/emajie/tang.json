@@ -1,0 +1,26 @@
+{
+  "name": "Tango",
+  "house": "emajie",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Calvin Klein CK One",
+  "notes": {
+    "top": [
+      "Crisp Citrus",
+      "Green Accords"
+    ],
+    "heart": [
+      "Soft Herbal",
+      "Floral Notes"
+    ],
+    "base": [
+      "Clean Musk",
+      "Light Woods"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/103690552.jpeg?width=800",
+  "source": "https://www.emajie.com/products/emajie-tang"
+}

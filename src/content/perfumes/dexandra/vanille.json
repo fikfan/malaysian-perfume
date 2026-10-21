@@ -1,0 +1,21 @@
+{
+  "name": "Vanille",
+  "house": "dexandra",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Orange"
+    ],
+    "heart": [
+      "Fresia"
+    ],
+    "base": [
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/3052/1898/files/vanilleweb.jpg?v=1749536538",
+  "source": "https://dexandra.com/products/vanille"
+}

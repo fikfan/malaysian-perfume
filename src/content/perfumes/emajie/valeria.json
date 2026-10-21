@@ -1,0 +1,26 @@
+{
+  "name": "Valeria",
+  "house": "emajie",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Montale Intense Café",
+  "notes": {
+    "top": [
+      "Velvety Coffee",
+      "Sweet Florals"
+    ],
+    "heart": [
+      "Creamy Vanilla",
+      "Delicate Musks"
+    ],
+    "base": [
+      "Rich Amber",
+      "Subtle Woods"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749302.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-valeria"
+}

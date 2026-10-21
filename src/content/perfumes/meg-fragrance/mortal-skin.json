@@ -1,0 +1,32 @@
+{
+  "name": "Mortal Skin",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Blackberry",
+      "Ink",
+      "Frankincense",
+      "Labdanum"
+    ],
+    "heart": [
+      "Opoponax",
+      "Iris",
+      "Cardamom",
+      "Myrrh"
+    ],
+    "base": [
+      "Ambergris",
+      "Styrax",
+      "Sandalwood",
+      "Birch",
+      "Cedarwood",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913205.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-mortal-skin-for-unisex"
+}

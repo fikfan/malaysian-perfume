@@ -1,0 +1,32 @@
+{
+  "name": "Sexy Vanilla",
+  "house": "sugarbomb",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pear",
+      "Lavender",
+      "Mint",
+      "Bergamot",
+      "Lemon"
+    ],
+    "heart": [
+      "Cinnamon",
+      "Clary Sage",
+      "Caraway"
+    ],
+    "base": [
+      "Black Vanilla Husk",
+      "Amber",
+      "Patchouli",
+      "Cedar"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107306814.jpg",
+  "source": "https://sugarbombgroup.com/products/sexy-vanilla-edp-by-sugarbomb"
+}

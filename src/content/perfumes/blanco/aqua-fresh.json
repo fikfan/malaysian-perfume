@@ -1,0 +1,45 @@
+{
+  "name": "Aqua Fresh",
+  "house": "blanco",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lime",
+      "Lemon",
+      "Bergamot",
+      "Jasmine",
+      "Orange",
+      "Mandarin Orange",
+      "Neroli"
+    ],
+    "heart": [
+      "Sea Notes",
+      "Jasmine",
+      "Calone",
+      "Peach",
+      "Freesia",
+      "Rosemary",
+      "Hiacynth",
+      "Cyclamen",
+      "Coriander",
+      "Violet",
+      "Nutmeg",
+      "Rose",
+      "Mignonette"
+    ],
+    "base": [
+      "White Musk",
+      "Cedar",
+      "Oakmoss",
+      "Patchouli",
+      "Amber"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/AQUA-FRESH.jpg",
+  "source": "https://blancofragrance.com.my/product/aqua-fresh/"
+}

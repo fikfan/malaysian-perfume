@@ -1,0 +1,31 @@
+{
+  "name": "Independent Women",
+  "house": "blanco",
+  "gender": "feminine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lavender",
+      "Mandarin Orange",
+      "Black Currant",
+      "Petitgrain"
+    ],
+    "heart": [
+      "Lavender",
+      "Orange Blossom",
+      "Jasmine"
+    ],
+    "base": [
+      "Madagascar Vanilla",
+      "Musk",
+      "Cedar",
+      "Ambergris"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/INDEPENDENT-WOMEN-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/independent-women/"
+}

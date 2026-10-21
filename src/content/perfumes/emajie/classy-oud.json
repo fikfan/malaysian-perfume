@@ -1,0 +1,26 @@
+{
+  "name": "Classy Oud",
+  "house": "emajie",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Louis Vuitton Ombre Nomade",
+  "notes": {
+    "top": [
+      "Smoky Oud",
+      "Dark Woods"
+    ],
+    "heart": [
+      "Amber",
+      "Spiced Rose"
+    ],
+    "base": [
+      "Leather",
+      "Balsamic Notes"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749278.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-classy-oud"
+}

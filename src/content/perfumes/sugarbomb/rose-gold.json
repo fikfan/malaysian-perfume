@@ -1,0 +1,26 @@
+{
+  "name": "Rose Gold",
+  "house": "sugarbomb",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Pear"
+    ],
+    "heart": [
+      "Rose",
+      "Pink Peony"
+    ],
+    "base": [
+      "Musk",
+      "Amber"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305468.jpg",
+  "source": "https://sugarbombgroup.com/products/rose-gold-edp-by-sugarbomb"
+}

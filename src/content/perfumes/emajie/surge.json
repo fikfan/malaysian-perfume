@@ -1,0 +1,26 @@
+{
+  "name": "Surge",
+  "house": "emajie",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Louis Vuitton Afternoon Swim",
+  "notes": {
+    "top": [
+      "Sparkling Citrus",
+      "Juicy Orange"
+    ],
+    "heart": [
+      "Refreshing Aquatic Accord",
+      "Ginger"
+    ],
+    "base": [
+      "Soft Amber",
+      "Smooth Musk"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/109420577.jpeg?width=800",
+  "source": "https://www.emajie.com/products/emajie-surge"
+}

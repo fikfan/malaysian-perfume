@@ -1,0 +1,27 @@
+{
+  "name": "Hush Lush Bloom",
+  "house": "sugarbomb",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lemon",
+      "Pomegranate"
+    ],
+    "heart": [
+      "Rose",
+      "Geranium",
+      "Green Apple"
+    ],
+    "base": [
+      "Jasmine",
+      "Wisteria"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107310423.jpg",
+  "source": "https://sugarbombgroup.com/products/hush-lush-bloom-edp-by-sugarbomb"
+}

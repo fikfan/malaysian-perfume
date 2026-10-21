@@ -1,0 +1,30 @@
+{
+  "name": "Suanni",
+  "house": "auphorie",
+  "gender": null,
+  "concentration": "Extrait",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Pomelo Blossom",
+      "Jasmine",
+      "Tuberose",
+      "Smoke",
+      "Leather",
+      "Lapsang Souchong",
+      "Iris Absolute",
+      "Orris Butter",
+      "White Sandalwood",
+      "Chinese Cliff Cedar",
+      "Patchouli",
+      "Amber",
+      "Castoreum",
+      "Ambergris",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0009/5440/0804/files/Suanni_bottle_02_700x800_ae9a6c73-aba8-4359-ab86-821963afac10.jpg?v=1741322272",
+  "source": "https://auphorie.com/products/suanni",
+  "discontinued": true
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Gula Melaka",
+  "house": "sugarbomb",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Gula Melaka"
+    ],
+    "heart": [
+      "Coffee"
+    ],
+    "base": [
+      "Labdanum Resinoid"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/111217517.jpeg",
+  "source": "https://sugarbombgroup.com/products/gula-melaka-extrait-de-parfum"
+}

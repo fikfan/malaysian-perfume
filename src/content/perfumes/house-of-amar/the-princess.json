@@ -1,0 +1,34 @@
+{
+  "name": "The Princess",
+  "house": "house-of-amar",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Orange",
+      "Mandarin Orange",
+      "Bergamot",
+      "Orange Blossom"
+    ],
+    "heart": [
+      "Turkish Rose",
+      "Jasmine",
+      "Mimosa",
+      "Ylang-Ylang"
+    ],
+    "base": [
+      "Patchouli",
+      "White Musk",
+      "Vanilla",
+      "Vetiver",
+      "Tonka Bean",
+      "Opoponax"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-6945787/h2ARtYGM69902ec18df5e_1771056833.jpeg",
+  "source": "https://hoaperfumes.com/product/hoa-the-princess-extrait-de-parfum-100ml"
+}

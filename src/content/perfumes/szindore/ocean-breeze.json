@@ -1,0 +1,28 @@
+{
+  "name": "Ocean Breeze",
+  "house": "szindore",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    32
+  ],
+  "inspiredBy": "Jo Malone Wood Sage & Sea Salt",
+  "notes": {
+    "top": [
+      "Sea Notes",
+      "Sea Salt",
+      "Sage"
+    ],
+    "heart": [
+      "Seaweed",
+      "Grapefruit"
+    ],
+    "base": [
+      "Oakmoss",
+      "Sandalwood",
+      "Ambrette"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2023/05/64-scaled.jpg",
+  "source": "https://perfumemalaya.com/product/ocean-breeze/"
+}

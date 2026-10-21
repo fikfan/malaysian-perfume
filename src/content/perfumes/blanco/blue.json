@@ -1,0 +1,38 @@
+{
+  "name": "Blue",
+  "house": "blanco",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Grapefruit",
+      "Lemon",
+      "Mint",
+      "Pink Pepper",
+      "Bergamot",
+      "Aldehydes",
+      "Coriander"
+    ],
+    "heart": [
+      "Ginger",
+      "Nutmeg",
+      "Jasmine",
+      "Melon"
+    ],
+    "base": [
+      "Incense",
+      "Amber",
+      "Cedar",
+      "Sandalwood",
+      "Patchouli",
+      "Amberwood",
+      "Labdanum"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/BLUE-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/blue/"
+}

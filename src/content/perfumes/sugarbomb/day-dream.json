@@ -1,0 +1,38 @@
+{
+  "name": "Day Dream",
+  "house": "sugarbomb",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Grapefruit",
+      "Fresh",
+      "Orange Blossom"
+    ],
+    "heart": [
+      "Green",
+      "Pineapple",
+      "Peach",
+      "Orris",
+      "Jasmine",
+      "Rose",
+      "Oriental",
+      "Watery"
+    ],
+    "base": [
+      "Ambery",
+      "Vanilla",
+      "Tonka",
+      "Musky",
+      "Patchouli",
+      "Cedar Wood"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305865.jpg",
+  "source": "https://sugarbombgroup.com/products/day-dream-edp-by-sugarbomb"
+}

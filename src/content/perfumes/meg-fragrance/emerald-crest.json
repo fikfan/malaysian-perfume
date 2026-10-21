@@ -1,0 +1,28 @@
+{
+  "name": "Emerald Crest",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Blackcurrant",
+      "Pineapple",
+      "Bergamot"
+    ],
+    "heart": [
+      "Green Tea",
+      "Violet",
+      "Iris"
+    ],
+    "base": [
+      "Musk",
+      "Sandalwood",
+      "Oakmoss",
+      "Ambroxan"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/109874277.jpeg",
+  "source": "https://megfragrance.com/products/meg-fragrance-wild-vetiver-extrait-de-parfum-for-unisex-1"
+}

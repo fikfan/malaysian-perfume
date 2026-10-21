@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+import SearchBox from '../components/SearchBox.astro';
+import Thumb from '../components/Thumb.astro';
+import { load, noteCounts, houseUrl, searchUrl, TYPE_LABEL } from '../lib/data';
+
+const { houses, perfumes, byHouse } = await load();
+const notes = await noteCounts();
+
+// Designer scents that more than one local perfume is inspired by
+const insp = new Map<string, number>();
+for (const p of perfumes) if (p.data.inspiredBy) insp.set(p.data.inspiredBy, (insp.get(p.data.inspiredBy) ?? 0) + 1);
+const inspired = [...insp].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 12);
+const coverOf = (id: string) => byHouse.get(id)?.find((p) => p.data.image && !p.data.discontinued)?.data.image ?? byHouse.get(id)?.[0]?.data.image;
+---
+<Base title="Malaysian Perfumes" showSearch={false}>
+  <section class="hero wrap">
+    <h1 class="x">Every local perfume in Malaysia, in one place.</h1>
+    <p class="lede">Look up any perfume made by a Malaysian house. See its notes, what it is inspired by, and where the brand sells it. Free, with no prices and no ads.</p>
+    <SearchBox big id="hero-q" />
+    <dl class="stats">
+      <div><dt>Houses</dt><dd>{houses.length}</dd></div>
+      <div><dt>Perfumes</dt><dd>{perfumes.length}</dd></div>
+      <div><dt>Notes</dt><dd>{notes.length}</dd></div>
+    </dl>
+  </section>
+
+  <section class="section wrap" aria-labelledby="h-houses">
+    <div class="section-head"><h2 id="h-houses">Houses</h2><a href="/houses/">All houses and who is coming next</a></div>
+    <ul class="houses">
+      {houses.map((h) => (
+        <li class="house">
+          <Thumb src={coverOf(h.id)} name={h.data.name} size={240} />
+          <div>
+            <h3><a href={houseUrl(h.id)}>{h.data.name}</a></h3>
+            <p class="muted">{TYPE_LABEL[h.data.type]}</p>
+            <p class="n">{byHouse.get(h.id)?.length} perfumes</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section wrap" aria-labelledby="h-notes">
+    <div class="section-head"><h2 id="h-notes">Find by note</h2><span class="muted">The number shows how many perfumes have that note.</span></div>
+    <ul class="chips">
+      {notes.slice(0, 36).map(([n, c]) => <li><a class="chip" href={searchUrl(n)}>{n} <small>{c}</small></a></li>)}
+    </ul>
+  </section>
+
+  {inspired.length > 0 && (
+    <section class="section wrap" aria-labelledby="h-insp">
+      <div class="section-head"><h2 id="h-insp">Local takes on designer scents</h2><span class="muted">Only where the brand itself names the inspiration.</span></div>
+      <ul class="chips">
+        {inspired.map(([n, c]) => <li><a class="chip" href={searchUrl(n)}>{n} <small>{c}</small></a></li>)}
+      </ul>
+    </section>
+  )}
+</Base>
+
+<style>
+  .hero { padding: 56px var(--gutter) 40px; }
+  .hero h1 { font-weight: 800; font-size: clamp(38px, 6.2vw, 84px); line-height: .95; letter-spacing: -.03em; max-width: 15ch; }
+  .lede { font-size: 19px; color: var(--muted); max-width: 56ch; margin: 18px 0 26px; }
+  .hero :global(.searchbox) { max-width: 680px; }
+  .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 160px)); margin: 32px 0 0; border-top: var(--line); }
+  .stats div { padding: 12px 16px 0 0; }
+  .stats dt { font-size: 14px; color: var(--muted); }
+  .stats dd { margin: 2px 0 0; font-weight: 800; font-size: 34px; font-variant-numeric: tabular-nums; font-stretch: 125%; font-variation-settings: "wdth" 125; }
+  .houses { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px 18px; }
+  .house { position: relative; }
+  .house h3 { font-size: 18px; font-weight: 750; margin-top: 10px; }
+  .house h3 a { text-decoration: none; }
+  .house h3 a::after { content: ""; position: absolute; inset: 0; }
+  .house:hover h3 a { text-decoration: underline; text-decoration-thickness: 2px; }
+  .house:hover :global(.thumb) { border-color: var(--ink); }
+  .house p { margin: 2px 0 0; font-size: 14.5px; }
+  .house .n { font-weight: 600; font-variant-numeric: tabular-nums; }
+  @media (max-width: 1000px) { .houses { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 640px) {
+    .hero { padding-top: 32px; padding-bottom: 28px; }
+    .lede { font-size: 17px; }
+    .houses { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; }
+    .stats dd { font-size: 28px; }
+  }
+</style>

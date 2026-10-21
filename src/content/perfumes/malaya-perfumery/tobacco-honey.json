@@ -1,0 +1,28 @@
+{
+  "name": "Tobacco Honey",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lavender",
+      "Bergamot",
+      "Lemon"
+    ],
+    "heart": [
+      "Honey",
+      "Cinnamon",
+      "Cashmeran",
+      "Jasmine Sambac"
+    ],
+    "base": [
+      "Tobacco Leaf",
+      "Tonka Bean",
+      "Vanilla"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/TH-50_c3a82aa9-3d1d-4229-a277-7ff7fbad44c1.png",
+  "source": "https://malayaperfumery.com/products/tobacco-honey"
+}

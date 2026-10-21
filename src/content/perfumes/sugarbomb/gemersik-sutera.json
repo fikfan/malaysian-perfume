@@ -1,0 +1,27 @@
+{
+  "name": "Gemersik Sutera",
+  "house": "sugarbomb",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Geranium",
+      "Aldehyde"
+    ],
+    "heart": [
+      "Cedarwood",
+      "Olibanum",
+      "Myrrh"
+    ],
+    "base": [
+      "Vanilla",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305606.jpg",
+  "source": "https://sugarbombgroup.com/products/gemersik-sutera-100ml"
+}

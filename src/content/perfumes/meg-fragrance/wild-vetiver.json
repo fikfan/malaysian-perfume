@@ -1,0 +1,27 @@
+{
+  "name": "Wild Vetiver",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Pink Pepper",
+      "Timur Pepper"
+    ],
+    "heart": [
+      "Rose",
+      "Blackcurrant",
+      "Geranium"
+    ],
+    "base": [
+      "Vetiver",
+      "Amberwood",
+      "Cedarwood"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/109654163.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-wild-vetiver-extrait-de-parfum-for-unisex"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Sentinel",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Hermès Terre d'Hermès",
+  "notes": {
+    "top": [
+      "Zesty Orange",
+      "Sparkling Grapefruit"
+    ],
+    "heart": [
+      "Earthy Spices",
+      "Mineral Notes"
+    ],
+    "base": [
+      "Dry Woods",
+      "Smoky Vetiver"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749206.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-sentinel"
+}

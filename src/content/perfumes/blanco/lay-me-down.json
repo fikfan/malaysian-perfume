@@ -1,0 +1,33 @@
+{
+  "name": "Lay Me Down",
+  "house": "blanco",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Apple",
+      "Lavender",
+      "Bergamot",
+      "Mandarin Orange"
+    ],
+    "heart": [
+      "Geranium",
+      "Violet",
+      "Jasmine"
+    ],
+    "base": [
+      "Vanilla",
+      "Cardamom",
+      "Sandalwood",
+      "Pepper",
+      "Patchouli",
+      "Guaiac Wood"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/LAY-ME-DOWN-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/lay-me-down/"
+}

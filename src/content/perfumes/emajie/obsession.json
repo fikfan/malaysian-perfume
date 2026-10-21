@@ -1,0 +1,27 @@
+{
+  "name": "Obsession",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30,
+    10
+  ],
+  "inspiredBy": "YSL Libre Intense",
+  "notes": {
+    "top": [
+      "Lavender Bloom",
+      "Citrus Spark"
+    ],
+    "heart": [
+      "Creamy Vanilla",
+      "Warm Amber Heart"
+    ],
+    "base": [
+      "Rich Woods",
+      "Musk Base"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/106443506.jpg?width=800",
+  "source": "https://www.emajie.com/products/copy-emajie-obsession"
+}

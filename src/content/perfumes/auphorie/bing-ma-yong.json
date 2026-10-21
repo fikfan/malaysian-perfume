@@ -1,0 +1,27 @@
+{
+  "name": "Bing Ma Yong",
+  "house": "auphorie",
+  "gender": null,
+  "concentration": "Extrait",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Mandarin Orange",
+      "Chinese Peony",
+      "Spices",
+      "Vetiver",
+      "Terracotta",
+      "Leather",
+      "Sandalwood",
+      "Orris Butter",
+      "Civet",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0009/5440/0804/products/BingMaYong_bottle_02_700x800_879c4308-03d7-44fd-92ca-d350f6cc08ca.jpg?v=1587369684",
+  "source": "https://auphorie.com/products/bing-ma-yong",
+  "discontinued": true
+}

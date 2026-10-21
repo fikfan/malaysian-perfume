@@ -1,0 +1,29 @@
+{
+  "name": "Dazzling Shine",
+  "house": "sugarbomb",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Grapefruit",
+      "Marine"
+    ],
+    "heart": [
+      "Jasmine",
+      "Bay Leaves"
+    ],
+    "base": [
+      "Ambery",
+      "Guaiac Wood",
+      "Patchouli",
+      "Oakmoss",
+      "Ambergris"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305260.jpg",
+  "source": "https://sugarbombgroup.com/products/dazzling-shine-edp-by-sugarbomb"
+}

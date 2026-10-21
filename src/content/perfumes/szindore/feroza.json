@@ -1,0 +1,29 @@
+{
+  "name": "Feroza",
+  "house": "szindore",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [],
+  "inspiredBy": "Parfums de Marly Layton Royal Essence",
+  "notes": {
+    "top": [
+      "Apple",
+      "Lavender",
+      "Mandarine",
+      "Bergamot"
+    ],
+    "heart": [
+      "Geranium",
+      "Violet",
+      "Patchouli"
+    ],
+    "base": [
+      "Guaiac",
+      "Vanilla",
+      "Cardamom",
+      "Sandalwood"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2021/02/38-scaled.jpg",
+  "source": "https://perfumemalaya.com/product/feroza-refined-series-perfume-copy/"
+}

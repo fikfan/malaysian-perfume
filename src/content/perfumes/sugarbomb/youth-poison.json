@@ -1,0 +1,30 @@
+{
+  "name": "Youth Poison",
+  "house": "sugarbomb",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Tangerine",
+      "Petitgrain",
+      "Wild Berry",
+      "Peach Nectar"
+    ],
+    "heart": [
+      "Tuberose",
+      "Jasmine",
+      "Orchid"
+    ],
+    "base": [
+      "Sandalwood",
+      "Vanilla",
+      "Caramel"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305570.jpg",
+  "source": "https://sugarbombgroup.com/products/youth-poison-edp-by-sugarbomb"
+}

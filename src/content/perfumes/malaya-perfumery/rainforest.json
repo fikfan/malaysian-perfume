@@ -1,0 +1,22 @@
+{
+  "name": "Rainforest",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Green Tea"
+    ],
+    "heart": [
+      "Sea Notes"
+    ],
+    "base": [
+      "Guaiac Wood",
+      "Amber"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/RAIN-50_3c3060b4-58cd-43e1-a2b9-1b21ac41baa0.png",
+  "source": "https://malayaperfumery.com/products/rainforest"
+}

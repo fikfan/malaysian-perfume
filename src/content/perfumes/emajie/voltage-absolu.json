@@ -1,0 +1,27 @@
+{
+  "name": "Voltage Absolu",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Jean Paul Gaultier Le Male Elixir Absolu",
+  "notes": {
+    "top": [
+      "Ginger",
+      "Cinnamon"
+    ],
+    "heart": [
+      "Lavender",
+      "Tonka Bean"
+    ],
+    "base": [
+      "Vanilla",
+      "Amber",
+      "Tobacco"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99753652.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-voltage-absolu"
+}

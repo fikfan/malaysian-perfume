@@ -1,0 +1,30 @@
+{
+  "name": "Her Sparkling Toast",
+  "house": "house-of-amar",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Champagne",
+      "Tangerine"
+    ],
+    "heart": [
+      "Nectarine",
+      "Passionfruit",
+      "Black Currant",
+      "Hibiscus"
+    ],
+    "base": [
+      "Sugar",
+      "Musk",
+      "Vanilla",
+      "Plum Tree"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7495962/VgnutuzB6a321fb039c11_1781669808.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-her-sparkling-toast-extrait-de-parfum-30ml"
+}

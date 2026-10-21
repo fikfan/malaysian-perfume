@@ -1,0 +1,30 @@
+{
+  "name": "Princess Jasmine",
+  "house": "malaya-perfumery",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    50,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Aqueous",
+      "Bergamot",
+      "Blackcurrant"
+    ],
+    "heart": [
+      "Lily of the Valley",
+      "Orange Blossom",
+      "Patchouli"
+    ],
+    "base": [
+      "Ambergris",
+      "Moss",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/PJ-50_69450cc4-0645-4dfe-8c26-8d90bc508492.png",
+  "source": "https://malayaperfumery.com/products/princess-jasmine"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Tanned Temptation",
+  "house": "sugarbomb",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Tea"
+    ],
+    "heart": [
+      "Raspberry",
+      "Floral",
+      "Lily of the Valley",
+      "Rosewood",
+      "Jasmine"
+    ],
+    "base": [
+      "Leather",
+      "Vanilla",
+      "Musk",
+      "Amber"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305443.jpg",
+  "source": "https://sugarbombgroup.com/products/tanned-temptation-edp-by-sugarbomb"
+}

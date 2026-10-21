@@ -1,0 +1,37 @@
+{
+  "name": "Nebula",
+  "house": "szindore",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [],
+  "inspiredBy": "Roja Parfums Elysium",
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Lemon",
+      "Grapefruit",
+      "Juniper Berries",
+      "Pink Pepper",
+      "Iso E Super"
+    ],
+    "heart": [
+      "Thyme",
+      "Artemisia",
+      "Galbanum",
+      "Vetiver",
+      "Rose",
+      "Jasmine",
+      "Apple",
+      "Cedar",
+      "Cypriol"
+    ],
+    "base": [
+      "Benzoin",
+      "Ambergris",
+      "Labdanum",
+      "Leather"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2021/03/58-scaled.jpg",
+  "source": "https://perfumemalaya.com/product/nebula-refined-series-perfume/"
+}

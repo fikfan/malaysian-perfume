@@ -1,0 +1,27 @@
+{
+  "name": "Blanche",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Aldehydes",
+      "Rose",
+      "Pink Pepper"
+    ],
+    "heart": [
+      "Peony",
+      "Violet",
+      "Neroli"
+    ],
+    "base": [
+      "Musk",
+      "Sandalwood",
+      "Blonde Woods"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913280.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-blanche-perfume-for-unisex"
+}

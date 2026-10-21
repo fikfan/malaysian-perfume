@@ -1,0 +1,21 @@
+{
+  "name": "Fig",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Jasmine"
+    ],
+    "heart": [
+      "Fig"
+    ],
+    "base": [
+      "Sandalwood"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/WEBSITE_PHOTO.png",
+  "source": "https://malayaperfumery.com/products/fig"
+}

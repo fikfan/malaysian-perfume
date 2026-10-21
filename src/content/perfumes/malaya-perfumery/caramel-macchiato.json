@@ -1,0 +1,23 @@
+{
+  "name": "Caramel Macchiato",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Rose"
+    ],
+    "heart": [
+      "Coffee",
+      "Whipped Cream"
+    ],
+    "base": [
+      "Vanilla",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/CM-50_aaf5cde0-a239-4509-afd1-1333919505dc.png",
+  "source": "https://malayaperfumery.com/products/caramel-macchiato"
+}

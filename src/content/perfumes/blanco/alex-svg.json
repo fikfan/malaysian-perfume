@@ -1,0 +1,30 @@
+{
+  "name": "Alex Svg",
+  "house": "blanco",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Nutmeg",
+      "Cinnamon",
+      "Cardamom",
+      "Grapefruit"
+    ],
+    "heart": [
+      "Lavender"
+    ],
+    "base": [
+      "Licorice",
+      "Sandalwood",
+      "Amber",
+      "Patchouli",
+      "Haitian Vetiver"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/ALEX-SVG-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/alex-svg/"
+}

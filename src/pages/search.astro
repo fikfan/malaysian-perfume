@@ -1,0 +1,116 @@
+---
+import Base from '../layouts/Base.astro';
+import SearchBox from '../components/SearchBox.astro';
+import { load, noteCounts, searchUrl } from '../lib/data';
+
+const { houses } = await load();
+const tips = (await noteCounts()).slice(0, 8).map(([n]) => n);
+---
+<Base title="Search" description="Search Malaysian perfumes by name, house, note, or the designer scent they are inspired by." showSearch={false}>
+  <div class="wrap">
+    <header class="page-head">
+      <h1 class="x">Search</h1>
+      <p>Search by perfume name, house, a note such as oud or vanilla, or the designer scent it is inspired by. Every word you type must match.</p>
+    </header>
+    <SearchBox id="search-q" />
+
+    <div class="filters" id="filters">
+      <label class="sr" for="f-house">House</label>
+      <select class="select" id="f-house">
+        <option value="">All houses</option>
+        {houses.map((h) => <option value={h.id}>{h.data.name}</option>)}
+      </select>
+      <label class="sr" for="f-gender">For</label>
+      <select class="select" id="f-gender">
+        <option value="">Anyone</option><option value="masculine">Masculine</option><option value="feminine">Feminine</option><option value="unisex">Unisex</option>
+      </select>
+      <label class="check"><input type="checkbox" id="f-disc" /> Include discontinued</label>
+      <span class="count" id="count" aria-live="polite"></span>
+    </div>
+
+    <ul class="plist" id="results"></ul>
+    <div id="empty" class="empty" hidden>
+      <h2>No perfume matches that.</h2>
+      <p class="muted">Check the spelling, remove a filter, or try a common note:</p>
+      <ul class="chips">{tips.map((t) => <li><a class="chip" href={searchUrl(t)}>{t}</a></li>)}</ul>
+    </div>
+    <p id="more-wrap" hidden><button type="button" class="btn" id="more">Show more</button></p>
+    <noscript><p>Search needs JavaScript. You can still browse <a href="/houses/">all houses</a>.</p></noscript>
+  </div>
+</Base>
+
+<script>
+  type Row = { n: string; h: string; hn: string; u: string; i: string | null; g: string | null; d: number; img: string | null; l: [string, string[]][] };
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const input = $<HTMLInputElement>('search-q'), house = $<HTMLSelectElement>('f-house'), gender = $<HTMLSelectElement>('f-gender'), disc = $<HTMLInputElement>('f-disc');
+  const out = $('results'), count = $('count'), empty = $('empty'), moreWrap = $('more-wrap');
+  const G: Record<string, string> = { masculine: 'Masculine', feminine: 'Feminine', unisex: 'Unisex' };
+  const PAGE = 40;
+  let rows: Row[] = [], hay: string[] = [], limit = PAGE;
+
+  const fold = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/['’]/g, '').toLowerCase();
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+  // Mark matches on folded text, then map back to the original characters
+  function hl(s: string, terms: string[]) {
+    if (!terms.length) return esc(s);
+    let f = ''; const map: number[] = []; const chars = [...s];
+    chars.forEach((ch, i) => { for (const c of fold(ch)) { f += c; map.push(i); } });
+    const on = new Array(chars.length).fill(false);
+    for (const t of terms) { let k = f.indexOf(t); while (k >= 0) { if (k === 0 || !/[a-z0-9]/.test(f[k - 1])) for (let j = k; j < k + t.length; j++) on[map[j]] = true; k = f.indexOf(t, k + 1); } }
+    let o = '', open = false;
+    chars.forEach((ch, i) => { if (on[i] !== open) { o += on[i] ? '<mark>' : '</mark>'; open = on[i]; } o += esc(ch); });
+    return o + (open ? '</mark>' : '');
+  }
+  const thumb = (r: Row) => `<div class="thumb-wrap"><div class="thumb${r.img ? '' : ' noimg'}" data-initial="${esc(r.n[0])}">${r.img ? `<img src="${esc(r.img)}" alt="" width="176" height="176" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('noimg');this.remove()">` : ''}</div></div>`;
+  const row = (r: Row, t: string[]) => `<li class="prow">${thumb(r)}<div>
+      <h3><a href="${r.u}">${hl(r.n, t)}</a></h3>
+      <p class="meta">by <b>${hl(r.hn, t)}</b></p>
+      ${r.i ? `<p class="meta">Inspired by <b>${hl(r.i, t)}</b></p>` : ''}
+      <div class="tags">${r.g ? `<span class="tag">${G[r.g]}</span>` : ''}${r.d ? '<span class="tag warn">Discontinued</span>' : ''}</div></div>
+      <p class="notes-line">${r.l.length ? r.l.map(([lab, ns]) => `<span>${lab}:</span> ${hl(ns.join(', '), t)}.`).join(' ') : '<span>The brand does not list notes for this one.</span>'}</p></li>`;
+
+  function run(push = true) {
+    const q = input.value.trim();
+    const terms = fold(q).replace(/[^a-z0-9]+/g, ' ').split(' ').filter((t) => t.length > 1);
+    const list = rows.filter((r, i) => (!house.value || r.h === house.value) && (!gender.value || r.g === gender.value) && (disc.checked || !r.d || house.value) && terms.every((t) => hay[i].includes(' ' + t)));
+    // Name matches first, then inspiration, then notes
+    if (terms.length) {
+      const has = (s: string, t: string) => (' ' + fold(s).replace(/[^a-z0-9]+/g, ' ')).includes(' ' + t);
+      const score = (r: Row) => (terms.some((t) => has(r.n, t)) ? 0 : r.i && terms.some((t) => has(r.i!, t)) ? 1 : 2);
+      list.sort((a, b) => score(a) - score(b) || a.n.localeCompare(b.n));
+    }
+    out.innerHTML = list.slice(0, limit).map((r) => row(r, terms)).join('');
+    count.textContent = `${list.length} perfume${list.length === 1 ? '' : 's'}`;
+    empty.hidden = list.length > 0;
+    moreWrap.hidden = list.length <= limit;
+    if (push) {
+      const u = new URL(location.href);
+      for (const [k, v] of [['q', q], ['house', house.value], ['for', gender.value]] as const) v ? u.searchParams.set(k, v) : u.searchParams.delete(k);
+      history.replaceState(null, '', u);
+    }
+  }
+
+  const p = new URLSearchParams(location.search);
+  input.value = p.get('q') ?? '';
+  house.value = p.get('house') ?? '';
+  gender.value = p.get('for') ?? '';
+  input.form!.addEventListener('submit', (e) => { e.preventDefault(); limit = PAGE; run(); });
+  let t: number;
+  input.addEventListener('input', () => { clearTimeout(t); t = window.setTimeout(() => { limit = PAGE; run(); }, 120); });
+  [house, gender, disc].forEach((el) => el.addEventListener('change', () => { limit = PAGE; run(); }));
+  $('more').addEventListener('click', () => { limit += PAGE; run(false); });
+
+  count.textContent = 'Loading…';
+  fetch('/search-index.json').then((r) => r.json()).then((data: Row[]) => {
+    rows = data;
+    hay = rows.map((r) => ' ' + fold([r.n, r.hn, r.i ?? '', ...r.l.flatMap(([, ns]) => ns)].join(' ')).replace(/[^a-z0-9]+/g, ' '));
+    run(false);
+    if (!input.value) input.focus();
+  }).catch(() => { count.textContent = 'Search could not load. Refresh the page to try again.'; });
+</script>
+
+<style>
+  :global(.searchbox) { max-width: 680px; margin-bottom: 18px; }
+  #results :global(.thumb-wrap) { width: 88px; }
+  @media (max-width: 860px) { #results :global(.thumb-wrap) { width: 72px; grid-row: span 2; } }
+</style>

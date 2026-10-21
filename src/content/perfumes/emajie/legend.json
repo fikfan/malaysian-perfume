@@ -1,0 +1,26 @@
+{
+  "name": "Legend",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Montblanc Legend",
+  "notes": {
+    "top": [
+      "Fresh Bergamot",
+      "Violet Leaves"
+    ],
+    "heart": [
+      "Warm Woods",
+      "Aromatic Notes"
+    ],
+    "base": [
+      "Leather Accord",
+      "Oakmoss"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/104424497.jpeg?width=800",
+  "source": "https://www.emajie.com/products/emajie-legend"
+}

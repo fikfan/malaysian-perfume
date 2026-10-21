@@ -1,0 +1,25 @@
+{
+  "name": "Gossip Girl",
+  "house": "emajie",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Victoria's Secret Scandalous",
+  "notes": {
+    "top": [
+      "Raspberry",
+      "Praline"
+    ],
+    "heart": [
+      "Peony Petals"
+    ],
+    "base": [
+      "Creamy Musk",
+      "Vanilla Woods"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749345.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-gossip-girl"
+}

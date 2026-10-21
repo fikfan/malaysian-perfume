@@ -1,0 +1,39 @@
+{
+  "name": "Susurrus",
+  "house": "auphorie",
+  "gender": null,
+  "concentration": "Extrait",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Chinese Quince",
+      "Green Plum",
+      "Rhubarb",
+      "Chinese Chrysanthemum Trilogy",
+      "Fuzhou Jasmine",
+      "Blue Lotus",
+      "Lotus Leaf",
+      "Chinese Plum Blossom",
+      "Gardenia",
+      "Rose",
+      "Chinese Tea",
+      "Rain",
+      "Chinese Garden Soil",
+      "Green Moss",
+      "Chinese Parasol Tree",
+      "Sandalwood",
+      "Qi-Nan",
+      "Incense",
+      "Patchouli",
+      "Resins",
+      "Orris Butter",
+      "Iris Absolute",
+      "Ambergris",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0009/5440/0804/files/Susurrus_bottle_02_700x800_3df9f93f-d564-4de4-9b93-aae223151b04.jpg?v=1762498675",
+  "source": "https://auphorie.com/products/susurrus",
+  "discontinued": true
+}

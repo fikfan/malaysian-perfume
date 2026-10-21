@@ -1,0 +1,30 @@
+{
+  "name": "Sozo",
+  "house": "blanco",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": "Louis Vuitton Imagination",
+  "notes": {
+    "top": [
+      "Citron",
+      "Calabrian Bergamot",
+      "Sicilian Orange"
+    ],
+    "heart": [
+      "Tunisian Neroli",
+      "Nigerian Ginger",
+      "Ceylon Cinnamon"
+    ],
+    "base": [
+      "Chinese Black Tea",
+      "Ambroxan",
+      "Guaiac Wood",
+      "Olibanum"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/SOZO-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/sozo/"
+}

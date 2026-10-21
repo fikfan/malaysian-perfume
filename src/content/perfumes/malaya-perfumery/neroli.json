@@ -1,0 +1,23 @@
+{
+  "name": "Neroli",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Jasmine"
+    ],
+    "heart": [
+      "Neroli"
+    ],
+    "base": [
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/NR-50_b5ede1cd-5a16-471e-b062-a427cd44455e.png",
+  "source": "https://malayaperfumery.com/products/neroli"
+}

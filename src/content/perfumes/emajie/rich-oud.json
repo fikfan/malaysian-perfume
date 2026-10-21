@@ -1,0 +1,26 @@
+{
+  "name": "Rich Oud",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Amouage Interlude Man",
+  "notes": {
+    "top": [
+      "Spiced Bergamot",
+      "Oregano"
+    ],
+    "heart": [
+      "Smoky Incense",
+      "Warm Amber"
+    ],
+    "base": [
+      "Dark Woods",
+      "Leather"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749291.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-rich-oud"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Epic Man",
+  "house": "meg-fragrance",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pink Pepper",
+      "Saffron",
+      "Cardamom",
+      "Nutmeg"
+    ],
+    "heart": [
+      "Myrrh",
+      "Geranium"
+    ],
+    "base": [
+      "Oud",
+      "Incense",
+      "Sandalwood",
+      "Leather",
+      "Musk",
+      "Patchouli"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913259.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-epic-man-perfume-for-men"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Limerence",
+  "house": "blanco",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": "Louis Vuitton L'Immensité",
+  "notes": {
+    "top": [
+      "Grapefruit",
+      "Ginger",
+      "Bergamot"
+    ],
+    "heart": [
+      "Water Notes",
+      "Sage",
+      "Rosemary",
+      "Geranium"
+    ],
+    "base": [
+      "Ambroxan",
+      "Amber",
+      "Labdanum"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/LIMERENCE-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/limerence/"
+}

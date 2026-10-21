@@ -1,0 +1,26 @@
+{
+  "name": "Aura Elixir",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "YSL Y Elixir",
+  "notes": {
+    "top": [
+      "Zesty Bergamot",
+      "Crisp Green Apple"
+    ],
+    "heart": [
+      "Spiced Cinnamon",
+      "Aromatic Lavender"
+    ],
+    "base": [
+      "Creamy Vanilla",
+      "Deep Woody Musk"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/100379512.jpeg?width=800",
+  "source": "https://www.emajie.com/products/emajie-aura-elixir"
+}

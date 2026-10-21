@@ -1,0 +1,23 @@
+{
+  "name": "Mineral Water",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Sea Notes"
+    ],
+    "heart": [
+      "Bamboo"
+    ],
+    "base": [
+      "Sandalwood"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/MW-50_21f97d76-a052-4da0-8503-692e7b312c18.png",
+  "source": "https://malayaperfumery.com/products/orange-grove-copy"
+}

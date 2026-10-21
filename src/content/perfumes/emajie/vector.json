@@ -1,0 +1,26 @@
+{
+  "name": "Vector",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Louis Vuitton Imagination",
+  "notes": {
+    "top": [
+      "Bright Citrus Zest",
+      "Fresh Ginger"
+    ],
+    "heart": [
+      "Aromatic Tea",
+      "Soft Neroli"
+    ],
+    "base": [
+      "Clean Woods",
+      "Subtle Amber"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99753722.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-vector"
+}

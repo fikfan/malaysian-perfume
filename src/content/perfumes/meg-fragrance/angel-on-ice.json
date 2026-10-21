@@ -1,0 +1,27 @@
+{
+  "name": "Angel on Ice",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Icy Citrus Accord"
+    ],
+    "heart": [
+      "Cognac",
+      "Cinnamon",
+      "Tonka Bean",
+      "Amber"
+    ],
+    "base": [
+      "Vanilla",
+      "Sandalwood",
+      "Praline"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913229.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-angel-on-ice-perfume-for-unisex"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Hydra",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30,
+    10
+  ],
+  "inspiredBy": "Versace Eros",
+  "notes": {
+    "top": [
+      "Cool Mint",
+      "Lemon"
+    ],
+    "heart": [
+      "Aromatic Green Apple",
+      "Geranium"
+    ],
+    "base": [
+      "Warm Vanilla",
+      "Tonka Bean"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749025.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-hydra"
+}

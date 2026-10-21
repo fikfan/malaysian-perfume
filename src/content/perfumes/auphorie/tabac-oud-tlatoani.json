@@ -1,0 +1,25 @@
+{
+  "name": "Tabac Oud Tlatoani",
+  "house": "auphorie",
+  "gender": null,
+  "concentration": "Extrait",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Finely-Aged Tobacco",
+      "Real Oud Oils",
+      "Tuberose",
+      "Pineapple",
+      "Hoja Santa",
+      "Reeds",
+      "Cacao",
+      "Vanilla Bean",
+      "Musk",
+      "Ambergris"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0009/5440/0804/products/TabacOudTlatoani_bottle_02_700x800_bea348aa-3191-41a4-8ea0-d9ff40930657.jpg?v=1633676288",
+  "source": "https://auphorie.com/products/tabac-oud-tlatoani",
+  "discontinued": true
+}

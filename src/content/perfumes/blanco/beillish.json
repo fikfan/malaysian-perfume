@@ -1,0 +1,31 @@
+{
+  "name": "Beillish",
+  "house": "blanco",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Sugar",
+      "Red Berries",
+      "Mandarin Orange"
+    ],
+    "heart": [
+      "Vanilla",
+      "Cacao",
+      "Spicy Notes",
+      "Rose"
+    ],
+    "base": [
+      "Tonka Bean",
+      "Amber",
+      "Musk",
+      "Woody Notes"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/BEILLISH-1.webp",
+  "source": "https://blancofragrance.com.my/product/beillish/"
+}

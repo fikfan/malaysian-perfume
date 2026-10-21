@@ -1,0 +1,30 @@
+{
+  "name": "Tropical Hybrid",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Pineapple",
+      "Coconut Powder"
+    ],
+    "heart": [
+      "Vanilla",
+      "Jasmine",
+      "Patchouli"
+    ],
+    "base": [
+      "Vanilla Absolute",
+      "Woody Notes",
+      "White Musk",
+      "Oakmoss",
+      "Palo Santo",
+      "Coconut"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913177.jpg",
+  "source": "https://megfragrance.com/products/mf-tropical-hybrid-perfume-for-unisex"
+}

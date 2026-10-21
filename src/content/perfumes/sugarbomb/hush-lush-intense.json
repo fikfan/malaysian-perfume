@@ -1,0 +1,28 @@
+{
+  "name": "Hush Lush Intense",
+  "house": "sugarbomb",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Apple",
+      "Peach",
+      "Citrus"
+    ],
+    "heart": [
+      "Rose",
+      "Peony"
+    ],
+    "base": [
+      "Musk",
+      "Powdery",
+      "Amber"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305597.jpg",
+  "source": "https://sugarbombgroup.com/products/hush-lush-intense-edp-by-sugarbomb"
+}

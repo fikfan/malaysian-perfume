@@ -1,0 +1,32 @@
+{
+  "name": "The Flame",
+  "house": "meg-fragrance",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lemon",
+      "Tangerine",
+      "Bitter Orange",
+      "Madagascar Black Pepper",
+      "Wild Rosemary"
+    ],
+    "heart": [
+      "Pepperwood",
+      "Geranium",
+      "Rose"
+    ],
+    "base": [
+      "Vanilla",
+      "Tonka Bean",
+      "Texas Cedar",
+      "Patchouli",
+      "Haitian Vetiver",
+      "Oakmoss"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/106080528.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-the-flame-perfume-for-men"
+}

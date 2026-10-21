@@ -1,0 +1,21 @@
+{
+  "name": "My Men",
+  "house": "dexandra",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot"
+    ],
+    "heart": [
+      "Cardamom"
+    ],
+    "base": [
+      "Sandalwood"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/3052/1898/files/mymenweb.jpg?v=1749518289",
+  "source": "https://dexandra.com/products/my-men"
+}

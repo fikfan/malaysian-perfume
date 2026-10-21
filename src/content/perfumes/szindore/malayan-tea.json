@@ -1,0 +1,32 @@
+{
+  "name": "Malayan Tea",
+  "house": "szindore",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    32
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Clary Sage",
+      "Green Tea",
+      "Mint",
+      "Bergamot"
+    ],
+    "heart": [
+      "White Tea",
+      "Jasmine",
+      "Oakmoss",
+      "Caraway"
+    ],
+    "base": [
+      "Patchouli",
+      "Cedar",
+      "Amber",
+      "Musk"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2022/05/malayan-tea-scaled.jpg",
+  "source": "https://perfumemalaya.com/product/malayan-tea-handcrafted-series-perfume/"
+}

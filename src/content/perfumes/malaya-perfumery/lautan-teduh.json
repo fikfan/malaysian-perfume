@@ -1,0 +1,21 @@
+{
+  "name": "Lautan Teduh",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Sea Notes"
+    ],
+    "heart": [
+      "Citron"
+    ],
+    "base": [
+      "Sandalwood"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/LAUT-50_04a3d782-a5e8-42e4-baaf-48c3e4a50543.png",
+  "source": "https://malayaperfumery.com/products/lautan-teduh"
+}

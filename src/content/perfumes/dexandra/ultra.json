@@ -1,0 +1,21 @@
+{
+  "name": "Ultra",
+  "house": "dexandra",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pineapple"
+    ],
+    "heart": [
+      "Cinnamon"
+    ],
+    "base": [
+      "Vanilla"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/3052/1898/files/ultraweb.jpg?v=1749526350",
+  "source": "https://dexandra.com/products/ultra"
+}

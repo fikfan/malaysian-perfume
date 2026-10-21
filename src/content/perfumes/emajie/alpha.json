@@ -1,0 +1,27 @@
+{
+  "name": "Alpha",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Creed Aventus",
+  "notes": {
+    "top": [
+      "Juicy Pineapple",
+      "Bright Bergamot"
+    ],
+    "heart": [
+      "Smoky Woods",
+      "Masculine Florals"
+    ],
+    "base": [
+      "Oakmoss",
+      "Musk",
+      "Dry Amber"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99753744.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-alpha"
+}

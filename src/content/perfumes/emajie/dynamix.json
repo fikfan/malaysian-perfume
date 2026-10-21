@@ -1,0 +1,26 @@
+{
+  "name": "Dynamix",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Azzaro The Most Wanted",
+  "notes": {
+    "top": [
+      "Spiced Apple",
+      "Fresh Citrus"
+    ],
+    "heart": [
+      "Warm Cardamom",
+      "Bold Amberwood"
+    ],
+    "base": [
+      "Smooth Vanilla",
+      "Smoky Woods"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749144.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-dynamix"
+}

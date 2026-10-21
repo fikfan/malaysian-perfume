@@ -1,0 +1,27 @@
+{
+  "name": "Castley",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Fresh Ginger",
+      "Black Pepper"
+    ],
+    "heart": [
+      "Petitgrain Citronnier",
+      "Timut Pepper",
+      "Neroli Accord"
+    ],
+    "base": [
+      "Akigalawood",
+      "Labdanum",
+      "Benzoin Accord"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913200.jpg",
+  "source": "https://megfragrance.com/products/mf-castley-perfume-for-unisex"
+}

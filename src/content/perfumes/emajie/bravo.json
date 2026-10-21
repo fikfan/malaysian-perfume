@@ -1,0 +1,26 @@
+{
+  "name": "Bravo",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "YSL La Nuit de L'Homme",
+  "notes": {
+    "top": [
+      "Bright Bergamot",
+      "Fresh Cardamom"
+    ],
+    "heart": [
+      "Lavender",
+      "Cedarwood"
+    ],
+    "base": [
+      "Smoky Vetiver",
+      "Creamy Woods"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99753691.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-bravo"
+}

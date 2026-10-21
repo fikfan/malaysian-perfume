@@ -1,0 +1,26 @@
+{
+  "name": "Echo",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Hugo Boss Bottled Intense",
+  "notes": {
+    "top": [
+      "Fresh Apple",
+      "Bright Citrus"
+    ],
+    "heart": [
+      "Warm Cinnamon",
+      "Spiced Woods"
+    ],
+    "base": [
+      "Smooth Vanilla",
+      "Smoky Sandalwood"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/104835245.jpeg?width=800",
+  "source": "https://www.emajie.com/products/emajie-echo"
+}

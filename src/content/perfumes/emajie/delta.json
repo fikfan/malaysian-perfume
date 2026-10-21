@@ -1,0 +1,28 @@
+{
+  "name": "Delta",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Chanel Bleu de Chanel",
+  "notes": {
+    "top": [
+      "Grapefruit",
+      "Citrus"
+    ],
+    "heart": [
+      "Ginger",
+      "Veltiver",
+      "Incense"
+    ],
+    "base": [
+      "Cedarwood",
+      "Musk",
+      "Sandalwood"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99753640.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-delta"
+}

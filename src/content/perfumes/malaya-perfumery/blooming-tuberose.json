@@ -1,0 +1,30 @@
+{
+  "name": "Blooming Tuberose",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    50,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Clove",
+      "Lily of the Valley"
+    ],
+    "heart": [
+      "Jasmine",
+      "Magnolia",
+      "Plum"
+    ],
+    "base": [
+      "Cashmere",
+      "Cedarwood",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/BT-50_9759e248-806e-4b55-abf9-51aca33d6f4c.png",
+  "source": "https://malayaperfumery.com/products/blooming-tuberose"
+}

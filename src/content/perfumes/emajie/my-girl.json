@@ -1,0 +1,26 @@
+{
+  "name": "My Girl",
+  "house": "emajie",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Victoria's Secret Bombshell",
+  "notes": {
+    "top": [
+      "Juicy Passionfruit",
+      "Sparkling Citrus"
+    ],
+    "heart": [
+      "Peony",
+      "Fresh Floral Bouquet"
+    ],
+    "base": [
+      "Creamy Musk",
+      "Smooth Woods"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/107146320.jpeg?width=800",
+  "source": "https://www.emajie.com/products/emajie-my-girl"
+}

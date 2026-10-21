@@ -1,0 +1,27 @@
+{
+  "name": "Caribbean Island",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lime",
+      "Bergamot",
+      "Tropical Fruits"
+    ],
+    "heart": [
+      "Coconut Milk",
+      "White Flowers",
+      "Jasmine"
+    ],
+    "base": [
+      "Tonka Bean",
+      "White Musk",
+      "Patchouli"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913240.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-caribbean-island-perfume-for-unisex"
+}

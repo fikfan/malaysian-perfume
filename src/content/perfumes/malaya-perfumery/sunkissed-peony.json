@@ -1,0 +1,27 @@
+{
+  "name": "Sunkissed Peony",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Cardamom",
+      "Grapefruit"
+    ],
+    "heart": [
+      "Aqueous Accord",
+      "Magnolia",
+      "Rose"
+    ],
+    "base": [
+      "Ambergris",
+      "Cedarwood",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/SP-50_18ca4f64-1e4b-4369-99d5-722a6af02d87.png",
+  "source": "https://malayaperfumery.com/products/sunkissed-peony"
+}

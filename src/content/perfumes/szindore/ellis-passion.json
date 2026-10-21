@@ -1,0 +1,28 @@
+{
+  "name": "Ellis Passion",
+  "house": "szindore",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    15,
+    32
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pineapple",
+      "Passion Fruit"
+    ],
+    "heart": [
+      "Bergamot",
+      "Cedar"
+    ],
+    "base": [
+      "Peony",
+      "Amber",
+      "Citrus"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2023/11/photo_6098190069933389189_y.jpg",
+  "source": "https://perfumemalaya.com/product/ellis-passion-handcrafted-by-szindore/"
+}

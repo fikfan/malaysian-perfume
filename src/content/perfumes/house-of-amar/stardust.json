@@ -1,0 +1,25 @@
+{
+  "name": "Stardust",
+  "house": "house-of-amar",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Cherry Blossom",
+      "Aldehydes"
+    ],
+    "heart": [
+      "Heliotrope",
+      "Iris"
+    ],
+    "base": [
+      "Musk"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-6945755/qmrBg5eF699029708f701_1771055472.jpeg",
+  "source": "https://hoaperfumes.com/product/hoa-stardust-extrait-de-parfum-100ml"
+}

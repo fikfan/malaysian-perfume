@@ -1,0 +1,32 @@
+{
+  "name": "Erogy",
+  "house": "blanco",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lemon",
+      "Lime",
+      "Grapefruit",
+      "Blood Orange",
+      "Sicilian Bergamot",
+      "Mandarin Orange"
+    ],
+    "heart": [
+      "Pink Pepper",
+      "White Amber",
+      "Black Currant"
+    ],
+    "base": [
+      "Oakmoss",
+      "Musk",
+      "Patchouli"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/EROGY-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/erogy/"
+}

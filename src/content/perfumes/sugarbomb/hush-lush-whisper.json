@@ -1,0 +1,32 @@
+{
+  "name": "Hush Lush Whisper",
+  "house": "sugarbomb",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Mandarin",
+      "Apple",
+      "Raspberry"
+    ],
+    "heart": [
+      "Purple Iris",
+      "Peony",
+      "Rose",
+      "Patchouli"
+    ],
+    "base": [
+      "Tonka Bean",
+      "Vanilla",
+      "Praline",
+      "Cashmere Wood",
+      "Vetiver"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305416.jpg",
+  "source": "https://sugarbombgroup.com/products/hush-lush-whisper-edp-by-sugarbomb"
+}

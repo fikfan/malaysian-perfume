@@ -1,0 +1,26 @@
+{
+  "name": "Supersonic Elixir",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Dior Sauvage Elixir",
+  "notes": {
+    "top": [
+      "Fiery Cinnamon",
+      "Spiced Nutmeg"
+    ],
+    "heart": [
+      "Lavender",
+      "Smooth Licorice"
+    ],
+    "base": [
+      "Rich Amber",
+      "Dark Woods"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749193.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-supersonic-elixir"
+}

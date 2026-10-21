@@ -1,0 +1,33 @@
+{
+  "name": "After Dark",
+  "house": "house-of-amar",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    18,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pear",
+      "Lavender",
+      "Mint",
+      "Bergamot",
+      "Lemon"
+    ],
+    "heart": [
+      "Cinnamon",
+      "Clary Sage",
+      "Caraway"
+    ],
+    "base": [
+      "Black Vanilla Husk",
+      "Amber",
+      "Patchouli",
+      "Cedar"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-6945574/sUPewcyo6a1db8f0ad87e_1780332784.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-after-dark-100ml-extrait-de-parfum"
+}

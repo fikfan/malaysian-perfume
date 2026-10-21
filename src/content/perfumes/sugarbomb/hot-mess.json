@@ -1,0 +1,38 @@
+{
+  "name": "Hot Mess",
+  "house": "sugarbomb",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Grapefruit",
+      "Lemon",
+      "Orange",
+      "Pepper",
+      "Geranium",
+      "Lavender",
+      "Olibanum",
+      "Elemi",
+      "Apple",
+      "Melon"
+    ],
+    "heart": [
+      "Rose",
+      "Gardenia",
+      "Magnolia",
+      "Jasmine"
+    ],
+    "base": [
+      "Patchouli",
+      "Vetiver",
+      "Sandalwood"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305664.jpg",
+  "source": "https://sugarbombgroup.com/products/hot-mess-edp-by-sugarbomb"
+}

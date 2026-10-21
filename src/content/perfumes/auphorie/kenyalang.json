@@ -1,0 +1,37 @@
+{
+  "name": "Kenyalang",
+  "house": "auphorie",
+  "gender": null,
+  "concentration": "Extrait",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Sarawak Black Pepper",
+      "Sarawak Pineapple",
+      "Sarawak Tampoi Fruit",
+      "Calamansi Lime",
+      "Sarawak Tuak",
+      "Tepui",
+      "Sago Palm Leaf",
+      "Red Champaca",
+      "Red Frangipani",
+      "White Frangipani",
+      "Aged Bornean Benzoin",
+      "Tropical Rainforest",
+      "Oakmoss",
+      "Petrichor",
+      "Sarawak \"Gula Apong\" Palm Sugar",
+      "Bornean Ironwood",
+      "Bamboo Logs",
+      "Tobacco",
+      "Cocoa",
+      "Vanilla Bean",
+      "Ambergris",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0009/5440/0804/files/Kenyalang_bottle_02_700x800_41706c8c-cfa7-47d8-b592-2a2223b7f4a1.jpg?v=1735807038",
+  "source": "https://auphorie.com/products/kenyalang",
+  "discontinued": true
+}

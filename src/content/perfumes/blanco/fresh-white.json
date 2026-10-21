@@ -1,0 +1,29 @@
+{
+  "name": "Fresh White",
+  "house": "blanco",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Grapefruit",
+      "Rosemary",
+      "Cardamom"
+    ],
+    "heart": [
+      "Ylang-Ylang",
+      "Tuberose"
+    ],
+    "base": [
+      "Suede",
+      "Virginia Cedar",
+      "Leather",
+      "Vetiver"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/FRESH-WHITE-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/fresh-white/"
+}

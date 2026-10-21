@@ -1,0 +1,26 @@
+{
+  "name": "Maverick",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Armani Acqua di Giò Essenza",
+  "notes": {
+    "top": [
+      "Zesty Citrus",
+      "Crisp Marine Accord"
+    ],
+    "heart": [
+      "Spicy Lavender",
+      "Aromatic Sage"
+    ],
+    "base": [
+      "Warm Musk",
+      "Smooth Woods"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99753687.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-maverick"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Beardman Essence",
+  "house": "szindore",
+  "gender": null,
+  "concentration": null,
+  "sizesMl": [
+    32
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Coriander",
+      "Black Pepper",
+      "Vanilla"
+    ],
+    "heart": [
+      "Pineapple",
+      "Bergamot",
+      "Rose"
+    ],
+    "base": [
+      "Amber",
+      "Cedar Wood",
+      "Lily",
+      "Patchouli"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2022/03/photo_6260554831747988560_y.jpg",
+  "source": "https://perfumemalaya.com/product/beardman-essence-handcrafted-perfume-series/"
+}

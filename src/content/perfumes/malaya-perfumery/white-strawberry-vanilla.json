@@ -1,0 +1,24 @@
+{
+  "name": "White Strawberry Vanilla",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "White Strawberry"
+    ],
+    "heart": [
+      "Rose"
+    ],
+    "base": [
+      "Musk",
+      "Bourbon Vanilla"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/WSV-50_df7fe664-2939-490a-a377-b3f4377632ce.png",
+  "source": "https://malayaperfumery.com/products/white-strawberry-vanilla"
+}

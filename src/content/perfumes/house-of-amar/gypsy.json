@@ -1,0 +1,29 @@
+{
+  "name": "Gypsy",
+  "house": "house-of-amar",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Agarwood (Oud)",
+      "Incense"
+    ],
+    "heart": [
+      "Rose",
+      "Raspberry",
+      "Saffron",
+      "Amberwood"
+    ],
+    "base": [
+      "Birch",
+      "Benzoin",
+      "Geranium"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-6945908/oqRheqV06a1db3e24c844_1780331490.png",
+  "source": "https://hoaperfumes.com/product/hoa-gypsy-extrait-de-parfum-100ml"
+}

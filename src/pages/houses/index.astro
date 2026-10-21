@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+import { load, houseUrl, TYPE_LABEL } from '../../lib/data';
+import upcoming from '../../data/upcoming.json';
+
+const { houses, byHouse } = await load();
+const host = (u?: string | null) => (u ? new URL(u).hostname.replace(/^www\./, '') : null);
+---
+<Base title="Houses" description="Every Malaysian perfume house in the library, with how many perfumes each one has.">
+  <div class="wrap">
+    <header class="page-head">
+      <h1 class="x">Houses</h1>
+      <p>{houses.length} Malaysian perfume houses are listed so far. More are being added.</p>
+    </header>
+
+    <div class="table-wrap">
+      <table>
+        <caption class="sr">Perfume houses in the library</caption>
+        <thead><tr><th scope="col">House</th><th scope="col">Makes</th><th scope="col">Based in</th><th scope="col" class="num">Perfumes</th><th scope="col">Website</th></tr></thead>
+        <tbody>
+          {houses.map((h) => (
+            <tr>
+              <th scope="row"><a href={houseUrl(h.id)}>{h.data.name}</a></th>
+              <td>{TYPE_LABEL[h.data.type]}</td>
+              <td>{h.data.location ?? <span class="muted">Not stated</span>}</td>
+              <td class="num">{byHouse.get(h.id)?.length}</td>
+              <td>{h.data.website ? <a href={h.data.website} rel="noopener" target="_blank">{host(h.data.website)}</a> : <span class="muted">None</span>}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <section class="section" aria-labelledby="h-next">
+      <div class="section-head"><h2 id="h-next">Not listed yet</h2><span class="muted">These houses are next. Brands can ask to be added sooner.</span></div>
+      <ul class="next">{upcoming.sort().map((n) => <li>{n}</li>)}</ul>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .table-wrap { overflow-x: auto; border-top: var(--line); }
+  table { width: 100%; border-collapse: collapse; font-size: 16px; }
+  th, td { text-align: left; padding: 14px 16px 14px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  thead th { font-size: 13.5px; color: var(--muted); font-weight: 600; padding-block: 10px; }
+  tbody th { font-weight: 750; font-size: 18px; }
+  tbody th a { text-decoration: none; }
+  tbody tr:hover th a { text-decoration: underline; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .next { list-style: none; margin: 0; padding: 0; columns: 3 220px; column-gap: 24px; }
+  .next li { padding: 8px 0; border-bottom: 1px solid var(--rule); break-inside: avoid; }
+  @media (max-width: 640px) {
+    thead { display: none; }
+    tr { display: grid; grid-template-columns: 1fr auto; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+    th, td { border: 0; padding: 2px 0; }
+    tbody th { grid-column: 1; }
+    td.num { grid-column: 2; grid-row: 1; align-self: center; font-weight: 700; }
+    td.num::after { content: " perfumes"; font-weight: 400; color: var(--muted); }
+    td { grid-column: 1 / -1; font-size: 14.5px; color: var(--muted); }
+  }
+</style>

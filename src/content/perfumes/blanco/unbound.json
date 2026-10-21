@@ -1,0 +1,30 @@
+{
+  "name": "Unbound",
+  "house": "blanco",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": "Xerjoff XJ 1861 Naxos",
+  "notes": {
+    "top": [
+      "Lavender",
+      "Bergamot",
+      "Lemon"
+    ],
+    "heart": [
+      "Honey",
+      "Cinnamon",
+      "Cashmeran",
+      "Jasmine Sambac"
+    ],
+    "base": [
+      "Tobacco Leaf",
+      "Vanilla",
+      "Tonka Bean"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/UNBOUD-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/unbound/"
+}

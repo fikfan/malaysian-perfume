@@ -1,0 +1,29 @@
+{
+  "name": "Moon of Badar",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Orange",
+      "Raspberry",
+      "Pineapple",
+      "Green Apple"
+    ],
+    "heart": [
+      "Amber",
+      "Tobacco",
+      "Turkish Rose"
+    ],
+    "base": [
+      "Vanilla",
+      "Musk",
+      "Frankincense",
+      "Malaysian Oud"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913263.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-moon-of-badar-perfume-for-unisex"
+}

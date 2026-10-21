@@ -1,0 +1,28 @@
+{
+  "name": "Infinite",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Grapefruit",
+      "Bergamot",
+      "Fresh Ginger"
+    ],
+    "heart": [
+      "Sage",
+      "Rosemary",
+      "Geranium",
+      "Water Notes"
+    ],
+    "base": [
+      "Ambroxan",
+      "Amber",
+      "Labdanum"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/108249205.jpeg",
+  "source": "https://megfragrance.com/products/mf-infinite-perfume-for-unisex"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Luxe Mirage",
+  "house": "house-of-amar",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    18,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Mandarin Orange",
+      "Cinnamon Bark"
+    ],
+    "heart": [
+      "Orange Flower",
+      "Pear"
+    ],
+    "base": [
+      "Vanilla Bean",
+      "Amber"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7651337/Mt1LkbgN6a9e65023f153_1788765442.jpeg",
+  "source": "https://hoaperfumes.com/product/hoa-luxe-mirage-extrait-de-parfum"
+}

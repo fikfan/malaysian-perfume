@@ -1,0 +1,26 @@
+{
+  "name": "Lumina",
+  "house": "emajie",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Amouage Guidance 46",
+  "notes": {
+    "top": [
+      "Juicy Pear",
+      "Creamy Hazelnut"
+    ],
+    "heart": [
+      "Velvety Rose",
+      "Warm Saffron"
+    ],
+    "base": [
+      "Sandalwood",
+      "Silky Vanilla"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99753804.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-lumina"
+}

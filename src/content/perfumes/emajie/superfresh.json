@@ -1,0 +1,26 @@
+{
+  "name": "Superfresh",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Parfums de Marly Perseus",
+  "notes": {
+    "top": [
+      "Sparkling Grapefruit",
+      "Bergamot"
+    ],
+    "heart": [
+      "Fresh Green Accords",
+      "Aromatic Notes"
+    ],
+    "base": [
+      "Smooth Musk",
+      "Amber Woods"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/105443147.jpeg?width=800",
+  "source": "https://www.emajie.com/products/emajie-superfresh"
+}

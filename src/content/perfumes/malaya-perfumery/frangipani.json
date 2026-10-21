@@ -1,0 +1,30 @@
+{
+  "name": "Frangipani",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    50,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Cotton",
+      "Freesia",
+      "Lychee"
+    ],
+    "heart": [
+      "Lily of the Valley",
+      "Magnolia",
+      "Marshmallow"
+    ],
+    "base": [
+      "Ambergris",
+      "Cedarwood",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/FRG-50_fa2003c9-76f2-4ed4-9d15-a85a848334d2.png",
+  "source": "https://malayaperfumery.com/products/frangipani"
+}

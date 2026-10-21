@@ -1,0 +1,27 @@
+{
+  "name": "Figure 09 Ice",
+  "house": "house-of-amar",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Mint",
+      "Ice"
+    ],
+    "heart": [
+      "Mint",
+      "Mint Tea",
+      "Blue Sage"
+    ],
+    "base": [
+      "Patchouli",
+      "Ambroxan"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7902744/GO7ISN066a9f776075ae9_1788835680.jpg",
+  "source": "https://hoaperfumes.com/product/figure-09-ice-extrait-de-parfum-100ml"
+}

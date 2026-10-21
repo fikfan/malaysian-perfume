@@ -1,0 +1,26 @@
+{
+  "name": "Fury Parfum",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Armani Stronger With You Parfum",
+  "notes": {
+    "top": [
+      "Warm Spices",
+      "Fresh Accords"
+    ],
+    "heart": [
+      "Sweet Vanilla",
+      "Rich Toffee"
+    ],
+    "base": [
+      "Amber Woods",
+      "Soft Smoky Notes"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/101344551.jpeg?width=800",
+  "source": "https://www.emajie.com/products/emajie-fury-parfum"
+}

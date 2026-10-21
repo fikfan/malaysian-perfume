@@ -1,0 +1,25 @@
+{
+  "name": "Luxe Cherie Junkie",
+  "house": "house-of-amar",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Rose"
+    ],
+    "heart": [
+      "Cherry",
+      "Ginger Milk"
+    ],
+    "base": [
+      "Vanilla"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7722105/BM0Z2BAq6a5da4f7bf1f0_1784521975.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-luxe-cherie-junkie-extrait-de-parfum"
+}

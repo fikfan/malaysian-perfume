@@ -1,0 +1,30 @@
+{
+  "name": "Sinbad",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Honey",
+      "Apricot",
+      "Mango",
+      "Pomegranate"
+    ],
+    "heart": [
+      "Black Tea",
+      "Cappuccino",
+      "Davana"
+    ],
+    "base": [
+      "Tonka Bean",
+      "Vanilla",
+      "Cedarwood",
+      "Vetiver",
+      "Labdanum"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913276.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-sinbad-perfume-for-unisex"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Sexy Romantic",
+  "house": "blanco",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Mandarin Orange",
+      "Bergamot",
+      "Green Notes"
+    ],
+    "heart": [
+      "Pepper",
+      "Flowers",
+      "Cardamom"
+    ],
+    "base": [
+      "Vanilla",
+      "Guaiac Wood",
+      "Sandalwood",
+      "Musk",
+      "Amber"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/SEXY-ROMANTIC-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/sexy-romantic/"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Oscar",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Blue",
+  "notes": {
+    "top": [
+      "Fresh Citrus",
+      "Aquatic Notes"
+    ],
+    "heart": [
+      "Cool Aromatic Herbs",
+      "Spicy Accents"
+    ],
+    "base": [
+      "Smooth Woods",
+      "Soft Musk"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/107507216.jpeg?width=800",
+  "source": "https://www.emajie.com/products/emajie-oscar"
+}

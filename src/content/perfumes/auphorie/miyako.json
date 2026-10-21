@@ -1,0 +1,27 @@
+{
+  "name": "Miyako",
+  "house": "auphorie",
+  "gender": null,
+  "concentration": "Extrait",
+  "sizesMl": [
+    15
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Apricot",
+      "Yuzu",
+      "Peach",
+      "Japanese Golden Osmanthus (Kin Mokusei)",
+      "Jasmine Green Tea",
+      "Leather",
+      "Precious Woods (Hinoki, Cedar, Sandalwood)",
+      "Patchouli",
+      "Katsura Leaf",
+      "Silken Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0009/5440/0804/products/Miyako15ML_bottle_02_700x800_960ea16f-50ea-44b0-99ac-6b9cc4d08968.jpg?v=1645596334",
+  "source": "https://auphorie.com/products/miyako",
+  "discontinued": false
+}

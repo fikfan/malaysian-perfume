@@ -1,0 +1,99 @@
+---
+import Base from '../../layouts/Base.astro';
+import PerfumeRow from '../../components/PerfumeRow.astro';
+import { load, TYPE_LABEL } from '../../lib/data';
+
+export async function getStaticPaths() {
+  const { houses } = await load();
+  return houses.map((h) => ({ params: { house: h.id } }));
+}
+const { houses, byHouse } = await load();
+const h = houses.find((x) => x.id === Astro.params.house)!;
+const list = byHouse.get(h.id) ?? [];
+const d = h.data;
+const genders = (['masculine', 'feminine', 'unisex'] as const).filter((g) => list.some((p) => p.data.gender === g));
+const discontinued = list.filter((p) => p.data.discontinued).length;
+const links = [
+  d.website && { href: d.website, label: 'Website' },
+  d.instagram && { href: `https://www.instagram.com/${d.instagram}/`, label: 'Instagram' },
+  d.tiktok && { href: `https://www.tiktok.com/@${d.tiktok}`, label: 'TikTok' },
+  d.shopee && { href: d.shopee, label: 'Shopee' },
+].filter(Boolean) as { href: string; label: string }[];
+const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg>';
+---
+<Base title={d.name} description={`${d.name}: ${list.length} perfumes with notes, from a Malaysian perfume house.`}>
+  <div class="wrap">
+    <header class="page-head">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/houses/">Houses</a><span aria-hidden="true">/</span>{d.name}</nav>
+      <h1 class="x">{d.name}</h1>
+      <p>{d.about}</p>
+    </header>
+
+    <div class="top">
+      <dl class="facts">
+        <dt>Makes</dt><dd>{TYPE_LABEL[d.type]}</dd>
+        <dt>Founded</dt><dd>{d.founded ?? <span class="muted">Not stated</span>}</dd>
+        <dt>Based in</dt><dd>{d.location ?? <span class="muted">Not stated</span>}</dd>
+        <dt>Listed here</dt><dd>{list.length} perfumes{discontinued > 0 && <span class="muted"> ({discontinued} discontinued)</span>}</dd>
+      </dl>
+      {links.length > 0 && (
+        <div>
+          <h2 class="sr">Where to find {d.name}</h2>
+          <div class="btn-row">{links.map((l) => <a class="btn" href={l.href} rel="noopener" target="_blank">{l.label}<Fragment set:html={ext} /><span class="sr"> (opens in a new tab)</span></a>)}</div>
+        </div>
+      )}
+    </div>
+
+    <section class="section" aria-labelledby="h-perfumes">
+      <div class="section-head"><h2 id="h-perfumes">Perfumes</h2></div>
+      {(genders.length > 1 || discontinued > 0) && (
+        <div class="filters" id="filters">
+          {genders.length > 1 && (
+            <div class="seg" role="group" aria-label="Filter by who it is for">
+              <button type="button" aria-pressed="true" data-g="">All</button>
+              {genders.map((g) => <button type="button" aria-pressed="false" data-g={g}>{g[0].toUpperCase() + g.slice(1)}</button>)}
+            </div>
+          )}
+          {discontinued > 0 && <label class="check"><input type="checkbox" id="show-disc" checked /> Show discontinued</label>}
+          <span class="count" id="count" aria-live="polite">{list.length} perfumes</span>
+        </div>
+      )}
+      <ul class="plist" id="plist">{list.map((p) => <PerfumeRow p={p} />)}</ul>
+    </section>
+
+    {d.sources.length > 0 && (
+      <p class="sources muted">Facts on this page come from: {d.sources.map((s, i) => <>{i > 0 && ', '}<a href={s} rel="noopener">{new URL(s).hostname.replace(/^www\./, '') + new URL(s).pathname.replace(/\/$/, '')}</a></>)}</p>
+    )}
+  </div>
+</Base>
+
+<script>
+  const f = document.getElementById('filters');
+  if (f) {
+    let g = '';
+    const disc = document.getElementById('show-disc') as HTMLInputElement | null;
+    const rows = [...document.querySelectorAll<HTMLElement>('#plist .prow')];
+    const apply = () => {
+      let n = 0;
+      for (const r of rows) {
+        const show = (!g || r.dataset.gender === g) && (!disc || disc.checked || !r.dataset.discontinued);
+        r.hidden = !show; if (show) n++;
+      }
+      document.getElementById('count')!.textContent = `${n} perfume${n === 1 ? '' : 's'}`;
+    };
+    f.querySelectorAll<HTMLButtonElement>('[data-g]').forEach((b) => b.addEventListener('click', () => {
+      g = b.dataset.g ?? '';
+      f.querySelectorAll('[data-g]').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      apply();
+    }));
+    disc?.addEventListener('change', apply);
+  }
+</script>
+
+<style>
+  .top { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 48px; align-items: start; }
+  .top .facts { max-width: 560px; }
+  .sources { font-size: 14px; margin-top: 24px; overflow-wrap: anywhere; }
+  .sources a { color: var(--muted); }
+  @media (max-width: 760px) { .top { grid-template-columns: 1fr; } }
+</style>

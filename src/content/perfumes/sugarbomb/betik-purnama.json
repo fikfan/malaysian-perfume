@@ -1,0 +1,37 @@
+{
+  "name": "Betik Purnama",
+  "house": "sugarbomb",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Mango",
+      "Mandarin",
+      "Lime",
+      "Grapefruit",
+      "Ozone",
+      "Papaya"
+    ],
+    "heart": [
+      "Prune",
+      "Rose",
+      "Jasmine",
+      "Apple",
+      "Freesia",
+      "Violet"
+    ],
+    "base": [
+      "Musk",
+      "Cedarwood",
+      "Amber",
+      "Sandalwood",
+      "Caramel"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305678.jpg",
+  "source": "https://sugarbombgroup.com/products/betik-purnama-100ml"
+}

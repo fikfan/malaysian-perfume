@@ -1,0 +1,31 @@
+{
+  "name": "Luxe Dominion",
+  "house": "house-of-amar",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    18,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Cinnamon",
+      "Grapefruit",
+      "Clove"
+    ],
+    "heart": [
+      "Patchouli",
+      "Cedarwood",
+      "Rose",
+      "Orris"
+    ],
+    "base": [
+      "Vanilla",
+      "Suede",
+      "Ciste Labdanum"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7723308/nemYP6Ib6a9e63480b274_1788765000.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-luxe-dominion-extrait-de-parfum"
+}

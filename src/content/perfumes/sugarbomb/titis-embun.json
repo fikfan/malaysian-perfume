@@ -1,0 +1,26 @@
+{
+  "name": "Titis Embun",
+  "house": "sugarbomb",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Neroli",
+      "Bergamot"
+    ],
+    "heart": [
+      "Jasmine Sambac",
+      "Orange Flower"
+    ],
+    "base": [
+      "Musk",
+      "Ambroxan"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107306969.jpg",
+  "source": "https://sugarbombgroup.com/products/titis-embun-100ml"
+}

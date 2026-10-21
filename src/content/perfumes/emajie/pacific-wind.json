@@ -1,0 +1,26 @@
+{
+  "name": "Pacific Wind",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Louis Vuitton Pacific Chill",
+  "notes": {
+    "top": [
+      "Zesty Citrus",
+      "Crisp Fruits"
+    ],
+    "heart": [
+      "Aromatic Herbs",
+      "Cooling Green Notes"
+    ],
+    "base": [
+      "Soft Woods",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749201.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-pacific-wind"
+}

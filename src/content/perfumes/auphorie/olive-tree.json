@@ -1,0 +1,29 @@
+{
+  "name": "Olive Tree",
+  "house": "auphorie",
+  "gender": null,
+  "concentration": "Extrait",
+  "sizesMl": [
+    15
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Basil",
+      "Olive Leaves",
+      "Taiwanese Black Tea",
+      "Olive Blossom",
+      "Jasmine",
+      "Iris",
+      "Tree Moss",
+      "Amyris",
+      "Olive Fruit",
+      "Ambrette Seed",
+      "Ambergris",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0009/5440/0804/files/OliveTree_bottle_02_700x800_f868d6da-a9dd-41bf-a0d4-71dec54a71ec.jpg?v=1789543804",
+  "source": "https://auphorie.com/products/olive-tree",
+  "discontinued": false
+}

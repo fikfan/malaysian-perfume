@@ -1,0 +1,31 @@
+{
+  "name": "Sexy Sweet",
+  "house": "sugarbomb",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Apple",
+      "Blackberry",
+      "Melon",
+      "Strawberry"
+    ],
+    "heart": [
+      "Apple",
+      "Blackberry",
+      "Melon"
+    ],
+    "base": [
+      "Apricot",
+      "Musk",
+      "Melon",
+      "Peach"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107446747.jpeg",
+  "source": "https://sugarbombgroup.com/products/sexy-sweet-edp-100ml"
+}

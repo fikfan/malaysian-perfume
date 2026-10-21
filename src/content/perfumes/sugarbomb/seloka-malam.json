@@ -1,0 +1,32 @@
+{
+  "name": "Seloka Malam",
+  "house": "sugarbomb",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Grapefruit",
+      "Mandarin",
+      "Cypress",
+      "Sage"
+    ],
+    "heart": [
+      "Geranium",
+      "Cedarwood",
+      "Pepper",
+      "Orris"
+    ],
+    "base": [
+      "Leather",
+      "Musk",
+      "Patchouli",
+      "Amber"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107306070.jpg",
+  "source": "https://sugarbombgroup.com/products/seloka-malam-100ml"
+}

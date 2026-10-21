@@ -1,0 +1,26 @@
+{
+  "name": "Honey & The Beast",
+  "house": "szindore",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [],
+  "inspiredBy": "Xerjoff Naxos",
+  "notes": {
+    "top": [
+      "Honey",
+      "Bergamot",
+      "Lavender"
+    ],
+    "heart": [
+      "Cinnamon",
+      "Lemon",
+      "Cashmeran"
+    ],
+    "base": [
+      "Vanilla",
+      "Tobacco"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2021/08/photo_6208400245008742334_w.jpg",
+  "source": "https://perfumemalaya.com/product/honey-the-beast/"
+}

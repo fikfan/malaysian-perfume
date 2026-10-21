@@ -1,0 +1,34 @@
+{
+  "name": "Nasi Lemak, Lemang & Rendang Maman",
+  "house": "auphorie",
+  "gender": null,
+  "concentration": "Extrait",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Fresh Pandan Leaf",
+      "Fresh Banana Leaf",
+      "Fresh Cucumber",
+      "Maman Leaf",
+      "Turmeric",
+      "Fire-Roasted Bamboo Log",
+      "Glutinous Rice",
+      "Jasmine Rice",
+      "Fresh Coconut Milk",
+      "Young Coconut Water",
+      "Peanut",
+      "Anchovy",
+      "Chili Pepper",
+      "Tuberose",
+      "Iris",
+      "Orris Butter",
+      "Sandalwood",
+      "Ambergris",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0009/5440/0804/files/NasiLemak_bottle_02_700x800_7d573ba8-e99e-4294-8760-0c2153c4612e.jpg?v=1757051324",
+  "source": "https://auphorie.com/products/nasi-lemak-lemang-rendang-maman",
+  "discontinued": true
+}

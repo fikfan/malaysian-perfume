@@ -1,0 +1,31 @@
+{
+  "name": "Life",
+  "house": "legendary",
+  "gender": "unisex",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    15,
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Lychee",
+      "Nutmeg"
+    ],
+    "heart": [
+      "Rose",
+      "Peony",
+      "Vanilla",
+      "Musk"
+    ],
+    "base": [
+      "Vetiver",
+      "Cedar",
+      "Incense"
+    ]
+  },
+  "image": "https://www.legendary.com.my/assets/client/p-life-life.webp",
+  "source": "https://www.legendary.com.my/product/life"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Wish II",
+  "house": "legendary",
+  "gender": "unisex",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    15
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Orange Blossom",
+      "Osmanthus",
+      "Bergamot"
+    ],
+    "heart": [
+      "Musk",
+      "Amber"
+    ],
+    "base": [
+      "Vetiver",
+      "Vanilla",
+      "Patchouli"
+    ]
+  },
+  "image": "https://www.legendary.com.my/assets/client/p-wish-ii-life.webp",
+  "source": "https://www.legendary.com.my/product/wish-ii"
+}

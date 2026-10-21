@@ -1,0 +1,23 @@
+{
+  "name": "Rouge Trafalgar",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Cherry",
+      "Pink Pepper"
+    ],
+    "heart": [
+      "Bulgarian Rose",
+      "Turkish Rose"
+    ],
+    "base": [
+      "Red Fruits"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/109874818.jpeg",
+  "source": "https://megfragrance.com/products/meg-fragrance-rouge-trafalgar-extrait-de-parfum-for-unisex"
+}

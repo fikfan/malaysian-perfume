@@ -1,0 +1,26 @@
+{
+  "name": "Supersport",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Chanel Allure Homme Sport Eau Extrême",
+  "notes": {
+    "top": [
+      "Mandarin",
+      "Mint Breeze"
+    ],
+    "heart": [
+      "Spicy Pepper",
+      "Aromatic Woods"
+    ],
+    "base": [
+      "Creamy Tonka",
+      "Smooth Musk"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/107397176.jpeg?width=800",
+  "source": "https://www.emajie.com/products/emajie-supersport"
+}

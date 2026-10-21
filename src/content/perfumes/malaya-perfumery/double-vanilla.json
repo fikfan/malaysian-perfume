@@ -1,0 +1,26 @@
+{
+  "name": "Double Vanilla",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Popcorn",
+      "Jasmine",
+      "Gardenia"
+    ],
+    "heart": [
+      "Caramel",
+      "Vanilla Planifolia"
+    ],
+    "base": [
+      "Bourbon Vanilla"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/DV-50_78572b84-2220-4427-a658-ba4e585015b9.png",
+  "source": "https://malayaperfumery.com/products/double-vanilla"
+}

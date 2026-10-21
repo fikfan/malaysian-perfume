@@ -1,0 +1,31 @@
+{
+  "name": "Koa-A-Hi",
+  "house": "auphorie",
+  "gender": null,
+  "concentration": "Extrait",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Yilan’s Tongue-Shaped Pastry",
+      "Peanut Brittle",
+      "Muscatel Black Tea",
+      "Chin-Hsuan Milk Oolong",
+      "Ka-Tang Tree",
+      "Island Breeze",
+      "Damp Earth",
+      "Humid Air",
+      "Sun-Scorched Land",
+      "Paddy Rice Blossom",
+      "Paddy Stalks",
+      "Banyan Tree",
+      "Heated Skin",
+      "Heated Light Bulbs",
+      "Theatrical Makeup",
+      "Taiwanese Temple Grounds"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0009/5440/0804/files/KoaAHi_bottle_02_700x800_df95c859-9bab-45f2-9970-ac25abb6006a.jpg?v=1778221758",
+  "source": "https://auphorie.com/products/koa-a-hi",
+  "discontinued": true
+}

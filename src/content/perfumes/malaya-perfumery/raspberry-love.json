@@ -1,0 +1,25 @@
+{
+  "name": "Raspberry Love",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Cranberry",
+      "Raspberry",
+      "Orange"
+    ],
+    "heart": [
+      "Rose",
+      "Tea"
+    ],
+    "base": [
+      "White Musk",
+      "Sandalwood"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/RASP-50_7336d510-8825-4378-a413-6208b7b5a143.png",
+  "source": "https://malayaperfumery.com/products/raspberry-love"
+}

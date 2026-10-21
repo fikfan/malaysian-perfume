@@ -1,0 +1,29 @@
+{
+  "name": "Crush on Me",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lime",
+      "Ginger"
+    ],
+    "heart": [
+      "Iris",
+      "Magnolia",
+      "Saffron",
+      "Rose",
+      "Caramel"
+    ],
+    "base": [
+      "Patchouli",
+      "Woody Notes",
+      "Musk",
+      "Amber"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913236.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-crush-on-me-perfume-for-unisex"
+}

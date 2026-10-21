@@ -1,0 +1,26 @@
+{
+  "name": "Mojave Whisper",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Ambrette",
+      "Sapodilla"
+    ],
+    "heart": [
+      "Magnolia",
+      "Violet",
+      "Sandalwood"
+    ],
+    "base": [
+      "Cedarwood",
+      "Musk",
+      "Ambergris"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/106169076.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-mojave-whisper-perfume-for-unisex"
+}

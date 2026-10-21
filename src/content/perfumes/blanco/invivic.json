@@ -1,0 +1,29 @@
+{
+  "name": "Invivic",
+  "house": "blanco",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Sea Notes",
+      "Grapefruit",
+      "Mandarin Orange"
+    ],
+    "heart": [
+      "Bay Leaf",
+      "Jasmine"
+    ],
+    "base": [
+      "Ambergris",
+      "Guaiac Wood",
+      "Oakmoss",
+      "Patchouli"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/INVIVC-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/invivic/"
+}

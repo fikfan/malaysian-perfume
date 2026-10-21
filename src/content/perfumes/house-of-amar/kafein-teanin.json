@@ -1,0 +1,31 @@
+{
+  "name": "Kafein Teanin",
+  "house": "house-of-amar",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    18,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Green Tea",
+      "Bergamot",
+      "Mandarin Orange"
+    ],
+    "heart": [
+      "Jasmine",
+      "Mate",
+      "Matcha Tea",
+      "Orange Blossom"
+    ],
+    "base": [
+      "White Chocolate",
+      "Moss",
+      "Cedar"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-6945963/GQkn7zuu6a1dc34ef30ac_1780335438.png",
+  "source": "https://hoaperfumes.com/product/hoa-kafein-teanin-extrait-de-parfum-100ml"
+}

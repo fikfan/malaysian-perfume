@@ -1,0 +1,21 @@
+{
+  "name": "Stella",
+  "house": "dexandra",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pear"
+    ],
+    "heart": [
+      "Cyclamen"
+    ],
+    "base": [
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/3052/1898/files/HER_1_43bdc159-cb92-496d-86ef-ede6641cd974.png?v=1690268802",
+  "source": "https://dexandra.com/products/stella"
+}

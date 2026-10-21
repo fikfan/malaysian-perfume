@@ -1,0 +1,31 @@
+{
+  "name": "Man",
+  "house": "legendary",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Grapefruit",
+      "Lemon"
+    ],
+    "heart": [
+      "Apple",
+      "Raspberry",
+      "Orange Flower",
+      "Muguet",
+      "Jasmine"
+    ],
+    "base": [
+      "Cedarwood",
+      "Musk",
+      "Sandalwood",
+      "Vanilla"
+    ]
+  },
+  "image": "https://www.legendary.com.my/assets/client/p-man-life.webp",
+  "source": "https://www.legendary.com.my/product/man"
+}

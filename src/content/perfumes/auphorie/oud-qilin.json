@@ -1,0 +1,33 @@
+{
+  "name": "Oud Qilin",
+  "house": "auphorie",
+  "gender": null,
+  "concentration": "Extrait",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Real Oud",
+      "Kinam Oils",
+      "Fresh Lychee",
+      "Rose Otto",
+      "Rose Absolute",
+      "Jasmine Absolute",
+      "Magnolia Flower",
+      "Violet Flower",
+      "Camellia Flower",
+      "Chinese Keemun Tea",
+      "Amber",
+      "Patchouli",
+      "Vetiver",
+      "Oakmoss",
+      "Civet",
+      "Ambergris",
+      "Musk",
+      "Honey"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0009/5440/0804/files/OudQilin_bottle_02_700x800_eb79bea0-afe8-4e37-ad64-d19d45e1c8b1.jpg?v=1772775620",
+  "source": "https://auphorie.com/products/oud-qilin",
+  "discontinued": true
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Amaya",
+  "house": "szindore",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    15,
+    32
+  ],
+  "inspiredBy": "Versace Eros",
+  "notes": {
+    "top": [
+      "Green Apple",
+      "Vanilla"
+    ],
+    "heart": [
+      "Mint",
+      "Ambroxan"
+    ],
+    "base": [
+      "Vetiver",
+      "Geranium",
+      "Oakmoss"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2021/02/4-scaled.jpg",
+  "source": "https://perfumemalaya.com/product/amaya-refined-series-perfume/"
+}

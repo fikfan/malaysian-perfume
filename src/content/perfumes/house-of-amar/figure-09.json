@@ -1,0 +1,32 @@
+{
+  "name": "Figure 09",
+  "house": "house-of-amar",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    18,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Apple",
+      "Aldehydes",
+      "Grapefruit",
+      "Ginger"
+    ],
+    "heart": [
+      "Lavender",
+      "Sage",
+      "Geranium"
+    ],
+    "base": [
+      "Tonka Bean",
+      "Cedar",
+      "Olibanum",
+      "Patchouli"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-6945967/5a8B0wb269903e29e1ce5_1771060777.jpeg",
+  "source": "https://hoaperfumes.com/product/hoa-figure-09-extrait-de-parfum-100-ml"
+}

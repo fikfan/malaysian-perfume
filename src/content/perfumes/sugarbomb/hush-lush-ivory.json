@@ -1,0 +1,27 @@
+{
+  "name": "Hush Lush Ivory",
+  "house": "sugarbomb",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pear",
+      "Melon"
+    ],
+    "heart": [
+      "Muguet",
+      "Gardenia",
+      "Watery"
+    ],
+    "base": [
+      "Musk",
+      "Vanilla"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107305406.jpg",
+  "source": "https://sugarbombgroup.com/products/hush-lush-ivory-edp-by-sugarbomb"
+}

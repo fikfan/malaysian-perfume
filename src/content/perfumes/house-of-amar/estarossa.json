@@ -1,0 +1,30 @@
+{
+  "name": "Estarossa",
+  "house": "house-of-amar",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    18,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Cognac"
+    ],
+    "heart": [
+      "Cinnamon",
+      "Tonka Bean",
+      "Oak",
+      "Hedione"
+    ],
+    "base": [
+      "Vanilla",
+      "Praline",
+      "Sandalwood",
+      "Candied Almond"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-6945693/3Ntrkgat6990232b0fdd2_1771053867.jpeg",
+  "source": "https://hoaperfumes.com/product/hoa-estarossa-extrait-de-parfum-100ml"
+}

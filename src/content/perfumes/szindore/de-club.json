@@ -1,0 +1,30 @@
+{
+  "name": "De Club",
+  "house": "szindore",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    15,
+    32
+  ],
+  "inspiredBy": "Jean Paul Gaultier Ultra Male",
+  "notes": {
+    "top": [
+      "Citrus",
+      "Pear",
+      "Bergamot",
+      "Patchouli"
+    ],
+    "heart": [
+      "Cinnamon",
+      "Clary Sage"
+    ],
+    "base": [
+      "Ambergris",
+      "Vanilla",
+      "Cedar"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2021/02/photo_6208400245008742341_w.jpg",
+  "source": "https://perfumemalaya.com/product/de-club-refined-series-perfume/"
+}

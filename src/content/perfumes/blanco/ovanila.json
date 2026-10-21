@@ -1,0 +1,31 @@
+{
+  "name": "Ovanila",
+  "house": "blanco",
+  "gender": "feminine",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pear",
+      "Pink Pepper",
+      "Orange Blossom"
+    ],
+    "heart": [
+      "Coffee",
+      "Jasmine",
+      "Bitter Almond",
+      "Licorice"
+    ],
+    "base": [
+      "Vanilla",
+      "Patchouli",
+      "Cashmere Wood",
+      "Cedar"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/OVANILA-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/ovanila/"
+}

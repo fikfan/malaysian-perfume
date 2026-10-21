@@ -1,0 +1,33 @@
+{
+  "name": "Pusaka Xlx",
+  "house": "house-of-amar",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Frankincense",
+      "Pimento",
+      "Pink Pepper",
+      "Bergamot"
+    ],
+    "heart": [
+      "Sandalwood",
+      "Vetiver",
+      "Papyrus",
+      "Rose"
+    ],
+    "base": [
+      "Akigalawood",
+      "Suede",
+      "Vanilla",
+      "Mystikal",
+      "Saffron"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-7899900/W8gs7tSA6a9e694266bfc_1788766530.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-pusaka-xlx-extrait-de-parfum-100ml"
+}

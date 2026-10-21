@@ -1,0 +1,23 @@
+{
+  "name": "Melon Mellow",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Watermelon",
+      "Yuzu"
+    ],
+    "heart": [
+      "Waterlily",
+      "Violet"
+    ],
+    "base": [
+      "Cupcake"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/MM-50_c2e4266a-afa8-4b46-a7a7-bca2ea0ac24f.png",
+  "source": "https://malayaperfumery.com/products/melon-mellow"
+}

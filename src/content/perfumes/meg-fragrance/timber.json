@@ -1,0 +1,31 @@
+{
+  "name": "Timber",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Cypress",
+      "Cardamom",
+      "Juniper",
+      "Pink Pepper",
+      "Cocoa"
+    ],
+    "heart": [
+      "Lavandin",
+      "Fir Balsam",
+      "Hojari Frankincense"
+    ],
+    "base": [
+      "Palo Santo",
+      "Sandalwood",
+      "Cedarwood",
+      "Patchouli",
+      "Bourbon Vanilla"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913232.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-timber-perfume-for-unisex"
+}

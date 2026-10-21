@@ -1,0 +1,26 @@
+{
+  "name": "Rossa",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pear",
+      "Lily of the Valley",
+      "Jasmine"
+    ],
+    "heart": [
+      "Rose",
+      "Orris",
+      "Vanilla"
+    ],
+    "base": [
+      "Cedarwood",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/RSSA-50_772b2d61-f2bf-480a-b46a-21ea8b32eadb.png",
+  "source": "https://malayaperfumery.com/products/rossa"
+}

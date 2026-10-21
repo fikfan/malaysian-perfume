@@ -1,0 +1,31 @@
+{
+  "name": "Rosie In Eden",
+  "house": "szindore",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    15,
+    32
+  ],
+  "inspiredBy": "Victoria's Secret Bombshell",
+  "notes": {
+    "top": [
+      "Passion Fruit",
+      "Grapefruit",
+      "Rose",
+      "Lily"
+    ],
+    "heart": [
+      "Peony",
+      "Red Berries",
+      "Citrus"
+    ],
+    "base": [
+      "Musk",
+      "Oakmoss",
+      "Cedar Wood"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2021/02/81-scaled.jpg",
+  "source": "https://perfumemalaya.com/product/rosie-in-eden-refined-series-perfume/"
+}

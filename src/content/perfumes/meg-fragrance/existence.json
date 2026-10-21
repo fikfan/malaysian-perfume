@@ -1,0 +1,27 @@
+{
+  "name": "Existence",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pink Pepper",
+      "Bergamot",
+      "Cardamom"
+    ],
+    "heart": [
+      "Frankincense",
+      "Myrrh",
+      "Juniper Berries"
+    ],
+    "base": [
+      "Cedarwood",
+      "Patchouli",
+      "Vanilla"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/108496810.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-existence-perfume-for-unisex"
+}

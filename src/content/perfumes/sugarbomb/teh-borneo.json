@@ -1,0 +1,30 @@
+{
+  "name": "Teh Borneo",
+  "house": "sugarbomb",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Cardamom",
+      "Saffron",
+      "Rice Powder"
+    ],
+    "heart": [
+      "Tea",
+      "Cyclamen",
+      "Jasmine",
+      "Powdery"
+    ],
+    "base": [
+      "Vanilla",
+      "Sandalwood",
+      "Amber",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/111216934.jpeg",
+  "source": "https://sugarbombgroup.com/products/teh-borneo-extrait-de-parfum"
+}

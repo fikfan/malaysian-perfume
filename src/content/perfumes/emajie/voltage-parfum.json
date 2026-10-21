@@ -1,0 +1,26 @@
+{
+  "name": "Voltage Parfum",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Jean Paul Gaultier Le Male Le Parfum",
+  "notes": {
+    "top": [
+      "Cardamom",
+      "Lavender"
+    ],
+    "heart": [
+      "Iris",
+      "Vanilla"
+    ],
+    "base": [
+      "Woods",
+      "Amber"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749384.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-voltage-parfum"
+}

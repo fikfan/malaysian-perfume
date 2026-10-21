@@ -1,0 +1,27 @@
+{
+  "name": "Black Mango",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Fresh Mango",
+      "Orange"
+    ],
+    "heart": [
+      "Tropical Mango",
+      "Tolu Balsam",
+      "Bourbon Vanilla"
+    ],
+    "base": [
+      "Malaysian Heritage Oud",
+      "Leather",
+      "Cypriol",
+      "Sandalwood"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/106909131.jpeg",
+  "source": "https://megfragrance.com/products/meg-fragrance-black-mango-perfume-for-unisex"
+}

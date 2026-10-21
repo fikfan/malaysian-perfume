@@ -1,0 +1,33 @@
+{
+  "name": "My Darling",
+  "house": "sugarbomb",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Cassis",
+      "Freesia",
+      "Lemon",
+      "Magnolia",
+      "Passion Fruit"
+    ],
+    "heart": [
+      "Lily of the Valley",
+      "Peach",
+      "Pink Peony"
+    ],
+    "base": [
+      "Ambergris",
+      "Cedarwood",
+      "Musk",
+      "Oakmoss"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107150868.jpg",
+  "source": "https://sugarbombgroup.com/products/my-darling-edp-by-sugarbomb"
+}

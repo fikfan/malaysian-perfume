@@ -1,0 +1,44 @@
+{
+  "name": "Outlands",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Cardamom",
+      "Bergamot",
+      "Lemon",
+      "Sichuan Pepper",
+      "Elemi",
+      "Frankincense"
+    ],
+    "heart": [
+      "Patchouli",
+      "Rose",
+      "Orange Blossom",
+      "Cumin",
+      "Geranium",
+      "Davana",
+      "Saffron",
+      "Anise",
+      "Coriander",
+      "Wormwood"
+    ],
+    "base": [
+      "Benzoin",
+      "Labdanum",
+      "Amber",
+      "Ambergris",
+      "Frankincense",
+      "Opoponax",
+      "Vanilla",
+      "Birch",
+      "Musk",
+      "Oud"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913208.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-outlands-perfume-for-unisex"
+}

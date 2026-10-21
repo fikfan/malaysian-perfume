@@ -1,0 +1,30 @@
+{
+  "name": "Absurd",
+  "house": "blanco",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": "Creed Absolu Aventus",
+  "notes": {
+    "top": [
+      "Grapefruit",
+      "Bergamot",
+      "Black Currant"
+    ],
+    "heart": [
+      "Ginger",
+      "Cinnamon",
+      "Citron",
+      "Cardamom"
+    ],
+    "base": [
+      "Pink Pepper",
+      "Patchouli",
+      "Vetiver"
+    ]
+  },
+  "image": "https://blancofragrance.com.my/wp-content/uploads/2025/10/ABSURD-1-1.webp",
+  "source": "https://blancofragrance.com.my/product/absurd/"
+}

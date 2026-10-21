@@ -1,0 +1,31 @@
+{
+  "name": "Harmonious Ginger",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Ginger Flower",
+      "Lemon",
+      "Mandarin"
+    ],
+    "heart": [
+      "Magnolia",
+      "Jasmine",
+      "Rose"
+    ],
+    "base": [
+      "Vanilla",
+      "Amber",
+      "Sandalwood",
+      "Musk",
+      "Cashmeran",
+      "Patchouli"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/110072461.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-harmonious-ginger-perfume-for-unisex"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Bara Senja",
+  "house": "sugarbomb",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Grapefruit",
+      "Bergamot",
+      "Orange",
+      "Lemon"
+    ],
+    "heart": [
+      "Ginger",
+      "Rose",
+      "Lily of the Valley",
+      "Guaiac Wood"
+    ],
+    "base": [
+      "Cedarwood",
+      "Amber",
+      "Vetiver",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107307169.jpg",
+  "source": "https://sugarbombgroup.com/products/bara-senja-100ml"
+}

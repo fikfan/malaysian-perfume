@@ -1,0 +1,34 @@
+{
+  "name": "Violet",
+  "house": "legendary",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Lychee",
+      "Red Fruits",
+      "Rhubarb",
+      "Nutmeg"
+    ],
+    "heart": [
+      "Cedarwood",
+      "Incense",
+      "Peony",
+      "Rose"
+    ],
+    "base": [
+      "Musk",
+      "Ambergris",
+      "Cashmere",
+      "Vetiver",
+      "Vanilla"
+    ]
+  },
+  "image": "https://www.legendary.com.my/assets/client/p-violet-life.webp",
+  "source": "https://www.legendary.com.my/product/violet"
+}

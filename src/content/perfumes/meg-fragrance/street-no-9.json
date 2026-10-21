@@ -1,0 +1,26 @@
+{
+  "name": "Street No 9",
+  "house": "meg-fragrance",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Violet Leaf",
+      "Citrus"
+    ],
+    "heart": [
+      "Blueberry",
+      "Floral Notes"
+    ],
+    "base": [
+      "Cedarwood",
+      "Oakmoss",
+      "Patchouli",
+      "Vanilla"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/105913235.png",
+  "source": "https://megfragrance.com/products/meg-fragrance-street-no-9-perfume-for-unisex"
+}

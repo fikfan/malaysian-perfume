@@ -1,0 +1,31 @@
+{
+  "name": "Binturong",
+  "house": "auphorie",
+  "gender": null,
+  "concentration": "Extrait",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Incense",
+      "Cannonball Flower",
+      "Iris",
+      "Mixed Spices",
+      "Amber",
+      "Labdanum",
+      "Laotian Oud",
+      "White Sandalwood",
+      "Cedarwood",
+      "Patchouli",
+      "Caramel",
+      "Black Coffee",
+      "Civet",
+      "Castoreum",
+      "Musk",
+      "Ambergris"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0009/5440/0804/products/Binturong_bottle_04_700x800_cfccd04b-1857-40ad-af9f-c19a4f903ebb.jpg?v=1531487938",
+  "source": "https://auphorie.com/products/binturong",
+  "discontinued": true
+}

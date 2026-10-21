@@ -1,0 +1,27 @@
+{
+  "name": "Black Potion",
+  "house": "emajie",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "YSL Black Opium",
+  "notes": {
+    "top": [
+      "Coffee",
+      "Pink Pepper"
+    ],
+    "heart": [
+      "Orange Blossom",
+      "Jasmine"
+    ],
+    "base": [
+      "Vanilla",
+      "Patchouli",
+      "Cedarwood"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749352.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-black-potion"
+}

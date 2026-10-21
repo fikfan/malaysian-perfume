@@ -1,0 +1,26 @@
+{
+  "name": "Falcon",
+  "house": "emajie",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Stéphane Humbert Lucas God of Fire",
+  "notes": {
+    "top": [
+      "Sparkling Lemon",
+      "Zesty Ginger"
+    ],
+    "heart": [
+      "Exotic Mango",
+      "Fresh Cardamom"
+    ],
+    "base": [
+      "Smoky Woods",
+      "Amber Resin"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99753655.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-falcon"
+}

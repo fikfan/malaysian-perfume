@@ -1,0 +1,26 @@
+{
+  "name": "Vortex",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "YSL MYSLF",
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Orange Blossom"
+    ],
+    "heart": [
+      "Amber",
+      "Musk"
+    ],
+    "base": [
+      "Woods",
+      "White Floral Notes"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749407.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-vortex"
+}

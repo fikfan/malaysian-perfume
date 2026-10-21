@@ -1,0 +1,22 @@
+{
+  "name": "Oud Sumeragi",
+  "house": "auphorie",
+  "gender": null,
+  "concentration": "Extrait",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Real Oud Oils",
+      "Japanese Wisteria Flower",
+      "Umeshu (Japanese Plum Liqueur)",
+      "Mysore Sandalwood",
+      "Orris Butter",
+      "Ambergris",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0009/5440/0804/files/OudSumeragi_bottle_02_700x800_58d0085a-6ee4-42ab-b6f0-4f9f8d398dc3.jpg?v=1783061188",
+  "source": "https://auphorie.com/products/oud-sumeragi",
+  "discontinued": true
+}

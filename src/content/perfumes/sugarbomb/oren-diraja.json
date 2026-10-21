@@ -1,0 +1,33 @@
+{
+  "name": "Oren Diraja",
+  "house": "sugarbomb",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Mandarin",
+      "Orange",
+      "Grapefruit",
+      "Lemon",
+      "Elemi",
+      "Black Pepper"
+    ],
+    "heart": [
+      "Geranium",
+      "Ozone",
+      "Lily of the Valley"
+    ],
+    "base": [
+      "Cedarwood",
+      "Sandalwood",
+      "Tonka",
+      "Amber"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107307865.jpg",
+  "source": "https://sugarbombgroup.com/products/oren-diraja-100ml"
+}

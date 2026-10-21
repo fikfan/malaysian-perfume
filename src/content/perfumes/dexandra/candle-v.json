@@ -1,0 +1,21 @@
+{
+  "name": "Candle V",
+  "house": "dexandra",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Raspberry"
+    ],
+    "heart": [
+      "Peony"
+    ],
+    "base": [
+      "Caramel"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/3052/1898/files/candlevweb.jpg?v=1749194354",
+  "source": "https://dexandra.com/products/candle-v"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Kiwi Kiwi",
+  "house": "malaya-perfumery",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Kiwi",
+      "Peach"
+    ],
+    "heart": [
+      "Jasmine",
+      "Rose"
+    ],
+    "base": [
+      "Musk",
+      "Sugar Accord"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0904/9138/8203/files/KIWI-50.png",
+  "source": "https://malayaperfumery.com/products/kiwi"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "FX",
+  "house": "szindore",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [],
+  "inspiredBy": "Initio Parfums Prives Side Effect",
+  "notes": {
+    "top": [
+      "Vanilla",
+      "Tobacco"
+    ],
+    "heart": [
+      "Rum",
+      "Iso E Super"
+    ],
+    "base": [
+      "Cinnamon"
+    ]
+  },
+  "image": "https://perfumemalaya.com/wp-content/uploads/2021/03/fx-1-scaled.jpg",
+  "source": "https://perfumemalaya.com/product/fx-refined-series-perfume/"
+}

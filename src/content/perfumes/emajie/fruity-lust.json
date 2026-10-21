@@ -1,0 +1,26 @@
+{
+  "name": "Fruity Lust",
+  "house": "emajie",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Xerjoff Erba Pura",
+  "notes": {
+    "top": [
+      "Burst Of Citrus",
+      "Exotic Fruits"
+    ],
+    "heart": [
+      "Velvety Florals",
+      "Sensual Amber"
+    ],
+    "base": [
+      "Soft Musk",
+      "Creamy Vanilla"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749232.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-fruity-lust"
+}

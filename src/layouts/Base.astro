@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+import SearchBox from '../components/SearchBox.astro';
+
+interface Props { title: string; description?: string; showSearch?: boolean }
+const { title, description = 'A free library of perfumes made by Malaysian houses: notes, inspirations and links, taken from each brand.', showSearch = true } = Astro.props;
+const path = Astro.url.pathname;
+const full = title === 'Malaysian Perfumes' ? title : `${title} | Malaysian Perfumes`;
+const nav = [
+  { href: '/houses/', label: 'Houses' },
+  { href: '/search/', label: 'Search' },
+];
+---
+<!doctype html>
+<html lang="en-MY">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{full}</title>
+  <meta name="description" content={description} />
+  <meta property="og:title" content={full} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-head">
+    <div class="wrap">
+      <a class="logo" href="/"><i aria-hidden="true"></i>Malaysian Perfumes</a>
+      <nav class="site-nav" aria-label="Main">
+        {nav.map((n) => <a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>{n.label}</a>)}
+      </nav>
+    </div>
+  </header>
+  {showSearch && <div class="wrap head-search"><SearchBox /></div>}
+  <main id="main"><slot /></main>
+  <footer class="site-foot">
+    <div class="wrap">
+      <div>
+        <p><strong>Malaysian Perfumes</strong> is a free library of perfumes made by Malaysian houses.</p>
+        <p>It is not linked to any brand. Notes, sizes and inspirations come from each brand's own website, and every perfume page links to its source. Prices are not shown.</p>
+      </div>
+      <div>
+        <p><strong>Is your house missing, or is something wrong?</strong></p>
+        <p><a href="https://github.com/fikfan/malaysianperfumes/issues">Send a correction on GitHub</a>. Brands can ask to be added or removed.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+<style>
+  .head-search { padding-top: 14px; max-width: calc(var(--wrap)); }
+  .head-search :global(.searchbox) { max-width: 560px; }
+</style>

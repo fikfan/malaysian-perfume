@@ -1,0 +1,26 @@
+{
+  "name": "Fury Intense",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Armani Stronger With You Intensely",
+  "notes": {
+    "top": [
+      "Pink Pepper",
+      "Juniper Berries"
+    ],
+    "heart": [
+      "Lavender",
+      "Vanilla"
+    ],
+    "base": [
+      "Amber",
+      "Tonka Bean"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749337.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-fury-intense"
+}

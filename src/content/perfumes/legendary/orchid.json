@@ -1,0 +1,35 @@
+{
+  "name": "Orchid",
+  "house": "legendary",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Orange",
+      "Aqueous",
+      "Clove",
+      "Lemon",
+      "Mandarin"
+    ],
+    "heart": [
+      "Jasmine",
+      "Magnolia",
+      "Muguet",
+      "Tuberose",
+      "Orchid"
+    ],
+    "base": [
+      "Ambergris",
+      "Vetiver",
+      "Violet",
+      "Musky",
+      "Cedar"
+    ]
+  },
+  "image": "https://www.legendary.com.my/assets/client/p-orchid-life.webp",
+  "source": "https://www.legendary.com.my/product/orchid"
+}

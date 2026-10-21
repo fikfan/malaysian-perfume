@@ -1,0 +1,28 @@
+{
+  "name": "Cendana Warisan",
+  "house": "sugarbomb",
+  "gender": null,
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Orris",
+      "Lily of the Valley"
+    ],
+    "heart": [
+      "Amber",
+      "Lactone"
+    ],
+    "base": [
+      "Musk",
+      "Moss",
+      "Sandalwood",
+      "Cedarwood"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1443111/i/107307704.jpg",
+  "source": "https://sugarbombgroup.com/products/cendana-warisan-100ml"
+}

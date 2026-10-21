@@ -1,0 +1,27 @@
+{
+  "name": "Uden",
+  "house": "meg-fragrance",
+  "gender": "masculine",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lemon",
+      "Grapefruit"
+    ],
+    "heart": [
+      "Rum",
+      "Rose",
+      "Sandalwood",
+      "Guaiac Wood"
+    ],
+    "base": [
+      "Vanilla Absolute",
+      "Coffee Absolute",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1441821/i/106226722.png",
+  "source": "https://megfragrance.com/products/megfragrance-uden-perfume-for-men"
+}

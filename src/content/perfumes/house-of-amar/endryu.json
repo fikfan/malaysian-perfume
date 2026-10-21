@@ -1,0 +1,30 @@
+{
+  "name": "Endryu",
+  "house": "house-of-amar",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    18,
+    100
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Mango",
+      "Ginger",
+      "Lemon",
+      "Red Berries"
+    ],
+    "heart": [
+      "Coumarin",
+      "Jasmine"
+    ],
+    "base": [
+      "Musk",
+      "Amber",
+      "Cypriol Oil"
+    ]
+  },
+  "image": "https://cdn1.sgliteasset.com/houseofa/images/product/product-6945597/6RZbpyMC6aa14c43c98c2_1788955715.jpg",
+  "source": "https://hoaperfumes.com/product/hoa-limited-edition-endryu-100ml-extrait-de-parfum"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Voltage Elixir",
+  "house": "emajie",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Jean Paul Gaultier Le Male Elixir",
+  "notes": {
+    "top": [
+      "Fresh Bergamot",
+      "Spiced Lavender"
+    ],
+    "heart": [
+      "Creamy Vanilla",
+      "Tonka Bean"
+    ],
+    "base": [
+      "Amber",
+      "Woody Notes"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749183.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-voltage-elixir"
+}

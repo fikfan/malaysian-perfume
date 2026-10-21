@@ -1,0 +1,26 @@
+{
+  "name": "Dark Angel",
+  "house": "emajie",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": "Kilian Black Phantom",
+  "notes": {
+    "top": [
+      "Dark Roasted Coffee",
+      "Caramelized Sugar"
+    ],
+    "heart": [
+      "Velvety Almond",
+      "Dark Chocolate"
+    ],
+    "base": [
+      "Smoky Woods",
+      "Creamy Sandalwood"
+    ]
+  },
+  "image": "https://cdn.store-assets.com/s/1079798/i/99749252.png?width=800",
+  "source": "https://www.emajie.com/products/emajie-dark-angel"
+}

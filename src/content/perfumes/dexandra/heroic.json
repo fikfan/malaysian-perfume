@@ -1,0 +1,21 @@
+{
+  "name": "Heroic",
+  "house": "dexandra",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Ginger"
+    ],
+    "heart": [
+      "Juniper Berries"
+    ],
+    "base": [
+      "Tonka Bean"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/3052/1898/files/HIM_1_b22f4273-67d8-4894-b60c-11fbfec58ca0.png?v=1690269284",
+  "source": "https://dexandra.com/products/heroic"
+}
