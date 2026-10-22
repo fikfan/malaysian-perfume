@@ -172,13 +172,18 @@ const links = [
   .highlights { margin: 40px 0; }
   .high-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
   .high-head h2 { margin: 0; }
-  .picks { list-style: none; margin: 0; padding: 0; border-top: var(--line); }
+  .picks { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
   :global(.js) .picks:not(.ready) { visibility: hidden; }
-  .pick { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
-  .pick h3 { font-size: 18px; font-weight: 750; margin: 0 0 8px; }
-  .pick h3 a { text-decoration: none; }
-  .pick h3 a:hover { text-decoration: underline; }
-  .pick .notes-grid { font-size: 14px; line-height: 1.45; }
+  /* a card: the whole card opens the perfume, and every card has the same height whatever its notes */
+  .pick { position: relative; display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 16px; padding: 14px; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); transition: border-color .2s, background-color .2s; }
+  .pick:hover { border-color: var(--ink); background: var(--soft); }
+  .pick:focus-within { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .pick h3 { font-size: 18px; font-weight: 750; margin: 0 0 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pick h3 a { text-decoration: none; outline: none; }
+  .pick h3 a::after { content: ""; position: absolute; inset: 0; }
+  .pick .notes-grid { font-size: 14px; line-height: 1.45; min-height: calc(3 * 1.45em + 12px); align-content: start; }
+  .pick .notes-grid > span:not(.layer) { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden; }
+  .pick .notes-grid > .layer[data-l="Notes"] + span { -webkit-line-clamp: 3; }
   .shuffle { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 0 12px; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); font-weight: 600; cursor: pointer; }
   .shuffle:hover { border-color: var(--ink); }
   .shuffle svg { width: 16px; height: 16px; }
