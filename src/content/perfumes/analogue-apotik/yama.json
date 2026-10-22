@@ -1,0 +1,22 @@
+{
+  "name": "Yama",
+  "house": "analogue-apotik",
+  "gender": "feminine",
+  "concentration": "Oil de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Garden Rose",
+      "Sakura",
+      "Lavender",
+      "Osmanthus",
+      "Musk",
+      "Green Tea"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/1063/9780/files/ODP_Yama_BottleOnly.png?v=1775976927",
+  "source": "https://analogueapotik.com/products/yama-oil-de-parfum"
+}

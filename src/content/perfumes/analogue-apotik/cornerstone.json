@@ -1,0 +1,22 @@
+{
+  "name": "Cornerstone",
+  "house": "analogue-apotik",
+  "gender": "masculine",
+  "concentration": "Oil de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Patchouli",
+      "Nutmeg",
+      "Sandalwood",
+      "Cedarwood",
+      "Vanilla",
+      "Paprika"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/1063/9780/files/ODP_Cornerstone_BottleOnly.png?v=1775977040",
+  "source": "https://analogueapotik.com/products/cornerstone-oil-de-parfum"
+}

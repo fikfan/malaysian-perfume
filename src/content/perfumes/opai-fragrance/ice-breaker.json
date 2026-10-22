@@ -1,0 +1,29 @@
+{
+  "name": "Ice Breaker",
+  "house": "opai-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    10,
+    40
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Calabrian Bergamot",
+      "Lavender"
+    ],
+    "heart": [
+      "Orange Blossom",
+      "Geranium"
+    ],
+    "base": [
+      "Patchouli",
+      "Olibanum",
+      "Ambergris",
+      "Leather"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0664/4200/2497/files/Ice_Breaker_54e39a9f-e3a0-4a0a-956c-04018d5003f5.png?v=1784636246",
+  "source": "https://opaifragrance.com/products/ice-breaker"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Phenomen",
+  "house": "analogue-apotik",
+  "gender": "masculine",
+  "concentration": "Oil de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Sandalwood",
+      "English Oak",
+      "Leather",
+      "Red Berries",
+      "Iris",
+      "Amber"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/1063/9780/files/ODP_Phenomen_BottleOnly.png?v=1775976953",
+  "source": "https://analogueapotik.com/products/phenomen-oil-de-parfum"
+}

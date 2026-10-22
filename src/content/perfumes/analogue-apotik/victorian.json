@@ -1,0 +1,25 @@
+{
+  "name": "Victorian",
+  "house": "analogue-apotik",
+  "gender": "feminine",
+  "concentration": "Oil de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Passionfruit",
+      "Magnolia",
+      "Tuberose",
+      "Spanish Orange",
+      "Jasmine",
+      "Guaiac Wood",
+      "White Musk",
+      "Green Tea",
+      "Oak Moss"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/1063/9780/files/ODP_Victorian_BottleOnly.png?v=1775976755",
+  "source": "https://analogueapotik.com/products/victorian-oil-de-parfum"
+}

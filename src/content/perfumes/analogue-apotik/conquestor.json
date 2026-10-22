@@ -1,0 +1,23 @@
+{
+  "name": "Conquestor",
+  "house": "analogue-apotik",
+  "gender": "unisex",
+  "concentration": "Oil de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Saffron",
+      "Vanilla",
+      "Orange Blossom",
+      "Tonka Bean",
+      "Musk",
+      "Cedar",
+      "Ambergris"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/1063/9780/files/ODP_Conquestor_BottleOnly.png?v=1775976824",
+  "source": "https://analogueapotik.com/products/conquestor-oil-de-parfum"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Wind",
+  "house": "opai-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Italian Mandarin",
+      "Ginger",
+      "Calone",
+      "Pink Pepper"
+    ],
+    "heart": [
+      "Ginger",
+      "Calone",
+      "Cardamom"
+    ],
+    "base": [
+      "Incense",
+      "White Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0664/4200/2497/files/WIND_7c1b33e0-2ead-47a9-8881-1cb5409af906.png?v=1782922355",
+  "source": "https://opaifragrance.com/products/wind"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Khan",
+  "house": "analogue-apotik",
+  "gender": "masculine",
+  "concentration": "Oil de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Orange",
+      "Bergamot",
+      "Mahogany",
+      "Pine",
+      "Juniper Berries",
+      "Cinnamon",
+      "Vetiver",
+      "Oakmoss",
+      "Sandalwood"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/1063/9780/files/ODP_Khan_BottleOnly.png?v=1775976860",
+  "source": "https://analogueapotik.com/products/khan-oil-de-parfum"
+}

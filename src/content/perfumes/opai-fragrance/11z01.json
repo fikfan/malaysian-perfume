@@ -1,0 +1,32 @@
+{
+  "name": "11Z01",
+  "house": "opai-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Lemon",
+      "Juicy Fruit Accord",
+      "Cardamom",
+      "Pepper"
+    ],
+    "heart": [
+      "Grasse Lavender",
+      "Soft Florals",
+      "Aromatic Herbs"
+    ],
+    "base": [
+      "Earthy Patchoulli",
+      "Smoke Vetiver",
+      "Oakmoss",
+      "Warm Amber"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0664/4200/2497/files/11Z01_a9d2fdf8-c633-43f7-a295-1621d281e01f.png?v=1782922117",
+  "source": "https://opaifragrance.com/products/11z01"
+}

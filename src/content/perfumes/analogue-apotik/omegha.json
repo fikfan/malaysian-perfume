@@ -1,0 +1,22 @@
+{
+  "name": "Omegha",
+  "house": "analogue-apotik",
+  "gender": "masculine",
+  "concentration": "Oil de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Pineapple",
+      "Bergamot",
+      "Rose",
+      "Jasmine",
+      "Patchouli",
+      "Oakmoss"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/1063/9780/files/ODP_Omegha_BottleOnly.png?v=1775976988",
+  "source": "https://analogueapotik.com/products/omegha-oil-de-parfum"
+}

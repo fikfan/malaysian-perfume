@@ -1,0 +1,23 @@
+{
+  "name": "Kasai",
+  "house": "analogue-apotik",
+  "gender": "unisex",
+  "concentration": "Oil de Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Orange Blossom",
+      "Pepper",
+      "Vetiver",
+      "Sandalwood",
+      "Cedarwood",
+      "Oakmoss",
+      "Nutmeg"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/1063/9780/files/ODP_Kasai_BottleOnly.png?v=1775976892",
+  "source": "https://analogueapotik.com/products/kasai-oil-de-parfum"
+}
