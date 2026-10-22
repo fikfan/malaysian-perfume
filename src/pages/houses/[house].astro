@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import PerfumeRow from '../../components/PerfumeRow.astro';
 import ExtLink from '../../components/ExtLink.astro';
 import Thumb from '../../components/Thumb.astro';
-import { load, host, perfumeUrl, houseUrl, currentWithPhoto, TILE_IMG, TYPE_LABEL, GENDER_LABEL, type House } from '../../lib/data';
+import { load, host, perfumeUrl, houseUrl, currentWithPhoto, pyramid, ROW_IMG, TYPE_LABEL, GENDER_LABEL, type House } from '../../lib/data';
 import { breadcrumbLd, itemListLd } from '../../lib/seo';
 import { iconSvg } from '../../lib/icons';
 
@@ -18,8 +18,8 @@ const d = h.data;
 const genders = (['masculine', 'feminine', 'unisex'] as const).filter((g) => list.some((p) => p.data.gender === g));
 const discontinued = list.filter((p) => p.data.discontinued).length;
 const named = list.filter((p) => p.data.inspiredBy).length;
-// four of the house's own photos fill the space beside the intro on wide screens
-const picks = currentWithPhoto(list).slice(0, 4);
+// Highlights beside the intro on wide screens: two perfumes at a time from up to 12; the shuffle picks another two
+const picks = currentWithPhoto(list).filter((p) => pyramid(p).length).slice(0, 12);
 const link = (href: string | null | undefined, label: string, key: string) => (href ? [{ href, label, key }] : []);
 const links = [
   ...link(d.website, 'Website', 'web'),
@@ -59,9 +59,25 @@ const links = [
     </div>
     </div>
     {picks.length > 0 && (
-      <ul class="picks" aria-label={`Some ${d.name} perfumes`}>
-        {picks.map((p) => <li><a href={perfumeUrl(p)}><Thumb src={p.data.image} name={p.data.name} size={TILE_IMG} eager /><span>{p.data.name}</span></a></li>)}
-      </ul>
+      <aside class="highlights" aria-labelledby="h-high">
+        <div class="high-head">
+          <h2 id="h-high" class="label">Highlights</h2>
+          {picks.length > 2 && <button type="button" class="shuffle" id="shuffle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>Shuffle</button>}
+        </div>
+        <!-- every pick is in the page; the script shows two at random, so it needs no HTML of its own -->
+        <ul class="picks" id="picks">
+          {picks.map((p, i) => (
+            <li class="pick" hidden={i > 1}>
+              <div class="thumb-wrap"><Thumb src={p.data.image} name={p.data.name} size={ROW_IMG} /></div>
+              <div>
+                <h3><a href={perfumeUrl(p)}>{p.data.name}</a></h3>
+                <div class="notes-grid">{pyramid(p).map((l) => <><span class="layer" data-l={l.label}>{l.label}</span><span>{l.notes.join(', ')}</span></>)}</div>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <p class="sr" id="shuffle-status" aria-live="polite"></p>
+      </aside>
     )}
     </div>
 
@@ -92,6 +108,24 @@ const links = [
 
 <script>
   import { haystack, terms, matches } from '../../lib/match';
+  import { shuffle, withFade } from '../../lib/render';
+  // Highlights: show two random picks on each visit and on each shuffle
+  const picks = [...document.querySelectorAll<HTMLElement>('#picks .pick')];
+  if (picks.length) {
+    let shown: HTMLElement[] = [];
+    const draw = () => {
+      const next = shuffle(picks.filter((p) => !shown.includes(p))).slice(0, 2); // never the same two again
+      shown = next.length === 2 ? next : shuffle([...picks]).slice(0, 2);
+      picks.forEach((p) => (p.hidden = !shown.includes(p)));
+      document.getElementById('picks')!.classList.add('ready');
+    };
+    draw();
+    document.getElementById('shuffle')?.addEventListener('click', () => {
+      withFade(draw);
+      document.getElementById('shuffle-status')!.textContent = 'Shuffled';
+    });
+  }
+
   const f = document.getElementById('filters');
   if (f) {
     let g = '';
@@ -134,12 +168,21 @@ const links = [
 </script>
 
 <style>
-  .intro { display: grid; grid-template-columns: minmax(0, 640px) minmax(0, 360px); justify-content: space-between; gap: 48px; align-items: start; }
-  .picks { list-style: none; margin: 40px 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .picks a { display: block; text-decoration: none; }
-  .picks span { display: block; margin-top: 6px; font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .picks a:hover span { text-decoration: underline; }
-  @media (max-width: 1000px) { .intro { grid-template-columns: 1fr; } .picks { display: none; } }
+  .intro { display: grid; grid-template-columns: minmax(0, 640px) minmax(0, 440px); justify-content: space-between; gap: 48px; align-items: start; }
+  .highlights { margin: 40px 0; }
+  .high-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .high-head h2 { margin: 0; }
+  .picks { list-style: none; margin: 0; padding: 0; border-top: var(--line); }
+  :global(.js) .picks:not(.ready) { visibility: hidden; }
+  .pick { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .pick h3 { font-size: 18px; font-weight: 750; margin: 0 0 8px; }
+  .pick h3 a { text-decoration: none; }
+  .pick h3 a:hover { text-decoration: underline; }
+  .pick .notes-grid { font-size: 14px; line-height: 1.45; }
+  .shuffle { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 0 12px; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); font-weight: 600; cursor: pointer; }
+  .shuffle:hover { border-color: var(--ink); }
+  .shuffle svg { width: 16px; height: 16px; }
+  @media (max-width: 1000px) { .intro { grid-template-columns: 1fr; } .highlights { display: none; } }
   .top { display: grid; gap: 16px; margin-bottom: 40px; max-width: 640px; }
   .sources { font-size: 14px; margin-top: 24px; overflow-wrap: anywhere; }
   .sources a { color: var(--muted); }
