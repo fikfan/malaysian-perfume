@@ -10,7 +10,7 @@ export const clip = (s: string, max = 160) => (s.length <= max ? s : s.slice(0, 
 export const websiteLd = () => ({
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Malaysian Perfumes',
+  name: 'Malaysia Perfumes',
   url: abs('/'),
   inLanguage: 'en-MY',
   sameAs: [REPO_URL],

@@ -3,7 +3,7 @@
 
 import { validate } from './validate.ts';
 
-const FROM = { email: 'contact@malaysiaperfumes.com', name: 'Malaysian Perfumes' };
+const FROM = { email: 'contact@malaysiaperfumes.com', name: 'Malaysia Perfumes' };
 const json = (status: number, body: object) => Response.json(body, { status });
 
 async function human(token: string, ip: string | null, secret: string) {

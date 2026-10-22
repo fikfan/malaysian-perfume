@@ -1,4 +1,4 @@
-# Malaysian Perfumes
+# Malaysia Perfumes
 
 A free library of perfumes made by Malaysian perfume houses: notes, inspirations and links, taken from each brand's own website.
 
