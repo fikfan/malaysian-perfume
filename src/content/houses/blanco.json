@@ -7,7 +7,8 @@
   "website": "https://blancofragrance.com.my",
   "instagram": "blancofragrancemalaysia",
   "tiktok": "blanco.fragrance.my",
-  "shopee": null,
+  "shopee": "https://shopee.com.my/wan.said",
+  "lazada": "https://www.lazada.com.my/shop/blanco-fragrance-malaysia/",
   "sources": [
     "https://blancofragrance.com.my/",
     "https://blancofragrance.com.my/wp-json/wc/store/v1/products"

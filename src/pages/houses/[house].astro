@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import PerfumeRow from '../../components/PerfumeRow.astro';
 import { load, TYPE_LABEL } from '../../lib/data';
+import icons from '../../data/brand-icons.json';
 
 export async function getStaticPaths() {
   const { houses } = await load();
@@ -14,11 +15,14 @@ const d = h.data;
 const genders = (['masculine', 'feminine', 'unisex'] as const).filter((g) => list.some((p) => p.data.gender === g));
 const discontinued = list.filter((p) => p.data.discontinued).length;
 const links = [
-  d.website && { href: d.website, label: 'Website' },
-  d.instagram && { href: `https://www.instagram.com/${d.instagram}/`, label: 'Instagram' },
-  d.tiktok && { href: `https://www.tiktok.com/@${d.tiktok}`, label: 'TikTok' },
-  d.shopee && { href: d.shopee, label: 'Shopee' },
-].filter(Boolean) as { href: string; label: string }[];
+  d.website && { href: d.website, label: 'Website', key: 'web' },
+  d.shopee && { href: d.shopee, label: 'Shopee', key: 'shopee' },
+  d.lazada && { href: d.lazada, label: 'Lazada', key: 'lazada' },
+  d.tiktok && { href: `https://www.tiktok.com/@${d.tiktok}`, label: 'TikTok', key: 'tiktok' },
+  d.instagram && { href: `https://www.instagram.com/${d.instagram}/`, label: 'Instagram', key: 'instagram' },
+].filter(Boolean) as { href: string; label: string; key: string }[];
+// Brand marks from Simple Icons (CC0); Lazada has none there, so its colours carry it
+const icon = (k: string) => (k in icons ? `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="${icons[k as keyof typeof icons]}"/></svg>` : k === 'web' ? ext : '');
 const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg>';
 ---
 <Base title={d.name} description={`${d.name}: ${list.length} perfumes with notes, from a Malaysian perfume house.`}>
@@ -39,7 +43,7 @@ const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
       {links.length > 0 && (
         <div>
           <h2 class="sr">Where to find {d.name}</h2>
-          <div class="btn-row">{links.map((l) => <a class="btn" href={l.href} rel="noopener" target="_blank">{l.label}<Fragment set:html={ext} /><span class="sr"> (opens in a new tab)</span></a>)}</div>
+          <div class="btn-row">{links.map((l) => <a class={`btn brand-${l.key}`} href={l.href} rel="noopener" target="_blank"><Fragment set:html={icon(l.key)} />{l.label}<span class="sr"> (opens in a new tab)</span></a>)}</div>
         </div>
       )}
     </div>

@@ -14,6 +14,7 @@ const houses = defineCollection({
     instagram: z.string().nullable().optional(),
     tiktok: z.string().nullable().optional(),
     shopee: z.string().nullable().optional(),
+    lazada: z.string().nullable().optional(),
     sources: z.array(z.string()).default([]),
     partial: z.boolean().optional(),
   }),

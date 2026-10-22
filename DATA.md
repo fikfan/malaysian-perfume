@@ -15,6 +15,7 @@ Images are linked from the brand's own site (not downloaded) and always credited
   "instagram": "emajie.my",         // handle without @, or null
   "tiktok": "emajieofficial",       // or null
   "shopee": null,                   // full URL or null
+  "lazada": null,                   // full URL or null (official store only)
   "sources": ["https://..."]        // pages the facts came from
 }
 

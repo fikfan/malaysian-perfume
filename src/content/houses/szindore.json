@@ -7,11 +7,13 @@
   "website": "https://szindore.com",
   "instagram": "szindoremalaysia",
   "tiktok": "szindore",
-  "shopee": null,
+  "shopee": "https://shopee.com.my/szindore",
+  "lazada": "https://www.lazada.com.my/shop/szindore-hq/",
   "sources": [
     "https://szindore.com/about-us/",
     "https://szindore.com/",
-    "https://perfumemalaya.com/"
+    "https://perfumemalaya.com/",
+    "https://heylink.me/Szindorehq"
   ],
   "partial": true
 }
