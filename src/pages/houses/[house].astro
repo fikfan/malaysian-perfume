@@ -55,8 +55,9 @@ const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
 
     <section class="section" aria-labelledby="h-perfumes">
       <div class="section-head"><h2 id="h-perfumes">Perfumes</h2></div>
-      {(genders.length > 1 || discontinued > 0) && (
-        <div class="filters" id="filters">
+      <div class="filters" id="filters">
+          <label class="sr" for="house-q">Search {d.name} perfumes</label>
+          <input class="filter" id="house-q" type="search" placeholder={`Search ${list.length} perfumes or notes`} autocomplete="off" />
           {genders.length > 1 && (
             <div class="seg" role="group" aria-label="Filter by who it is for">
               <button type="button" aria-pressed="true" data-g="">All</button>
@@ -65,9 +66,10 @@ const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
           )}
           {discontinued > 0 && <label class="check"><input type="checkbox" id="show-disc" checked /> Show discontinued</label>}
           <span class="count" id="count" aria-live="polite">{list.length} perfumes</span>
-        </div>
-      )}
+      </div>
       <ul class="plist" id="plist">{list.map((p) => <PerfumeRow p={p} />)}</ul>
+      <p class="empty muted" id="no-match" hidden>No {d.name} perfume matches. Try another word, or clear the filters.</p>
+      <div id="more" aria-hidden="true"></div>
     </section>
 
     {d.sources.length > 0 && (
@@ -80,22 +82,39 @@ const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
   const f = document.getElementById('filters');
   if (f) {
     let g = '';
+    const PAGE = 20; // rows shown at a time; more load as the visitor scrolls
+    let limit = PAGE;
     const disc = document.getElementById('show-disc') as HTMLInputElement | null;
+    const q = document.getElementById('house-q') as HTMLInputElement;
     const rows = [...document.querySelectorAll<HTMLElement>('#plist .prow')];
+    const fold = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    const keys = rows.map((r) => ' ' + fold(r.dataset.k ?? ''));
     const apply = () => {
+      const words = fold(q.value.trim()).split(/\s+/).filter(Boolean);
       let n = 0;
-      for (const r of rows) {
-        const show = (!g || r.dataset.gender === g) && (!disc || disc.checked || !r.dataset.discontinued);
-        r.hidden = !show; if (show) n++;
-      }
+      rows.forEach((r, i) => {
+        const match = (!g || r.dataset.gender === g) && (!disc || disc.checked || !r.dataset.discontinued)
+          && words.every((w) => keys[i].includes(' ' + w));
+        if (match) n++;
+        r.hidden = !match || n > limit;
+      });
       document.getElementById('count')!.textContent = `${n} perfume${n === 1 ? '' : 's'}`;
+      document.getElementById('no-match')!.hidden = n > 0;
+      more.dataset.left = String(Math.max(0, n - limit));
     };
+    const more = document.getElementById('more')!;
+    new IntersectionObserver((e) => {
+      if (e[0].isIntersecting && Number(more.dataset.left) > 0) { limit += PAGE; apply(); }
+    }, { rootMargin: '600px' }).observe(more);
+    const reset = () => { limit = PAGE; apply(); };
+    q.addEventListener('input', reset);
     f.querySelectorAll<HTMLButtonElement>('[data-g]').forEach((b) => b.addEventListener('click', () => {
       g = b.dataset.g ?? '';
       f.querySelectorAll('[data-g]').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
-      apply();
+      reset();
     }));
-    disc?.addEventListener('change', apply);
+    disc?.addEventListener('change', reset);
+    apply();
   }
 </script>
 

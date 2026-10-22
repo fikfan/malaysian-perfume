@@ -7,8 +7,10 @@ const { p, houseName, shared = [] } = Astro.props;
 const on = new Set(shared);
 const layers = pyramid(p);
 const d = p.data;
+// what the house-page filter box matches against
+const k = [d.name, d.inspiredBy, ...layers.flatMap((l) => l.notes)].filter(Boolean).join(' ').toLowerCase();
 ---
-<li class="prow" data-gender={d.gender ?? ''} data-discontinued={d.discontinued ? '1' : ''}>
+<li class="prow" data-k={k} data-gender={d.gender ?? ''} data-discontinued={d.discontinued ? '1' : ''}>
   <div class="thumb-wrap"><Thumb src={d.image} name={d.name} size={176} /></div>
   <div>
     <h3><a href={perfumeUrl(p)}>{d.name}</a></h3>
