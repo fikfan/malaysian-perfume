@@ -45,9 +45,9 @@
 
 /* brief loader: shown only if the page is not ready within 150 ms, so fast loads never see it */
 .loader { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; background: var(--paper); pointer-events: none; opacity: 0; visibility: hidden; transition: opacity .2s ease, visibility 0s .2s; }
-.loader i { width: 22px; height: 22px; background: var(--accent); border: var(--line); animation: loader-pulse .8s ease-in-out infinite alternate; }
+.loader img { width: 40px; height: 40px; animation: loader-pulse .8s ease-in-out infinite alternate; }
 .loading .loader { opacity: 1; visibility: visible; transition: opacity .15s ease .15s; }
-@keyframes loader-pulse { from { transform: scale(.7) rotate(0deg); } to { transform: scale(1.1) rotate(90deg); } }
+@keyframes loader-pulse { from { transform: scale(.7) rotate(0deg); } to { transform: scale(1.1) rotate(72deg); } }
 
 /* product photos fade in once loaded instead of popping in */
 .js .thumb img { opacity: 0; transition: opacity .3s ease; }
@@ -83,7 +83,7 @@ h1, h2, h3 { margin: 0; line-height: 1.05; letter-spacing: -0.02em; text-wrap: b
 .site-head { border-bottom: var(--line); }
 .site-head .wrap { display: flex; align-items: center; gap: 24px; min-height: 68px; flex-wrap: wrap; }
 .logo { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; text-decoration: none; letter-spacing: -0.01em; }
-.logo i { width: 16px; height: 16px; background: var(--accent); border: var(--line); }
+.logo img { width: 28px; height: 28px; } /* bunga raya mark in flag colours; same in light and dark mode */
 .site-nav { display: flex; gap: 4px; margin-left: auto; }
 .site-nav a { text-decoration: none; padding: 10px 12px; font-weight: 600; border-bottom: 2px solid transparent; }
 .site-nav a[aria-current="page"] { border-bottom-color: var(--ink); }

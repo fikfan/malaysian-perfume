@@ -34,17 +34,19 @@ const nav = [
       addEventListener('DOMContentLoaded', () => document.fonts.ready.then(done));
     })();
   </script>
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="loader" aria-hidden="true"><i></i></div>
+  <div class="loader" aria-hidden="true"><img src="/logo.svg" alt="" width="40" height="40" /></div>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-head">
     <div class="wrap">
-      <a class="logo" href="/"><i aria-hidden="true"></i>Malaysian Perfumes</a>
+      <a class="logo" href="/"><img src="/logo.svg" alt="" width="28" height="28" />Malaysian Perfumes</a>
       <nav class="site-nav" aria-label="Main">
         {nav.map((n) => <a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>{n.label}</a>)}
       </nav>
