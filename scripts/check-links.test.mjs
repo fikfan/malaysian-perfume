@@ -66,13 +66,14 @@ test('check turns network errors into a readable code', async () => {
   assert.equal(await check('https://a', fakeFetch({ 'https://a': { HEAD: slow } }).impl), 'timeout');
 });
 
-test('classify fails 4xx/5xx and errors, but only reports bot walls', () => {
+test('classify fails clear errors, but only reports bot walls and network hiccups', () => {
   const { broken, walled } = classify(new Map([
-    ['https://ok', 200], ['https://moved', 301], ['https://gone', 404], ['https://down', 500],
+    ['https://ok', 200], ['https://moved', 301], ['https://gone', 404], ['https://removed', 410], ['https://down', 500],
     ['https://dns', 'ENOTFOUND'], ['https://linkedin', 999], ['https://busy', 429], ['https://cf', 403],
+    ['https://linktree', 406], ['https://slow', 'timeout'], ['https://reset', 'ECONNRESET'],
   ]));
-  assert.deepEqual(broken.map(([u]) => u), ['https://gone', 'https://down', 'https://dns']);
-  assert.deepEqual(walled.map(([u]) => u), ['https://linkedin', 'https://busy', 'https://cf']);
+  assert.deepEqual(broken.map(([u]) => u), ['https://gone', 'https://removed', 'https://down', 'https://dns']);
+  assert.deepEqual(walled.map(([u]) => u), ['https://linkedin', 'https://busy', 'https://cf', 'https://linktree', 'https://slow', 'https://reset']);
 });
 
 test('checkAll checks every url once, with limited concurrency', async () => {

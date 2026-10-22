@@ -7,8 +7,10 @@ import { fileURLToPath } from 'node:url';
 
 const CONCURRENCY = 8;
 const TIMEOUT_MS = 15000;
-// Sites that refuse scripts but work in a browser: report them, but do not fail on them
-export const BOT_WALLS = [401, 403, 429, 999];
+// Answers that mean "this server will not talk to a script" (bot protection, rate limits, LinkedIn's 999),
+// and network hiccups. Common from CI data centres; the link usually works in a browser, so report, do not fail.
+export const BOT_WALLS = [401, 403, 406, 429, 999];
+const FLAKY = ['timeout', 'ECONNRESET', 'ECONNREFUSED', 'EAI_AGAIN', 'UND_ERR_SOCKET'];
 
 const json = (p) => JSON.parse(readFileSync(p, 'utf8'));
 const files = (dir) => readdirSync(dir, { recursive: true }).filter((f) => f.endsWith('.json')).map((f) => join(dir, f));
@@ -44,12 +46,12 @@ export async function check(url, fetchImpl = fetch) {
   }
 }
 
-/** Split results into broken links (fail the run) and bot-walled ones (check by hand) */
+/** Split results into broken links (fail the run) and ones that could not be checked (check by hand) */
 export function classify(results) {
   const broken = [], walled = [];
   for (const [u, s] of results) {
     if (typeof s === 'number' && s < 400) continue;
-    (BOT_WALLS.includes(s) ? walled : broken).push([u, s]);
+    (BOT_WALLS.includes(s) || FLAKY.includes(s) ? walled : broken).push([u, s]);
   }
   return { broken, walled };
 }
@@ -72,7 +74,7 @@ async function main() {
     return `  ${s}  ${u}\n        used by: ${used.slice(0, 3).join(', ')}${used.length > 3 ? ` (+${used.length - 3})` : ''}`;
   };
   console.log(`Checked ${links.size} links.`);
-  if (walled.length) console.log(`\n${walled.length} blocked automatic checks (open them in a browser to confirm):\n${walled.map(show).join('\n')}`);
+  if (walled.length) console.log(`\n${walled.length} could not be checked: blocked or no answer (open them in a browser to confirm):\n${walled.map(show).join('\n')}`);
   console.log(broken.length ? `\n${broken.length} broken:\n${broken.map(show).join('\n')}` : 'No broken links.');
   process.exit(broken.length ? 1 : 0);
 }
