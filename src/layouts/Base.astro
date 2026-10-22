@@ -64,11 +64,14 @@ const nav = [
       const dark = () => root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
       const sync = () => b.setAttribute('aria-pressed', String(dark()));
       sync();
-      b.addEventListener('click', () => {
+      const flip = () => {
         root.dataset.theme = dark() ? 'light' : 'dark';
         try { localStorage.setItem('theme', root.dataset.theme); } catch {}
         sync();
-      });
+      };
+      // cross-fade the whole page between themes where supported
+      const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      b.addEventListener('click', () => (document.startViewTransition && !still ? document.startViewTransition(flip) : flip()));
     })();
   </script>
 </body>

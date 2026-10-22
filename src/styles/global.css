@@ -37,6 +37,16 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+
+/* page changes cross-fade instead of blinking (browsers without support just load normally); the header stays put */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .2s; }
+.site-head { view-transition-name: site-head; }
+
+/* hover and theme changes ease instead of snapping */
+a, button, .btn, .chip, .thumb, .theme-toggle, .seg button, select, input {
+  transition: background-color .18s ease, border-color .18s ease, color .18s ease, text-decoration-color .18s ease, box-shadow .18s ease, filter .18s ease;
+}
 html { -webkit-text-size-adjust: 100%; scrollbar-gutter: stable; }
 body {
   margin: 0; background: var(--paper); color: var(--ink);
@@ -220,4 +230,8 @@ a.chip:hover { border-color: var(--ink); background: var(--soft); }
   .facts { grid-template-columns: 96px 1fr; }
   .facts dt { padding-right: 12px; }
 }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  @view-transition { navigation: none; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}
