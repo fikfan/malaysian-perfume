@@ -5,7 +5,6 @@ A free library of perfumes made by Malaysian perfume houses: notes, inspirations
 - Site: https://malaysianperfumes.com (not deployed yet)
 - Stack: Astro (static), no database, no tracking.
 - Data: one JSON file per house in `src/content/houses/` and one per perfume in `src/content/perfumes/<house>/`. See [DATA.md](DATA.md).
-- Houses waiting to be added live in `data-staging/`.
 
 ## Run it
 
