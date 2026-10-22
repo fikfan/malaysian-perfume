@@ -1,0 +1,24 @@
+{
+  "name": "Vanilla Tea",
+  "house": "rirana",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Vanilla",
+      "Tea",
+      "Lime",
+      "Blood orange",
+      "Pear",
+      "Apricot",
+      "Rose",
+      "Honeysuckle",
+      "Ambrette",
+      "Sugar"
+    ]
+  },
+  "image": "https://cdn-ca.dg1.services/6/976/4918/o/Vanilla-Tea-899x1024.jpg",
+  "source": "https://riranaparfume.com/vanilla-tea"
+}

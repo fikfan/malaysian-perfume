@@ -1,0 +1,21 @@
+{
+  "name": "Spices Oud",
+  "house": "rirana",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Oud",
+      "Cinnamon",
+      "Guaiac Wood",
+      "Pink Pepper",
+      "Vetiver"
+    ]
+  },
+  "image": "https://cdn-ca.dg1.services/6/976/4876/o/White-Background-SPICES-OUD-1000x1024.jpg",
+  "source": "https://riranaparfume.com/spices-oud-50ml"
+}

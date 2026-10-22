@@ -85,6 +85,7 @@ export function imgUrl(src: string | null | undefined, w: number) {
   try {
     const u = new URL(src);
     if (/cdn\.shopify\.com|store-assets\.com|\/cdn\/shop\//.test(u.href)) { u.searchParams.set('width', String(w)); return u.href; }
+    if (u.hostname.endsWith('dg1.services')) return src.replace('/o/', `/rw${w}/`);
     return src;
   } catch { return src; }
 }

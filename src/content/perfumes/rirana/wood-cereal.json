@@ -1,0 +1,22 @@
+{
+  "name": "Wood Cereal",
+  "house": "rirana",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Oat",
+      "Wheat",
+      "Sandalwood",
+      "Dried Fruits",
+      "Benzoin",
+      "Peat"
+    ]
+  },
+  "image": "https://cdn-ca.dg1.services/6/976/4900/o/White-Background-WOOD-CEREAL.jpg",
+  "source": "https://riranaparfume.com/wood-cereal-50ml"
+}

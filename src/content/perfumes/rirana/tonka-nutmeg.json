@@ -1,0 +1,28 @@
+{
+  "name": "Tonka Nutmeg",
+  "house": "rirana",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Tonka Bean",
+      "Vanilla",
+      "Nutmeg",
+      "Orris Root",
+      "Saffron",
+      "Mastic",
+      "Styrax",
+      "Opoponax",
+      "Iris",
+      "Black Pepper",
+      "Caraway",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn-ca.dg1.services/6/976/4911/o/TONKA-NUTMEG-899x1024.jpg",
+  "source": "https://riranaparfume.com/tonka-nutmeg-50ml"
+}

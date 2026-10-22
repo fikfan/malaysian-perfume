@@ -1,0 +1,20 @@
+{
+  "name": "Herb & Wood",
+  "house": "rirana",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Cannabis",
+      "Mint",
+      "Leather",
+      "Rosewood",
+      "Oud",
+      "Incense"
+    ]
+  },
+  "image": "https://cdn-ca.dg1.services/6/976/4913/o/hw-2-1024x871.jpg",
+  "source": "https://riranaparfume.com/herb-and-wood"
+}

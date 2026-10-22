@@ -1,0 +1,21 @@
+{
+  "name": "Iris Ambrette",
+  "house": "rirana",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Iris",
+      "Ambrette",
+      "Lavender",
+      "Cedarwood",
+      "Vetiver"
+    ]
+  },
+  "image": "https://cdn-ca.dg1.services/6/976/4884/o/White-Background-IRIS-2-1000x1024.jpg",
+  "source": "https://riranaparfume.com/iris-ambrette-50ml"
+}
