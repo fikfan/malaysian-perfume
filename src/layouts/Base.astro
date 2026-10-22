@@ -6,6 +6,7 @@ import { iconSvg } from '../lib/icons';
 import profileJson from '../data/profile.json';
 import type { Profile } from '../lib/contracts';
 const profile: Profile = profileJson;
+const linkedin = profile.links.find((l) => l.icon === 'linkedin')!;
 
 interface Props { title: string; description?: string; showSearch?: boolean }
 const { title, description = 'A free library of perfumes made by Malaysian houses: notes, inspirations and links, taken from each brand.', showSearch = true } = Astro.props;
@@ -75,7 +76,7 @@ const nav = [
       </div>
       <div>
         <p><strong>Is your house missing, or is something wrong?</strong></p>
-        <p><a href="https://github.com/fikfan/malaysianperfumes/issues">Send a correction on GitHub</a>. Brands can ask to be added or removed.</p>
+        <p>Message me on <ExtLink href={linkedin.href}>LinkedIn</ExtLink>. Brands can ask to be added, corrected or removed.</p>
       </div>
     </div>
   </footer>
