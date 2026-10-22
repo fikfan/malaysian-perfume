@@ -4,6 +4,7 @@ import SearchBox from '../components/SearchBox.astro';
 import Thumb from '../components/Thumb.astro';
 import { load, noteCounts, houseUrl, searchUrl, perfumeUrl, imgUrl, countLabel, currentWithPhoto, TILE_IMG, TYPE_LABEL } from '../lib/data';
 import type { HeroHouse } from '../lib/contracts';
+import { websiteLd } from '../lib/seo';
 
 const { houses, perfumes, byHouse } = await load();
 const notes = await noteCounts();
@@ -26,7 +27,7 @@ const pool: HeroHouse[] = houses.map((h) => ({
   p: currentWithPhoto(listOf(h.id)).slice(0, 12).map((p) => ({ n: p.data.name, u: perfumeUrl(p), img: imgUrl(p.data.image, TILE_IMG * 2) })),
 }));
 ---
-<Base title="Malaysian Perfumes" showSearch={false}>
+<Base title="Malaysian Perfumes: local perfume houses, notes and inspirations" description={`Find perfumes made in Malaysia: ${houses.length} local perfume houses and ${perfumes.length} fragrances, with notes, what each one is inspired by, and where the brand sells it.`} jsonLd={websiteLd()} showSearch={false}>
   <section class="hero wrap">
     <div class="hero-text">
     <h1 class="x">Malaysian perfumes,<br /> in one place.</h1>

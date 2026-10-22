@@ -10,7 +10,7 @@ const list = [...groups].sort((a, b) => a[0].localeCompare(b[0]));
 const letter = (s: string) => (/[a-z]/i.test(s[0]) ? s[0].toUpperCase() : '#');
 const letters = [...new Set(list.map(([n]) => letter(n)))];
 ---
-<Base title="Inspired by" description="Designer and niche scents that Malaysian houses say their perfumes are inspired by, A to Z.">
+<Base title="Local Malaysian perfumes inspired by designer scents" description={`Malaysian perfumes inspired by ${[...list].sort((a, b) => b[1].length - a[1].length).slice(0, 3).map(([n]) => n).join(', ')} and ${list.length - 3} more designer scents, A to Z, as named by each brand.`}>
   <div class="wrap"><div class="inspired">
     <header class="page-head">
       <h1 class="x">Inspired by</h1>

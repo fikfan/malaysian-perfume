@@ -6,13 +6,25 @@ import { iconSvg } from '../lib/icons';
 import profileJson from '../data/profile.json';
 import type { Profile } from '../lib/contracts';
 import { REPO_URL } from '../lib/site';
+import { clip } from '../lib/seo';
 const profile: Profile = profileJson;
 const linkedin = profile.links.find((l) => l.icon === 'linkedin')!;
 
-interface Props { title: string; description?: string; showSearch?: boolean }
-const { title, description = 'A free library of perfumes made by Malaysian houses: notes, inspirations and links, taken from each brand.', showSearch = true } = Astro.props;
+interface Props {
+  title: string;
+  description?: string;
+  showSearch?: boolean;
+  image?: string | null;            // share image; defaults to the site card
+  jsonLd?: object | object[];       // structured data for this page
+  noindex?: boolean;
+}
+const { title, description: rawDescription = 'A free library of perfumes made by Malaysian houses: notes, inspirations and links, taken from each brand.', showSearch = true, image, jsonLd, noindex = false } = Astro.props;
+const description = clip(rawDescription);
 const path = Astro.url.pathname;
-const full = title === 'Malaysian Perfumes' ? title : `${title} | Malaysian Perfumes`;
+const full = title.includes('Malaysian Perfumes') ? title : `${title} | Malaysian Perfumes`;
+const canonical = new URL(path, Astro.site).href;
+const shareImage = image ?? new URL('/og.png', Astro.site).href;
+const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 const nav = [
   { href: '/houses/', label: 'Houses' },
   { href: '/inspired/', label: 'Inspired by' },
@@ -26,9 +38,17 @@ const nav = [
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{full}</title>
   <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  {noindex && <meta name="robots" content="noindex" />}
+  <meta property="og:site_name" content="Malaysian Perfumes" />
+  <meta property="og:locale" content="en_MY" />
   <meta property="og:title" content={full} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={shareImage} />
+  <meta name="twitter:card" content={image ? 'summary' : 'summary_large_image'} />
+  {ld.map((x) => <script type="application/ld+json" set:html={JSON.stringify(x).replace(/</g, '\\u003c')} />)}
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)" />
   <script is:inline>

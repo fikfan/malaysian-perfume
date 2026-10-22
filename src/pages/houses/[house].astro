@@ -2,7 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import PerfumeRow from '../../components/PerfumeRow.astro';
 import ExtLink from '../../components/ExtLink.astro';
-import { load, host, TYPE_LABEL, GENDER_LABEL, type House } from '../../lib/data';
+import { load, host, perfumeUrl, houseUrl, TYPE_LABEL, GENDER_LABEL, type House } from '../../lib/data';
+import { breadcrumbLd, itemListLd } from '../../lib/seo';
 import { iconSvg } from '../../lib/icons';
 
 export async function getStaticPaths() {
@@ -25,7 +26,11 @@ const links = [
   ...link(d.instagram && `https://www.instagram.com/${d.instagram}/`, 'Instagram', 'instagram'),
 ];
 ---
-<Base title={d.name} description={`${d.name}: ${list.length} perfumes with notes, from a Malaysian perfume house.`}>
+<Base
+  title={`${d.name} perfumes: notes and full list`}
+  description={`All ${list.length} ${d.name} perfumes${d.location ? ` (${d.location})` : ''} with their notes${named ? ', what each one is inspired by,' : ''} and where the brand sells them. ${d.about}`}
+  jsonLd={[breadcrumbLd([['Houses', '/houses/'], [d.name, houseUrl(h.id)]]), itemListLd(`${d.name} perfumes`, list.map((p) => [p.data.name, perfumeUrl(p)]))]}
+>
   <div class="wrap">
     <header class="page-head">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/houses/">Houses</a><span aria-hidden="true">/</span>{d.name}</nav>
