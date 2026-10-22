@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import SearchBox from '../components/SearchBox.astro';
 import Thumb from '../components/Thumb.astro';
-import { load, noteCounts, houseUrl, searchUrl, TYPE_LABEL } from '../lib/data';
+import { load, noteCounts, houseUrl, searchUrl, perfumeUrl, TYPE_LABEL } from '../lib/data';
 
 const { houses, perfumes, byHouse } = await load();
 const notes = await noteCounts();
@@ -12,9 +12,17 @@ const insp = new Map<string, number>();
 for (const p of perfumes) if (p.data.inspiredBy) insp.set(p.data.inspiredBy, (insp.get(p.data.inspiredBy) ?? 0) + 1);
 const inspired = [...insp].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 12);
 const coverOf = (id: string) => byHouse.get(id)?.find((p) => p.data.image && !p.data.discontinued)?.data.image ?? byHouse.get(id)?.[0]?.data.image;
+// Hero photos: one current perfume from every other house, never the one already used as that house's cover below
+const picks = houses.filter((_, i) => i % 2 === 0).slice(0, 6)
+  .map((h) => {
+    const ok = (byHouse.get(h.id) ?? []).filter((p) => p.data.image && !p.data.discontinued);
+    return { h, p: ok.find((p) => p.data.image !== coverOf(h.id)) ?? ok[0] };
+  })
+  .filter((x) => x.p);
 ---
 <Base title="Malaysian Perfumes" showSearch={false}>
   <section class="hero wrap">
+    <div class="hero-text">
     <h1 class="x">Malaysian perfumes,<br /> in one place.</h1>
     <p class="lede">Look up perfumes made by Malaysian houses. See the notes, what each one is inspired by, and where the brand sells it. Free, with no prices and no ads. More houses are being added.</p>
     <SearchBox big id="hero-q" />
@@ -23,6 +31,16 @@ const coverOf = (id: string) => byHouse.get(id)?.find((p) => p.data.image && !p.
       <div><dt>Perfumes</dt><dd>{perfumes.length}</dd></div>
       <div><dt>Notes</dt><dd>{notes.length}</dd></div>
     </dl>
+    </div>
+    <ul class="hero-grid" aria-label="A few perfumes in the library">
+      {picks.map(({ h, p }) => (
+        <li>
+          <Thumb src={p!.data.image} name={p!.data.name} size={240} eager />
+          <a href={perfumeUrl(p!)}>{p!.data.name}</a>
+          <span class="muted">{h.data.name}</span>
+        </li>
+      ))}
+    </ul>
   </section>
 
   <div class="wrap">
@@ -61,8 +79,16 @@ const coverOf = (id: string) => byHouse.get(id)?.find((p) => p.data.image && !p.
 </Base>
 
 <style>
-  .hero { padding: 56px var(--gutter) 40px; }
-  .hero h1 { font-weight: 800; font-size: clamp(38px, 6.2vw, 84px); line-height: .95; letter-spacing: -.03em; max-width: 11ch; }
+  .hero { padding: 56px var(--gutter) 40px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 520px); gap: 56px; align-items: center; }
+  .hero-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 12px; }
+  .hero-grid li { position: relative; display: grid; gap: 2px; font-size: 13.5px; line-height: 1.3; }
+  .hero-grid :global(.thumb) { margin-bottom: 6px; }
+  .hero-grid a { font-weight: 700; text-decoration: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .hero-grid a::after { content: ""; position: absolute; inset: 0; }
+  .hero-grid li:hover a { text-decoration: underline; }
+  .hero-grid li:hover :global(.thumb) { outline-color: var(--ink); }
+  .hero-grid span { font-size: 12.5px; }
+  .hero h1 { font-weight: 800; font-size: clamp(38px, 5.4vw, 74px); line-height: .95; letter-spacing: -.03em; max-width: 11ch; }
   .lede { font-size: 19px; color: var(--muted); max-width: 56ch; margin: 18px 0 26px; }
   .hero :global(.searchbox) { max-width: 640px; }
   .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 160px)); margin: 32px 0 0; border-top: var(--line); }
@@ -78,7 +104,10 @@ const coverOf = (id: string) => byHouse.get(id)?.find((p) => p.data.image && !p.
   .house:hover :global(.thumb) { border-color: var(--ink); }
   .house p { margin: 2px 0 0; font-size: 14.5px; }
   .house .n { font-weight: 600; font-variant-numeric: tabular-nums; }
-  @media (max-width: 1000px) { .houses { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 1120px) { .hero { grid-template-columns: 1fr; gap: 32px; } .hero-grid { max-width: 640px; } }
+  @media (max-width: 1000px) {
+    .houses { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
   @media (max-width: 640px) {
     .hero { padding-top: 32px; padding-bottom: 28px; }
     .lede { font-size: 17px; }
