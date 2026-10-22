@@ -21,8 +21,13 @@ const links = [
   d.tiktok && { href: `https://www.tiktok.com/@${d.tiktok}`, label: 'TikTok', key: 'tiktok' },
   d.instagram && { href: `https://www.instagram.com/${d.instagram}/`, label: 'Instagram', key: 'instagram' },
 ].filter(Boolean) as { href: string; label: string; key: string }[];
-// Brand marks from Simple Icons (CC0); Lazada has none there, so its colours carry it
-const icon = (k: string) => (k in icons ? `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="${icons[k as keyof typeof icons]}"/></svg>` : k === 'web' ? ext : '');
+// Brand marks: Simple Icons (CC0); Lazada from Wikimedia Commons (public domain), which has its own viewBox
+const icon = (k: string) => {
+  const i = (icons as Record<string, string | { viewBox: string; d: string }>)[k];
+  if (!i) return k === 'web' ? ext : '';
+  const [vb, d] = typeof i === 'string' ? ['0 0 24 24', i] : [i.viewBox, i.d];
+  return `<svg viewBox="${vb}" fill="currentColor" aria-hidden="true"><path d="${d}"/></svg>`;
+};
 const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg>';
 ---
 <Base title={d.name} description={`${d.name}: ${list.length} perfumes with notes, from a Malaysian perfume house.`}>
