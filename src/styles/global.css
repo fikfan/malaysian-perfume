@@ -118,8 +118,6 @@ h1, h2, h3 { margin: 0; line-height: 1.05; letter-spacing: -0.02em; text-wrap: b
 .cta:active { transform: translateY(0) scale(.97); transition-duration: .1s; }
 @keyframes cta-stripes { to { background-position: 16px 0; } }
 @keyframes cta-star { to { transform: rotate(360deg); } }
-/* on the contact page the stripes stay, to mark where you are */
-.cta[aria-current="page"]::after { transform: scaleX(1); }
 .theme-toggle { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); cursor: pointer; }
 .theme-toggle:hover { border-color: var(--ink); }
 .theme-toggle svg { width: 18px; height: 18px; }
