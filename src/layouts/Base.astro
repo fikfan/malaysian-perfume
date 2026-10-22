@@ -4,11 +4,17 @@ import SearchBox from '../components/SearchBox.astro';
 import ExtLink from '../components/ExtLink.astro';
 import { iconSvg } from '../lib/icons';
 import profileJson from '../data/profile.json';
-import type { Profile } from '../lib/contracts';
+import { z } from 'astro/zod';
 import { REPO_URL } from '../lib/site';
 import { clip } from '../lib/seo';
-const profile: Profile = profileJson;
-const linkedin = profile.links.find((l) => l.icon === 'linkedin')!;
+// validated like the content collections: links go into hrefs on every page
+const profile = z.object({
+  name: z.string(),
+  about: z.string(),
+  links: z.array(z.object({ label: z.string(), href: z.url({ protocol: /^https$/ }), icon: z.string() })),
+}).parse(profileJson);
+const linkedin = profile.links.find((l) => l.icon === 'linkedin');
+if (!linkedin) throw new Error('profile.json: a link with icon "linkedin" is required');
 
 interface Props {
   title: string;
@@ -51,18 +57,7 @@ const nav = [
   {ld.map((x) => <script type="application/ld+json" set:html={JSON.stringify(x).replace(/</g, '\\u003c')} />)}
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)" />
-  <script is:inline>
-    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch {}
-    // hold the page behind a brief loader until the font is in, so text does not jump; never longer than 1.2 s
-    (() => {
-      const r = document.documentElement; r.classList.add('js');
-      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      r.classList.add('loading');
-      const done = () => r.classList.remove('loading');
-      setTimeout(done, 1200);
-      addEventListener('DOMContentLoaded', () => document.fonts.ready.then(done));
-    })();
-  </script>
+  <script is:inline src="/head.js"></script>
   <link rel="icon" href="/favicon.ico" sizes="32x32" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -111,17 +106,17 @@ const nav = [
       {profile.links.map((l) => <li><ExtLink class="btn" href={l.href}><Fragment set:html={iconSvg(l.icon)} />{l.label}</ExtLink></li>)}
     </ul>
   </dialog>
-  <script is:inline>
+  <script>
     // footer name opens the profile card; clicking outside the card closes it
     (() => {
-      const d = document.getElementById('profile');
-      document.getElementById('profile-open').addEventListener('click', (e) => { e.preventDefault(); d.showModal(); });
+      const d = document.getElementById('profile') as HTMLDialogElement;
+      document.getElementById('profile-open')!.addEventListener('click', (e) => { e.preventDefault(); d.showModal(); });
       d.addEventListener('click', (e) => { if (e.target === d) d.close(); });
     })();
   </script>
-  <script is:inline>
+  <script>
     (() => {
-      const b = document.getElementById('theme-toggle'), root = document.documentElement;
+      const b = document.getElementById('theme-toggle')!, root = document.documentElement;
       const dark = () => root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
       const sync = () => {
         b.setAttribute('aria-pressed', String(dark()));
@@ -135,7 +130,7 @@ const nav = [
       };
       // cross-fade the whole page between themes where supported
       const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
-      b.addEventListener('click', () => (document.startViewTransition && !still ? document.startViewTransition(flip) : flip()));
+      b.addEventListener('click', () => ('startViewTransition' in document && !still ? document.startViewTransition(flip) : flip()));
     })();
   </script>
 </body>

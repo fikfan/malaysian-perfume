@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { collectLinks, check, classify, checkAll } from './check-links.mjs';
+import { collectLinks, check, classify, checkAll, clean } from './check-links.mjs';
 
 // A tiny copy of the data layout: one house, two perfumes, a profile
 function fixture() {
@@ -85,4 +85,17 @@ test('checkAll checks every url once, with limited concurrency', async () => {
   assert.equal(results.size, 10);
   assert.deepEqual(seen.sort(), [...urls].sort());
   assert.ok(peak <= 3, `peak concurrency ${peak}`);
+});
+
+test('collectLinks skips anything that is not https', () => {
+  const root = fixture();
+  try {
+    writeFileSync(join(root, 'src/content/perfumes/acme/bad.json'), JSON.stringify({ image: 'http://169.254.169.254/', source: 'data:text/html,x' }));
+    const links = collectLinks(root);
+    assert.ok(![...links.keys()].some((u) => !u.startsWith('https://')));
+  } finally { rmSync(root, { recursive: true }); }
+});
+
+test('clean strips control characters, so data cannot fake CI log commands', () => {
+  assert.equal(clean('https://a\n::error::fake'), 'https://a?::error::fake');
 });

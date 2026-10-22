@@ -8,5 +8,7 @@ export function iconSvg(key: string) {
   const i = (icons as Record<string, string | { viewBox: string; d: string }>)[key];
   if (!i) return EXT;
   const [vb, d] = typeof i === 'string' ? ['0 0 24 24', i] : [i.viewBox, i.d];
+  // the JSON goes into raw markup, so allow only path commands and numbers
+  if (!/^[MmLlHhVvCcSsQqTtAaZzEe\d.,\s+-]+$/.test(d) || !/^[\d.\s-]+$/.test(vb)) throw new Error(`brand-icons.json: invalid icon "${key}"`);
   return `<svg viewBox="${vb}" fill="currentColor" aria-hidden="true"><path d="${d}"/></svg>`;
 }

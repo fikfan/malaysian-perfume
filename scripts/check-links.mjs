@@ -7,6 +7,8 @@ import { fileURLToPath } from 'node:url';
 
 const CONCURRENCY = 8;
 const TIMEOUT_MS = 15000;
+// The data has under 1000 links; far more means a bad pull request, which would keep the CI runner busy for hours
+export const MAX_LINKS = 3000;
 // Answers that mean "this server will not talk to a script" (bot protection, rate limits, LinkedIn's 999),
 // and network hiccups. Common from CI data centres; the link usually works in a browser, so report, do not fail.
 export const BOT_WALLS = [401, 403, 406, 429, 999];
@@ -18,7 +20,8 @@ const files = (dir) => readdirSync(dir, { recursive: true }).filter((f) => f.end
 /** Every outside link in the data, as url → list of places that use it */
 export function collectLinks(root) {
   const links = new Map();
-  const add = (url, where) => { if (url) links.set(url, [...(links.get(url) ?? []), where]); };
+  // https only, like the schema: never fetch http:, data: or other schemes from CI
+  const add = (url, where) => { if (/^https:\/\//i.test(url ?? '')) links.set(url, [...(links.get(url) ?? []), where]); };
   for (const f of files(join(root, 'src/content/houses'))) {
     const h = json(f), id = f.split('/').pop().replace('.json', '');
     for (const k of ['website', 'shopee', 'lazada']) add(h[k], `house ${id} ${k}`);
@@ -66,12 +69,16 @@ export async function checkAll(urls, checkOne = check, concurrency = CONCURRENCY
   return results;
 }
 
+// Data from pull requests reaches the CI log; strip control characters so it cannot fake log commands
+export const clean = (s) => String(s).replace(/[\x00-\x1f\x7f]/g, '?');
+
 async function main() {
   const links = collectLinks(fileURLToPath(new URL('..', import.meta.url)));
+  if (links.size > MAX_LINKS) { console.log(`${links.size} links, more than ${MAX_LINKS}. Check the data.`); process.exit(1); }
   const { broken, walled } = classify(await checkAll([...links.keys()]));
   const show = ([u, s]) => {
     const used = links.get(u);
-    return `  ${s}  ${u}\n        used by: ${used.slice(0, 3).join(', ')}${used.length > 3 ? ` (+${used.length - 3})` : ''}`;
+    return `  ${clean(s)}  ${clean(u)}\n        used by: ${clean(used.slice(0, 3).join(', '))}${used.length > 3 ? ` (+${used.length - 3})` : ''}`;
   };
   console.log(`Checked ${links.size} links.`);
   if (walled.length) console.log(`\n${walled.length} could not be checked: blocked or no answer (open them in a browser to confirm):\n${walled.map(show).join('\n')}`);

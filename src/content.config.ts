@@ -4,6 +4,9 @@ import { z } from 'astro/zod';
 
 // only https links: blocks javascript: and other schemes in outside corrections
 const link = z.url({ protocol: /^https$/, error: 'must be an https:// link' });
+// photos load in every visitor's browser, so only from known brand hosts; keep in sync with img-src in public/_headers
+const IMG_HOSTS = ['cdn.shopify.com', 'cdn.store-assets.com', 'cdn1.sgliteasset.com', 'cdn-ca.dg1.services', 'blancofragrance.com.my', 'perfumemalaya.com', 'www.legendary.com.my', 'szindore.com'];
+const image = link.refine((u) => IMG_HOSTS.includes(new URL(u).hostname), 'image host not allowed: add it to IMG_HOSTS and to img-src in public/_headers');
 
 const houses = defineCollection({
   loader: glob({ pattern: '*.json', base: './src/content/houses' }),
@@ -38,7 +41,7 @@ const perfumes = defineCollection({
     sizesMl: z.array(z.number()).default([]),
     inspiredBy: z.string().nullable().optional(),
     notes,
-    image: link.nullable().optional(),
+    image: image.nullable().optional(),
     source: link,
     discontinued: z.boolean().optional(),
   }),

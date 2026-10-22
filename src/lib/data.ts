@@ -34,7 +34,7 @@ export function cleanNote(raw: string): string[] {
     let n = noteName(x);
     if (DROP.has(n)) return [];
     if (n.split(' ').length > 1) n = n.replace(ADJ, '');
-    n = aliases[n] ?? n;
+    n = Object.hasOwn(aliases, n) ? aliases[n] : n;
     if (!n || DROP.has(n)) return [];
     return [n[0].toUpperCase() + n.slice(1)];
   });

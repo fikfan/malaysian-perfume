@@ -1,5 +1,5 @@
 ---
-// Brand-hosted product photo. If the brand's server refuses the image, show the first letter instead.
+// Brand-hosted product photo. If the brand's server refuses the image, show the first letter instead (public/head.js).
 import { imgUrl } from '../lib/data';
 interface Props { src?: string | null; name: string; eager?: boolean; size?: number; alt?: string }
 // alt stays empty in lists (the name is right next to the photo); the perfume page passes a real one
@@ -7,7 +7,6 @@ const { src, name, eager = false, size = 400, alt = '' } = Astro.props;
 ---
 <div class:list={['thumb', { noimg: !src }]} data-initial={name.trim()[0]}>
   {src && (
-    <img src={imgUrl(src, Math.min(size * 2, 1200))} alt={alt} width={size} height={size} loading={eager ? 'eager' : 'lazy'} decoding="async"
-      referrerpolicy="no-referrer" onload="this.classList.add('in')" onerror="this.parentElement.classList.add('noimg');this.remove()" />
+    <img src={imgUrl(src, Math.min(size * 2, 1200))} alt={alt} width={size} height={size} loading={eager ? 'eager' : 'lazy'} decoding="async" referrerpolicy="no-referrer" />
   )}
 </div>

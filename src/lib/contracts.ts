@@ -20,13 +20,6 @@ export type SearchRow = {
   f: string;                    // extra family words for search (oud names)
 };
 
-/** src/data/profile.json: the site owner's card in the footer popup */
-export type Profile = {
-  name: string;
-  about: string;
-  links: { label: string; href: string; icon: string }[]; // icon: a key in brand-icons.json
-};
-
 /** One house in the home page hero pool (src/pages/index.astro, build → inline JSON → client) */
 export type HeroHouse = {
   n: string;                    // house name

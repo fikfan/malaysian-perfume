@@ -1,0 +1,11 @@
+# Security headers for Cloudflare. The site has no inline scripts, styles or handlers (see astro.config.mjs), so no hashes.
+# img-src must list the same hosts as IMG_HOSTS in src/content.config.ts.
+# cloudflareinsights.com is Cloudflare Web Analytics.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://cdn.shopify.com https://cdn.store-assets.com https://cdn1.sgliteasset.com https://cdn-ca.dg1.services https://blancofragrance.com.my https://perfumemalaya.com https://www.legendary.com.my https://szindore.com; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
+  Cross-Origin-Opener-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains

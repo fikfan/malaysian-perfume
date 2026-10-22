@@ -1,11 +1,11 @@
 // HTML-string helpers for the browser scripts that render lists (search results, hero grid).
 // Server-rendered pages use the Astro components; keep the thumbnail markup here in sync with Thumb.astro.
 
-export const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+export const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
 
 export const thumbHtml = (img: string | null, name: string, size: number) =>
   `<div class="thumb${img ? '' : ' noimg'}" data-initial="${esc(name[0] ?? '')}">${img
-    ? `<img src="${esc(img)}" alt="" width="${size}" height="${size}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.classList.add('in')" onerror="this.parentElement.classList.add('noimg');this.remove()">`
+    ? `<img src="${esc(img)}" alt="" width="${size}" height="${size}" loading="lazy" decoding="async" referrerpolicy="no-referrer">`
     : ''}</div>`;
 
 // Fisher–Yates: every order equally likely
