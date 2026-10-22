@@ -252,15 +252,18 @@ a.chip:hover { border-color: var(--ink); background: var(--soft); }
   .prow .notes-line { grid-column: 2; }
   .site-foot .wrap { grid-template-columns: 1fr; }
 }
+/* below 900 px the header is two rows: logo + Get featured, then the menu + night mode */
+@media (max-width: 900px) {
+  .site-head .wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; grid-template-areas: "logo cta cta" "nav nav toggle"; align-items: center; gap: 8px 16px; padding-block: 10px; }
+  .logo { grid-area: logo; }
+  .cta { grid-area: cta; justify-self: end; }
+  .site-nav { grid-area: nav; margin-left: 0; }
+  .theme-toggle { grid-area: toggle; }
+  .site-nav a { white-space: nowrap; padding: 10px; }
+  .site-nav a:first-child { padding-left: 0; }
+}
 @media (max-width: 640px) {
   :root { --gutter: 16px; }
-  .site-head .wrap { gap: 8px 16px; padding-block: 10px; }
-  .site-nav { margin-left: 0; flex: 1; order: 1; }
-  .cta { margin-left: auto; }
-  .theme-toggle { order: 2; }
-  .site-nav a { white-space: nowrap; }
-  .site-nav a { padding: 10px 10px; }
-  .site-nav a:first-child { padding-left: 0; }
   .btn-row .btn { flex: 1 1 0; justify-content: center; padding: 0 8px; }
   .logo { font-size: 17px; }
   .page-head { padding: 26px 0 18px; }
@@ -274,8 +277,12 @@ a.chip:hover { border-color: var(--ink); background: var(--soft); }
   @view-transition { navigation: none; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
 }
+/* the smallest phones: everything a little smaller so the header still fits on two rows */
 @media (max-width: 380px) {
-  .logo { font-size: 15px; gap: 8px; }
-  .cta { min-height: 36px; padding: 0 10px; font-size: 14px; }
-  .site-nav a { padding: 10px 7px; }
+  .site-head .wrap { gap: 8px; }
+  .logo { font-size: 14px; gap: 6px; }
+  .logo img { width: 24px; height: 24px; }
+  .cta { min-height: 36px; padding: 0 9px; font-size: 13px; }
+  .site-nav a { padding: 10px 6px; font-size: 15px; }
+  .theme-toggle { width: 36px; height: 36px; }
 }
