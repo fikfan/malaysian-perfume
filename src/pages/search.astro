@@ -70,7 +70,7 @@ const tips = (await noteCounts()).slice(0, 8).map(([n]) => n);
       <p class="meta">by <b>${hl(r.hn, t)}</b></p>
       ${r.i ? `<p class="meta">Inspired by <b>${hl(r.i, t)}</b></p>` : ''}
       <div class="tags">${r.g ? `<span class="tag">${GENDER_LABEL[r.g]}</span>` : ''}${r.d ? '<span class="tag warn">Discontinued</span>' : ''}</div></div>
-      <p class="notes-line">${r.l.length ? r.l.map(([lab, ns]) => `<span class="layer" data-l="${esc(lab)}">${esc(lab)}</span> ${hl(ns.join(', '), t)}.`).join(' ') : '<span>The brand does not list notes for this one.</span>'}</p></li>`;
+      ${r.l.length ? `<div class="notes-line notes-grid">${r.l.map(([lab, ns]) => `<span class="layer" data-l="${esc(lab)}">${esc(lab)}</span><span>${hl(ns.join(', '), t)}</span>`).join('')}</div>` : '<p class="notes-line empty">The brand does not list notes for this one.</p>'}</li>`;
 
   function run(push = true) {
     const q = input.value.trim();

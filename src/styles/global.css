@@ -160,10 +160,12 @@ a.chip:hover { border-color: var(--ink); background: var(--soft); }
 .prow .meta b { color: var(--ink); font-weight: 500; }
 .prow .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
 .prow .notes-line { font-size: 14.5px; line-height: 1.45; margin: 0; }
-.prow .notes-line > span:not(.layer) { color: var(--muted); }
+.prow .notes-line.empty { color: var(--muted); }
+/* one row per layer: the badge in a fixed column, its notes beside it */
+.notes-grid { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 10px; align-items: baseline; }
+.notes-grid .layer { text-align: center; }
 /* note layer badges: one tint per layer so top, heart and base read at a glance */
 .layer { display: inline-block; font-size: 12px; font-weight: 700; line-height: 1.5; padding: 0 7px; border: 1px solid; border-radius: var(--radius); white-space: nowrap; color: var(--ink); background: var(--soft); border-color: var(--rule); }
-.prow .notes-line .layer { margin-right: 2px; }
 .layer[data-l="Top"], .layer[data-l="Heart"], .layer[data-l="Base"] { color: #000; }
 .layer[data-l="Top"] { background: #fff3b0; border-color: #d9b600; }
 .layer[data-l="Heart"] { background: #ffdde4; border-color: #e0899b; }

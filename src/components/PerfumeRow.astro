@@ -23,8 +23,8 @@ const k = [d.name, d.inspiredBy, ...notes].filter(Boolean).join(' ') + searchFam
     </div>
   </div>
   {layers.length ? (
-    <p class="notes-line">{layers.map((l, i) => <>{i > 0 && ' '}<span class="layer" data-l={l.label}>{l.label}</span> {l.notes.map((n, j) => <>{j > 0 && ', '}{on.has(n) ? <strong>{n}</strong> : n}</>)}.</>)}</p>
+    <div class="notes-line notes-grid">{layers.map((l) => <><span class="layer" data-l={l.label}>{l.label}</span><span>{l.notes.map((n, j) => <>{j > 0 && ', '}{on.has(n) ? <strong>{n}</strong> : n}</>)}</span></>)}</div>
   ) : (
-    <p class="notes-line"><span>The brand does not list notes for this one.</span></p>
+    <p class="notes-line empty">The brand does not list notes for this one.</p>
   )}
 </li>
