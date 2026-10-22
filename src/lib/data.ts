@@ -67,7 +67,9 @@ export async function load() {
   if (cache) return cache;
   const houses = (await getCollection('houses')).sort((a, b) => a.data.name.localeCompare(b.data.name));
   const perfumes = (await getCollection('perfumes')).sort((a, b) => a.data.name.localeCompare(b.data.name));
-  const byHouse = new Map(houses.map((h) => [h.id, perfumes.filter((p) => p.data.house === h.id)]));
+  // current perfumes first, discontinued ones after (stable, so A-Z order is kept inside each group)
+  const byHouse = new Map(houses.map((h) => [h.id, perfumes.filter((p) => p.data.house === h.id)
+    .sort((a, b) => Number(!!a.data.discontinued) - Number(!!b.data.discontinued))]));
   return (cache = { houses, perfumes, byHouse });
 }
 

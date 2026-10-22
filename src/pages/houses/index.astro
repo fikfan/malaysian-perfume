@@ -23,7 +23,7 @@ const host = (u?: string | null) => (u ? new URL(u).hostname.replace(/^www\./, '
               <th scope="row"><a href={houseUrl(h.id)}>{h.data.name}</a></th>
               <td>{TYPE_LABEL[h.data.type]}</td>
               <td>{h.data.location ?? <span class="muted">Not stated</span>}</td>
-              <td class="num">{byHouse.get(h.id)?.length}</td>
+              <td class="num">{byHouse.get(h.id)?.length}{h.data.partial && '+'}</td>
               <td>{h.data.website ? <a href={h.data.website} rel="noopener" target="_blank">{host(h.data.website)}</a> : <span class="muted">None</span>}</td>
             </tr>
           ))}

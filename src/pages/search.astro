@@ -64,11 +64,11 @@ const tips = (await noteCounts()).slice(0, 8).map(([n]) => n);
   }
   const thumb = (r: Row) => `<div class="thumb-wrap"><div class="thumb${r.img ? '' : ' noimg'}" data-initial="${esc(r.n[0])}">${r.img ? `<img src="${esc(r.img)}" alt="" width="176" height="176" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.classList.add('in')" onerror="this.parentElement.classList.add('noimg');this.remove()">` : ''}</div></div>`;
   const row = (r: Row, t: string[]) => `<li class="prow">${thumb(r)}<div>
-      <h3><a href="${r.u}">${hl(r.n, t)}</a></h3>
+      <h3><a href="${esc(r.u)}">${hl(r.n, t)}</a></h3>
       <p class="meta">by <b>${hl(r.hn, t)}</b></p>
       ${r.i ? `<p class="meta">Inspired by <b>${hl(r.i, t)}</b></p>` : ''}
       <div class="tags">${r.g ? `<span class="tag">${G[r.g]}</span>` : ''}${r.d ? '<span class="tag warn">Discontinued</span>' : ''}</div></div>
-      <p class="notes-line">${r.l.length ? r.l.map(([lab, ns]) => `<span class="layer" data-l="${lab}">${lab}</span> ${hl(ns.join(', '), t)}.`).join(' ') : '<span>The brand does not list notes for this one.</span>'}</p></li>`;
+      <p class="notes-line">${r.l.length ? r.l.map(([lab, ns]) => `<span class="layer" data-l="${esc(lab)}">${esc(lab)}</span> ${hl(ns.join(', '), t)}.`).join(' ') : '<span>The brand does not list notes for this one.</span>'}</p></li>`;
 
   function run(push = true) {
     const q = input.value.trim();

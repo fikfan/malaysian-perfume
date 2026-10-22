@@ -2,6 +2,9 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
+// only https links: blocks javascript: and other schemes in outside corrections
+const link = z.string().url().refine((u) => u.startsWith('https://'), 'must be an https:// link');
+
 const houses = defineCollection({
   loader: glob({ pattern: '*.json', base: './src/content/houses' }),
   schema: z.object({
@@ -10,12 +13,12 @@ const houses = defineCollection({
     founded: z.number().nullable().optional(),
     location: z.string().nullable().optional(),
     about: z.string(),
-    website: z.string().url().nullable().optional(),
+    website: link.nullable().optional(),
     instagram: z.string().nullable().optional(),
     tiktok: z.string().nullable().optional(),
-    shopee: z.string().nullable().optional(),
-    lazada: z.string().nullable().optional(),
-    sources: z.array(z.string()).default([]),
+    shopee: link.nullable().optional(),
+    lazada: link.nullable().optional(),
+    sources: z.array(link).default([]),
     partial: z.boolean().optional(),
   }),
 });
@@ -35,8 +38,8 @@ const perfumes = defineCollection({
     sizesMl: z.array(z.number()).default([]),
     inspiredBy: z.string().nullable().optional(),
     notes,
-    image: z.string().url().nullable().optional(),
-    source: z.string().url(),
+    image: link.nullable().optional(),
+    source: link,
     discontinued: z.boolean().optional(),
   }),
 });

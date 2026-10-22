@@ -14,6 +14,7 @@ const list = byHouse.get(h.id) ?? [];
 const d = h.data;
 const genders = (['masculine', 'feminine', 'unisex'] as const).filter((g) => list.some((p) => p.data.gender === g));
 const discontinued = list.filter((p) => p.data.discontinued).length;
+const named = list.filter((p) => p.data.inspiredBy).length;
 const links = [
   d.website && { href: d.website, label: 'Website', key: 'web' },
   d.shopee && { href: d.shopee, label: 'Shopee', key: 'shopee' },
@@ -40,7 +41,7 @@ const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
 
     <div class="top">
       <dl class="facts">
-        <dt>Makes</dt><dd>{TYPE_LABEL[d.type]}</dd>
+        <dt>Makes</dt><dd>{TYPE_LABEL[d.type]}{d.type !== 'original' && named === 0 && <span class="muted">. The brand does not name which scent each perfume is inspired by.</span>}</dd>
         <dt>Founded</dt><dd>{d.founded ?? <span class="muted">Not stated</span>}</dd>
         <dt>Based in</dt><dd>{d.location ?? <span class="muted">Not stated</span>}</dd>
         <dt>Listed here</dt><dd>{list.length} perfumes{discontinued > 0 && <span class="muted"> ({discontinued} discontinued)</span>}{d.partial && <span class="muted">. The brand sells more; they are being added.</span>}</dd>

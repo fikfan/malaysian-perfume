@@ -21,7 +21,7 @@ const picks = houses.filter((_, i) => i % 2 === 0).slice(0, 6)
   .filter((x) => x.p);
 // Pool for the shuffle: every house, with its cover and up to 12 current perfumes that have a photo
 const pool = houses.map((h) => ({
-  n: h.data.name, u: houseUrl(h.id), c: byHouse.get(h.id)?.length ?? 0, img: imgUrl(coverOf(h.id), 480),
+  n: h.data.name, u: houseUrl(h.id), c: `${byHouse.get(h.id)?.length ?? 0}${h.data.partial ? '+' : ''}`, img: imgUrl(coverOf(h.id), 480),
   p: (byHouse.get(h.id) ?? []).filter((p) => p.data.image && !p.data.discontinued).slice(0, 12)
     .map((p) => ({ n: p.data.name, u: perfumeUrl(p), img: imgUrl(p.data.image, 480) })),
 }));
@@ -49,7 +49,7 @@ const pool = houses.map((h) => ({
     </ul>
     <button type="button" class="shuffle" id="shuffle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>Shuffle</button>
     </div>
-    <script type="application/json" id="hero-pool" set:html={JSON.stringify(pool)} />
+    <script type="application/json" id="hero-pool" set:html={JSON.stringify(pool).replace(/</g, '\\u003c')} />
     <script is:inline>
       // Random mix on every visit: 4 perfumes and 2 houses, all from different houses, in random order
       (() => {
@@ -83,7 +83,7 @@ const pool = houses.map((h) => ({
           <div>
             <h3><a href={houseUrl(h.id)}>{h.data.name}</a></h3>
             <p class="muted">{TYPE_LABEL[h.data.type]}</p>
-            <p class="n">{byHouse.get(h.id)?.length} perfumes</p>
+            <p class="n">{byHouse.get(h.id)?.length}{h.data.partial && '+'} perfumes</p>
           </div>
         </li>
       ))}
