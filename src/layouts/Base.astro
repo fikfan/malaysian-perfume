@@ -87,8 +87,6 @@ const nav = [
       <div>
         <p><strong>Malaysian Perfumes</strong> is a free library of perfumes made by Malaysian houses.</p>
         <p>It is not linked to any brand. Notes, sizes and inspirations come from each brand's own website or online store, and every perfume page links to its source. Prices are not shown.</p>
-        <!-- without JS the name is a plain link to the first profile link -->
-        <p>Made with love by <a href={profile.links[0].href} id="profile-open" aria-haspopup="dialog">{profile.name}</a></p>
       </div>
       <div>
         <p><strong>Is your brand not featured, or is something wrong?</strong></p>
@@ -96,6 +94,8 @@ const nav = [
         <p><strong>Want to contribute?</strong> The site is open source. <ExtLink href={REPO_URL}>Contribute here</ExtLink>.</p>
       </div>
     </div>
+    <!-- without JS the name is a plain link to the first profile link -->
+    <p class="made-by">Made with love by <a href={profile.links[0].href} id="profile-open" aria-haspopup="dialog"><img src="/fikfan.png" alt="" width="24" height="24" />{profile.name}</a></p>
   </footer>
   <dialog class="profile" id="profile" aria-labelledby="profile-name">
     <form method="dialog"><button class="profile-close" aria-label="Close">×</button></form>
