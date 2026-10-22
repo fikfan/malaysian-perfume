@@ -80,6 +80,10 @@ const pool: HeroHouse[] = houses.map((h) => ({
   </section>
 
   <div class="wrap">
+  <aside class="feature-band" aria-label="For brands">
+    <p><strong>Own a Malaysian perfume brand?</strong> Get it listed here, free. Your perfumes, notes and shop links, with a link back to your store.</p>
+    <a class="cta" href="/contact/">Get featured</a>
+  </aside>
   <section class="section" aria-labelledby="h-houses">
     <div class="section-head"><h2 id="h-houses">Houses</h2><a href="/houses/">All houses and who is coming next</a></div>
     <ul class="houses">
@@ -115,6 +119,8 @@ const pool: HeroHouse[] = houses.map((h) => ({
 </Base>
 
 <style>
+  .feature-band { display: flex; align-items: center; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap; padding: 18px 20px; margin-bottom: 40px; border: var(--line); border-radius: var(--radius); background: var(--soft); }
+  .feature-band p { margin: 0; max-width: 70ch; font-size: 16px; }
   .hero { padding: 56px var(--gutter) 40px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 520px); gap: 56px; align-items: center; }
   :global(.js) .hero-grid:not(.ready) { visibility: hidden; }
   .hero-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 12px; }
