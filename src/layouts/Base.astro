@@ -1,6 +1,11 @@
 ---
 import '../styles/global.css';
 import SearchBox from '../components/SearchBox.astro';
+import ExtLink from '../components/ExtLink.astro';
+import { iconSvg } from '../lib/icons';
+import profileJson from '../data/profile.json';
+import type { Profile } from '../lib/contracts';
+const profile: Profile = profileJson;
 
 interface Props { title: string; description?: string; showSearch?: boolean }
 const { title, description = 'A free library of perfumes made by Malaysian houses: notes, inspirations and links, taken from each brand.', showSearch = true } = Astro.props;
@@ -65,7 +70,8 @@ const nav = [
       <div>
         <p><strong>Malaysian Perfumes</strong> is a free library of perfumes made by Malaysian houses.</p>
         <p>It is not linked to any brand. Notes, sizes and inspirations come from each brand's own website or online store, and every perfume page links to its source. Prices are not shown.</p>
-        <p>Made by <a href="https://github.com/fikfan">fikfan</a>, a Malaysian web designer.</p>
+        <!-- without JS the name is a plain link to the first profile link -->
+        <p>Made with love by <a href={profile.links[0].href} id="profile-open" aria-haspopup="dialog">{profile.name}</a></p>
       </div>
       <div>
         <p><strong>Is your house missing, or is something wrong?</strong></p>
@@ -73,6 +79,23 @@ const nav = [
       </div>
     </div>
   </footer>
+  <dialog class="profile" id="profile" aria-labelledby="profile-name">
+    <form method="dialog"><button class="profile-close" aria-label="Close">×</button></form>
+    <img src="/logo.svg" alt="" width="40" height="40" />
+    <h2 id="profile-name">{profile.name}</h2>
+    <p class="muted">{profile.about}</p>
+    <ul>
+      {profile.links.map((l) => <li><ExtLink class="btn" href={l.href}><Fragment set:html={iconSvg(l.icon)} />{l.label}</ExtLink></li>)}
+    </ul>
+  </dialog>
+  <script is:inline>
+    // footer name opens the profile card; clicking outside the card closes it
+    (() => {
+      const d = document.getElementById('profile');
+      document.getElementById('profile-open').addEventListener('click', (e) => { e.preventDefault(); d.showModal(); });
+      d.addEventListener('click', (e) => { if (e.target === d) d.close(); });
+    })();
+  </script>
   <script is:inline>
     (() => {
       const b = document.getElementById('theme-toggle'), root = document.documentElement;

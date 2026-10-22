@@ -224,6 +224,18 @@ a.chip:hover { border-color: var(--ink); background: var(--soft); }
 .site-foot strong { color: var(--ink); }
 .site-foot p { margin: 0 0 8px; max-width: 60ch; }
 
+/* footer profile card (native <dialog>: focus trap, Esc to close and inert page come for free) */
+.profile { width: min(360px, calc(100vw - 32px)); padding: 24px; border: var(--line); border-radius: var(--radius); background: var(--paper); color: var(--ink); }
+.profile::backdrop { background: rgb(0 0 0 / .45); }
+.profile[open] { animation: profile-in .18s ease-out; }
+@keyframes profile-in { from { opacity: 0; transform: translateY(8px); } }
+.profile h2 { font-size: 22px; font-weight: 800; margin: 12px 0 6px; }
+.profile p { margin: 0 0 16px; font-size: 15px; }
+.profile ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.profile .btn { width: 100%; }
+.profile-close { position: absolute; top: 8px; right: 8px; width: 40px; height: 40px; border: 0; background: none; font-size: 24px; line-height: 1; cursor: pointer; border-radius: var(--radius); }
+.profile-close:hover { background: var(--soft); }
+
 @media (max-width: 860px) {
   .prow { grid-template-columns: 72px minmax(0, 1fr); gap: 8px 14px; }
   .prow .thumb-wrap { width: 72px; grid-row: span 2; }

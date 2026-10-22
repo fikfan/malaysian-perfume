@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import PerfumeRow from '../../components/PerfumeRow.astro';
 import ExtLink from '../../components/ExtLink.astro';
 import { load, host, TYPE_LABEL, GENDER_LABEL, type House } from '../../lib/data';
-import icons from '../../data/brand-icons.json';
+import { iconSvg } from '../../lib/icons';
 
 export async function getStaticPaths() {
   const { houses } = await load();
@@ -24,14 +24,6 @@ const links = [
   ...link(d.tiktok && `https://www.tiktok.com/@${d.tiktok}`, 'TikTok', 'tiktok'),
   ...link(d.instagram && `https://www.instagram.com/${d.instagram}/`, 'Instagram', 'instagram'),
 ];
-// Brand marks: Simple Icons (CC0); Lazada from Wikimedia Commons (public domain), which has its own viewBox
-const icon = (k: string) => {
-  const i = (icons as Record<string, string | { viewBox: string; d: string }>)[k];
-  if (!i) return k === 'web' ? ext : '';
-  const [vb, d] = typeof i === 'string' ? ['0 0 24 24', i] : [i.viewBox, i.d];
-  return `<svg viewBox="${vb}" fill="currentColor" aria-hidden="true"><path d="${d}"/></svg>`;
-};
-const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg>';
 ---
 <Base title={d.name} description={`${d.name}: ${list.length} perfumes with notes, from a Malaysian perfume house.`}>
   <div class="wrap">
@@ -51,7 +43,7 @@ const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
       {links.length > 0 && (
         <div>
           <h2 class="sr">Where to find {d.name}</h2>
-          <div class="btn-row">{links.map((l) => <ExtLink class={`btn brand-${l.key}`} href={l.href}><Fragment set:html={icon(l.key)} />{l.label}</ExtLink>)}</div>
+          <div class="btn-row">{links.map((l) => <ExtLink class={`btn brand-${l.key}`} href={l.href}><Fragment set:html={iconSvg(l.key)} />{l.label}</ExtLink>)}</div>
         </div>
       )}
     </div>
