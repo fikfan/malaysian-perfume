@@ -104,6 +104,12 @@ a.chip:hover { border-color: var(--ink); background: var(--soft); }
 .prow .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
 .prow .notes-line { font-size: 14.5px; line-height: 1.45; margin: 0; }
 .prow .notes-line span { color: var(--muted); }
+/* note layer badges: one tint per layer so top, heart and base read at a glance */
+.layer { display: inline-block; font-size: 12px; font-weight: 700; line-height: 1.5; padding: 0 7px; border: 1px solid; border-radius: var(--radius); white-space: nowrap; color: var(--ink); background: var(--soft); border-color: var(--rule); }
+.prow .notes-line .layer { color: var(--ink); margin-right: 2px; }
+.layer[data-l="Top"] { background: #fff3b0; border-color: #d9b600; }
+.layer[data-l="Heart"] { background: #ffdde4; border-color: #e0899b; }
+.layer[data-l="Base"] { background: #ead9c6; border-color: #a9825a; }
 
 /* brand photos vary; a soft tile plus multiply makes white backgrounds sit on the same grey */
 .thumb { aspect-ratio: 1; background: var(--soft); display: grid; place-items: center; overflow: hidden; border-radius: var(--radius); outline: 1px solid rgb(0 0 0 / .08); outline-offset: -1px; }

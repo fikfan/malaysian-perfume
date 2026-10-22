@@ -20,7 +20,7 @@ const d = p.data;
     </div>
   </div>
   {layers.length ? (
-    <p class="notes-line">{layers.map((l, i) => <>{i > 0 && ' '}<span>{l.label}:</span> {l.notes.map((n, j) => <>{j > 0 && ', '}{on.has(n) ? <strong>{n}</strong> : n}</>)}.</>)}</p>
+    <p class="notes-line">{layers.map((l, i) => <>{i > 0 && ' '}<span class="layer" data-l={l.label}>{l.label}</span> {l.notes.map((n, j) => <>{j > 0 && ', '}{on.has(n) ? <strong>{n}</strong> : n}</>)}.</>)}</p>
   ) : (
     <p class="notes-line"><span>The brand does not list notes for this one.</span></p>
   )}

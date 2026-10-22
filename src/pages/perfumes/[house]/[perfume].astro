@@ -62,7 +62,7 @@ const desc = `${d.name} by ${house.data.name}${d.inspiredBy ? `, inspired by ${d
           <dl class="pyramid">
             {layers.map((l) => (
               <div>
-                <dt>{l.label === 'Notes' ? 'All notes' : l.label}</dt>
+                <dt><span class="layer big" data-l={l.label}>{l.label === 'Notes' ? 'All notes' : l.label}</span></dt>
                 <dd><ul class="chips">{l.notes.map((n) => <li><a class="chip" href={searchUrl(n)}>{n}</a></li>)}</ul></dd>
               </div>
             ))}
@@ -114,8 +114,9 @@ const desc = `${d.name} by ${house.data.name}${d.inspiredBy ? `, inspired by ${d
   .insp a { font-weight: 600; }
   .label { font-size: 16px; font-weight: 750; margin: 28px 0 10px; letter-spacing: 0; }
   .pyramid { margin: 0; border-top: var(--line); }
-  .pyramid > div { display: grid; grid-template-columns: 76px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
-  .pyramid dt { font-weight: 700; padding-top: 5px; }
+  .pyramid > div { display: grid; grid-template-columns: 84px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .pyramid dt { padding-top: 4px; }
+  .layer.big { font-size: 13.5px; padding: 2px 8px; }
   .pyramid dd { margin: 0; }
   .hint { font-size: 14px; margin: 8px 0 0; }
   .reviews { margin: 16px 0 0; font-size: 14.5px; }
