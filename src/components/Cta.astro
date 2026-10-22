@@ -1,0 +1,15 @@
+---
+// The "Get featured" button. On hover it turns into the Jalur Gemilang: a blue sweep, the 14-point star
+// spinning in, and the red and white stripes along the bottom. Styles: .cta in global.css.
+interface Props { current?: boolean }
+const { current = false } = Astro.props;
+// Bintang Persekutuan: 14 points, alternating outer and inner radius
+const star = Array.from({ length: 28 }, (_, i) => {
+  const r = i % 2 ? 4.2 : 10, a = (i * Math.PI) / 14 - Math.PI / 2;
+  return `${(12 + r * Math.cos(a)).toFixed(2)},${(12 + r * Math.sin(a)).toFixed(2)}`;
+}).join(' ');
+---
+<a class="cta" href="/contact/" aria-current={current ? 'page' : undefined}>
+  <svg class="cta-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points={star} /></svg>
+  <span>Get featured</span>
+</a>

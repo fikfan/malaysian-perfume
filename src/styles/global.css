@@ -94,12 +94,30 @@ h1, h2, h3 { margin: 0; line-height: 1.05; letter-spacing: -0.02em; text-wrap: b
 .site-nav a[aria-current="page"] { border-bottom-color: var(--ink); }
 .site-nav a:hover { background: var(--soft); }
 /* the one call to action for brands, in every header: flag yellow, so it reads the same in light and dark mode */
-.cta { position: relative; overflow: hidden; display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border: 1px solid #000; border-radius: var(--radius); background: var(--accent); color: #000; font-weight: 700; text-decoration: none; white-space: nowrap; transition: background-color .25s, color .25s, border-color .25s, transform .25s; }
-/* hover: Jalur Gemilang colours. The flag's blue and yellow, with its red and white stripes sliding in along the bottom */
-.cta::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: repeating-linear-gradient(90deg, #cc0001 0 8px, #fff 8px 16px); transform: scaleX(0); transform-origin: left; transition: transform .35s cubic-bezier(.2, .7, .2, 1); }
-.cta:hover, .cta:focus-visible { background: #010066; color: #ffcc00; border-color: #010066; transform: translateY(-1px); }
-.cta:hover::after, .cta:focus-visible::after { transform: scaleX(1); animation: cta-stripes 1.2s linear infinite; }
+.cta {
+  position: relative; isolation: isolate; overflow: hidden; display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px;
+  border: 1px solid #000; border-radius: var(--radius); color: #000; font-weight: 700; text-decoration: none; white-space: nowrap;
+  /* flag yellow, with a soft shine that sweeps across every few seconds to catch the eye */
+  background: linear-gradient(105deg, transparent 40%, rgb(255 255 255 / .75) 50%, transparent 60%) -150% 0 / 250% 100% no-repeat, var(--accent);
+  animation: cta-shine 6s ease-in-out 2s infinite;
+  transition: color .3s, border-color .3s, transform .3s cubic-bezier(.3, 1.6, .5, 1), box-shadow .3s;
+}
+@keyframes cta-shine { 0%, 80% { background-position: -150% 0, 0 0; } 100% { background-position: 250% 0, 0 0; } }
+.cta span { position: relative; transition: transform .45s cubic-bezier(.3, 1.6, .5, 1); }
+/* hover: a slanted flag-blue sweep fills the button from the left */
+.cta::before { content: ""; position: absolute; inset: 0 -30% 0 -30%; z-index: -1; background: #010066; transform: translateX(-100%) skewX(-20deg); transition: transform .45s cubic-bezier(.2, .8, .2, 1); }
+/* the red and white stripes run along the bottom */
+.cta::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: repeating-linear-gradient(90deg, #cc0001 0 8px, #fff 8px 16px); transform: scaleX(0); transform-origin: left; transition: transform .4s .15s cubic-bezier(.2, .8, .2, 1); }
+/* the 14-point star spins in from the left and the text makes room for it */
+.cta-star { position: absolute; left: 7px; top: 50%; width: 15px; height: 15px; margin-top: -7.5px; fill: #ffcc00; opacity: 0; transform: translateX(-24px) rotate(-180deg) scale(.4); transition: transform .55s .1s cubic-bezier(.3, 1.6, .5, 1), opacity .3s .1s; }
+.cta:hover, .cta:focus-visible { color: #ffcc00; border-color: #010066; transform: translateY(-2px) scale(1.06); box-shadow: 0 6px 18px -6px rgb(1 0 102 / .6); animation: none; }
+.cta:hover::before, .cta:focus-visible::before { transform: translateX(0) skewX(-20deg); }
+.cta:hover::after, .cta:focus-visible::after { transform: scaleX(1); animation: cta-stripes 1s linear infinite; }
+.cta:hover .cta-star, .cta:focus-visible .cta-star { opacity: 1; transform: none; animation: cta-star 4s linear .65s infinite; }
+.cta:hover span, .cta:focus-visible span { transform: translateX(9px); }
+.cta:active { transform: translateY(0) scale(.97); transition-duration: .1s; }
 @keyframes cta-stripes { to { background-position: 16px 0; } }
+@keyframes cta-star { to { transform: rotate(360deg); } }
 /* on the contact page the stripes stay, to mark where you are */
 .cta[aria-current="page"]::after { transform: scaleX(1); }
 .theme-toggle { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); cursor: pointer; }
@@ -279,7 +297,7 @@ a.chip:hover { border-color: var(--ink); background: var(--soft); }
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
-  .cta::after { transition: none !important; animation: none !important; }
+  .cta::before, .cta::after, .cta-star, .cta span { transition: none !important; animation: none !important; }
   .cta:hover, .cta:focus-visible { transform: none; }
   @view-transition { navigation: none; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
