@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://malaysianperfumes.com',
+  site: 'https://malaysiaperfumes.com',
   trailingSlash: 'always',
   // CSS and small scripts as files, not inline, so the CSP in public/_headers needs no hashes
   build: { inlineStylesheets: 'never' },

@@ -38,7 +38,7 @@ export function collectLinks(root) {
 
 /** HTTP status for a url, or an error code string ('timeout', 'ENOTFOUND', …) */
 export async function check(url, fetchImpl = fetch) {
-  const opts = { redirect: 'follow', signal: AbortSignal.timeout(TIMEOUT_MS), headers: { 'user-agent': 'Mozilla/5.0 (link check; malaysianperfumes.com)' } };
+  const opts = { redirect: 'follow', signal: AbortSignal.timeout(TIMEOUT_MS), headers: { 'user-agent': 'Mozilla/5.0 (link check; malaysiaperfumes.com)' } };
   try {
     // HEAD first (no download); some servers refuse or mishandle HEAD, so confirm a failure with GET
     let r = await fetchImpl(url, { ...opts, method: 'HEAD' });
