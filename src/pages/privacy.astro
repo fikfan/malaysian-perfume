@@ -1,0 +1,79 @@
+---
+import Base from '../layouts/Base.astro';
+// Update UPDATED whenever the text below changes. The Malay text should say the same thing as the English.
+const UPDATED = '22 October 2026';
+const UPDATED_MS = '22 Oktober 2026';
+---
+<Base title="Privacy notice" description="What Malaysian Perfumes collects, why, who processes it, and how to ask for it to be corrected or deleted." showSearch={false}>
+  <div class="wrap prose">
+    <header class="page-head">
+      <h1 class="x">Privacy notice</h1>
+      <p>Last updated {UPDATED}. <a href="#ms">Baca dalam Bahasa Melayu</a>.</p>
+    </header>
+
+    <section lang="en" aria-labelledby="h-en">
+      <h2 id="h-en" class="sr">English</h2>
+      <h3>Who runs this site</h3>
+      <p>Malaysian Perfumes is a free, non-commercial library run by one person, fikfan, in Malaysia. To contact me about your data, use the <a href="/contact/">contact form</a>.</p>
+
+      <h3>What is collected</h3>
+      <ul>
+        <li><strong>The contact form.</strong> The brand name, your name, your email, a link and your message. These are emailed to me so I can reply and, if you ask, add or change a listing.</li>
+        <li><strong>The spam check.</strong> The contact form uses Cloudflare Turnstile. It checks your browser and IP address to tell people from bots.</li>
+        <li><strong>Visit counts.</strong> The site uses Cloudflare Web Analytics. It counts page views without cookies and does not identify you.</li>
+        <li><strong>Your theme choice.</strong> Night mode is saved in your own browser. It is never sent to me.</li>
+      </ul>
+      <p>The site has no accounts, no ads, no tracking cookies and no affiliate links.</p>
+
+      <h3>Who processes it</h3>
+      <p>The site, the contact form and the analytics run on Cloudflare. Its servers can be outside Malaysia. Messages are delivered to my personal email inbox. Nothing is sold, and nothing is used for marketing.</p>
+
+      <h3>How long it is kept</h3>
+      <p>I keep a message only as long as I need it for your request, then delete it.</p>
+
+      <h3>Your choices</h3>
+      <p>You can ask to see, correct or delete what you sent. Use the <a href="/contact/">contact form</a>, or reply to my email.</p>
+
+      <h3>Brands and the people behind them</h3>
+      <p>Brand pages use public information from each brand's own website, which can include a founder's name. Any brand or person named on the site can ask for a correction or for their listing to be removed, and it will be done.</p>
+    </section>
+
+    <section id="ms" lang="ms" aria-labelledby="h-ms">
+      <h2 id="h-ms">Notis privasi (Bahasa Melayu)</h2>
+      <p class="muted">Kemas kini terakhir {UPDATED_MS}.</p>
+      <h3>Siapa yang mengendalikan laman ini</h3>
+      <p>Malaysian Perfumes ialah perpustakaan percuma bukan komersial yang dikendalikan oleh seorang individu, fikfan, di Malaysia. Untuk menghubungi saya tentang data anda, gunakan <a href="/contact/">borang hubungan</a>.</p>
+
+      <h3>Data yang dikumpul</h3>
+      <ul>
+        <li><strong>Borang hubungan.</strong> Nama jenama, nama anda, e-mel anda, pautan dan mesej anda. Maklumat ini dihantar kepada saya melalui e-mel supaya saya boleh membalas dan, jika anda minta, menambah atau mengubah senarai.</li>
+        <li><strong>Semakan spam.</strong> Borang hubungan menggunakan Cloudflare Turnstile. Ia menyemak pelayar dan alamat IP anda untuk membezakan manusia daripada bot.</li>
+        <li><strong>Kiraan lawatan.</strong> Laman ini menggunakan Cloudflare Web Analytics. Ia mengira paparan halaman tanpa kuki dan tidak mengenal pasti anda.</li>
+        <li><strong>Pilihan tema.</strong> Mod malam disimpan dalam pelayar anda sendiri. Ia tidak pernah dihantar kepada saya.</li>
+      </ul>
+      <p>Laman ini tiada akaun, tiada iklan, tiada kuki penjejakan dan tiada pautan afiliasi.</p>
+
+      <h3>Siapa yang memproses data</h3>
+      <p>Laman ini, borang hubungan dan analitik berjalan di Cloudflare. Pelayannya mungkin berada di luar Malaysia. Mesej dihantar ke peti masuk e-mel peribadi saya. Tiada data yang dijual, dan tiada data digunakan untuk pemasaran.</p>
+
+      <h3>Tempoh simpanan</h3>
+      <p>Saya menyimpan mesej hanya selama yang perlu untuk permintaan anda, kemudian memadamnya.</p>
+
+      <h3>Pilihan anda</h3>
+      <p>Anda boleh meminta untuk melihat, membetulkan atau memadam apa yang anda hantar. Gunakan <a href="/contact/">borang hubungan</a>, atau balas e-mel saya.</p>
+
+      <h3>Jenama dan individu di sebaliknya</h3>
+      <p>Halaman jenama menggunakan maklumat awam daripada laman web rasmi setiap jenama, yang mungkin termasuk nama pengasas. Mana-mana jenama atau individu yang dinamakan di laman ini boleh meminta pembetulan atau supaya senarai mereka dibuang, dan ia akan dilakukan.</p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .prose > * { max-width: 720px; }
+  .prose section { margin-bottom: 48px; }
+  .prose h2 { font-size: 24px; font-weight: 800; margin: 0 0 4px; }
+  .prose h3 { font-size: 18px; font-weight: 750; margin: 28px 0 8px; }
+  .prose p, .prose li { font-size: 16px; line-height: 1.6; }
+  .prose ul { padding-left: 20px; }
+  .prose li { margin-bottom: 8px; }
+</style>
