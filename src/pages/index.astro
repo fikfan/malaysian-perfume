@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import SearchBox from '../components/SearchBox.astro';
 import Thumb from '../components/Thumb.astro';
 import { load, noteCounts, houseUrl, searchUrl, perfumeUrl, imgUrl, countLabel, currentWithPhoto, TILE_IMG, TYPE_LABEL } from '../lib/data';
+import { INSPIRATION_POLICY } from '../lib/labels';
 import type { HeroHouse } from '../lib/contracts';
 import { websiteLd } from '../lib/seo';
 
@@ -27,7 +28,7 @@ const pool: HeroHouse[] = houses.map((h) => ({
   p: currentWithPhoto(listOf(h.id)).slice(0, 12).map((p) => ({ n: p.data.name, u: perfumeUrl(p), img: imgUrl(p.data.image, TILE_IMG * 2) })),
 }));
 ---
-<Base title="Malaysian Perfumes: local perfume houses, notes and inspirations" description={`Find perfumes made in Malaysia: ${houses.length} local perfume houses and ${perfumes.length} fragrances, with notes, what each one is inspired by, and where the brand sells it.`} jsonLd={websiteLd()} showSearch={false}>
+<Base title="Malaysian Perfumes: local perfume houses, notes and inspirations" description={`Find perfumes from Malaysian perfume houses: ${houses.length} local houses and ${perfumes.length} fragrances, with notes, the inspirations each brand names, and where the brand sells it.`} jsonLd={websiteLd()} showSearch={false}>
   <section class="hero wrap">
     <div class="hero-text">
     <h1 class="x">Malaysian perfumes,<br /> in one place.</h1>
@@ -35,7 +36,6 @@ const pool: HeroHouse[] = houses.map((h) => ({
     <dl class="stats">
       <div><dt>Houses</dt><dd>{houses.length}</dd></div>
       <div><dt>Perfumes</dt><dd>{perfumes.length}</dd></div>
-      <div><dt>Notes</dt><dd>{notes.length}</dd></div>
     </dl>
     </div>
     <div class="hero-side">
@@ -109,7 +109,7 @@ const pool: HeroHouse[] = houses.map((h) => ({
 
   {inspired.length > 0 && (
     <section class="section" aria-labelledby="h-insp">
-      <div class="section-head"><h2 id="h-insp">Local takes on designer scents</h2><span class="muted">Only where the brand itself names the inspiration.</span></div>
+      <div class="section-head"><h2 id="h-insp">Local takes on designer scents</h2><span class="muted">{INSPIRATION_POLICY}</span></div>
       <ul class="chips">
         {inspired.map(([n, c]) => <li><a class="chip" href={searchUrl(n)}>{n} <small>{c}</small></a></li>)}
       </ul>
@@ -138,7 +138,7 @@ const pool: HeroHouse[] = houses.map((h) => ({
   .shuffle svg { width: 16px; height: 16px; }
   .hero h1 { font-weight: 800; font-size: clamp(38px, 5.4vw, 74px); line-height: .95; letter-spacing: -.03em; max-width: 11ch; }
   .hero :global(.searchbox) { max-width: 640px; margin-top: 32px; }
-  .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 160px)); margin: 32px 0 0; border-top: var(--line); }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 160px)); margin: 32px 0 0; border-top: var(--line); }
   .stats div { padding: 12px 16px 0 0; }
   .stats dt { font-size: 14px; color: var(--muted); }
   .stats dd { margin: 2px 0 0; font-weight: 800; font-size: 34px; font-variant-numeric: tabular-nums; font-stretch: 125%; font-variation-settings: "wdth" 125; }

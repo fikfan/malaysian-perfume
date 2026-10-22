@@ -229,6 +229,7 @@ a.chip:hover { border-color: var(--ink); background: var(--soft); }
 .site-foot .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; }
 .site-foot strong { color: var(--ink); }
 .site-foot p { margin: 0 0 8px; max-width: 60ch; }
+.site-foot .fine { font-size: 13px; }
 .site-foot .made-by { margin: 28px auto 0; max-width: none; text-align: center; }
 .made-by a { display: inline-flex; align-items: center; gap: 6px; vertical-align: middle; font-weight: 600; color: var(--ink); }
 .made-by img { border-radius: 50%; }

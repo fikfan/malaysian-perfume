@@ -11,7 +11,7 @@ const { houses, byHouse } = await load();
   <div class="wrap">
     <header class="page-head">
       <h1 class="x">Houses</h1>
-      <p>{houses.length} Malaysian perfume houses are listed so far. More are being added.</p>
+      <p>{houses.length} Malaysian perfume houses are listed.</p>
     </header>
 
     <div class="table-wrap">
@@ -33,9 +33,9 @@ const { houses, byHouse } = await load();
     </div>
 
     <section class="section" aria-labelledby="h-next">
-      <div class="section-head"><h2 id="h-next">Not listed yet</h2><span class="muted">These houses are next. Brands can ask to be added sooner.</span></div>
+      <div class="section-head"><h2 id="h-next">Not listed yet</h2><span class="muted">Known Malaysian houses not in the library yet.</span></div>
       <ul class="next">{upcoming.toSorted().map((n) => <li>{n}</li>)}</ul>
-      <p class="muted feature-note">Want to be featured? It's free. <a href="/contact/">Send a request</a>.</p>
+      <p class="muted feature-note">Own one of these brands, or another one? Listing is free. <a href="/contact/">Send a request</a>.</p>
     </section>
   </div>
 </Base>

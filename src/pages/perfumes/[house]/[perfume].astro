@@ -52,7 +52,7 @@ const more = sib.filter((x) => !shown.has(x) && !similar.some((s) => s.x === x))
   .sort((a, b) => Number(!!a.data.discontinued) - Number(!!b.data.discontinued) || Math.abs(sib.indexOf(a) - at) - Math.abs(sib.indexOf(b) - at))
   .slice(0, MORE_MAX);
 const sourceHost = host(d.source);
-const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy ? ` inspired by ${d.inspiredBy}` : ''}. Notes: ${[...mine].slice(0, 8).join(', ') || 'not listed'}.`;
+const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy ? `. ${house.data.name} names ${d.inspiredBy} as its inspiration` : ''}. Notes: ${[...mine].slice(0, 8).join(', ') || 'not listed'}.`;
 ---
 <Base
   title={`${d.name} by ${house.data.name}: notes${d.inspiredBy ? ' and inspiration' : ''}`}
@@ -68,7 +68,7 @@ const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy
       <div class="info">
         <p class="by"><a href={houseUrl(d.house)}>{house.data.name}</a></p>
         <h1 class="x">{d.name}</h1>
-        {d.inspiredBy && <p class="insp">Inspired by <a href={searchUrl(d.inspiredBy)}>{d.inspiredBy}</a></p>}
+        {d.inspiredBy && <p class="insp">{house.data.name} says it is inspired by <a href={searchUrl(d.inspiredBy)}>{d.inspiredBy}</a></p>}
         <p class="src muted">Notes and details from <ExtLink href={d.source}>{sourceHost} (product page)</ExtLink>, checked {DATA_CHECKED}.</p>
         {d.discontinued && <p><span class="tag warn">Discontinued by the brand</span></p>}
 

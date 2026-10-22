@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { load, perfumeUrl } from '../../lib/data';
+import { INSPIRATION_POLICY } from '../../lib/labels';
 
 const { houses, perfumes } = await load();
 const hn = new Map(houses.map((h) => [h.id, h.data.name]));
@@ -10,11 +11,11 @@ const list = [...groups].sort((a, b) => a[0].localeCompare(b[0]));
 const letter = (s: string) => (/[a-z]/i.test(s[0]) ? s[0].toUpperCase() : '#');
 const letters = [...new Set(list.map(([n]) => letter(n)))];
 ---
-<Base title="Local Malaysian perfumes inspired by designer scents" description={`Malaysian perfumes inspired by ${[...list].sort((a, b) => b[1].length - a[1].length).slice(0, 3).map(([n]) => n).join(', ')} and ${list.length - 3} more designer scents, A to Z, as named by each brand.`}>
+<Base title="Local Malaysian perfumes inspired by designer scents" description="Local Malaysian perfumes whose brands name a designer or niche scent as the inspiration, listed A to Z with a link to each brand's source.">
   <div class="wrap"><div class="inspired">
     <header class="page-head">
       <h1 class="x">Inspired by</h1>
-      <p>{list.length} designer and niche scents, and the local perfumes made after them. Only listed where the brand itself names the inspiration.</p>
+      <p>{list.length} designer and niche scents, and the local perfumes made after them. {INSPIRATION_POLICY}</p>
     </header>
     <div class="tools">
       <label class="sr" for="filter">Filter inspirations</label>

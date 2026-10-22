@@ -31,7 +31,7 @@ const links = [
 ---
 <Base
   title={`${d.name} perfumes: notes and full list`}
-  description={`All ${list.length} ${d.name} perfumes${d.location ? ` (${d.location})` : ''} with their notes${named ? ', what each one is inspired by,' : ''} and where the brand sells them. ${d.about}`}
+  description={`${d.partial ? `${list.length} of the` : `All ${list.length}`} ${d.name} perfumes${d.location ? ` (${d.location})` : ''} with their notes${named ? ', what each one is inspired by,' : ''} and where the brand sells them. ${d.about}`}
   jsonLd={[breadcrumbLd([['Houses', '/houses/'], [d.name, houseUrl(h.id)]]), itemListLd(`${d.name} perfumes`, list.map((p) => [p.data.name, perfumeUrl(p)]))]}
 >
   <div class="wrap">
