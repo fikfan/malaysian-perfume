@@ -12,6 +12,8 @@ A free library of perfumes made by Malaysian perfume houses: notes, inspirations
 npm install
 npm run dev      # http://localhost:4321
 npm run build    # static site in dist/
+npm run check    # type check
+npm run links    # check every photo, source and shop link (needs internet, ~1 min)
 ```
 
 ## Corrections
