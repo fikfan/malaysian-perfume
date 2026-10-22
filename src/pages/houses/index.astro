@@ -7,7 +7,7 @@ import { itemListLd } from '../../lib/seo';
 
 const { houses, byHouse } = await load();
 ---
-<Base title="Malaysian perfume houses" description={`All ${houses.length} Malaysian perfume houses in the library, from niche originals to local takes on designer scents, with how many perfumes each one has.`} showSearch={false} jsonLd={itemListLd('Malaysian perfume houses', houses.map((h) => [h.data.name, houseUrl(h.id)]))}>
+<Base title="Malaysian perfume houses" description={`All ${houses.length} Malaysian perfume houses in the library, from niche originals to local takes on designer scents, with how many perfumes each one has.`} jsonLd={itemListLd('Malaysian perfume houses', houses.map((h) => [h.data.name, houseUrl(h.id)]))}>
   <div class="wrap">
     <header class="page-head">
       <h1 class="x">Houses</h1>

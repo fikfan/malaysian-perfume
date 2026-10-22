@@ -55,6 +55,7 @@ const sourceHost = host(d.source);
 const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy ? `. ${house.data.name} names ${d.inspiredBy} as its inspiration` : ''}. Notes: ${[...mine].slice(0, 8).join(', ') || 'not listed'}.`;
 ---
 <Base
+  searchBand
   title={`${d.name} by ${house.data.name}: notes${d.inspiredBy ? ' and inspiration' : ''}`}
   description={desc}
   image={imgUrl(d.image, 1200)}

@@ -17,12 +17,12 @@ const profile = z.object({
 interface Props {
   title: string;
   description?: string;
-  showSearch?: boolean;
+  searchBand?: boolean;            // site search under the header; only for pages with no search of their own
   image?: string | null;            // share image; defaults to the site card
   jsonLd?: object | object[];       // structured data for this page
   noindex?: boolean;
 }
-const { title, description: rawDescription = 'A free library of perfumes made by Malaysian houses: notes, inspirations and links, taken from each brand.', showSearch = true, image, jsonLd, noindex = false } = Astro.props;
+const { title, description: rawDescription = 'A free library of perfumes made by Malaysian houses: notes, inspirations and links, taken from each brand.', searchBand = false, image, jsonLd, noindex = false } = Astro.props;
 const description = clip(rawDescription);
 const path = Astro.url.pathname;
 const full = title.includes('Malaysian Perfumes') ? title : `${title} | Malaysian Perfumes`;
@@ -79,7 +79,7 @@ const nav = [
       </button>
     </div>
   </header>
-  {showSearch && <div class="head-search-band"><div class="wrap head-search"><SearchBox /></div></div>}
+  {searchBand && <div class="head-search-band"><div class="wrap head-search"><SearchBox /></div></div>}
   <main id="main"><slot /></main>
   <footer class="site-foot">
     <div class="wrap">
