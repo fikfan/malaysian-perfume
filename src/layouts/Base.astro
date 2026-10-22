@@ -13,8 +13,6 @@ const profile = z.object({
   about: z.string(),
   links: z.array(z.object({ label: z.string(), href: z.url({ protocol: /^https$/ }), icon: z.string() })),
 }).parse(profileJson);
-const linkedin = profile.links.find((l) => l.icon === 'linkedin');
-if (!linkedin) throw new Error('profile.json: a link with icon "linkedin" is required');
 
 interface Props {
   title: string;
@@ -90,7 +88,7 @@ const nav = [
       </div>
       <div>
         <p><strong>Is your brand not featured, or is something wrong?</strong></p>
-        <p>Message me on <ExtLink href={linkedin.href}>LinkedIn</ExtLink>. Brands can ask to be added, corrected or removed.</p>
+        <p><a href="/contact/">Send me a message</a>. Brands can ask to be added, corrected or removed.</p>
         <p><strong>Want to contribute?</strong> The site is open source. <ExtLink href={REPO_URL}>Contribute here</ExtLink>.</p>
       </div>
     </div>

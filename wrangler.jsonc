@@ -1,0 +1,19 @@
+// Cloudflare Worker: serves the built site from dist/ and handles the contact form at /api/contact.
+// Secrets (never in this file): CONTACT_TO, the address that gets the messages, and TURNSTILE_SECRET.
+//   npx wrangler secret put CONTACT_TO
+//   npx wrangler secret put TURNSTILE_SECRET
+// Local: put both in .dev.vars (gitignored), then `npm run build && npx wrangler dev`.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "malaysian-perfume",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  // Cloudflare Email Service; the sender domain must be onboarded (wrangler email sending enable malaysianperfumes.com)
+  "send_email": [{ "name": "EMAIL" }],
+  "observability": { "enabled": true }
+}

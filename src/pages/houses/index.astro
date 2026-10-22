@@ -3,7 +3,6 @@ import Base from '../../layouts/Base.astro';
 import ExtLink from '../../components/ExtLink.astro';
 import { load, houseUrl, host, countLabel, TYPE_LABEL } from '../../lib/data';
 import upcoming from '../../data/upcoming.json';
-import profile from '../../data/profile.json';
 import { itemListLd } from '../../lib/seo';
 
 const { houses, byHouse } = await load();
@@ -36,7 +35,7 @@ const { houses, byHouse } = await load();
     <section class="section" aria-labelledby="h-next">
       <div class="section-head"><h2 id="h-next">Not listed yet</h2><span class="muted">These houses are next. Brands can ask to be added sooner.</span></div>
       <ul class="next">{upcoming.toSorted().map((n) => <li>{n}</li>)}</ul>
-      <p class="muted feature-note">Want to be featured? It's free, just let me know on <ExtLink href={profile.links.find((l) => l.icon === 'linkedin')!.href}>LinkedIn</ExtLink>.</p>
+      <p class="muted feature-note">Want to be featured? It's free. <a href="/contact/">Send a request</a>.</p>
     </section>
   </div>
 </Base>
