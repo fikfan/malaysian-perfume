@@ -95,7 +95,7 @@ h1, h2, h3 { margin: 0; line-height: 1.05; letter-spacing: -0.02em; text-wrap: b
 .site-nav a:hover { background: var(--soft); }
 /* the one call to action for brands, in every header: flag yellow, so it reads the same in light and dark mode */
 .cta {
-  position: relative; isolation: isolate; overflow: hidden; display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px;
+  position: relative; isolation: isolate; overflow: hidden; display: inline-flex; align-items: center; min-height: 40px; padding: 0 18px;
   border: 1px solid #000; border-radius: var(--radius); color: #000; font-weight: 700; text-decoration: none; white-space: nowrap;
   /* flag yellow, with a soft shine that sweeps across every few seconds to catch the eye */
   background: linear-gradient(105deg, transparent 40%, rgb(255 255 255 / .75) 50%, transparent 60%) -150% 0 / 250% 100% no-repeat, var(--accent);
@@ -110,11 +110,21 @@ h1, h2, h3 { margin: 0; line-height: 1.05; letter-spacing: -0.02em; text-wrap: b
 .cta::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: repeating-linear-gradient(90deg, #cc0001 0 8px, #fff 8px 16px); transform: scaleX(0); transform-origin: left; transition: transform .4s .15s cubic-bezier(.2, .8, .2, 1); }
 /* the 14-point star spins in from the left and the text makes room for it */
 .cta-star { position: absolute; left: 7px; top: 50%; width: 15px; height: 15px; margin-top: -7.5px; fill: #ffcc00; opacity: 0; transform: translateX(-24px) rotate(-180deg) scale(.4); transition: transform .55s .1s cubic-bezier(.3, 1.6, .5, 1), opacity .3s .1s; }
-.cta:hover, .cta:focus-visible { color: #ffcc00; border-color: #010066; transform: translateY(-2px) scale(1.06); box-shadow: 0 6px 18px -6px rgb(1 0 102 / .6); animation: none; }
-.cta:hover::before, .cta:focus-visible::before { transform: translateX(0) skewX(-20deg); }
-.cta:hover::after, .cta:focus-visible::after { transform: scaleX(1); animation: cta-stripes 1s linear infinite; }
-.cta:hover .cta-star, .cta:focus-visible .cta-star { opacity: 1; transform: none; animation: cta-star 4s linear .65s infinite; }
-.cta:hover span, .cta:focus-visible span { transform: translateX(9px); }
+/* the flag state: keyboard focus and a press everywhere, hover only with a mouse
+   (phones keep :hover after a tap, which would leave the flag stuck on when you come back) */
+.cta:focus-visible, .cta:active { color: #ffcc00; border-color: #010066; animation: none; }
+.cta:focus-visible::before, .cta:active::before { transform: translateX(0) skewX(-20deg); }
+.cta:focus-visible::after, .cta:active::after { transform: scaleX(1); animation: cta-stripes 1s linear infinite; }
+.cta:focus-visible .cta-star, .cta:active .cta-star { opacity: 1; transform: none; animation: cta-star 4s linear .65s infinite; }
+.cta:focus-visible span, .cta:active span { transform: translateX(8px); }
+.cta:focus-visible { transform: translateY(-2px) scale(1.06); box-shadow: 0 6px 18px -6px rgb(1 0 102 / .6); }
+@media (hover: hover) {
+  .cta:hover { color: #ffcc00; border-color: #010066; transform: translateY(-2px) scale(1.06); box-shadow: 0 6px 18px -6px rgb(1 0 102 / .6); animation: none; }
+  .cta:hover::before { transform: translateX(0) skewX(-20deg); }
+  .cta:hover::after { transform: scaleX(1); animation: cta-stripes 1s linear infinite; }
+  .cta:hover .cta-star { opacity: 1; transform: none; animation: cta-star 4s linear .65s infinite; }
+  .cta:hover span { transform: translateX(8px); }
+}
 .cta:active { transform: translateY(0) scale(.97); transition-duration: .1s; }
 @keyframes cta-stripes { to { background-position: 16px 0; } }
 @keyframes cta-star { to { transform: rotate(360deg); } }
@@ -306,6 +316,9 @@ a.chip:hover { border-color: var(--ink); background: var(--soft); }
   .logo { font-size: 14px; gap: 6px; }
   .logo img { width: 24px; height: 24px; }
   .cta { min-height: 36px; padding: 0 9px; font-size: 13px; }
+  /* no room for the star on the narrowest button: keep the text still */
+  .cta-star { display: none; }
+  .cta:focus-visible span, .cta:active span { transform: none; }
   .site-nav a { padding: 10px 6px; font-size: 15px; }
   .theme-toggle { width: 36px; height: 36px; }
 }
