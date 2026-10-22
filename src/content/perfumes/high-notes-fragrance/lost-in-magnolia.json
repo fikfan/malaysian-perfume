@@ -1,0 +1,24 @@
+{
+  "name": "Lost IN Magnolia",
+  "house": "high-notes-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    55
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Earthy"
+    ],
+    "heart": [
+      "Living Magnolia in Afternoon"
+    ],
+    "base": [
+      "Black Tea",
+      "Oakwood CO2"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0764/3047/5435/files/Lost_In_Magnolia-2.jpg?v=1790514938",
+  "source": "https://highnotesfragrance.com/products/lost-in-magnolia"
+}

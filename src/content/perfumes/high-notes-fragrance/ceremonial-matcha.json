@@ -1,0 +1,31 @@
+{
+  "name": "Ceremonial Matcha",
+  "house": "high-notes-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    80
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Muguet",
+      "Lemon Heart"
+    ],
+    "heart": [
+      "Matcha",
+      "Violet",
+      "Jasmine",
+      "Lily of the Valley"
+    ],
+    "base": [
+      "Guaiac Wood",
+      "Vetiver",
+      "Musk",
+      "Cedarwood"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0764/3047/5435/files/CEREMONIAL_MATCHA_BOTTLE.jpg?v=1791776813",
+  "source": "https://highnotesfragrance.com/products/ceremonial-matcha"
+}

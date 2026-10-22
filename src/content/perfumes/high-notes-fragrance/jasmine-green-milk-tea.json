@@ -1,0 +1,28 @@
+{
+  "name": "Jasmine Green Milk Tea",
+  "house": "high-notes-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    55
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Green Tea",
+      "Bergamot"
+    ],
+    "heart": [
+      "Jasmine (Sampaquita)",
+      "Tea Leaves",
+      "Milk Accord"
+    ],
+    "base": [
+      "Amber",
+      "Musk",
+      "Sandalwood"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0764/3047/5435/files/Jasmine_Green_Milk_Tea-2.jpg?v=1790514938",
+  "source": "https://highnotesfragrance.com/products/jasmine-green-milk-tea"
+}

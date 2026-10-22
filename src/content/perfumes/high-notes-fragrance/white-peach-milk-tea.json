@@ -1,0 +1,31 @@
+{
+  "name": "White Peach Milk Tea",
+  "house": "high-notes-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    55
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Peach",
+      "Orange",
+      "Tropical Fruits"
+    ],
+    "heart": [
+      "Cream",
+      "Rose",
+      "Tea Leaves",
+      "Jasmine"
+    ],
+    "base": [
+      "Vanilla",
+      "Sandalwood",
+      "Amber",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0764/3047/5435/files/White_Peach_Milk_Tea-2.jpg?v=1790514938",
+  "source": "https://highnotesfragrance.com/products/white-peach-milk-tea"
+}

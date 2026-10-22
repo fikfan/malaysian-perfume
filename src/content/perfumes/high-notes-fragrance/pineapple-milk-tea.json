@@ -1,0 +1,31 @@
+{
+  "name": "Pineapple Milk Tea",
+  "house": "high-notes-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    55
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pineapple",
+      "Orange",
+      "Grapefruit"
+    ],
+    "heart": [
+      "Violet",
+      "Milk Accord",
+      "Melon",
+      "Fig"
+    ],
+    "base": [
+      "Vanilla",
+      "Cedarwood",
+      "Amber",
+      "White Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0764/3047/5435/files/Pineapple_Milk_Tea-2.jpg?v=1790514939",
+  "source": "https://highnotesfragrance.com/products/pineapple-milk-tea"
+}

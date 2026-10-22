@@ -1,0 +1,26 @@
+{
+  "name": "Neroli Zest",
+  "house": "high-notes-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    80
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Mandarin Orange",
+      "Neroli"
+    ],
+    "heart": [
+      "Jasmine",
+      "Orange Blossom"
+    ],
+    "base": [
+      "Musk",
+      "Amber"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0764/3047/5435/files/NEROLI_ZEST_BOTTLE.jpg?v=1791776813",
+  "source": "https://highnotesfragrance.com/products/neroli-zest"
+}

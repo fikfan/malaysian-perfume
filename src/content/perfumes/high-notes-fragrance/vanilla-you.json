@@ -1,0 +1,32 @@
+{
+  "name": "Vanilla & You",
+  "house": "high-notes-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    55
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Citrus",
+      "Pomelo",
+      "Vanilla",
+      "Eucalyptus"
+    ],
+    "heart": [
+      "Gardenia",
+      "Coconut",
+      "Vanilla",
+      "Amber"
+    ],
+    "base": [
+      "Vanilla Bean",
+      "Coconut Milk",
+      "Musk",
+      "Sandalwood"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0764/3047/5435/files/Vanilla_You_-2.jpg?v=1790514938",
+  "source": "https://highnotesfragrance.com/products/vanilla-you"
+}

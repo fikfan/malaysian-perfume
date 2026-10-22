@@ -1,0 +1,33 @@
+{
+  "name": "Kissberry",
+  "house": "high-notes-fragrance",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    55
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Saffron",
+      "Raspberry",
+      "Honey"
+    ],
+    "heart": [
+      "Rose Taif",
+      "Jasmine Sambac",
+      "Geranium",
+      "Orris"
+    ],
+    "base": [
+      "Vanilla",
+      "Caramel",
+      "Balsamic Notes",
+      "Amber",
+      "White Musk",
+      "Sandalwood"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0764/3047/5435/files/Kiss_Berry-2.jpg?v=1790514938",
+  "source": "https://highnotesfragrance.com/products/kissberry"
+}

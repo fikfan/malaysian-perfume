@@ -1,0 +1,34 @@
+{
+  "name": "Summer Vibes",
+  "house": "high-notes-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    55
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Aromatic Notes",
+      "Pineapple",
+      "Bergamot",
+      "Anise",
+      "Ginger",
+      "Aldehydes"
+    ],
+    "heart": [
+      "Lavandin",
+      "Lactonic Notes",
+      "Fig Milk",
+      "Jasmine"
+    ],
+    "base": [
+      "Amber",
+      "Moss",
+      "Sandalwood",
+      "Patchouli"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0764/3047/5435/files/Summer_Vibes-2.jpg?v=1790514938",
+  "source": "https://highnotesfragrance.com/products/summer-vibes"
+}

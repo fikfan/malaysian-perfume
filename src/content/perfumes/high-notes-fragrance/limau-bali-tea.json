@@ -1,0 +1,28 @@
+{
+  "name": "Limau Bali Tea",
+  "house": "high-notes-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    55
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Limau Bali",
+      "Pink Grapefruit"
+    ],
+    "heart": [
+      "Green Tea",
+      "White Flowers",
+      "Rose"
+    ],
+    "base": [
+      "Vetiver",
+      "Iris",
+      "Amber"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0764/3047/5435/files/Limau_Bali_Tea-2.jpg?v=1790514939",
+  "source": "https://highnotesfragrance.com/products/limau-bali-tea"
+}

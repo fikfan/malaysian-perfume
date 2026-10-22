@@ -1,0 +1,29 @@
+{
+  "name": "Sweet Frankincense",
+  "house": "high-notes-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    80
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Benzoin",
+      "Myrrh",
+      "Frankincense"
+    ],
+    "heart": [
+      "Frangipani",
+      "Marigold",
+      "Tonka"
+    ],
+    "base": [
+      "Sandalwood",
+      "Amber",
+      "Labdanum"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0764/3047/5435/files/SWEET_FRANKINCENSE_BOTTLE.jpg?v=1791776814",
+  "source": "https://highnotesfragrance.com/products/sweet-frankincense"
+}

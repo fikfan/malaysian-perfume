@@ -1,0 +1,27 @@
+{
+  "name": "Lumen Veil",
+  "house": "high-notes-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    55
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Grapefruit Peel",
+      "Pepper"
+    ],
+    "heart": [
+      "Geranium",
+      "Neroli"
+    ],
+    "base": [
+      "Leather",
+      "Ambergris",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0764/3047/5435/files/Lumen_Veil-2.jpg?v=1790514938",
+  "source": "https://highnotesfragrance.com/products/lumen-creed"
+}

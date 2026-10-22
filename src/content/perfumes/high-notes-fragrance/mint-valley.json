@@ -1,0 +1,34 @@
+{
+  "name": "Mint Valley",
+  "house": "high-notes-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    55
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Rosemary",
+      "Elemi",
+      "Sage",
+      "Lemon Mint",
+      "Grapefruit"
+    ],
+    "heart": [
+      "Violet",
+      "Lavender",
+      "Neroli",
+      "Spearmint"
+    ],
+    "base": [
+      "White Musk",
+      "Vetiver",
+      "Olibanum",
+      "Oakwood",
+      "Sandalwood"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0764/3047/5435/files/Mint_Valley-2.jpg?v=1790514938",
+  "source": "https://highnotesfragrance.com/products/mint-valley"
+}

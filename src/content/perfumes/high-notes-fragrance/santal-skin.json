@@ -1,0 +1,28 @@
+{
+  "name": "Santal Skin",
+  "house": "high-notes-fragrance",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    80
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pink Pepper",
+      "Violette"
+    ],
+    "heart": [
+      "Muguet",
+      "Palo Santo",
+      "Lactonic"
+    ],
+    "base": [
+      "Sandalwood",
+      "Amber",
+      "Ambrette"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0764/3047/5435/files/SANTAL_SKIN___BOTTLE.jpg?v=1791776813",
+  "source": "https://highnotesfragrance.com/products/santal-skin"
+}
