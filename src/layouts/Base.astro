@@ -28,7 +28,9 @@ const nav = [
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch {}
     // hold the page behind a brief loader until the font is in, so text does not jump; never longer than 1.2 s
     (() => {
-      const r = document.documentElement; r.classList.add('js', 'loading');
+      const r = document.documentElement; r.classList.add('js');
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      r.classList.add('loading');
       const done = () => r.classList.remove('loading');
       setTimeout(done, 1200);
       addEventListener('DOMContentLoaded', () => document.fonts.ready.then(done));
@@ -75,7 +77,10 @@ const nav = [
     (() => {
       const b = document.getElementById('theme-toggle'), root = document.documentElement;
       const dark = () => root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
-      const sync = () => b.setAttribute('aria-pressed', String(dark()));
+      const sync = () => {
+        b.setAttribute('aria-pressed', String(dark()));
+        document.querySelectorAll('meta[name="theme-color"]').forEach((m) => m.setAttribute('content', dark() ? '#141414' : '#ffffff'));
+      };
       sync();
       const flip = () => {
         root.dataset.theme = dark() ? 'light' : 'dark';

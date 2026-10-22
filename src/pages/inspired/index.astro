@@ -39,16 +39,20 @@ const letters = [...new Set(list.map(([n]) => letter(n)))];
 </Base>
 
 <script>
+  import { haystack, terms, matches } from '../../lib/match';
   const input = document.getElementById('filter') as HTMLInputElement;
   const rows = [...document.querySelectorAll<HTMLElement>('.row')];
-  const fold = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const keys = rows.map((r) => haystack(r.dataset.k ?? ''));
   input.addEventListener('input', () => {
-    const t = fold(input.value.trim());
+    const ts = terms(input.value);
     let n = 0;
-    for (const r of rows) { const show = !t || fold(r.dataset.k ?? '').includes(t); r.hidden = !show; if (show) n++; }
+    rows.forEach((r, i) => { const show = matches(keys[i], ts); r.hidden = !show; if (show) n++; });
     document.querySelectorAll<HTMLElement>('.letter').forEach((s) => {
       s.hidden = !s.querySelector('.row:not([hidden])');
-      document.querySelector(`.az a[href="#${s.id}"]`)?.toggleAttribute('aria-disabled', s.hidden);
+      const a = document.querySelector<HTMLAnchorElement>(`.az a[href="#${s.id}"]`);
+      a?.toggleAttribute('aria-disabled', s.hidden);
+      // a letter with no matches leaves the tab order too
+      if (s.hidden) a?.setAttribute('tabindex', '-1'); else a?.removeAttribute('tabindex');
     });
     document.getElementById('count')!.textContent = `${n} scent${n === 1 ? '' : 's'}`;
   });

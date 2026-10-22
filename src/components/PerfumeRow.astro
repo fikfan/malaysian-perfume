@@ -1,17 +1,18 @@
 ---
 import Thumb from './Thumb.astro';
-import { pyramid, perfumeUrl, GENDER_LABEL, type Perfume } from '../lib/data';
+import { pyramid, perfumeUrl, searchFamilies, ROW_IMG, GENDER_LABEL, type Perfume } from '../lib/data';
 
 interface Props { p: Perfume; houseName?: string; shared?: string[] }
 const { p, houseName, shared = [] } = Astro.props;
 const on = new Set(shared);
 const layers = pyramid(p);
 const d = p.data;
-// what the house-page filter box matches against
-const k = [d.name, d.inspiredBy, ...layers.flatMap((l) => l.notes)].filter(Boolean).join(' ').toLowerCase();
+// what the house-page filter box matches against (same words, oud names included, as the main search)
+const notes = layers.flatMap((l) => l.notes);
+const k = [d.name, d.inspiredBy, ...notes].filter(Boolean).join(' ') + searchFamilies([d.name, d.inspiredBy, ...notes]);
 ---
 <li class="prow" data-k={k} data-gender={d.gender ?? ''} data-discontinued={d.discontinued ? '1' : ''}>
-  <div class="thumb-wrap"><Thumb src={d.image} name={d.name} size={176} /></div>
+  <div class="thumb-wrap"><Thumb src={d.image} name={d.name} size={ROW_IMG} /></div>
   <div>
     <h3><a href={perfumeUrl(p)}>{d.name}</a></h3>
     {houseName && <p class="meta">by <b>{houseName}</b></p>}
@@ -27,7 +28,3 @@ const k = [d.name, d.inspiredBy, ...layers.flatMap((l) => l.notes)].filter(Boole
     <p class="notes-line"><span>The brand does not list notes for this one.</span></p>
   )}
 </li>
-<style>
-  .thumb-wrap { width: 88px; }
-  @media (max-width: 860px) { .thumb-wrap { width: 72px; grid-row: span 2; } }
-</style>

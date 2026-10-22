@@ -1,27 +1,29 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PerfumeRow from '../../components/PerfumeRow.astro';
-import { load, TYPE_LABEL } from '../../lib/data';
+import ExtLink from '../../components/ExtLink.astro';
+import { load, host, TYPE_LABEL, GENDER_LABEL, type House } from '../../lib/data';
 import icons from '../../data/brand-icons.json';
 
 export async function getStaticPaths() {
   const { houses } = await load();
-  return houses.map((h) => ({ params: { house: h.id } }));
+  return houses.map((h) => ({ params: { house: h.id }, props: { h } }));
 }
-const { houses, byHouse } = await load();
-const h = houses.find((x) => x.id === Astro.params.house)!;
+const { h } = Astro.props as { h: House };
+const { byHouse } = await load();
 const list = byHouse.get(h.id) ?? [];
 const d = h.data;
 const genders = (['masculine', 'feminine', 'unisex'] as const).filter((g) => list.some((p) => p.data.gender === g));
 const discontinued = list.filter((p) => p.data.discontinued).length;
 const named = list.filter((p) => p.data.inspiredBy).length;
+const link = (href: string | null | undefined, label: string, key: string) => (href ? [{ href, label, key }] : []);
 const links = [
-  d.website && { href: d.website, label: 'Website', key: 'web' },
-  d.shopee && { href: d.shopee, label: 'Shopee', key: 'shopee' },
-  d.lazada && { href: d.lazada, label: 'Lazada', key: 'lazada' },
-  d.tiktok && { href: `https://www.tiktok.com/@${d.tiktok}`, label: 'TikTok', key: 'tiktok' },
-  d.instagram && { href: `https://www.instagram.com/${d.instagram}/`, label: 'Instagram', key: 'instagram' },
-].filter(Boolean) as { href: string; label: string; key: string }[];
+  ...link(d.website, 'Website', 'web'),
+  ...link(d.shopee, 'Shopee', 'shopee'),
+  ...link(d.lazada, 'Lazada', 'lazada'),
+  ...link(d.tiktok && `https://www.tiktok.com/@${d.tiktok}`, 'TikTok', 'tiktok'),
+  ...link(d.instagram && `https://www.instagram.com/${d.instagram}/`, 'Instagram', 'instagram'),
+];
 // Brand marks: Simple Icons (CC0); Lazada from Wikimedia Commons (public domain), which has its own viewBox
 const icon = (k: string) => {
   const i = (icons as Record<string, string | { viewBox: string; d: string }>)[k];
@@ -49,7 +51,7 @@ const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
       {links.length > 0 && (
         <div>
           <h2 class="sr">Where to find {d.name}</h2>
-          <div class="btn-row">{links.map((l) => <a class={`btn brand-${l.key}`} href={l.href} rel="noopener" target="_blank"><Fragment set:html={icon(l.key)} />{l.label}<span class="sr"> (opens in a new tab)</span></a>)}</div>
+          <div class="btn-row">{links.map((l) => <ExtLink class={`btn brand-${l.key}`} href={l.href}><Fragment set:html={icon(l.key)} />{l.label}</ExtLink>)}</div>
         </div>
       )}
     </div>
@@ -62,7 +64,7 @@ const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
           {genders.length > 1 && (
             <div class="seg" role="group" aria-label="Filter by who it is for">
               <button type="button" aria-pressed="true" data-g="">All</button>
-              {genders.map((g) => <button type="button" aria-pressed="false" data-g={g}>{g[0].toUpperCase() + g.slice(1)}</button>)}
+              {genders.map((g) => <button type="button" aria-pressed="false" data-g={g}>{GENDER_LABEL[g]}</button>)}
             </div>
           )}
           {discontinued > 0 && <label class="check"><input type="checkbox" id="show-disc" checked /> Show discontinued</label>}
@@ -74,12 +76,13 @@ const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
     </section>
 
     {d.sources.length > 0 && (
-      <p class="sources muted">Facts on this page come from: {d.sources.map((s, i) => <>{i > 0 && ', '}<a href={s} rel="noopener">{new URL(s).hostname.replace(/^www\./, '') + new URL(s).pathname.replace(/\/$/, '')}</a></>)}</p>
+      <p class="sources muted">Facts on this page come from: {d.sources.map((s, i) => <>{i > 0 && ', '}<ExtLink href={s}>{host(s) + new URL(s).pathname.replace(/\/$/, '')}</ExtLink></>)}</p>
     )}
   </div>
 </Base>
 
 <script>
+  import { haystack, terms, matches } from '../../lib/match';
   const f = document.getElementById('filters');
   if (f) {
     let g = '';
@@ -88,14 +91,14 @@ const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
     const disc = document.getElementById('show-disc') as HTMLInputElement | null;
     const q = document.getElementById('house-q') as HTMLInputElement;
     const rows = [...document.querySelectorAll<HTMLElement>('#plist .prow')];
-    const fold = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-    const keys = rows.map((r) => ' ' + fold(r.dataset.k ?? ''));
+    const keys = rows.map((r) => haystack(r.dataset.k ?? ''));
+    const more = document.getElementById('more')!;
     const apply = () => {
-      const words = fold(q.value.trim()).split(/\s+/).filter(Boolean);
+      const ts = terms(q.value);
       let n = 0;
       rows.forEach((r, i) => {
         const match = (!g || r.dataset.gender === g) && (!disc || disc.checked || !r.dataset.discontinued)
-          && words.every((w) => keys[i].includes(' ' + w));
+          && matches(keys[i], ts);
         if (match) n++;
         r.hidden = !match || n > limit;
       });
@@ -103,11 +106,13 @@ const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
       document.getElementById('no-match')!.hidden = n > 0;
       more.dataset.left = String(Math.max(0, n - limit));
     };
-    const more = document.getElementById('more')!;
-    new IntersectionObserver((e) => {
-      if (e[0].isIntersecting && Number(more.dataset.left) > 0) { limit += PAGE; apply(); }
-    }, { rootMargin: '600px' }).observe(more);
-    const reset = () => { limit = PAGE; apply(); };
+    // Re-observe after every change: a sentinel that never left the screen gives no new event otherwise
+    const io = new IntersectionObserver((e) => {
+      if (e[0].isIntersecting && Number(more.dataset.left) > 0) { limit += PAGE; apply(); recheck(); }
+    }, { rootMargin: '600px' });
+    const recheck = () => { io.unobserve(more); io.observe(more); };
+    io.observe(more);
+    const reset = () => { limit = PAGE; apply(); recheck(); };
     q.addEventListener('input', reset);
     f.querySelectorAll<HTMLButtonElement>('[data-g]').forEach((b) => b.addEventListener('click', () => {
       g = b.dataset.g ?? '';

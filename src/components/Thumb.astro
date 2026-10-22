@@ -6,7 +6,7 @@ const { src, name, eager = false, size = 400 } = Astro.props;
 ---
 <div class:list={['thumb', { noimg: !src }]} data-initial={name.trim()[0]}>
   {src && (
-    <img src={imgUrl(src, size * 2 > 1200 ? 1200 : size * 2)!} alt="" width={size} height={size} loading={eager ? 'eager' : 'lazy'} decoding="async"
+    <img src={imgUrl(src, Math.min(size * 2, 1200))} alt="" width={size} height={size} loading={eager ? 'eager' : 'lazy'} decoding="async"
       referrerpolicy="no-referrer" onload="this.classList.add('in')" onerror="this.parentElement.classList.add('noimg');this.remove()" />
   )}
 </div>

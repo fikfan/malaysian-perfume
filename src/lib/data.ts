@@ -1,5 +1,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import ALIAS from '../data/note-aliases.json';
+import { family } from './match';
+export { GENDER_LABEL } from './labels';
 
 export type House = CollectionEntry<'houses'>;
 export type Perfume = CollectionEntry<'perfumes'>;
@@ -10,11 +12,7 @@ export const noteName = (n: string) =>
   n.trim().toLowerCase().replace(/\s+/g, ' ')
     .replace(/[\p{L}\d][\p{L}\d'’.]*/gu, (w, i) => (i > 0 && SMALL.has(w) ? w : w[0].toUpperCase() + w.slice(1)));
 
-export const slug = (s: string) =>
-  s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-
 export const TYPE_LABEL = { original: 'Original scents', inspired: 'Inspired-by scents', both: 'Original and inspired-by' } as const;
-export const GENDER_LABEL = { masculine: 'Masculine', feminine: 'Feminine', unisex: 'Unisex' } as const;
 
 export const DATA_CHECKED = 'October 2026';
 
@@ -37,13 +35,12 @@ export function cleanNote(raw: string): string[] {
     if (DROP.has(n)) return [];
     if (n.split(' ').length > 1) n = n.replace(ADJ, '');
     n = aliases[n] ?? n;
-    n = n[0].toUpperCase() + n.slice(1);
-    return DROP.has(n) || !n ? [] : [n];
+    if (!n || DROP.has(n)) return [];
+    return [n[0].toUpperCase() + n.slice(1)];
   });
 }
 // Search also finds oud under its other names, and the other way round
-export const searchFamilies = (notes: string[]) =>
-  notes.some((n) => /agarwood|gaharu|jinkoh|kyara|qi-?nan|\boud\b/i.test(n)) ? ' oud agarwood gaharu kyara' : '';
+export const searchFamilies = (texts: (string | null | undefined)[]) => family(texts.filter(Boolean).join(' '));
 
 export const pyramid = (p: Perfume): { label: string; notes: string[] }[] => {
   const n = p.data.notes;
@@ -67,6 +64,12 @@ export async function load() {
   if (cache) return cache;
   const houses = (await getCollection('houses')).sort((a, b) => a.data.name.localeCompare(b.data.name));
   const perfumes = (await getCollection('perfumes')).sort((a, b) => a.data.name.localeCompare(b.data.name));
+  // Each perfume's house must exist and match its folder (the folder gives the slug, the field gives the URL)
+  const ids = new Set(houses.map((h) => h.id));
+  for (const p of perfumes) {
+    if (!ids.has(p.data.house) || p.id.split('/')[0] !== p.data.house)
+      throw new Error(`Perfume ${p.id}: house "${p.data.house}" must be an existing house id and match its folder`);
+  }
   // current perfumes first, discontinued ones after (stable, so A-Z order is kept inside each group)
   const byHouse = new Map(houses.map((h) => [h.id, perfumes.filter((p) => p.data.house === h.id)
     .sort((a, b) => Number(!!a.data.discontinued) - Number(!!b.data.discontinued))]));
@@ -82,6 +85,8 @@ export async function noteCounts() {
 }
 
 // Ask the brand's image server for a small copy when it supports resizing (Shopify, EasyStore CDNs)
+export function imgUrl(src: string, w: number): string;
+export function imgUrl(src: string | null | undefined, w: number): string | null;
 export function imgUrl(src: string | null | undefined, w: number) {
   if (!src) return null;
   try {
@@ -91,5 +96,16 @@ export function imgUrl(src: string | null | undefined, w: number) {
     return src;
   } catch { return src; }
 }
+
+// Thumbnail display sizes in CSS px; image requests ask for 2x for sharp screens
+export const ROW_IMG = 176;
+export const TILE_IMG = 240;
+
+export const host = (u: string) => new URL(u).hostname.replace(/^www\./, '');
+// "40" or "40+" when the house sells more than is listed here
+export const countLabel = (h: House, n: number) => `${n}${h.data.partial ? '+' : ''}`;
+
+// A house's current perfumes that have a photo: what the home page shows off
+export const currentWithPhoto = (list: Perfume[]) => list.filter((p) => p.data.image && !p.data.discontinued);
 
 export const fmtSizes = (s: number[]) => (s.length ? s.map((m) => `${m} ml`).join(', ') : null);

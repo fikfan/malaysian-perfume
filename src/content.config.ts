@@ -3,7 +3,7 @@ import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 // only https links: blocks javascript: and other schemes in outside corrections
-const link = z.string().url().refine((u) => u.startsWith('https://'), 'must be an https:// link');
+const link = z.url({ protocol: /^https$/, error: 'must be an https:// link' });
 
 const houses = defineCollection({
   loader: glob({ pattern: '*.json', base: './src/content/houses' }),
@@ -14,8 +14,8 @@ const houses = defineCollection({
     location: z.string().nullable().optional(),
     about: z.string(),
     website: link.nullable().optional(),
-    instagram: z.string().nullable().optional(),
-    tiktok: z.string().nullable().optional(),
+    instagram: z.string().regex(/^[\w.]+$/, 'handle only, without @ or a URL').nullable().optional(),
+    tiktok: z.string().regex(/^[\w.]+$/, 'handle only, without @ or a URL').nullable().optional(),
     shopee: link.nullable().optional(),
     lazada: link.nullable().optional(),
     sources: z.array(link).default([]),

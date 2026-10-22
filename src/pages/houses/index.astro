@@ -1,10 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { load, houseUrl, TYPE_LABEL } from '../../lib/data';
+import ExtLink from '../../components/ExtLink.astro';
+import { load, houseUrl, host, countLabel, TYPE_LABEL } from '../../lib/data';
 import upcoming from '../../data/upcoming.json';
 
 const { houses, byHouse } = await load();
-const host = (u?: string | null) => (u ? new URL(u).hostname.replace(/^www\./, '') : null);
 ---
 <Base title="Houses" description="Every Malaysian perfume house in the library, with how many perfumes each one has.">
   <div class="wrap">
@@ -23,8 +23,8 @@ const host = (u?: string | null) => (u ? new URL(u).hostname.replace(/^www\./, '
               <th scope="row"><a href={houseUrl(h.id)}>{h.data.name}</a></th>
               <td>{TYPE_LABEL[h.data.type]}</td>
               <td>{h.data.location ?? <span class="muted">Not stated</span>}</td>
-              <td class="num">{byHouse.get(h.id)?.length}{h.data.partial && '+'}</td>
-              <td>{h.data.website ? <a href={h.data.website} rel="noopener" target="_blank">{host(h.data.website)}</a> : <span class="muted">None</span>}</td>
+              <td class="num">{countLabel(h, byHouse.get(h.id)?.length ?? 0)}</td>
+              <td>{h.data.website ? <ExtLink href={h.data.website}>{host(h.data.website)}</ExtLink> : <span class="muted">None</span>}</td>
             </tr>
           ))}
         </tbody>
@@ -33,7 +33,7 @@ const host = (u?: string | null) => (u ? new URL(u).hostname.replace(/^www\./, '
 
     <section class="section" aria-labelledby="h-next">
       <div class="section-head"><h2 id="h-next">Not listed yet</h2><span class="muted">These houses are next. Brands can ask to be added sooner.</span></div>
-      <ul class="next">{upcoming.sort().map((n) => <li>{n}</li>)}</ul>
+      <ul class="next">{upcoming.toSorted().map((n) => <li>{n}</li>)}</ul>
     </section>
   </div>
 </Base>
