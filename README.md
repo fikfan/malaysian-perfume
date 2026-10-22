@@ -13,6 +13,7 @@ npm install
 npm run dev      # http://localhost:4321
 npm run build    # static site in dist/
 npm run check    # type check
+npm test         # unit tests for the link checker
 npm run links    # check every photo, source and shop link (needs internet, ~1 min)
 ```
 
