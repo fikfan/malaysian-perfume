@@ -30,7 +30,6 @@ const pool = houses.map((h) => ({
   <section class="hero wrap">
     <div class="hero-text">
     <h1 class="x">Malaysian perfumes,<br /> in one place.</h1>
-    <p class="lede">Look up perfumes made by Malaysian houses. See the notes, what each one is inspired by, and where the brand sells it. Free, with no prices and no ads. More houses are being added.</p>
     <SearchBox big id="hero-q" />
     <dl class="stats">
       <div><dt>Houses</dt><dd>{houses.length}</dd></div>
@@ -63,7 +62,7 @@ const pool = houses.map((h) => ({
         const draw = () => {
           const hs = shuffle(pool.filter((h) => h.p.length)).slice(0, 6);
           grid.innerHTML = hs.map((h, i) => {
-            if (i < 2) return tile(h.img, h.n, h.u, `House · ${h.c} perfumes`, 'is-house');
+            if (i < 2) return tile(h.img, h.n, h.u, `${h.c} perfumes`, 'is-house');
             const p = pick(h.p);
             return tile(p.img, p.n, p.u, h.n, 'is-perfume');
           }).sort(() => Math.random() - .5).join('');
@@ -125,8 +124,7 @@ const pool = houses.map((h) => ({
   .shuffle:hover { border-color: var(--ink); }
   .shuffle svg { width: 16px; height: 16px; }
   .hero h1 { font-weight: 800; font-size: clamp(38px, 5.4vw, 74px); line-height: .95; letter-spacing: -.03em; max-width: 11ch; }
-  .lede { font-size: 19px; color: var(--muted); max-width: 56ch; margin: 18px 0 26px; }
-  .hero :global(.searchbox) { max-width: 640px; }
+  .hero :global(.searchbox) { max-width: 640px; margin-top: 32px; }
   .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 160px)); margin: 32px 0 0; border-top: var(--line); }
   .stats div { padding: 12px 16px 0 0; }
   .stats dt { font-size: 14px; color: var(--muted); }
@@ -146,7 +144,6 @@ const pool = houses.map((h) => ({
   }
   @media (max-width: 640px) {
     .hero { padding-top: 32px; padding-bottom: 28px; }
-    .lede { font-size: 17px; }
     .houses { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; }
     .stats dd { font-size: 28px; }
   }
