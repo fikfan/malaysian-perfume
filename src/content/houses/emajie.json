@@ -11,5 +11,6 @@
   "sources": [
     "https://www.emajie.com/pages/about",
     "https://www.emajie.com/collections/fragrance"
-  ]
+  ],
+  "logo": "/assets/emajie/logo.png"
 }

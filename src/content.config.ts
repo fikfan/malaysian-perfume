@@ -23,6 +23,8 @@ const houses = defineCollection({
     lazada: link.nullable().optional(),
     sources: z.array(link).default([]),
     partial: z.boolean().optional(),
+    // a logo the brand sent us, served from public/assets/<house>/
+    logo: z.string().regex(/^\/assets\/[\w-]+\/[\w.-]+\.(png|svg|jpg|webp)$/, 'a file under /assets/<house>/').nullable().optional(),
   }),
 });
 

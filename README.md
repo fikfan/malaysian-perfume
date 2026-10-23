@@ -27,6 +27,10 @@ TURNSTILE_SECRET=1x0000000000000000000000000000000AA   # Cloudflare test secret,
 
 The Turnstile widget only loads on its listed hostnames. To test the form locally, add `localhost` to the widget's hostnames in the Cloudflare dashboard.
 
+## Brand assets
+
+Files that a brand sends (for example a logo) go in `public/assets/<house-id>/`. Resize a logo to 256px first (`sips -Z 256 in.png --out public/assets/<house-id>/logo.png`), then set `"logo": "/assets/<house-id>/logo.png"` in the house file.
+
 ## Deploy (Cloudflare)
 
 1. Add the domain to Cloudflare. Turn on Email Routing (`npx wrangler email routing enable malaysiaperfumes.com`), then add and verify the inbox that gets the messages (`npx wrangler email routing addresses create you@example.com`). On the Workers Free plan, the form can only send to a verified address.

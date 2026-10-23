@@ -39,7 +39,10 @@ const links = [
     <div>
     <header class="page-head">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/houses/">Houses</a><span aria-hidden="true">/</span>{d.name}</nav>
-      <h1 class="x">{d.name}</h1>
+      <div class="brand">
+        {d.logo && <img class="logo-mark" src={d.logo} alt={`${d.name} logo`} width="64" height="64" />}
+        <h1 class="x">{d.name}</h1>
+      </div>
       <p>{d.about}</p>
     </header>
 
@@ -170,6 +173,8 @@ const links = [
 <style>
   .intro { display: grid; grid-template-columns: minmax(0, 640px) minmax(0, 440px); justify-content: space-between; gap: 48px; align-items: start; }
   .highlights { margin: 40px 0; }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .logo-mark { flex: none; width: clamp(48px, 5vw, 64px); height: auto; aspect-ratio: 1; object-fit: contain; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); }
   .high-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
   .high-head h2 { margin: 0; }
   .picks { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
