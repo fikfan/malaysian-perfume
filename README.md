@@ -25,9 +25,11 @@ CONTACT_TO=you@example.com
 TURNSTILE_SECRET=1x0000000000000000000000000000000AA   # Cloudflare test secret, always passes
 ```
 
+The Turnstile widget only loads on its listed hostnames. To test the form locally, add `localhost` to the widget's hostnames in the Cloudflare dashboard.
+
 ## Deploy (Cloudflare)
 
-1. Add the domain to Cloudflare, then turn on Email Service sending for it: `npx wrangler email sending enable malaysiaperfumes.com`.
+1. Add the domain to Cloudflare. Turn on Email Routing (`npx wrangler email routing enable malaysiaperfumes.com`), then add and verify the inbox that gets the messages (`npx wrangler email routing addresses create you@example.com`). On the Workers Free plan, the form can only send to a verified address.
 2. Create a Turnstile widget for the domain. Put its site key in `TURNSTILE_SITE_KEY` in `src/lib/site.ts`.
 3. Set the two secrets: `npx wrangler secret put CONTACT_TO` and `npx wrangler secret put TURNSTILE_SECRET`.
 4. Deploy: `npm run deploy`, or connect the repo in Workers Builds (build `npm run build`, deploy `npx wrangler deploy`).

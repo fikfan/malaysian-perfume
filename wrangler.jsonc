@@ -13,7 +13,7 @@
     "not_found_handling": "404-page",
     "run_worker_first": ["/api/*"]
   },
-  // Cloudflare Email Service; the sender domain must be onboarded (wrangler email sending enable malaysiaperfumes.com)
+  // Cloudflare Email Service. Email Routing is on for the domain, and CONTACT_TO is a verified routing address (free plan)
   // the site's own domain (and www); Cloudflare makes the DNS records and the certificate
   "routes": [
     { "pattern": "malaysiaperfumes.com", "custom_domain": true, "zone_name": "malaysiaperfumes.com" },
