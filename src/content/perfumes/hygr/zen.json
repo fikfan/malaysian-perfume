@@ -1,0 +1,27 @@
+{
+  "name": "Zen",
+  "house": "hygr",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lemon",
+      "Bergamot",
+      "Orange"
+    ],
+    "heart": [
+      "Rosemary",
+      "Lemongrass"
+    ],
+    "base": [
+      "Patchouli",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0644/0203/0811/files/ZenPerfumemaincopy.jpg?v=1788515449",
+  "source": "https://hygr.com/products/hygr-zen-perfume-30ml-extrait-de-parfum-primer"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Solace Balok",
+  "house": "maison-d-azeez",
+  "gender": null,
+  "concentration": "Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pear",
+      "Pink Grapefruit",
+      "Yuzu",
+      "Cardamom",
+      "Ginger",
+      "Lavender Bulgaria",
+      "Sage"
+    ],
+    "heart": [
+      "Blue Lotus Absolute",
+      "Orange Blossom",
+      "Orris Root Absolute",
+      "Seaweed",
+      "Sea Salt",
+      "Marine",
+      "Blue Cypress",
+      "Hinoki Wood"
+    ],
+    "base": [
+      "Oud Koh Chang",
+      "Siam Wood",
+      "Olibanum",
+      "Opoponax",
+      "Labdanum",
+      "Benzoin",
+      "Ambergris",
+      "Ambrette Seed"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/2482/0067/files/110826-MaisonD_Azees514.jpg?v=1788763252",
+  "source": "https://www.maisondazeez.com/products/solace-balok"
+}

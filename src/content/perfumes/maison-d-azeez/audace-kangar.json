@@ -1,0 +1,40 @@
+{
+  "name": "Audace Kangar",
+  "house": "maison-d-azeez",
+  "gender": null,
+  "concentration": "Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Mango",
+      "Tropical Fruit",
+      "Sweet Orange",
+      "Lime",
+      "Allspice"
+    ],
+    "heart": [
+      "Broom Absolute",
+      "Red Champaca Absolute",
+      "Davana",
+      "Green Cognac",
+      "Honey"
+    ],
+    "base": [
+      "Guaiacwood",
+      "Vanilla",
+      "Labdanum",
+      "Tobacco Absolute",
+      "Hay Absolute",
+      "Tonka Bean Absolute",
+      "Flouve Absolute",
+      "Asparagus Twigs Absolute",
+      "Sweet Clover Absolute",
+      "Ambrette Seed"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/2482/0067/files/AudaceKangar.jpg?v=1788765497",
+  "source": "https://www.maisondazeez.com/products/audace-kangar"
+}

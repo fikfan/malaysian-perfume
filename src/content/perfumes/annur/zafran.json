@@ -1,0 +1,25 @@
+{
+  "name": "Zafran",
+  "house": "annur",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Rosemary",
+      "Lavender"
+    ],
+    "heart": [
+      "Jasmin"
+    ],
+    "base": [
+      "Sandalwood",
+      "Cedarwood"
+    ]
+  },
+  "image": "https://static.wixstatic.com/media/ec5ab9_6fdaf30a438f42d8b5e69ba9a873cf10~mv2.png/v1/fill/w_800,h_800,al_c,q_80/ec5ab9_6fdaf30a438f42d8b5e69ba9a873cf10~mv2.png",
+  "source": "https://www.annur-official.com/product-page/safran-eau-de-parfum"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Vert Forêt",
+  "house": "maison-d-azeez",
+  "gender": null,
+  "concentration": "Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Cucumber",
+      "Green Mandarin",
+      "Petitgrain",
+      "Lavender"
+    ],
+    "heart": [
+      "Sweet Pea",
+      "Green Leaf",
+      "Bamboo",
+      "White Cypress Leaf",
+      "Blue Tansy",
+      "Fig"
+    ],
+    "base": [
+      "Forest",
+      "Vetiver Haiti",
+      "Patchouli",
+      "Cistus Green Absolute",
+      "Boxtree Absolute"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/2482/0067/files/IMG_0351.png?v=1790406949",
+  "source": "https://www.maisondazeez.com/products/vert-foret"
+}

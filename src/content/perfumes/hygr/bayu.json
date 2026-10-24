@@ -1,0 +1,28 @@
+{
+  "name": "Bayu",
+  "house": "hygr",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Neroli",
+      "Citrus"
+    ],
+    "heart": [
+      "Sambac Jasmine",
+      "Orange Blossom",
+      "White Floral"
+    ],
+    "base": [
+      "Ambroxan",
+      "Musky"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0644/0203/0811/files/BayuPerfumeMaincopy.webp?v=1788515022",
+  "source": "https://hygr.com/products/hygr-bayu-perfume-30ml-extrait-de-parfum-primer"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Amani",
+  "house": "annur",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "French Rose",
+      "Peony"
+    ],
+    "heart": [
+      "Magnolia",
+      "Lily of the Valley"
+    ],
+    "base": [
+      "Honeysuckle"
+    ]
+  },
+  "image": "https://static.wixstatic.com/media/ec5ab9_561fdabf4dd443cb93a7cdc11ec721ab~mv2.jpg/v1/fill/w_800,h_800,al_c,q_80/ec5ab9_561fdabf4dd443cb93a7cdc11ec721ab~mv2.jpg",
+  "source": "https://www.annur-official.com/product-page/amani-eau-de-parfum"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Demure Dungun",
+  "house": "maison-d-azeez",
+  "gender": null,
+  "concentration": "Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Apricot",
+      "Peach",
+      "Grapefruit",
+      "Pomelo",
+      "Rosewood",
+      "Rosemary",
+      "Rose Geranium"
+    ],
+    "heart": [
+      "Rose Absolute",
+      "Rose Otto",
+      "Rose de Mai",
+      "Osmanthus Absolute",
+      "Pink Peppercorn CO2",
+      "Saffron",
+      "Coconut"
+    ],
+    "base": [
+      "Sandalwood Mysore",
+      "Vanilla",
+      "Amber",
+      "Leather",
+      "Castoreum",
+      "Tonkin Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/2482/0067/files/demuredungun.jpg?v=1788764551",
+  "source": "https://www.maisondazeez.com/products/demure-dungun"
+}

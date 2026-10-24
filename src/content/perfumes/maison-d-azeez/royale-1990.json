@@ -1,0 +1,44 @@
+{
+  "name": "Royale 1990",
+  "house": "maison-d-azeez",
+  "gender": null,
+  "concentration": "Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Cherry",
+      "Raspberry",
+      "Amaretto",
+      "Lemon",
+      "Lavender Kashmir"
+    ],
+    "heart": [
+      "Black Tea",
+      "Iris",
+      "Hyacinth",
+      "Rose",
+      "Jasmine",
+      "Tuberose",
+      "Cardamom",
+      "Clove",
+      "Cinnamon Bark"
+    ],
+    "base": [
+      "Oud Assam",
+      "Cypriol",
+      "Vetiver",
+      "Patchouli",
+      "Vanilla CO2",
+      "Cistus Absolute",
+      "Benzoin",
+      "Tolu Balsam",
+      "Wool Absolute",
+      "Cashmere"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/2482/0067/files/Royale1990.jpg?v=1788764304",
+  "source": "https://www.maisondazeez.com/products/royale-1990"
+}

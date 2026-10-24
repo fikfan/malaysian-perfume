@@ -1,0 +1,16 @@
+{
+  "name": "HYGR",
+  "type": "original",
+  "founded": null,
+  "location": null,
+  "about": "HYGR is a Malaysian body care brand known for its aluminium-free deodorants, lip balms and sunscreens. It also sells three extraits de parfum, each paired with a matching primer oil.",
+  "website": "https://hygr.com",
+  "instagram": "hygr.my",
+  "tiktok": "hygr.my",
+  "shopee": null,
+  "lazada": null,
+  "sources": [
+    "https://hygr.com/",
+    "https://hygr.com/products.json"
+  ]
+}

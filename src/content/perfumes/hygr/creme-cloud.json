@@ -1,0 +1,30 @@
+{
+  "name": "Crème Cloud",
+  "house": "hygr",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Berries",
+      "Pineapple",
+      "Coconut"
+    ],
+    "heart": [
+      "Jasmine",
+      "Orchid"
+    ],
+    "base": [
+      "Vanilla",
+      "Woody",
+      "Amber",
+      "Musk",
+      "Moss"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0644/0203/0811/files/Creme_Cloud_Perfume_Main_copy.webp?v=1788515658",
+  "source": "https://hygr.com/products/hygr-creme-cloud-perfume-30ml-extrait-de-parfum-primer"
+}

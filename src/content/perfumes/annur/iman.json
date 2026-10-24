@@ -1,0 +1,25 @@
+{
+  "name": "Iman",
+  "house": "annur",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Magnolia",
+      "Peony"
+    ],
+    "heart": [
+      "Orchid",
+      "Lily of the Valley"
+    ],
+    "base": [
+      "Honeysuckle"
+    ]
+  },
+  "image": "https://static.wixstatic.com/media/ec5ab9_e3fd9c757a4f4b769184ae8ccfa97ba5~mv2.png/v1/fill/w_800,h_800,al_c,q_80/ec5ab9_e3fd9c757a4f4b769184ae8ccfa97ba5~mv2.png",
+  "source": "https://www.annur-official.com/product-page/iman-eau-de-parfum"
+}

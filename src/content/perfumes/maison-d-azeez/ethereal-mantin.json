@@ -1,0 +1,32 @@
+{
+  "name": "Ethereal Mantin",
+  "house": "maison-d-azeez",
+  "gender": null,
+  "concentration": "Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Apple",
+      "Pear",
+      "Bergamot",
+      "Gin",
+      "Lavender Diva"
+    ],
+    "heart": [
+      "Heliotrope",
+      "Muguet",
+      "Coriander Seed",
+      "Caraway"
+    ],
+    "base": [
+      "Amyris",
+      "Vanilla",
+      "Cistus Green Absolute"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/2482/0067/files/EtherealMantin.jpg?v=1788764743",
+  "source": "https://www.maisondazeez.com/products/ethereal-mantin"
+}

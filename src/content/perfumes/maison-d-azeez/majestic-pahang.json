@@ -1,0 +1,45 @@
+{
+  "name": "Majestic Pahang",
+  "house": "maison-d-azeez",
+  "gender": null,
+  "concentration": "Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Apple",
+      "Apricot",
+      "Peach",
+      "Pear",
+      "Grapefruit",
+      "Bergamot",
+      "Lime",
+      "Eucalyptus",
+      "Spearmint"
+    ],
+    "heart": [
+      "Jasmine Sambac",
+      "Tuberose",
+      "Ylang-Ylang",
+      "Cardamom",
+      "Ginger",
+      "Pink Pepper",
+      "Nutmeg",
+      "Clove"
+    ],
+    "base": [
+      "Oud Raub",
+      "Frankincense Frereana",
+      "Patchouli Leaf",
+      "Labdanum",
+      "Benzoin",
+      "Vanilla",
+      "Tonka Bean",
+      "Peru Balsam"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/2482/0067/files/MajesticPahang.jpg?v=1788765229",
+  "source": "https://www.maisondazeez.com/products/majestic-pahang"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Mubarak",
+  "house": "annur",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [30],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lemon",
+      "Bergamot"
+    ],
+    "heart": [
+      "Patchouli"
+    ],
+    "base": [
+      "Sandalwood",
+      "Cedarwood"
+    ]
+  },
+  "image": "https://static.wixstatic.com/media/ec5ab9_062e6bbf633f4c2383a41d16369ad596~mv2.jpeg/v1/fill/w_800,h_800,al_c,q_80/ec5ab9_062e6bbf633f4c2383a41d16369ad596~mv2.jpeg",
+  "source": "https://www.annur-official.com/product-page/mubarak-eau-de-parfum"
+}

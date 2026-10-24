@@ -1,0 +1,38 @@
+{
+  "name": "Classy Rompin",
+  "house": "maison-d-azeez",
+  "gender": null,
+  "concentration": "Parfum",
+  "sizesMl": [
+    50
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pineapple",
+      "Tangerine",
+      "Petitgrain",
+      "Neroli",
+      "Spearmint"
+    ],
+    "heart": [
+      "Rose",
+      "Violet",
+      "Cypress",
+      "Violet Leaf",
+      "Grass",
+      "Anise"
+    ],
+    "base": [
+      "Bahulu Accord",
+      "Tonka Bean",
+      "Oakmoss",
+      "Fir Balsam Absolute",
+      "Black Spruce Absolute",
+      "Black Hemlock Absolute",
+      "Musk"
+    ]
+  },
+  "image": "https://cdn.shopify.com/s/files/1/0679/2482/0067/files/ClassyRompin.jpg?v=1788763786",
+  "source": "https://www.maisondazeez.com/products/classy-rompin"
+}

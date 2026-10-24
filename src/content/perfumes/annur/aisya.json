@@ -1,0 +1,25 @@
+{
+  "name": "Aisya",
+  "house": "annur",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "French Rose",
+      "Peony"
+    ],
+    "heart": [
+      "Orchid",
+      "Jasmine Petals"
+    ],
+    "base": [
+      "Honeysuckle"
+    ]
+  },
+  "image": "https://static.wixstatic.com/media/ec5ab9_39376f08d6464422a1546e6a6b5e93d2~mv2.png/v1/fill/w_800,h_800,al_c,q_80/ec5ab9_39376f08d6464422a1546e6a6b5e93d2~mv2.png",
+  "source": "https://www.annur-official.com/product-page/aisya-eau-de-parfum"
+}
