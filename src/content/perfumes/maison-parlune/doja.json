@@ -1,0 +1,29 @@
+{
+  "name": "Doja",
+  "house": "maison-parlune",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    50,
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Sapodilla",
+      "Ambrette"
+    ],
+    "heart": [
+      "Magnolia",
+      "Violet",
+      "Sandalwood"
+    ],
+    "base": [
+      "Ambergris",
+      "Cedar",
+      "Musk"
+    ]
+  },
+  "image": "https://ptjyhtnqeqtmeepaudvq.supabase.co/storage/v1/render/image/public/Image/uploads/1790610311658-doja.png?width=800&quality=70&resize=contain",
+  "source": "https://www.maisonparlune.com/product/doja"
+}

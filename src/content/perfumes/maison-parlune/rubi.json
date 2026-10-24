@@ -1,0 +1,35 @@
+{
+  "name": "Rubi",
+  "house": "maison-parlune",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    50,
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Burning Cherry",
+      "Raspberry",
+      "Bergamot"
+    ],
+    "heart": [
+      "Praline",
+      "Heliotrope",
+      "Damask Rose",
+      "Jasmine Sambac"
+    ],
+    "base": [
+      "Palo Santo",
+      "Tonka Bean",
+      "Guaiac Wood",
+      "Peru Balsam",
+      "Ambrettolide",
+      "Patchouli",
+      "Haitian Vetiver"
+    ]
+  },
+  "image": "https://ptjyhtnqeqtmeepaudvq.supabase.co/storage/v1/render/image/public/Image/uploads/1792596962024-rubi.png?width=800&quality=70&resize=contain",
+  "source": "https://www.maisonparlune.com/product/rubi"
+}

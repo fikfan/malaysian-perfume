@@ -1,0 +1,30 @@
+{
+  "name": "Jami",
+  "house": "maison-parlune",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    50,
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Peach",
+      "Passionfruit",
+      "Bergamot"
+    ],
+    "heart": [
+      "Caramel",
+      "Jasmine",
+      "Geranium"
+    ],
+    "base": [
+      "Amber",
+      "White Musk",
+      "Patchouli"
+    ]
+  },
+  "image": "https://ptjyhtnqeqtmeepaudvq.supabase.co/storage/v1/render/image/public/Image/uploads/1790610208223-jami.png?width=800&quality=70&resize=contain",
+  "source": "https://www.maisonparlune.com/product/jami"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Bluu",
+  "house": "maison-parlune",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    50,
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pear",
+      "Bergamot",
+      "Mandarin Orange",
+      "Ginger"
+    ],
+    "heart": [
+      "Orange Blossom",
+      "Georgywood"
+    ],
+    "base": [
+      "Musk",
+      "Ambrofix",
+      "Akigalawood",
+      "Cedar"
+    ]
+  },
+  "image": "https://ptjyhtnqeqtmeepaudvq.supabase.co/storage/v1/render/image/public/Image/uploads/1792603530804-bluu.png?width=800&quality=70&resize=contain",
+  "source": "https://www.maisonparlune.com/product/bluu"
+}

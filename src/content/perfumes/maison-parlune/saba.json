@@ -1,0 +1,26 @@
+{
+  "name": "Saba",
+  "house": "maison-parlune",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    50,
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "all": [
+      "Blackcurrant",
+      "Citron",
+      "Lemon",
+      "Basil",
+      "Coriander",
+      "Carrot Seeds",
+      "Peppermint",
+      "Ambrette",
+      "Orange"
+    ]
+  },
+  "image": "https://ptjyhtnqeqtmeepaudvq.supabase.co/storage/v1/render/image/public/Image/uploads/1792605276878-saba.png?width=800&quality=70&resize=contain",
+  "source": "https://www.maisonparlune.com/product/saba"
+}

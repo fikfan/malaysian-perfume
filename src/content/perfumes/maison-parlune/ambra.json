@@ -1,0 +1,29 @@
+{
+  "name": "Ambra",
+  "house": "maison-parlune",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    50,
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Bitter Almond",
+      "Saffron"
+    ],
+    "heart": [
+      "Egyptian Jasmine",
+      "Cedarwood"
+    ],
+    "base": [
+      "Ambergris",
+      "Woody Notes",
+      "Woody Musk Accord",
+      "Musk"
+    ]
+  },
+  "image": "https://ptjyhtnqeqtmeepaudvq.supabase.co/storage/v1/render/image/public/Image/uploads/1792602388611-ambra.png?width=800&quality=70&resize=contain",
+  "source": "https://www.maisonparlune.com/product/ambra"
+}

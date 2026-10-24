@@ -1,0 +1,28 @@
+{
+  "name": "Kani",
+  "house": "maison-parlune",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    50,
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Lemon",
+      "Calabrian Bergamot",
+      "Sicilian Orange"
+    ],
+    "heart": [
+      "Mediterranean Fruit"
+    ],
+    "base": [
+      "Amber",
+      "Madagascar Vanilla Beans",
+      "White Musk"
+    ]
+  },
+  "image": "https://ptjyhtnqeqtmeepaudvq.supabase.co/storage/v1/render/image/public/Image/uploads/1792599402686-kani.png?width=800&quality=70&resize=contain",
+  "source": "https://www.maisonparlune.com/product/kani"
+}

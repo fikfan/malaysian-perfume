@@ -1,0 +1,30 @@
+{
+  "name": "Raja",
+  "house": "maison-parlune",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    50,
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Calabrian Bergamot",
+      "Sicilian Lemon",
+      "Blackcurrant Leaf Accord"
+    ],
+    "heart": [
+      "Pineapple Accord",
+      "Pink Pepper",
+      "Jasmine Accord"
+    ],
+    "base": [
+      "Birch",
+      "Patchouli",
+      "Musk Accord"
+    ]
+  },
+  "image": "https://ptjyhtnqeqtmeepaudvq.supabase.co/storage/v1/render/image/public/Image/uploads/1792604853660-raja.png?width=800&quality=70&resize=contain",
+  "source": "https://www.maisonparlune.com/product/raja"
+}

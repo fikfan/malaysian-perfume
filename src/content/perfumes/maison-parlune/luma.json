@@ -1,0 +1,33 @@
+{
+  "name": "Luma",
+  "house": "maison-parlune",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    50,
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pear",
+      "Hazelnut",
+      "Frankincense",
+      "Pink Pepper"
+    ],
+    "heart": [
+      "Rose",
+      "Osmanthus",
+      "Saffron",
+      "Jasmine Sambac"
+    ],
+    "base": [
+      "Sandalwood",
+      "Vanilla",
+      "Ambergris",
+      "Labdanum"
+    ]
+  },
+  "image": "https://ptjyhtnqeqtmeepaudvq.supabase.co/storage/v1/render/image/public/Image/uploads/1790610563490-luma.png?width=800&quality=70&resize=contain",
+  "source": "https://www.maisonparlune.com/product/luma"
+}

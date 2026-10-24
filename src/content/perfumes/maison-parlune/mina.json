@@ -1,0 +1,30 @@
+{
+  "name": "Mina",
+  "house": "maison-parlune",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    50,
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Pear",
+      "Blackcurrant",
+      "Pink Pepper"
+    ],
+    "heart": [
+      "Rose",
+      "Jasmine",
+      "Pineapple"
+    ],
+    "base": [
+      "Vanilla",
+      "Cedar",
+      "Amberwood"
+    ]
+  },
+  "image": "https://ptjyhtnqeqtmeepaudvq.supabase.co/storage/v1/render/image/public/Image/uploads/1790610295080-mina.png?width=800&quality=70&resize=contain",
+  "source": "https://www.maisonparlune.com/product/mina"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Ali",
+  "house": "maison-parlune",
+  "gender": "unisex",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    50,
+    30
+  ],
+  "inspiredBy": null,
+  "notes": {
+    "top": [
+      "Citron",
+      "Bergamot",
+      "Sicilian Orange"
+    ],
+    "heart": [
+      "Neroli",
+      "Ginger",
+      "Cinnamon"
+    ],
+    "base": [
+      "Black Tea",
+      "Ambroxan",
+      "Guaiac Wood"
+    ]
+  },
+  "image": "https://ptjyhtnqeqtmeepaudvq.supabase.co/storage/v1/render/image/public/Image/uploads/1790610349780-ali.png?width=800&quality=70&resize=contain",
+  "source": "https://www.maisonparlune.com/product/ali"
+}

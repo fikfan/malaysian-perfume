@@ -2,7 +2,7 @@
 # img-src must list the same hosts as IMG_HOSTS in src/content.config.ts.
 # cloudflareinsights.com is Cloudflare Web Analytics; challenges.cloudflare.com is Turnstile on /contact/.
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://cdn.shopify.com https://cdn.store-assets.com https://cdn1.sgliteasset.com https://cdn-ca.dg1.services https://blancofragrance.com.my https://perfumemalaya.com https://www.legendary.com.my https://szindore.com; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src https://challenges.cloudflare.com; frame-ancestors 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://cdn.shopify.com https://cdn.store-assets.com https://cdn1.sgliteasset.com https://cdn-ca.dg1.services https://blancofragrance.com.my https://perfumemalaya.com https://www.legendary.com.my https://szindore.com https://ptjyhtnqeqtmeepaudvq.supabase.co; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src https://challenges.cloudflare.com; frame-ancestors 'none'; upgrade-insecure-requests
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
