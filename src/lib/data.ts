@@ -93,6 +93,11 @@ export function imgUrl(src: string | null | undefined, w: number) {
     const u = new URL(src);
     if (/cdn\.shopify\.com|store-assets\.com|\/cdn\/shop\//.test(u.href)) { u.searchParams.set('width', String(w)); return u.href; }
     if (u.hostname.endsWith('dg1.services')) return src.replace('/o/', `/rw${w}/`);
+    if (u.hostname.endsWith('.supabase.co') && u.pathname.includes('/render/image/')) { u.searchParams.set('width', String(w)); return u.href; }
+    if (u.hostname === 'static.wixstatic.com') {
+      const file = u.pathname.split('/')[2];
+      return `${u.origin}/media/${file}/v1/fill/w_${w},h_${w},al_c,q_80,enc_auto/${file}`;
+    }
     return src;
   } catch { return src; }
 }
