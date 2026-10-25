@@ -3,7 +3,7 @@ import Cta from '../components/Cta.astro';
 import Base from '../layouts/Base.astro';
 import SearchBox from '../components/SearchBox.astro';
 import Thumb from '../components/Thumb.astro';
-import { load, noteCounts, houseUrl, searchUrl, perfumeUrl, imgUrl, countLabel, currentWithPhoto, TILE_IMG, TYPE_LABEL } from '../lib/data';
+import { load, noteCounts, houseUrl, searchUrl, perfumeUrl, imgUrl, perfumesLabel, currentWithPhoto, TILE_IMG, TYPE_LABEL } from '../lib/data';
 import { INSPIRATION_POLICY } from '../lib/labels';
 import type { HeroHouse } from '../lib/contracts';
 import { websiteLd } from '../lib/seo';
@@ -16,7 +16,9 @@ const insp = new Map<string, number>();
 for (const p of perfumes) if (p.data.inspiredBy) insp.set(p.data.inspiredBy, (insp.get(p.data.inspiredBy) ?? 0) + 1);
 const inspired = [...insp].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 12);
 const listOf = (id: string) => byHouse.get(id) ?? [];
-const coverOf = (id: string) => currentWithPhoto(listOf(id))[0]?.data.image ?? listOf(id)[0]?.data.image;
+// A house shows its logo; a house without one falls back to a perfume photo
+const logoOf = new Map(houses.map((h) => [h.id, h.data.logo]));
+const coverOf = (id: string) => logoOf.get(id) ?? currentWithPhoto(listOf(id))[0]?.data.image ?? listOf(id)[0]?.data.image;
 // No-JS hero: one current perfume from every other house, never the one already used as that house's cover below
 const picks = houses.filter((_, i) => i % 2 === 0).slice(0, 6).flatMap((h) => {
   const ok = currentWithPhoto(listOf(h.id));
@@ -25,7 +27,7 @@ const picks = houses.filter((_, i) => i % 2 === 0).slice(0, 6).flatMap((h) => {
 });
 // Pool for the shuffle: every house, with its cover and up to 12 current perfumes that have a photo
 const pool: HeroHouse[] = houses.map((h) => ({
-  n: h.data.name, u: houseUrl(h.id), c: countLabel(h, listOf(h.id).length), img: imgUrl(coverOf(h.id), TILE_IMG * 2),
+  n: h.data.name, u: houseUrl(h.id), c: perfumesLabel(h, listOf(h.id).length), img: imgUrl(coverOf(h.id), TILE_IMG * 2),
   p: currentWithPhoto(listOf(h.id)).slice(0, 12).map((p) => ({ n: p.data.name, u: perfumeUrl(p), img: imgUrl(p.data.image, TILE_IMG * 2) })),
 }));
 ---
@@ -65,7 +67,7 @@ const pool: HeroHouse[] = houses.map((h) => ({
         `<li class="${kind}">${thumbHtml(img, name, SIZE)}<a href="${esc(href)}">${esc(name)}</a><span class="muted">${esc(sub)}</span></li>`;
       const draw = () => {
         const tiles = shuffle(pool.filter((h) => h.p.length)).slice(0, 6).map((h, i) => {
-          if (i < 2) return tile(h.img, h.n, h.u, `${h.c} perfumes`, 'is-house');
+          if (i < 2) return tile(h.img, h.n, h.u, h.c, 'is-house');
           const p = pick(h.p);
           return tile(p.img, p.n, p.u, h.n, 'is-perfume');
         });
@@ -94,7 +96,7 @@ const pool: HeroHouse[] = houses.map((h) => ({
           <div>
             <h3><a href={houseUrl(h.id)}>{h.data.name}</a></h3>
             <p class="muted">{TYPE_LABEL[h.data.type]}</p>
-            <p class="n">{countLabel(h, listOf(h.id).length)} perfumes</p>
+            <p class="n">{perfumesLabel(h, listOf(h.id).length)}</p>
           </div>
         </li>
       ))}

@@ -107,8 +107,9 @@ export const ROW_IMG = 176;
 export const TILE_IMG = 240;
 
 export const host = (u: string) => new URL(u).hostname.replace(/^www\./, '');
-// "40" or "40+" when the house sells more than is listed here
-export const countLabel = (h: House, n: number) => `${n}${h.data.partial ? '+' : ''}`;
+// A house that sells more than we list shows no number: the count would read as the brand's whole range
+export const countLabel = (h: House, n: number) => (h.data.partial ? 'Selection' : String(n));
+export const perfumesLabel = (h: House, n: number) => (h.data.partial ? 'A selection of perfumes' : `${n} perfumes`);
 
 // A house's current perfumes that have a photo: what the home page shows off
 export const currentWithPhoto = (list: Perfume[]) => list.filter((p) => p.data.image && !p.data.discontinued);

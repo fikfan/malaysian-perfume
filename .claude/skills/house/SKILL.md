@@ -29,7 +29,7 @@ Read `DATA.md` first. It is the data format. The rules below add to it.
    - `type`: `original`, `inspired` or `both`, from what the brand says.
    - `sources`: every page you took facts from.
 3. **Write the perfume files** `src/content/perfumes/<id>/<perfume-slug>.json`.
-   - **Count:** list at most 40 perfumes. If the brand sells more, set `"partial": true` on the house.
+   - **Count:** list at most 40 perfumes, and prefer perfumes whose notes the brand confirms. If the brand sells more, set `"partial": true` on the house. The site then shows "Selection" instead of a count.
    - **Skip:** gift sets, bundles, samples, body mists and non-perfume products.
    - **Notes:** use `top`/`heart`/`base` when the brand gives a pyramid; otherwise use `all`. Use the brand's note names. When a note is a spelling variant of an existing note, add an entry to `src/data/note-aliases.json`.
    - **Other fields:** set `inspiredBy` only when the brand names the inspiration itself, and set `gender` only as the brand states it.
@@ -42,7 +42,7 @@ Read `DATA.md` first. It is the data format. The rules below add to it.
   - For a new `about` text, show the user 2 or 3 drafts. Write the drafts in plain words, without "it says" wording when the brand asked for its own claims. Wait for the user's choice.
 - **Corrections or new perfumes:** edit or add the perfume files with the same rules as "Add a house".
 - **Logo:**
-  1. Resize it: `sips -Z 256 "<file>" --out public/assets/<id>/logo.png`.
+  1. Resize it: `sips -Z 512 "<file>" --out public/assets/<id>/logo.png`. Home page tiles show it at about 240 px, so a sharp 2x screen needs 480 px or more. Do not enlarge a smaller file.
   2. Set `"logo": "/assets/<id>/logo.png"` in the house file.
   3. Keep each brand's files in `public/assets/<id>/`.
 

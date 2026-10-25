@@ -51,7 +51,7 @@ const links = [
         <dt>Makes</dt><dd>{TYPE_LABEL[d.type]}{d.type !== 'original' && named === 0 && <span class="muted">. The brand does not name which scent each perfume is inspired by.</span>}</dd>
         <dt>Founded</dt><dd>{d.founded ?? <span class="muted">Not stated</span>}</dd>
         <dt>Based in</dt><dd>{d.location ?? <span class="muted">Not stated</span>}</dd>
-        <dt>Listed here</dt><dd>{list.length} perfumes{discontinued > 0 && <span class="muted"> ({discontinued} discontinued)</span>}{d.partial && <span class="muted">. The brand sells more; they are being added.</span>}</dd>
+        <dt>Listed here</dt><dd>{d.partial ? <>A selection <span class="muted">(the brand sells more)</span></> : `${list.length} perfumes`}{discontinued > 0 && <span class="muted"> ({discontinued} discontinued)</span>}<br /><span class="muted">We list only details the brand confirms.</span></dd>
       </dl>
       {links.length > 0 && (
         <div>
@@ -103,9 +103,9 @@ const links = [
       <div id="more" aria-hidden="true"></div>
     </section>
 
-    {d.sources.length > 0 && (
-      <p class="sources muted">Facts on this page come from: {d.sources.map((s, i) => <>{i > 0 && ', '}<ExtLink href={s}>{host(s) + new URL(s).pathname.replace(/\/$/, '')}</ExtLink></>)}</p>
-    )}
+    {d.sources.length > 0
+      ? <p class="sources muted">Facts on this page come from: {d.sources.map((s, i) => <>{i > 0 && ', '}<ExtLink href={s}>{host(s) + new URL(s).pathname.replace(/\/$/, '')}</ExtLink></>)}</p>
+      : <p class="sources muted">Facts on this page were sent by the brand.</p>}
   </div>
 </Base>
 

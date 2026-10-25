@@ -24,7 +24,7 @@ export type SearchRow = {
 export type HeroHouse = {
   n: string;                    // house name
   u: string;                    // house page URL
-  c: string;                    // perfume count label, "40" or "40+"
+  c: string;                    // "57 perfumes" or "A selection of perfumes"
   img: string | null;           // house cover photo
   p: { n: string; u: string; img: string | null }[]; // current perfumes with a photo
 };
