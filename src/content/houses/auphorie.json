@@ -12,5 +12,6 @@
     "https://auphorie.com",
     "https://auphorie.com/products.json"
   ],
+  "logo": "/assets/auphorie/logo.png",
   "partial": true
 }

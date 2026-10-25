@@ -12,5 +12,6 @@
   "sources": [
     "https://hygr.com/",
     "https://hygr.com/products.json"
-  ]
+  ],
+  "logo": "/assets/hygr/logo.png"
 }

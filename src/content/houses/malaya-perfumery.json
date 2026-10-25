@@ -11,5 +11,6 @@
   "sources": [
     "https://malayaperfumery.com",
     "https://malayaperfumery.com/products.json"
-  ]
+  ],
+  "logo": "/assets/malaya-perfumery/logo.png"
 }

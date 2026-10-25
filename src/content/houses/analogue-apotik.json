@@ -14,5 +14,6 @@
     "https://analogueapotik.com/pages/stores",
     "https://analogueapotik.com/pages/contact-us",
     "https://analogueapotik.com/products.json"
-  ]
+  ],
+  "logo": "/assets/analogue-apotik/logo.png"
 }

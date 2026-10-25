@@ -12,5 +12,6 @@
     "https://dexandra.com",
     "https://dexandra.com/products.json"
   ],
+  "logo": "/assets/dexandra/logo.png",
   "partial": true
 }

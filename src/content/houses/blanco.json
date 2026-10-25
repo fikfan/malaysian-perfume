@@ -13,5 +13,6 @@
     "https://blancofragrance.com.my/",
     "https://blancofragrance.com.my/wp-json/wc/store/v1/products"
   ],
+  "logo": "/assets/blanco/logo.png",
   "partial": true
 }
