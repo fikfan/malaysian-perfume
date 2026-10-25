@@ -1,0 +1,35 @@
+{
+  "name": "Bellé",
+  "house": "hane-atelier",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "sweet",
+    "floral",
+    "gourmand",
+    "elegant"
+  ],
+  "notes": {
+    "top": [
+      "Black currant",
+      "Pear"
+    ],
+    "heart": [
+      "Iris",
+      "Jasmine",
+      "Orange Blossom"
+    ],
+    "base": [
+      "Praline",
+      "Vanila",
+      "Patchouli",
+      "Tonka Bean"
+    ]
+  },
+  "image": "/assets/hane-atelier/belle.jpg",
+  "source": null
+}

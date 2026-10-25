@@ -1,0 +1,35 @@
+{
+  "name": "Azuré",
+  "house": "hane-atelier",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "fresh",
+    "clean",
+    "woody"
+  ],
+  "notes": {
+    "top": [
+      "Sicilian Lemon",
+      "Granny Smith Apple",
+      "Cedar",
+      "Bellflower"
+    ],
+    "heart": [
+      "Bamboo",
+      "Jasmine",
+      "Rose"
+    ],
+    "base": [
+      "Cedarwood",
+      "Musk",
+      "Amber"
+    ]
+  },
+  "image": "/assets/hane-atelier/azure.jpg",
+  "source": null
+}

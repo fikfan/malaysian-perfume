@@ -1,0 +1,32 @@
+{
+  "name": "Amber",
+  "house": "hane-atelier",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "luxurious",
+    "sensual",
+    "woody"
+  ],
+  "notes": {
+    "top": [
+      "Bitter Almond",
+      "Saffron"
+    ],
+    "heart": [
+      "Egyptian Jasmine",
+      "Cedarwood"
+    ],
+    "base": [
+      "Ambergris",
+      "Woody notes",
+      "Musk"
+    ]
+  },
+  "image": "/assets/hane-atelier/amber.jpg",
+  "source": null
+}

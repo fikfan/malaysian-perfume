@@ -1,0 +1,36 @@
+{
+  "name": "Noiré",
+  "house": "hane-atelier",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "dark",
+    "sweet",
+    "seductive"
+  ],
+  "notes": {
+    "top": [
+      "Pear",
+      "Pink Pepper",
+      "Orange Blossom"
+    ],
+    "heart": [
+      "Black Coffee",
+      "Jasmine",
+      "Bitter Almond",
+      "Licorice"
+    ],
+    "base": [
+      "Vanila",
+      "Patchouli",
+      "Cashmere Wood",
+      "Cedar"
+    ]
+  },
+  "image": "/assets/hane-atelier/noire.jpg",
+  "source": null
+}

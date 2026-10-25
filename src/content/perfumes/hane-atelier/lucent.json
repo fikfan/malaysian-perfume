@@ -1,0 +1,37 @@
+{
+  "name": "Lucent",
+  "house": "hane-atelier",
+  "gender": "masculine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "fresh",
+    "aromatic",
+    "masculine"
+  ],
+  "notes": {
+    "top": [
+      "Lavender",
+      "Pineapple",
+      "Bergamot",
+      "Lemon Verbena"
+    ],
+    "heart": [
+      "Red Apple",
+      "Dried fruits",
+      "Oakmoss",
+      "Geranium",
+      "Coumarin",
+      "Rose"
+    ],
+    "base": [
+      "Tonka Bean",
+      "Sandalwood"
+    ]
+  },
+  "image": "/assets/hane-atelier/lucent.jpg",
+  "source": null
+}

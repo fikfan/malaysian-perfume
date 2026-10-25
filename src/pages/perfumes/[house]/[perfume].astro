@@ -51,7 +51,6 @@ const at = sib.indexOf(p);
 const more = sib.filter((x) => !shown.has(x) && !similar.some((s) => s.x === x))
   .sort((a, b) => Number(!!a.data.discontinued) - Number(!!b.data.discontinued) || Math.abs(sib.indexOf(a) - at) - Math.abs(sib.indexOf(b) - at))
   .slice(0, MORE_MAX);
-const sourceHost = host(d.source);
 const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy ? `. ${house.data.name} names ${d.inspiredBy} as its inspiration` : ''}. Notes: ${[...mine].slice(0, 8).join(', ') || 'not listed'}.`;
 ---
 <Base
@@ -69,8 +68,9 @@ const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy
       <div class="info">
         <p class="by"><a href={houseUrl(d.house)}>{house.data.name}</a></p>
         <h1 class="x">{d.name}</h1>
+        {d.describedAs?.length && <p class="insp">{house.data.name} describes it as {new Intl.ListFormat('en').format(d.describedAs)}.</p>}
         {d.inspiredBy && <p class="insp">{house.data.name} says it is inspired by <a href={searchUrl(d.inspiredBy)}>{d.inspiredBy}</a></p>}
-        <p class="src muted">Notes and details from <ExtLink href={d.source}>{sourceHost} (product page)</ExtLink>, checked {DATA_CHECKED}.</p>
+        <p class="src muted">{d.source ? <>Notes and details from <ExtLink href={d.source}>{host(d.source)} (product page)</ExtLink></> : 'Notes and details sent by the brand'}, checked {DATA_CHECKED}.</p>
         {d.discontinued && <p><span class="tag warn">Discontinued by the brand</span></p>}
 
         <h2 class="label">Notes</h2>
@@ -86,7 +86,13 @@ const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy
         ) : <p class="muted">{house.data.name} does not list notes for this perfume.</p>}
         {layers.length === 1 && layers[0].label === 'Notes' && <p class="hint muted">The brand lists the notes without splitting them into top, heart and base.</p>}
 
-        <h2 class="label">Details</h2>
+        <div class="label-row">
+          <h2 class="label">Details</h2>
+          <details class="about-data">
+            <summary aria-label="About these details">i</summary>
+            <p>We list only what is confirmed and available on the brand's website or in its marketing.</p>
+          </details>
+        </div>
         <dl class="facts">
           <dt>For</dt><dd>{d.gender ? GENDER_LABEL[d.gender] : <span class="muted">Not stated</span>}</dd>
           <dt>Type</dt><dd>{d.concentration ?? <span class="muted">Not stated</span>}</dd>
@@ -128,6 +134,11 @@ const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy
   .insp { font-size: 18px; margin: 12px 0 0; }
   .insp a { font-weight: 600; }
   .label { font-size: 16px; font-weight: 750; margin: 28px 0 10px; letter-spacing: 0; }
+  .label-row { display: flex; align-items: center; gap: 8px; position: relative; }
+  .about-data summary { list-style: none; cursor: pointer; display: grid; place-items: center; width: 20px; height: 20px; margin-top: 18px; border: 1px solid var(--rule); border-radius: 50%; font: italic 700 12px/1 Georgia, serif; color: var(--muted); }
+  .about-data summary::-webkit-details-marker { display: none; }
+  .about-data summary:hover, .about-data[open] summary { color: var(--ink); border-color: var(--ink); }
+  .about-data p { position: absolute; z-index: 2; left: 0; top: calc(100% - 4px); max-width: min(320px, 100%); margin: 0; padding: 10px 12px; font-size: 14px; background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: 0 4px 16px rgb(0 0 0 / .08); }
   .pyramid { margin: 0; border-top: var(--line); }
   .pyramid > div { display: grid; grid-template-columns: 84px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
   .pyramid dt { padding-top: 4px; }

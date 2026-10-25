@@ -6,7 +6,9 @@ import { z } from 'astro/zod';
 const link = z.url({ protocol: /^https$/, error: 'must be an https:// link' });
 // photos load in every visitor's browser, so only from known brand hosts; keep in sync with img-src in public/_headers
 const IMG_HOSTS = ['cdn.shopify.com', 'cdn.store-assets.com', 'cdn1.sgliteasset.com', 'cdn-ca.dg1.services', 'blancofragrance.com.my', 'perfumemalaya.com', 'www.legendary.com.my', 'szindore.com', 'ptjyhtnqeqtmeepaudvq.supabase.co', 'static.wixstatic.com'];
-const image = link.refine((u) => IMG_HOSTS.includes(new URL(u).hostname), 'image host not allowed: add it to IMG_HOSTS and to img-src in public/_headers');
+// a file the brand sent us, served from public/assets/<house>/
+const asset = z.string().regex(/^\/assets\/[\w-]+\/[\w.-]+\.(png|svg|jpg|webp)$/, 'a file under /assets/<house>/');
+const image = link.refine((u) => URL.canParse(u) && IMG_HOSTS.includes(new URL(u).hostname), 'image host not allowed: add it to IMG_HOSTS and to img-src in public/_headers').or(asset);
 
 const houses = defineCollection({
   loader: glob({ pattern: '*.json', base: './src/content/houses' }),
@@ -23,8 +25,7 @@ const houses = defineCollection({
     lazada: link.nullable().optional(),
     sources: z.array(link).default([]),
     partial: z.boolean().optional(),
-    // a logo the brand sent us, served from public/assets/<house>/
-    logo: z.string().regex(/^\/assets\/[\w-]+\/[\w.-]+\.(png|svg|jpg|webp)$/, 'a file under /assets/<house>/').nullable().optional(),
+    logo: asset.nullable().optional(),
   }),
 });
 
@@ -42,9 +43,10 @@ const perfumes = defineCollection({
     concentration: z.string().nullable().optional(),
     sizesMl: z.array(z.number()).default([]),
     inspiredBy: z.string().nullable().optional(),
+    describedAs: z.array(z.string()).optional(), // the brand's own short scent words, e.g. ["fresh", "clean", "woody"]
     notes,
     image: image.nullable().optional(),
-    source: link,
+    source: link.nullable(), // null: the brand sent the details to us directly
     discontinued: z.boolean().optional(),
   }),
 });

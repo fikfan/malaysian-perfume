@@ -1,6 +1,7 @@
 # Data format
 
 One JSON file per house and one per perfume. Facts only (names, notes, sizes, links).
+Store only what the brand confirms. Leave a field null or empty rather than guess; a house that sells more than we list gets `"partial": true`.
 Do not copy marketing paragraphs. Do not store prices. Do not copy data from Fragrantica or Parfumo.
 Images are linked from the brand's own site (not downloaded) and always credited with a source link.
 
@@ -16,7 +17,7 @@ Images are linked from the brand's own site (not downloaded) and always credited
   "tiktok": "emajieofficial",       // or null
   "shopee": null,                   // full URL or null
   "lazada": null,                   // full URL or null (official store only)
-  "sources": ["https://..."]        // pages the facts came from
+  "sources": ["https://..."]        // pages the facts came from; [] when the brand sent the facts to us
 }
 
 ## Perfume: src/content/perfumes/<house-slug>/<perfume-slug>.json
@@ -27,11 +28,12 @@ Images are linked from the brand's own site (not downloaded) and always credited
   "concentration": "Extrait de Parfum", // as stated, or null
   "sizesMl": [30],                  // numbers, or []
   "inspiredBy": "Maison Francis Kurkdjian Aqua Universalis", // only if the brand states it, else null
+  "describedAs": ["fresh", "clean", "woody"], // optional: the brand's own short scent words
   "notes": {
     "top": ["Lemon", "Bergamot"],
     "heart": ["White Flowers", "Lily of the Valley"],
     "base": ["Musk", "Light Woods"]
   },                                 // or "notes": {"all": ["..."]} when the brand gives no pyramid
   "image": "https://cdn.../image.png", // brand-hosted image URL, or null
-  "source": "https://www.emajie.com/products/emajie-superclean"
+  "source": "https://www.emajie.com/products/emajie-superclean" // or null when the brand sent the details
 }

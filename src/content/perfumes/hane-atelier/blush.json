@@ -1,0 +1,46 @@
+{
+  "name": "Blush",
+  "house": "hane-atelier",
+  "gender": "feminine",
+  "concentration": "Extrait de Parfum",
+  "sizesMl": [
+    30
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "sweet",
+    "creamy",
+    "floral",
+    "warm"
+  ],
+  "notes": {
+    "top": [
+      "Almond",
+      "Coffee",
+      "Bergamot",
+      "Lemon"
+    ],
+    "heart": [
+      "Tuberose",
+      "Jasmine Sambac",
+      "Orange Blossom",
+      "Bulgarian Rose",
+      "Orris"
+    ],
+    "base": [
+      "Tonka Bean",
+      "Vanila",
+      "Musk",
+      "Cinnamon",
+      "Cacao(Cocoa)",
+      "Praline",
+      "Amber",
+      "Patchouli",
+      "Sandalwood",
+      "Cashmere Wood",
+      "Cedar"
+    ]
+  },
+  "image": "/assets/hane-atelier/blush.jpg",
+  "source": null
+}

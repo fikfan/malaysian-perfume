@@ -28,7 +28,7 @@ const description = clip(rawDescription);
 const path = Astro.url.pathname;
 const full = title.includes('Malaysia Perfumes') ? title : `${title} | Malaysia Perfumes`;
 const canonical = new URL(path, Astro.site).href;
-const shareImage = image ?? new URL('/og.png', Astro.site).href;
+const shareImage = new URL(image ?? '/og.png', Astro.site).href;
 const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 const nav = [
   { href: '/houses/', label: 'Houses' },
@@ -86,7 +86,7 @@ const nav = [
     <div class="wrap">
       <div>
         <p><strong>Malaysia Perfumes</strong> is a free, independent library of perfumes from Malaysian houses. No brand pays to be here, and there are no affiliate links.</p>
-        <p>Details come from each brand's own website, and every perfume page links to its source. Prices change often, so check the brand's shop.</p>
+        <p>We list only details the brand confirms, such as notes, sizes and inspirations. They come from each brand's own website or from the brand directly, and every perfume page names its source. Prices change often, so check the brand's shop.</p>
         <p class="fine">Not affiliated with or endorsed by any brand. Brand and designer names are trademarks of their owners. Designer names appear only where a local brand names them as an inspiration. Bottle photos belong to each brand. <a href="/privacy/">Privacy notice</a>.</p>
       </div>
       <div>
