@@ -207,7 +207,7 @@ a.chip:hover { border-color: var(--ink); background: var(--soft); }
 .layer[data-l="Base"] { background: #ead9c6; border-color: #a9825a; }
 
 /* brand photos vary; a soft tile plus multiply makes white backgrounds sit on the same grey */
-.thumb { aspect-ratio: 1; background: var(--tile); display: grid; place-items: center; overflow: hidden; border-radius: var(--radius); outline: 1px solid rgb(0 0 0 / .08); outline-offset: -1px; }
+.thumb { aspect-ratio: 1; background: var(--tile); display: grid; grid-template: 100% / 100%; place-items: center; overflow: hidden; border-radius: var(--radius); outline: 1px solid rgb(0 0 0 / .08); outline-offset: -1px; }
 .thumb img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
 .thumb.noimg::before { content: attr(data-initial); font-weight: 800; font-size: 28px; color: var(--muted); }
 
