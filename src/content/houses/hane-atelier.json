@@ -4,11 +4,13 @@
   "founded": 2026,
   "location": "Kuala Lumpur",
   "about": "Hane Atelier is a Malaysian fragrance brand. It sells some perfumes built on well-known fragrance profiles and some original creations. It says all its perfumes use a 35% fragrance oil concentration, which it classes as Extrait de Parfum.",
-  "website": null,
+  "website": "https://haneatelier.myshopify.com",
   "instagram": "hane_atelierofficial",
   "tiktok": "hane_atelierhq",
   "shopee": null,
   "lazada": null,
-  "sources": [],
+  "sources": [
+    "https://haneatelier.myshopify.com/collections/all"
+  ],
   "logo": "/assets/hane-atelier/logo.png"
 }

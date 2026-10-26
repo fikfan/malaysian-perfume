@@ -4,6 +4,7 @@
   "gender": "feminine",
   "concentration": "Extrait de Parfum",
   "sizesMl": [
+    10,
     30
   ],
   "inspiredBy": null,
@@ -32,5 +33,5 @@
     ]
   },
   "image": "/assets/hane-atelier/noire.jpg",
-  "source": null
+  "source": "https://haneatelier.myshopify.com/products/noire-30ml"
 }
