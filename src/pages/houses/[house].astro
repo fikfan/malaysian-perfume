@@ -4,7 +4,7 @@ import PerfumeRow from '../../components/PerfumeRow.astro';
 import ExtLink from '../../components/ExtLink.astro';
 import Thumb from '../../components/Thumb.astro';
 import { load, host, perfumeUrl, houseUrl, currentWithPhoto, pyramid, ROW_IMG, TYPE_LABEL, GENDER_LABEL, type House } from '../../lib/data';
-import { breadcrumbLd, itemListLd } from '../../lib/seo';
+import { breadcrumbLd, houseLd } from '../../lib/seo';
 import { iconSvg } from '../../lib/icons';
 
 export async function getStaticPaths() {
@@ -32,7 +32,7 @@ const links = [
 <Base
   title={`${d.name} perfumes: notes and full list`}
   description={`${d.partial ? `${list.length} of the` : `All ${list.length}`} ${d.name} perfumes${d.location ? ` (${d.location})` : ''} with their notes${named ? ', what each one is inspired by,' : ''} and where the brand sells them. ${d.about}`}
-  jsonLd={[breadcrumbLd([['Houses', '/houses/'], [d.name, houseUrl(h.id)]]), itemListLd(`${d.name} perfumes`, list.map((p) => [p.data.name, perfumeUrl(p)]))]}
+  jsonLd={[breadcrumbLd([['Houses', '/houses/'], [d.name, houseUrl(h.id)]]), houseLd({ name: d.name, path: houseUrl(h.id), website: d.website, logo: d.logo, sameAs: links.filter((l) => l.key !== 'web').map((l) => l.href) }, list.map((p) => [p.data.name, perfumeUrl(p)]))]}
 >
   <div class="wrap">
     <div class="intro">

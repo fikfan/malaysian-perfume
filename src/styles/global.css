@@ -256,12 +256,14 @@ a.chip:hover { border-color: var(--ink); background: var(--soft); }
 .empty h2 { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
 
 /* footer */
-.site-foot { border-top: var(--line); margin-top: 64px; padding: 28px 0 40px; font-size: 14.5px; color: var(--muted); }
-.site-foot .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; }
+.site-foot { border-top: var(--line); margin-top: 64px; padding: 20px 0 24px; font-size: 14px; color: var(--muted); }
+.site-foot .wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 24px; align-items: center; }
 .site-foot strong { color: var(--ink); }
-.site-foot p { margin: 0 0 8px; max-width: 60ch; }
+.site-foot p { margin: 0; }
 .site-foot .fine { font-size: 13px; }
-.site-foot .made-by { margin: 28px auto 0; max-width: none; text-align: center; }
+.foot-links { grid-column: 2; grid-row: 1 / 3; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.foot-links a { color: var(--ink); font-weight: 600; }
+.site-foot .made-by { margin: 16px auto 0; text-align: center; }
 .made-by a { display: inline-flex; align-items: center; gap: 6px; vertical-align: middle; font-weight: 600; color: var(--ink); }
 .made-by img { border-radius: 50%; }
 
@@ -282,6 +284,7 @@ a.chip:hover { border-color: var(--ink); background: var(--soft); }
   .prow .thumb-wrap { width: 72px; grid-row: span 2; }
   .prow .notes-line { grid-column: 2; }
   .site-foot .wrap { grid-template-columns: 1fr; }
+  .foot-links { grid-column: 1; grid-row: auto; margin-top: 8px; }
 }
 /* below 900 px the header is two rows: logo + Get featured, then the menu + night mode */
 @media (max-width: 900px) {

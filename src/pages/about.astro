@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import ExtLink from '../components/ExtLink.astro';
+import { REPO_URL } from '../lib/site';
+import { aboutLd } from '../lib/seo';
+import profile from '../data/profile.json'; // Base validates this file on every page
+---
+<Base title="About" description="Malaysia Perfumes is a free, independent library of perfumes from Malaysian houses. How the data is collected, how to ask for a correction, and who runs it." jsonLd={aboutLd()}>
+  <div class="wrap prose">
+    <header class="page-head">
+      <h1 class="x">About Malaysia Perfumes</h1>
+      <p>A free, independent library of perfumes from Malaysian houses.</p>
+    </header>
+
+    <section aria-labelledby="h-what">
+      <h2 id="h-what">What this site is</h2>
+      <p>Malaysia Perfumes is a free, independent library of perfumes from Malaysian houses. No brand pays to be here, and there are no affiliate links.</p>
+    </section>
+
+    <section aria-labelledby="h-data">
+      <h2 id="h-data">How the data is collected</h2>
+      <p>We list only details the brand confirms, such as notes, sizes and inspirations. They come from each brand's own website or from the brand directly, and every perfume page names its source. Prices change often, so check the brand's shop.</p>
+    </section>
+
+    <section aria-labelledby="h-fix">
+      <h2 id="h-fix">Corrections</h2>
+      <p>Is your brand not featured, or is something wrong? <a href="/contact/">Send me a message</a>. Brands can ask to be added, corrected or removed.</p>
+    </section>
+
+    <section aria-labelledby="h-code">
+      <h2 id="h-code">Open source</h2>
+      <p>The site is open source. Want to contribute? <ExtLink href={REPO_URL}>Contribute here</ExtLink>.</p>
+    </section>
+
+    <section aria-labelledby="h-who">
+      <h2 id="h-who">Who runs it</h2>
+      <p><strong>{profile.name}</strong>. {profile.about}</p>
+      <ul>
+        {profile.links.map((l) => <li><ExtLink href={l.href}>{l.label}</ExtLink></li>)}
+      </ul>
+    </section>
+
+    <section aria-labelledby="h-legal">
+      <h2 id="h-legal">Legal notice</h2>
+      <p>Not affiliated with or endorsed by any brand. Brand and designer names are trademarks of their owners. Designer names appear only where a local brand names them as an inspiration. Bottle photos belong to each brand. <a href="/privacy/">Privacy notice</a>.</p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .prose > * { max-width: 720px; }
+  .prose section { margin-bottom: 32px; }
+  .prose h2 { font-size: 24px; font-weight: 800; margin: 0 0 8px; }
+  .prose p, .prose li { font-size: 16px; line-height: 1.6; }
+  .prose ul { padding-left: 20px; }
+  .prose li { margin-bottom: 8px; }
+</style>

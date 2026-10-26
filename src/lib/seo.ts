@@ -6,15 +6,34 @@ const abs = (path: string) => new URL(path, SITE).href;
 /** Search results show about 160 characters of a description; cut at a word and add an ellipsis */
 export const clip = (s: string, max = 160) => (s.length <= max ? s : s.slice(0, s.lastIndexOf(' ', max - 1)).replace(/[,;:.\s]+$/, '') + '…');
 
-/** Home page: names the site and lets Google offer a search box for it */
+const WEBSITE = abs('/#website');
+const ORG = abs('/#org');
+const org = { '@type': 'Organization', '@id': ORG, name: 'Malaysia Perfumes', url: abs('/'), logo: abs('/logo.svg'), sameAs: [REPO_URL] };
+
+/** Home page: names the site and who publishes it, and lets Google offer a search box for it */
 export const websiteLd = () => ({
   '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Malaysia Perfumes',
-  url: abs('/'),
-  inLanguage: 'en-MY',
-  sameAs: [REPO_URL],
-  potentialAction: { '@type': 'SearchAction', target: `${abs('/search/')}?q={search_term_string}`, 'query-input': 'required name=search_term_string' },
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': WEBSITE,
+      name: 'Malaysia Perfumes',
+      url: abs('/'),
+      inLanguage: 'en-MY',
+      publisher: { '@id': ORG },
+      potentialAction: { '@type': 'SearchAction', target: `${abs('/search/')}?q={search_term_string}`, 'query-input': 'required name=search_term_string' },
+    },
+    org,
+  ],
+});
+
+/** The About page: describes the site and the organisation behind it */
+export const aboutLd = () => ({
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'AboutPage', name: 'About Malaysia Perfumes', url: abs('/about/'), isPartOf: { '@id': WEBSITE }, about: { '@id': ORG } },
+    org,
+  ],
 });
 
 /** "Houses › Emajie › Alpha" trail shown under the result in Google */
@@ -43,6 +62,25 @@ export const collectionPageLd = (name: string, path: string, description: string
   inLanguage: 'en-MY',
   ...(list && { mainEntity: { ...list, '@context': undefined } }),
 });
+
+/** A house page: the brand, and the list of its perfumes */
+export const houseLd = (b: { name: string; path: string; website?: string | null; logo?: string | null; sameAs: string[] }, items: [name: string, path: string][]) => {
+  const { '@context': _, ...list } = itemListLd(`${b.name} perfumes`, items);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: `${b.name} perfumes`,
+    url: abs(b.path),
+    about: {
+      '@type': 'Brand',
+      name: b.name,
+      ...(b.website && { url: b.website }),
+      ...(b.logo && { logo: abs(b.logo) }),
+      ...(b.sameAs.length && { sameAs: b.sameAs }),
+    },
+    mainEntity: list,
+  };
+};
 
 /** A perfume page; facts only, so no offers, ratings or reviews */
 export const perfumeLd = (p: { name: string; brand: string; brandPath: string; path: string; description: string; image?: string | null; inspiredBy?: string | null; sameAs?: string | null }) => ({
