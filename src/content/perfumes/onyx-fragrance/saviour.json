@@ -1,7 +1,7 @@
 {
   "name": "Saviour",
   "house": "onyx-fragrance",
-  "gender": null,
+  "gender": "masculine",
   "concentration": "Eau de Parfum",
   "sizesMl": [
     35
@@ -14,7 +14,17 @@
     "vanilla"
   ],
   "notes": {
-    "all": []
+    "all": [
+      "Black Pepper",
+      "Bergamot",
+      "Lemon",
+      "Lime",
+      "Lavender",
+      "Geranium",
+      "Vanilla",
+      "Amber",
+      "Musk"
+    ]
   },
   "image": "/assets/onyx-fragrance/saviour.jpg",
   "source": null
