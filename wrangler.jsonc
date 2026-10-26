@@ -19,7 +19,8 @@
     { "pattern": "malaysiaperfumes.com", "custom_domain": true, "zone_name": "malaysiaperfumes.com" },
     { "pattern": "www.malaysiaperfumes.com", "custom_domain": true, "zone_name": "malaysiaperfumes.com" }
   ],
-  "workers_dev": true,
+  // the workers.dev copy is off, so search engines see only the real domain
+  "workers_dev": false,
   "send_email": [{ "name": "EMAIL" }],
   "observability": { "enabled": true }
 }

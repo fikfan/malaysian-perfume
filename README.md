@@ -2,7 +2,7 @@
 
 A free library of perfumes made by Malaysian perfume houses: notes, inspirations and links, taken from each brand's own website.
 
-- Site: https://malaysiaperfumes.com (also https://malaysian-perfume.malaysianperfumes.workers.dev)
+- Site: https://malaysiaperfumes.com
 - Stack: Astro (static) on a Cloudflare Worker, no database, no tracking. The Worker only handles the contact form (`worker/`).
 - Data: one JSON file per house in `src/content/houses/` and one per perfume in `src/content/perfumes/<house>/`. See [DATA.md](DATA.md).
 
