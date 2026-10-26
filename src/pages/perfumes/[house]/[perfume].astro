@@ -4,7 +4,7 @@ import Thumb from '../../../components/Thumb.astro';
 import PerfumeRow from '../../../components/PerfumeRow.astro';
 import ExtLink from '../../../components/ExtLink.astro';
 import { load, pyramid, allNotes, perfumeSlug, perfumeUrl, houseUrl, searchUrl, fmtSizes, noteCounts, host, imgUrl, GENDER_LABEL, DATA_CHECKED, type House, type Perfume } from '../../../lib/data';
-import { breadcrumbLd } from '../../../lib/seo';
+import { breadcrumbLd, perfumeLd } from '../../../lib/seo';
 
 export async function getStaticPaths() {
   const { perfumes, houses } = await load();
@@ -51,6 +51,9 @@ const at = sib.indexOf(p);
 const more = sib.filter((x) => !shown.has(x) && !similar.some((s) => s.x === x))
   .sort((a, b) => Number(!!a.data.discontinued) - Number(!!b.data.discontinued) || Math.abs(sib.indexOf(a) - at) - Math.abs(sib.indexOf(b) - at))
   .slice(0, MORE_MAX);
+// Lead line: only the brand's own words, so it shows only when one of those fields is set
+const hn = house.data.name;
+const described = d.describedAs?.length ? `${hn} describes it as ${new Intl.ListFormat('en').format(d.describedAs)}.` : '';
 const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy ? `. ${house.data.name} names ${d.inspiredBy} as its inspiration` : ''}. Notes: ${[...mine].slice(0, 8).join(', ') || 'not listed'}.`;
 ---
 <Base
@@ -58,7 +61,10 @@ const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy
   title={`${d.name} by ${house.data.name}: notes${d.inspiredBy ? ' and inspiration' : ''}`}
   description={desc}
   image={imgUrl(d.image, 1200)}
-  jsonLd={breadcrumbLd([['Houses', '/houses/'], [house.data.name, houseUrl(d.house)], [d.name, perfumeUrl(p)]])}
+  jsonLd={[
+    breadcrumbLd([['Houses', '/houses/'], [house.data.name, houseUrl(d.house)], [d.name, perfumeUrl(p)]]),
+    perfumeLd({ name: d.name, brand: house.data.name, brandPath: houseUrl(d.house), path: perfumeUrl(p), description: desc, image: imgUrl(d.image, 1200), inspiredBy: d.inspiredBy, sameAs: d.source }),
+  ]}
 >
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/houses/">Houses</a><span aria-hidden="true">/</span><a href={houseUrl(d.house)}>{house.data.name}</a><span aria-hidden="true">/</span>{d.name}</nav>
@@ -66,10 +72,8 @@ const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy
     <article class="perfume">
       <div class="photo"><Thumb src={d.image} name={d.name} eager size={720} alt={`${d.name} by ${house.data.name}, bottle`} /></div>
       <div class="info">
-        <p class="by"><a href={houseUrl(d.house)}>{house.data.name}</a></p>
-        <h1 class="x">{d.name}</h1>
-        {d.describedAs?.length && <p class="insp">{house.data.name} describes it as {new Intl.ListFormat('en').format(d.describedAs)}.</p>}
-        {d.inspiredBy && <p class="insp">{house.data.name} says it is inspired by <a href={searchUrl(d.inspiredBy)}>{d.inspiredBy}</a></p>}
+        <h1><span class="x">{d.name}</span> <span class="by">by <a href={houseUrl(d.house)}>{house.data.name}</a></span></h1>
+        {(d.inspiredBy || described) && <p class="lead">{d.inspiredBy && <>{hn} says it is inspired by <a href={searchUrl(d.inspiredBy)}>{d.inspiredBy}</a>. </>}{described}</p>}
         <p class="src muted">{d.source ? <>Notes and details from <ExtLink href={d.source}>{host(d.source)} (product page)</ExtLink></> : 'Notes and details sent by the brand'}, checked {DATA_CHECKED}.</p>
         {d.discontinued && <p><span class="tag warn">Discontinued by the brand</span></p>}
 
@@ -127,12 +131,12 @@ const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy
   .crumbs { padding-top: 24px; }
   .perfume { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 48px; padding: 8px 0 40px; align-items: start; }
   .photo { position: sticky; top: 16px; }
-  .by { margin: 0 0 6px; font-weight: 600; }
-  .by a { text-decoration: none; }
-  .by a:hover { text-decoration: underline; }
   h1 { font-weight: 800; font-size: clamp(34px, 4.6vw, 60px); }
-  .insp { font-size: 18px; margin: 12px 0 0; }
-  .insp a { font-weight: 600; }
+  h1 .by { display: block; margin-top: 8px; font-size: 18px; font-weight: 600; letter-spacing: 0; line-height: 1.3; }
+  h1 .by a { text-decoration: none; }
+  h1 .by a:hover { text-decoration: underline; }
+  .lead { font-size: 18px; margin: 14px 0 0; }
+  .lead a { font-weight: 600; }
   .label { font-size: 16px; font-weight: 750; margin: 28px 0 10px; letter-spacing: 0; }
   .label-row { display: flex; align-items: center; gap: 8px; position: relative; }
   .about-data summary { list-style: none; cursor: pointer; display: grid; place-items: center; width: 20px; height: 20px; margin-top: 18px; border: 1px solid var(--rule); border-radius: 50%; font: italic 700 12px/1 Georgia, serif; color: var(--muted); }

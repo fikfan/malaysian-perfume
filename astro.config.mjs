@@ -10,6 +10,6 @@ export default defineConfig({
   vite: { build: { assetsInlineLimit: 0 } },
   // fetch the next page when a link is hovered or tapped, so clicks open from cache
   prefetch: { prefetchAll: true, defaultStrategy: 'hover' },
-  // sitemap-index.xml for search engines; the 404 page is left out
-  integrations: [sitemap({ filter: (page) => !page.includes('/404') })],
+  // sitemap-index.xml for search engines; the 404 page and the noindex search page are left out
+  integrations: [sitemap({ filter: (page) => !page.includes('/404') && !page.includes('/search/') })],
 });

@@ -6,7 +6,7 @@ import { load, noteCounts, searchUrl, GENDER_LABEL } from '../lib/data';
 const { houses } = await load();
 const tips = (await noteCounts()).slice(0, 8).map(([n]) => n);
 ---
-<Base title="Search" description="Search Malaysian perfumes by name, house, note, or the designer scent they are inspired by.">
+<Base title="Search" description="Search Malaysian perfumes by name, house, note, or the designer scent they are inspired by." noindex>
   <div class="wrap">
     <header class="page-head">
       <h1 class="x">Search</h1>

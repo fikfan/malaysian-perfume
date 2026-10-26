@@ -32,3 +32,18 @@ export const itemListLd = (name: string, items: [name: string, path: string][]) 
   numberOfItems: items.length,
   itemListElement: items.map(([n, path], i) => ({ '@type': 'ListItem', position: i + 1, name: n, url: abs(path) })),
 });
+
+/** A perfume page; facts only, so no offers, ratings or reviews */
+export const perfumeLd = (p: { name: string; brand: string; brandPath: string; path: string; description: string; image?: string | null; inspiredBy?: string | null; sameAs?: string | null }) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  '@id': abs(p.path) + '#product',
+  name: p.name,
+  description: p.description,
+  url: abs(p.path),
+  category: 'Perfume',
+  brand: { '@type': 'Brand', name: p.brand, url: abs(p.brandPath) },
+  ...(p.image && { image: abs(p.image) }), // brand-sent photos are local /assets/ paths
+  ...(p.inspiredBy && { isSimilarTo: { '@type': 'Product', name: p.inspiredBy } }),
+  ...(p.sameAs && { sameAs: p.sameAs }),
+});

@@ -9,3 +9,7 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
   Cross-Origin-Opener-Policy: same-origin
   Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Astro puts a content hash in every /_astro/ file name, so these can be cached for a year. Rules combine, so /* headers still apply.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
