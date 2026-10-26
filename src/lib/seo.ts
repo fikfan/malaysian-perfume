@@ -33,6 +33,17 @@ export const itemListLd = (name: string, items: [name: string, path: string][]) 
   itemListElement: items.map(([n, path], i) => ({ '@type': 'ListItem', position: i + 1, name: n, url: abs(path) })),
 });
 
+/** A page that lists things (an inspiration and its perfumes); the list goes in as mainEntity */
+export const collectionPageLd = (name: string, path: string, description: string, list?: ReturnType<typeof itemListLd>) => ({
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name,
+  description,
+  url: abs(path),
+  inLanguage: 'en-MY',
+  ...(list && { mainEntity: { ...list, '@context': undefined } }),
+});
+
 /** A perfume page; facts only, so no offers, ratings or reviews */
 export const perfumeLd = (p: { name: string; brand: string; brandPath: string; path: string; description: string; image?: string | null; inspiredBy?: string | null; sameAs?: string | null }) => ({
   '@context': 'https://schema.org',

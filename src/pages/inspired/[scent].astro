@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+import PerfumeRow from '../../components/PerfumeRow.astro';
+import { load, inspirations, perfumeUrl, scentSlug, inspiredUrl, SCENT_PAGE_MIN, type Perfume } from '../../lib/data';
+import { INSPIRATION_POLICY } from '../../lib/labels';
+import { breadcrumbLd, itemListLd, collectionPageLd } from '../../lib/seo';
+
+export async function getStaticPaths() {
+  return (await inspirations()).filter(([, ps]) => ps.length >= SCENT_PAGE_MIN)
+    .map(([scent, ps]) => ({ params: { scent: scentSlug(scent) }, props: { scent, ps } }));
+}
+const { scent, ps } = Astro.props as { scent: string; ps: Perfume[] };
+const { houses } = await load();
+const hn = new Map(houses.map((h) => [h.id, h.data.name]));
+const names = [...new Set(ps.map((p) => hn.get(p.data.house)!))];
+const path = inspiredUrl(scent, ps.length);
+const h1 = `Local perfumes inspired by ${scent}`;
+// the first that fits in about 60 characters (the layout adds the site name)
+const title = [`${h1} in Malaysia`, `Perfumes inspired by ${scent} in Malaysia`, h1].find((t) => t.length <= 60) ?? h1;
+const answer = `${ps.length} Malaysian perfumes from ${names.length} ${names.length === 1 ? 'house' : 'houses'} name ${scent} as their inspiration.`;
+const description = `${answer} ${new Intl.ListFormat('en').format(ps.map((p) => `${p.data.name} by ${hn.get(p.data.house)}`))}, with their notes.`;
+---
+<Base
+  title={title}
+  description={description}
+  jsonLd={[
+    collectionPageLd(h1, path, description, itemListLd(h1, ps.map((p) => [`${p.data.name} by ${hn.get(p.data.house)}`, perfumeUrl(p)]))),
+    breadcrumbLd([['Inspirations', '/inspired/'], [scent, path]]),
+  ]}
+>
+  <div class="wrap">
+    <header class="page-head">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/inspired/">Inspirations</a><span aria-hidden="true">/</span>{scent}</nav>
+      <h1 class="x">{h1}</h1>
+      <p>{answer}</p>
+    </header>
+
+    <section class="section" aria-labelledby="h-perfumes">
+      <div class="section-head"><h2 id="h-perfumes">Perfumes</h2><a href="/inspired/">All inspirations</a></div>
+      <ul class="plist">{ps.map((p) => <PerfumeRow p={p} houseName={hn.get(p.data.house)} />)}</ul>
+    </section>
+
+    <p class="note muted">{new Intl.ListFormat('en').format(names)} {names.length === 1 ? 'says' : 'each say'} these perfumes are inspired by {scent}. {INSPIRATION_POLICY}</p>
+  </div>
+</Base>
+
+<style>
+  .note { font-size: 14px; margin-top: 24px; max-width: 62ch; }
+</style>

@@ -1,17 +1,21 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { load, perfumeUrl } from '../../lib/data';
+import { load, inspirations, perfumeUrl, scentSlug, inspiredUrl, SCENT_PAGE_MIN } from '../../lib/data';
 import { INSPIRATION_POLICY } from '../../lib/labels';
+import { breadcrumbLd, collectionPageLd } from '../../lib/seo';
 
-const { houses, perfumes } = await load();
+const { houses } = await load();
 const hn = new Map(houses.map((h) => [h.id, h.data.name]));
-const groups = new Map<string, typeof perfumes>();
-for (const p of perfumes) if (p.data.inspiredBy) groups.set(p.data.inspiredBy, [...(groups.get(p.data.inspiredBy) ?? []), p]);
-const list = [...groups].sort((a, b) => a[0].localeCompare(b[0]));
+const list = await inspirations();
+const description = "Local Malaysian perfumes whose brands name a designer or niche scent as the inspiration, listed A to Z with a link to each brand's source.";
 const letter = (s: string) => (/[a-z]/i.test(s[0]) ? s[0].toUpperCase() : '#');
 const letters = [...new Set(list.map(([n]) => letter(n)))];
 ---
-<Base title="Local Malaysian perfumes inspired by designer scents" description="Local Malaysian perfumes whose brands name a designer or niche scent as the inspiration, listed A to Z with a link to each brand's source.">
+<Base
+  title="Local Malaysian perfumes inspired by designer scents"
+  description={description}
+  jsonLd={[collectionPageLd('Local Malaysian perfumes inspired by designer scents', '/inspired/', description), breadcrumbLd([['Inspirations', '/inspired/']])]}
+>
   <div class="wrap"><div class="inspired">
     <header class="page-head">
       <h1 class="x">Inspired by</h1>
@@ -28,8 +32,8 @@ const letters = [...new Set(list.map(([n]) => letter(n)))];
         <h2 id={`h-${l}`} class="x">{l}</h2>
         <dl>
           {list.filter(([n]) => letter(n) === l).map(([name, ps]) => (
-            <div class="row" data-k={`${name} ${ps.map((p) => p.data.name + ' ' + hn.get(p.data.house)).join(' ')}`.toLowerCase()}>
-              <dt>{name} <span class="muted n">{ps.length} local {ps.length === 1 ? 'take' : 'takes'}</span></dt>
+            <div class="row" id={scentSlug(name)} data-k={`${name} ${ps.map((p) => p.data.name + ' ' + hn.get(p.data.house)).join(' ')}`.toLowerCase()}>
+              <dt>{ps.length >= SCENT_PAGE_MIN ? <a href={inspiredUrl(name, ps.length)}>{name}</a> : name} <span class="muted n">{ps.length} local {ps.length === 1 ? 'take' : 'takes'}</span></dt>
               <dd>{ps.map((p, i) => <>{i > 0 && ', '}<a href={perfumeUrl(p)}>{p.data.name}</a> <span class="muted">({hn.get(p.data.house)})</span></>)}</dd>
             </div>
           ))}
@@ -68,6 +72,7 @@ const letters = [...new Set(list.map(([n]) => letter(n)))];
   .az a[aria-disabled] { opacity: .3; pointer-events: none; }
   .inspired { max-width: 980px; }
   .letter { padding-top: 24px; scroll-margin-top: 56px; }
+  .row { scroll-margin-top: 64px; }
   @media (max-width: 640px) { .az { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); padding-right: 32px; } .az a { flex: none; } }
   .letter h2 { font-size: 32px; font-weight: 800; border-bottom: var(--line); padding-bottom: 6px; }
   dl { margin: 0; }

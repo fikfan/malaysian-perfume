@@ -1,6 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import ALIAS from '../data/note-aliases.json';
-import { family } from './match';
+import { family, fold } from './match';
 export { GENDER_LABEL } from './labels';
 
 export type House = CollectionEntry<'houses'>;
@@ -58,6 +58,11 @@ export const perfumeSlug = (p: Perfume) => p.id.split('/')[1];
 export const perfumeUrl = (p: Perfume) => `/perfumes/${p.data.house}/${perfumeSlug(p)}/`;
 export const houseUrl = (id: string) => `/houses/${id}/`;
 export const searchUrl = (q: string) => `/search/?q=${encodeURIComponent(q)}`;
+// "Louis Vuitton L'Immensité" -> "louis-vuitton-limmensite"
+export const scentSlug = (s: string) => fold(s).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+// A scent named by this many perfumes gets its own page; fewer would be a thin page, so it stays an anchor on /inspired/
+export const SCENT_PAGE_MIN = 3;
+export const inspiredUrl = (scent: string, n: number) => (n >= SCENT_PAGE_MIN ? `/inspired/${scentSlug(scent)}/` : `/inspired/#${scentSlug(scent)}`);
 
 let cache: { houses: House[]; perfumes: Perfume[]; byHouse: Map<string, Perfume[]> } | null = null;
 export async function load() {
@@ -74,6 +79,20 @@ export async function load() {
   const byHouse = new Map(houses.map((h) => [h.id, perfumes.filter((p) => p.data.house === h.id)
     .sort((a, b) => Number(!!a.data.discontinued) - Number(!!b.data.discontinued))]));
   return (cache = { houses, perfumes, byHouse });
+}
+
+// Perfumes grouped by the scent their brand names, A-Z
+export async function inspirations() {
+  const { perfumes } = await load();
+  const groups = new Map<string, Perfume[]>();
+  for (const p of perfumes) if (p.data.inspiredBy) groups.set(p.data.inspiredBy, [...(groups.get(p.data.inspiredBy) ?? []), p]);
+  const slugs = new Map<string, string>();
+  for (const name of groups.keys()) {
+    const s = scentSlug(name);
+    if (slugs.has(s)) throw new Error(`Inspirations "${name}" and "${slugs.get(s)}" share the slug "${s}"`);
+    slugs.set(s, name);
+  }
+  return [...groups].sort((a, b) => a[0].localeCompare(b[0]));
 }
 
 // Note frequency across the whole library, used for "popular notes" and note links

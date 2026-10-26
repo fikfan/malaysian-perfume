@@ -3,7 +3,7 @@ import Base from '../../../layouts/Base.astro';
 import Thumb from '../../../components/Thumb.astro';
 import PerfumeRow from '../../../components/PerfumeRow.astro';
 import ExtLink from '../../../components/ExtLink.astro';
-import { load, pyramid, allNotes, perfumeSlug, perfumeUrl, houseUrl, searchUrl, fmtSizes, noteCounts, host, imgUrl, GENDER_LABEL, DATA_CHECKED, type House, type Perfume } from '../../../lib/data';
+import { load, pyramid, allNotes, perfumeSlug, perfumeUrl, houseUrl, searchUrl, inspiredUrl, fmtSizes, noteCounts, host, imgUrl, GENDER_LABEL, DATA_CHECKED, type House, type Perfume } from '../../../lib/data';
 import { breadcrumbLd, perfumeLd } from '../../../lib/seo';
 
 export async function getStaticPaths() {
@@ -73,7 +73,7 @@ const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy
       <div class="photo"><Thumb src={d.image} name={d.name} eager size={720} alt={`${d.name} by ${house.data.name}, bottle`} /></div>
       <div class="info">
         <h1><span class="x">{d.name}</span> <span class="by">by <a href={houseUrl(d.house)}>{house.data.name}</a></span></h1>
-        {(d.inspiredBy || described) && <p class="lead">{d.inspiredBy && <>{hn} says it is inspired by <a href={searchUrl(d.inspiredBy)}>{d.inspiredBy}</a>. </>}{described}</p>}
+        {(d.inspiredBy || described) && <p class="lead">{d.inspiredBy && <>{hn} says it is inspired by <a href={inspiredUrl(d.inspiredBy, sameInspo.length + 1)}>{d.inspiredBy}</a>. </>}{described}</p>}
         <p class="src muted">{d.source ? <>Notes and details from <ExtLink href={d.source}>{host(d.source)} (product page)</ExtLink></> : 'Notes and details sent by the brand'}, checked {DATA_CHECKED}.</p>
         {d.discontinued && <p><span class="tag warn">Discontinued by the brand</span></p>}
 
