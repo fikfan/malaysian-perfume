@@ -1,7 +1,7 @@
 {
   "name": "Reflection",
   "house": "onyx-fragrance",
-  "gender": null,
+  "gender": "masculine",
   "concentration": "Eau de Parfum",
   "sizesMl": [
     35

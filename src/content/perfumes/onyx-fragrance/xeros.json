@@ -1,7 +1,7 @@
 {
   "name": "Xeros",
   "house": "onyx-fragrance",
-  "gender": null,
+  "gender": "masculine",
   "concentration": "Eau de Parfum",
   "sizesMl": [
     35
@@ -14,7 +14,16 @@
     "citrus"
   ],
   "notes": {
-    "all": []
+    "all": [
+      "Vanilla",
+      "Cedarwood",
+      "Amber",
+      "Pepper",
+      "Cardamom",
+      "Mint",
+      "Lemon",
+      "Bergamot"
+    ]
   },
   "image": "/assets/onyx-fragrance/xeros.jpg",
   "source": null

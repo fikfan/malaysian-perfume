@@ -1,7 +1,7 @@
 {
   "name": "Vibrant Luxe",
   "house": "onyx-fragrance",
-  "gender": null,
+  "gender": "masculine",
   "concentration": "Eau de Parfum",
   "sizesMl": [
     35
@@ -15,7 +15,19 @@
     "aromatic"
   ],
   "notes": {
-    "all": []
+    "all": [
+      "Bergamot",
+      "Lemon",
+      "Mandarin",
+      "Leather",
+      "Suede",
+      "Cedarwood",
+      "Sandalwood",
+      "Vetiver",
+      "Black Pepper",
+      "Pink Pepper",
+      "Ginger"
+    ]
   },
   "image": "/assets/onyx-fragrance/vibrant-luxe.jpg",
   "source": null
