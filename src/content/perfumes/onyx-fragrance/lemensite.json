@@ -1,0 +1,34 @@
+{
+  "name": "Lemensite",
+  "house": "onyx-fragrance",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "citrus",
+    "marine",
+    "fruity",
+    "aquatic",
+    "musky"
+  ],
+  "notes": {
+    "all": [
+      "Bergamot",
+      "Lemon",
+      "Grapefruit",
+      "Ocean Accord",
+      "Aquatic Notes",
+      "Apple",
+      "Berries",
+      "Melon",
+      "Musk",
+      "Amber",
+      "Cedarwood"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/lemensite.jpg",
+  "source": null
+}

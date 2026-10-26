@@ -1,0 +1,34 @@
+{
+  "name": "Lxbre",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "white floral",
+    "citrus",
+    "lavender",
+    "sweet",
+    "powdery"
+  ],
+  "notes": {
+    "all": [
+      "Jasmine",
+      "Orange Blossom",
+      "Bergamot",
+      "Mandarin",
+      "Lemon",
+      "Lavender",
+      "Vanilla",
+      "Benzoin",
+      "Caramel",
+      "Musk",
+      "Iris"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/lxbre.jpg",
+  "source": null
+}

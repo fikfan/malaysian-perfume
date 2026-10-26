@@ -1,0 +1,34 @@
+{
+  "name": "Symphony",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "citrus",
+    "fresh spicy",
+    "floral",
+    "bitter"
+  ],
+  "notes": {
+    "all": [
+      "Bergamot",
+      "Lemon",
+      "Mandarin",
+      "Pink Pepper",
+      "Cardamom",
+      "Ginger",
+      "Jasmine",
+      "Iris",
+      "Lavender",
+      "Patchouli",
+      "Vetiver",
+      "Amber"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/symphony.jpg",
+  "source": null
+}

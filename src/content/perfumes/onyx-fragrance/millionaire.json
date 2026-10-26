@@ -1,0 +1,33 @@
+{
+  "name": "Millionaire",
+  "house": "onyx-fragrance",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "warm spicy",
+    "cinnamon",
+    "woody",
+    "leather",
+    "rose"
+  ],
+  "notes": {
+    "all": [
+      "Spices",
+      "Amber",
+      "Cardamom",
+      "Cinnamon",
+      "Sandalwood",
+      "Cedarwood",
+      "Leather",
+      "Patchouli",
+      "Vetiver",
+      "Rose"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/millionaire.jpg",
+  "source": null
+}

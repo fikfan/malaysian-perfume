@@ -1,0 +1,31 @@
+{
+  "name": "Black Don",
+  "house": "onyx-fragrance",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "woody",
+    "lavender",
+    "white floral",
+    "leather"
+  ],
+  "notes": {
+    "all": [
+      "Cedarwood",
+      "Sandalwood",
+      "Vetiver",
+      "Lavender",
+      "Jasmine",
+      "White Flowers",
+      "Leather",
+      "Amber",
+      "Musk"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/black-don.jpg",
+  "source": null
+}

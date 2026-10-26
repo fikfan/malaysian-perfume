@@ -1,0 +1,30 @@
+{
+  "name": "Scxndal",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "honey",
+    "sweet",
+    "white floral",
+    "caramel",
+    "woody"
+  ],
+  "notes": {
+    "all": [
+      "Honey",
+      "Vanilla",
+      "Caramel",
+      "Jasmine",
+      "Tuberose",
+      "Sandalwood",
+      "Cedarwood"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/scxndal.jpg",
+  "source": null
+}

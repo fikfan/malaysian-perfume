@@ -1,0 +1,21 @@
+{
+  "name": "Xeros",
+  "house": "onyx-fragrance",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "vanilla",
+    "woody",
+    "fresh spicy",
+    "citrus"
+  ],
+  "notes": {
+    "all": []
+  },
+  "image": "/assets/onyx-fragrance/xeros.jpg",
+  "source": null
+}

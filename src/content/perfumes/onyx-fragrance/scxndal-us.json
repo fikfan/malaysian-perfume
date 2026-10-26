@@ -1,0 +1,34 @@
+{
+  "name": "Scxndal-Us",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "fruity",
+    "sweet",
+    "floral",
+    "rose"
+  ],
+  "notes": {
+    "all": [
+      "Strawberry",
+      "Raspberry",
+      "Blackcurrant",
+      "Caramel",
+      "Sugar",
+      "Vanilla",
+      "Jasmine",
+      "Peony",
+      "Magnolia",
+      "Rose",
+      "Lily",
+      "Musk"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/scxndal-us.jpg",
+  "source": null
+}

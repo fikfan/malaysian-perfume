@@ -1,0 +1,30 @@
+{
+  "name": "Midnight Spell",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "sweet",
+    "fruity",
+    "cherry",
+    "vanilla",
+    "floral"
+  ],
+  "notes": {
+    "all": [
+      "Sugar",
+      "Vanilla",
+      "Berries",
+      "Peach",
+      "Cherry",
+      "Jasmine",
+      "Lily"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/midnight-spell.jpg",
+  "source": null
+}

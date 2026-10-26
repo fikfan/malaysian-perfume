@@ -1,0 +1,28 @@
+{
+  "name": "The Wanted",
+  "house": "onyx-fragrance",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "vanilla",
+    "woody",
+    "powdery",
+    "sweet"
+  ],
+  "notes": {
+    "all": [
+      "Vanilla",
+      "Cedarwood",
+      "Sandalwood",
+      "Amber",
+      "Caramel",
+      "Tonka Bean"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/the-wanted.jpg",
+  "source": null
+}

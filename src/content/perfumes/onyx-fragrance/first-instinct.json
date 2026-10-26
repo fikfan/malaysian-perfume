@@ -1,0 +1,31 @@
+{
+  "name": "First Instinct",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "amber",
+    "sweet",
+    "floral",
+    "vanilla",
+    "powdery"
+  ],
+  "notes": {
+    "all": [
+      "Amber",
+      "Caramel",
+      "Sugar",
+      "Vanilla",
+      "Jasmine",
+      "Rose",
+      "Magnolia",
+      "Musk"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/first-instinct.jpg",
+  "source": null
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Aqua DX Gio",
+  "house": "onyx-fragrance",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": "Armani Acqua di Giò Pour Homme",
+  "describedAs": [
+    "citrus aromatic marine",
+    "fresh spicy",
+    "woody"
+  ],
+  "notes": {
+    "all": [
+      "Bergamot",
+      "Lemon",
+      "Grapefruit",
+      "Lavender",
+      "Sage",
+      "Rosemary",
+      "Sea Notes",
+      "Aquatic Notes",
+      "Mineral Notes",
+      "Black Pepper",
+      "Cardamom",
+      "Pink Pepper",
+      "Cedarwood",
+      "Sandalwood",
+      "Vetiver"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/aqua-dx-gio.jpg",
+  "source": null
+}

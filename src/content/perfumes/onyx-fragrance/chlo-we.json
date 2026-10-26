@@ -1,0 +1,33 @@
+{
+  "name": "Chlo-We",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": "Chloé Eau de Parfum",
+  "describedAs": [
+    "floral rose fresh fruity",
+    "white floral"
+  ],
+  "notes": {
+    "all": [
+      "Jasmine",
+      "Freesia",
+      "Peony",
+      "Rose",
+      "Damask Rose",
+      "Citrus",
+      "Green Notes",
+      "Peach",
+      "Raspberry",
+      "Lychee",
+      "Lily",
+      "Magnolia",
+      "White Musk"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/chlo-we.jpg",
+  "source": null
+}

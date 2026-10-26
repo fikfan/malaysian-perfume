@@ -1,0 +1,32 @@
+{
+  "name": "Champs Toast",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "sweet",
+    "fruity",
+    "citrus",
+    "vanilla",
+    "powdery"
+  ],
+  "notes": {
+    "all": [
+      "Strawberry",
+      "Raspberry",
+      "Peach",
+      "Apple",
+      "Berries",
+      "Orange",
+      "Mandarin",
+      "Vanilla",
+      "Musk"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/champs-toast.jpg",
+  "source": null
+}

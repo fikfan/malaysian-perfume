@@ -1,0 +1,31 @@
+{
+  "name": "Bacxarat",
+  "house": "onyx-fragrance",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "amber",
+    "woody",
+    "almond",
+    "warm spicy",
+    "musky"
+  ],
+  "notes": {
+    "all": [
+      "Amber",
+      "Cedarwood",
+      "Sandalwood",
+      "Cashmere Wood",
+      "Almond",
+      "Saffron",
+      "Pepper",
+      "Cardamom"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/bacxarat.jpg",
+  "source": null
+}

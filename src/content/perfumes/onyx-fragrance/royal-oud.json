@@ -1,0 +1,29 @@
+{
+  "name": "Royal Oud",
+  "house": "onyx-fragrance",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "rose",
+    "oud",
+    "woody",
+    "musky",
+    "patchouli"
+  ],
+  "notes": {
+    "all": [
+      "Rose",
+      "Oud",
+      "Cedarwood",
+      "Sandalwood",
+      "Musk",
+      "Patchouli"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/royal-oud.jpg",
+  "source": null
+}

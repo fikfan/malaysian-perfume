@@ -1,0 +1,24 @@
+{
+  "name": "Exlish",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "vanilla",
+    "sweet",
+    "cacao",
+    "powdery"
+  ],
+  "notes": {
+    "all": [
+      "Vanilla",
+      "Cacao"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/exlish.jpg",
+  "source": null
+}

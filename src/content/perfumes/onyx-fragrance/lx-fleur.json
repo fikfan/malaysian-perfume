@@ -1,0 +1,33 @@
+{
+  "name": "LX. Fleur",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "white floral",
+    "fruity",
+    "sweet",
+    "vanilla",
+    "caramel"
+  ],
+  "notes": {
+    "all": [
+      "Jasmine",
+      "Peony",
+      "Orange Blossom",
+      "Peach",
+      "Strawberry",
+      "Raspberry",
+      "Caramel",
+      "Sugar",
+      "Candy",
+      "Vanilla"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/lx-fleur.jpg",
+  "source": null
+}

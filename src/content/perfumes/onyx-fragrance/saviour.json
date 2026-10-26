@@ -1,0 +1,21 @@
+{
+  "name": "Saviour",
+  "house": "onyx-fragrance",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "fresh spicy",
+    "citrus",
+    "lavender",
+    "vanilla"
+  ],
+  "notes": {
+    "all": []
+  },
+  "image": "/assets/onyx-fragrance/saviour.jpg",
+  "source": null
+}

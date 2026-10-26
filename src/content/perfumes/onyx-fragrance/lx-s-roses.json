@@ -1,0 +1,27 @@
+{
+  "name": "LX. S Roses",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "rose",
+    "oud",
+    "warm spicy",
+    "amber",
+    "floral"
+  ],
+  "notes": {
+    "all": [
+      "Rose",
+      "Oud",
+      "Spices",
+      "Amber"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/lx-s-roses.jpg",
+  "source": null
+}

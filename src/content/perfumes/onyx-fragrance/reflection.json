@@ -1,0 +1,21 @@
+{
+  "name": "Reflection",
+  "house": "onyx-fragrance",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "woody",
+    "white floral",
+    "powdery",
+    "iris"
+  ],
+  "notes": {
+    "all": []
+  },
+  "image": "/assets/onyx-fragrance/reflection.jpg",
+  "source": null
+}

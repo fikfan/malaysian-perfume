@@ -1,0 +1,31 @@
+{
+  "name": "DX Bleu",
+  "house": "onyx-fragrance",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "citrus",
+    "woody",
+    "smoky",
+    "fresh"
+  ],
+  "notes": {
+    "all": [
+      "Bergamot",
+      "Lemon",
+      "Grapefruit",
+      "Cedarwood",
+      "Sandalwood",
+      "Vetiver",
+      "Incense",
+      "Tobacco",
+      "Sea Notes"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/dx-bleu.jpg",
+  "source": null
+}

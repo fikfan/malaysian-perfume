@@ -1,0 +1,38 @@
+{
+  "name": "Bxmbshell",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "fruity",
+    "sweet",
+    "fresh",
+    "floral",
+    "tropical"
+  ],
+  "notes": {
+    "all": [
+      "Strawberry",
+      "Raspberry",
+      "Pineapple",
+      "Passionfruit",
+      "Caramel",
+      "Sugar",
+      "Candy",
+      "Citrus",
+      "Green Notes",
+      "Jasmine",
+      "Peony",
+      "Rose",
+      "Coconut",
+      "Mango",
+      "Tropical Fruits"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/bxmbshell.jpg",
+  "source": null
+}

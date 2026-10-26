@@ -1,0 +1,37 @@
+{
+  "name": "Avextus",
+  "house": "onyx-fragrance",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "fruity",
+    "sweet",
+    "leather",
+    "woody",
+    "fresh"
+  ],
+  "notes": {
+    "all": [
+      "Pineapple",
+      "Blackcurrant",
+      "Apple",
+      "Vanilla",
+      "Musk",
+      "Ambergris",
+      "Leather",
+      "Birch",
+      "Bergamot",
+      "Sandalwood",
+      "Patchouli",
+      "Oakmoss",
+      "Lemon",
+      "Sea Notes"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/avextus.jpg",
+  "source": null
+}

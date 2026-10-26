@@ -1,0 +1,35 @@
+{
+  "name": "Starwalxer",
+  "house": "onyx-fragrance",
+  "gender": "masculine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "woody",
+    "citrus",
+    "fresh spicy",
+    "powdery",
+    "musky"
+  ],
+  "notes": {
+    "all": [
+      "Cedarwood",
+      "Sandalwood",
+      "Amberwood",
+      "Bergamot",
+      "Lemon",
+      "Grapefruit",
+      "Pink Pepper",
+      "Cardamom",
+      "Black Pepper",
+      "Musk",
+      "Ambroxan",
+      "Tonka Bean"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/starwalxer.jpg",
+  "source": null
+}

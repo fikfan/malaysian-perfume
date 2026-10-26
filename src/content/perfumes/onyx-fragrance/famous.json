@@ -1,0 +1,34 @@
+{
+  "name": "Famous",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "tropical",
+    "vanilla",
+    "sweet",
+    "fruity",
+    "powdery"
+  ],
+  "notes": {
+    "all": [
+      "Pineapple",
+      "Mango",
+      "Passionfruit",
+      "Vanilla",
+      "Caramel",
+      "Sugar",
+      "Candy",
+      "Strawberry",
+      "Raspberry",
+      "Peach",
+      "Musk"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/famous.jpg",
+  "source": null
+}

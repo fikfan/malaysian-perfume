@@ -1,0 +1,21 @@
+{
+  "name": "Sweet LX Candy",
+  "house": "onyx-fragrance",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "sweet",
+    "vanilla",
+    "fruity",
+    "powdery"
+  ],
+  "notes": {
+    "all": []
+  },
+  "image": "/assets/onyx-fragrance/sweet-lx-candy.jpg",
+  "source": null
+}

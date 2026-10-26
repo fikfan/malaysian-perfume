@@ -1,0 +1,34 @@
+{
+  "name": "Tease",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "vanilla",
+    "white floral",
+    "fruity",
+    "sweet",
+    "powdery"
+  ],
+  "notes": {
+    "all": [
+      "Vanilla",
+      "Jasmine",
+      "Lily",
+      "Peony",
+      "Peach",
+      "Raspberry",
+      "Blackberry",
+      "Caramel",
+      "Sugar",
+      "Musk",
+      "Violet"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/tease.jpg",
+  "source": null
+}

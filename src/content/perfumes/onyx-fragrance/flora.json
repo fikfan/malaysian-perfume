@@ -1,0 +1,36 @@
+{
+  "name": "Flora",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "floral",
+    "citrus",
+    "rose",
+    "fruity",
+    "fresh"
+  ],
+  "notes": {
+    "all": [
+      "Jasmine",
+      "Peony",
+      "White Flowers",
+      "Bergamot",
+      "Orange",
+      "Lemon",
+      "Rose",
+      "Violet",
+      "Peach",
+      "Raspberry",
+      "Blackcurrant",
+      "Green Notes",
+      "Aquatic Notes"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/flora.jpg",
+  "source": null
+}

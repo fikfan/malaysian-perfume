@@ -1,0 +1,28 @@
+{
+  "name": "Blacx Opium",
+  "house": "onyx-fragrance",
+  "gender": "feminine",
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "vanilla coffee sweet woody",
+    "white floral"
+  ],
+  "notes": {
+    "all": [
+      "Vanilla",
+      "Coffee",
+      "Caramel",
+      "Sugar",
+      "Sandalwood",
+      "Cedarwood",
+      "Jasmine",
+      "Orange Blossom"
+    ]
+  },
+  "image": "/assets/onyx-fragrance/blacx-opium.jpg",
+  "source": null
+}

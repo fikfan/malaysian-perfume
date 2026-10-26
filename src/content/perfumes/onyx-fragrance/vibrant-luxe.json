@@ -1,0 +1,22 @@
+{
+  "name": "Vibrant Luxe",
+  "house": "onyx-fragrance",
+  "gender": null,
+  "concentration": "Eau de Parfum",
+  "sizesMl": [
+    35
+  ],
+  "inspiredBy": null,
+  "describedAs": [
+    "citrus",
+    "leather",
+    "woody",
+    "fresh spicy",
+    "aromatic"
+  ],
+  "notes": {
+    "all": []
+  },
+  "image": "/assets/onyx-fragrance/vibrant-luxe.jpg",
+  "source": null
+}
