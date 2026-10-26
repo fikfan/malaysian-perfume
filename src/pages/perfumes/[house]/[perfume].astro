@@ -152,7 +152,13 @@ const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy
   .src { margin: 10px 0 0; font-size: 14.5px; }
   .src a { color: inherit; }
   @media (max-width: 860px) {
-    .perfume { grid-template-columns: 1fr; gap: 20px; }
+    .perfume { grid-template-columns: 1fr; gap: 0; }
     .photo { position: static; max-width: 420px; }
+    /* phones: name, house and lead line above the photo, so the H1 is on the first screen */
+    .info { display: contents; }
+    .photo { order: 1; margin-top: 20px; }
+    .info > :not(h1, .lead, .src) { order: 2; }
+    /* inline links: vertical padding on an inline box grows the tap area to ~44px without moving the text */
+    .crumbs a, .info :is(h1, .lead) a, .src :global(a) { padding-block: 15px; }
   }
 </style>

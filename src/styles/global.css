@@ -54,8 +54,8 @@
 .loading .loader { opacity: 1; visibility: visible; transition: opacity .15s ease .15s; }
 @keyframes loader-pulse { from { transform: scale(.7) rotate(0deg); } to { transform: scale(1.1) rotate(72deg); } }
 
-/* product photos fade in once loaded instead of popping in */
-.js .thumb img { opacity: 0; transition: opacity .3s ease; }
+/* product photos fade in once loaded instead of popping in; not the main photo, it is the LCP */
+.js .thumb:not(.hero) img { opacity: 0; transition: opacity .3s ease; }
 .js .thumb img.in { opacity: 1; }
 
 /* hover and theme changes ease instead of snapping */

@@ -1,12 +1,12 @@
 ---
-// Brand-hosted product photo. If the brand's server refuses the image, show the first letter instead (public/head.js).
+// Brand-hosted product photo. `eager` marks the page's main photo (the LCP): it loads first and skips the fade-in. If the brand's server refuses the image, show the first letter instead (public/head.js).
 import { imgUrl } from '../lib/data';
 interface Props { src?: string | null; name: string; eager?: boolean; size?: number; alt?: string }
 // alt stays empty in lists (the name is right next to the photo); the perfume page passes a real one
 const { src, name, eager = false, size = 400, alt = '' } = Astro.props;
 ---
-<div class:list={['thumb', { noimg: !src }]} data-initial={name.trim()[0]}>
+<div class:list={['thumb', { noimg: !src, hero: eager }]} data-initial={name.trim()[0]}>
   {src && (
-    <img src={imgUrl(src, Math.min(size * 2, 1200))} alt={alt} width={size} height={size} loading={eager ? 'eager' : 'lazy'} decoding="async" referrerpolicy="no-referrer" />
+    <img src={imgUrl(src, Math.min(size * 2, 1200))} alt={alt} width={size} height={size} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} decoding="async" referrerpolicy="no-referrer" />
   )}
 </div>
