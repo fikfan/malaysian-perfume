@@ -14,7 +14,19 @@
     "iris"
   ],
   "notes": {
-    "all": []
+    "all": [
+      "Cedarwood",
+      "Sandalwood",
+      "Patchouli",
+      "Jasmine",
+      "Lily",
+      "Gardenia",
+      "Musk",
+      "Amber",
+      "Violet",
+      "Iris",
+      "Orris"
+    ]
   },
   "image": "/assets/onyx-fragrance/reflection.jpg",
   "source": null
