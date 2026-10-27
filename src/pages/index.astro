@@ -31,7 +31,7 @@ const pool: HeroHouse[] = houses.map((h) => ({
   p: currentWithPhoto(listOf(h.id)).slice(0, 12).map((p) => ({ n: p.data.name, u: perfumeUrl(p), img: imgUrl(p.data.image, TILE_IMG * 2) })),
 }));
 ---
-<Base title="Malaysia Perfumes: local perfumes, notes and inspirations" description={`${perfumes.length} local perfumes from ${houses.length} Malaysian brands: notes, sizes, the designer scent each brand names, and where each is sold. No paid listings or rankings.`} jsonLd={websiteLd()}>
+<Base title="Malaysia Perfumes: local perfumes, notes and inspirations" description="Local perfume brands from Malaysia: notes, sizes, the designer scent each brand names, and where each is sold. No paid listings or rankings." jsonLd={websiteLd()}>
   <section class="hero wrap">
     <div class="hero-text">
     <h1 class="x">Malaysian perfumes,<br /> in one place.</h1>

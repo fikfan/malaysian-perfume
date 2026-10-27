@@ -28,7 +28,7 @@ const description = clip(rawDescription);
 const path = Astro.url.pathname;
 const full = title.includes('Malaysia Perfumes') ? title : `${title} | Malaysia Perfumes`;
 const canonical = new URL(path, Astro.site).href;
-const shareImage = new URL(image ?? '/og.png', Astro.site).href;
+const shareImage = new URL(image ?? '/share.png', Astro.site).href;
 const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 const nav = [
   { href: '/houses/', label: 'Houses' },
