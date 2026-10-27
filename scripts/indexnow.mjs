@@ -1,6 +1,7 @@
 // Tells Bing (and so ChatGPT search and DuckDuckGo) which pages changed, through IndexNow. Google does not use it.
 // `prepare` runs after every build (npm postbuild): it hashes each sitemap page and compares with the hashes on the live site.
 // `send` runs after the deploy, once the changed pages are live. Neither step ever fails the build or the deploy.
+// `send all` sends every sitemap page from the last build, for a one-off full submission.
 // Unit tests: scripts/indexnow.test.mjs
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
@@ -41,8 +42,9 @@ async function prepare() {
   console.log(`IndexNow: ${list.length} changed page(s) to send after the deploy.`);
 }
 
-async function send() {
-  const list = existsSync(PENDING) ? JSON.parse(readFileSync(PENDING, 'utf8')) : [];
+async function send(all) {
+  const list = all ? sitemapPaths(readFileSync(dist('sitemap-0.xml'), 'utf8'))
+    : existsSync(PENDING) ? JSON.parse(readFileSync(PENDING, 'utf8')) : [];
   if (!list.length) return console.log('IndexNow: nothing to send.');
   try {
     const res = await fetch('https://api.indexnow.org/indexnow', {
@@ -61,6 +63,6 @@ async function send() {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const step = process.argv[2];
   if (step === 'prepare') await prepare();
-  else if (step === 'send') await send();
-  else console.log('Usage: node scripts/indexnow.mjs prepare|send');
+  else if (step === 'send') await send(process.argv[3] === 'all');
+  else console.log('Usage: node scripts/indexnow.mjs prepare|send [all]');
 }
