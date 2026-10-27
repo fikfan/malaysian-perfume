@@ -51,7 +51,8 @@ async function send() {
       body: JSON.stringify({ host: new URL(SITE).host, key: KEY, keyLocation: `${SITE}/${KEY}.txt`, urlList: list.map((p) => SITE + p) }),
       signal: AbortSignal.timeout(15000),
     });
-    console.log(`IndexNow: sent ${list.length} page(s), HTTP ${res.status}.`); // 200 or 202 means accepted
+    // 200 or 202 means accepted; a new site gets 403 SiteVerificationNotCompleted for big lists until Bing has checked the key
+    console.log(`IndexNow: sent ${list.length} page(s), HTTP ${res.status}. ${res.ok ? '' : (await res.text()).slice(0, 200)}`);
   } catch (e) {
     console.log(`IndexNow: send failed (${e.message}).`);
   }
