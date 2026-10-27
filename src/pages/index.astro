@@ -31,10 +31,12 @@ const pool: HeroHouse[] = houses.map((h) => ({
   p: currentWithPhoto(listOf(h.id)).slice(0, 12).map((p) => ({ n: p.data.name, u: perfumeUrl(p), img: imgUrl(p.data.image, TILE_IMG * 2) })),
 }));
 ---
-<Base title="Malaysia Perfumes: local perfume houses, notes and inspirations" description={`Find perfumes from Malaysian perfume houses: ${houses.length} local houses and ${perfumes.length} fragrances, with notes, the inspirations each brand names, and where the brand sells it.`} jsonLd={websiteLd()}>
+<Base title="Malaysia Perfumes: local perfumes, notes and inspirations" description={`${perfumes.length} local perfumes from ${houses.length} Malaysian brands: notes, sizes, the designer scent each brand names, and where each is sold. No paid listings or rankings.`} jsonLd={websiteLd()}>
   <section class="hero wrap">
     <div class="hero-text">
     <h1 class="x">Malaysian perfumes,<br /> in one place.</h1>
+    <!-- says what the meta description says, so Google keeps it instead of rewriting -->
+    <p class="intro">Local perfumes from Malaysian brands, with notes, sizes and the designer scent each brand names. No paid listings or rankings.</p>
     <SearchBox big id="hero-q" />
     <dl class="stats">
       <div><dt>Houses</dt><dd>{houses.length}</dd></div>
@@ -140,7 +142,8 @@ const pool: HeroHouse[] = houses.map((h) => ({
   .shuffle:hover { border-color: var(--ink); }
   .shuffle svg { width: 16px; height: 16px; }
   .hero h1 { font-weight: 800; font-size: clamp(38px, 5.4vw, 74px); line-height: .95; letter-spacing: -.03em; max-width: 11ch; }
-  .hero :global(.searchbox) { max-width: 640px; margin-top: 32px; }
+  .intro { max-width: 46ch; margin: 20px 0 0; font-size: 18px; color: var(--muted); }
+  .hero :global(.searchbox) { max-width: 640px; margin-top: 24px; }
   .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 160px)); margin: 32px 0 0; border-top: var(--line); }
   .stats div { padding: 12px 16px 0 0; }
   .stats dt { font-size: 14px; color: var(--muted); }

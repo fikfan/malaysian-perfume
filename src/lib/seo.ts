@@ -18,6 +18,7 @@ export const websiteLd = () => ({
       '@type': 'WebSite',
       '@id': WEBSITE,
       name: 'Malaysia Perfumes',
+      alternateName: 'malaysiaperfumes.com',
       url: abs('/'),
       inLanguage: 'en-MY',
       publisher: { '@id': ORG },
