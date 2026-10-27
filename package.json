@@ -8,13 +8,14 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "postbuild": "node scripts/indexnow.mjs prepare",
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check && tsc -p worker",
     "links": "node scripts/check-links.mjs",
     "test": "node --test \"scripts/*.test.mjs\" \"worker/*.test.ts\"",
     "dev:worker": "astro build && wrangler dev",
-    "deploy": "astro build && wrangler deploy"
+    "deploy": "npm run build && wrangler deploy && node scripts/indexnow.mjs send"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
