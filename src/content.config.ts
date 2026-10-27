@@ -21,6 +21,7 @@ const houses = defineCollection({
     website: link.nullable().optional(),
     instagram: z.string().regex(/^[\w.]+$/, 'handle only, without @ or a URL').nullable().optional(),
     tiktok: z.string().regex(/^[\w.]+$/, 'handle only, without @ or a URL').nullable().optional(),
+    threads: z.string().regex(/^[\w.]+$/, 'handle only, without @ or a URL').nullable().optional(),
     shopee: link.nullable().optional(),
     lazada: link.nullable().optional(),
     sources: z.array(link).default([]),

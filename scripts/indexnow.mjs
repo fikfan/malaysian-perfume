@@ -20,10 +20,13 @@ export const sitemapPaths = (xml) => [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].m
 /** Paths whose hash is new or different; with no old hashes (first run) every path counts */
 export const changed = (old, now) => Object.keys(now).filter((p) => !old || old[p] !== now[p]);
 
+/** Hash of a page's HTML; /_astro/ file names are left out, so a CSS or JS edit alone does not count as a change */
+export const pageHash = (html) => createHash('sha1').update(html.replace(/\/_astro\/[\w.-]+/g, '')).digest('hex').slice(0, 12);
+
 async function prepare() {
   const now = {};
   for (const p of sitemapPaths(readFileSync(dist('sitemap-0.xml'), 'utf8'))) {
-    now[p] = createHash('sha1').update(readFileSync(dist(`${p.slice(1)}index.html`))).digest('hex').slice(0, 12);
+    now[p] = pageHash(readFileSync(dist(`${p.slice(1)}index.html`), 'utf8'));
   }
   writeFileSync(dist(HASHES), JSON.stringify(now));
   let old;

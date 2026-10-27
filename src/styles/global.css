@@ -234,6 +234,8 @@ a.chip:hover { border-color: var(--ink); background: var(--soft); }
 .btn.brand-tiktok:hover { background: #222; }
 .btn.brand-instagram { background: linear-gradient(45deg, #d62976, #962fbf 60%, #4f5bd5); }
 .btn.brand-instagram:hover { filter: brightness(1.1); }
+.btn.brand-threads { background: #000; }
+.btn.brand-threads:hover { background: #222; }
 
 .filter { -webkit-appearance: none; appearance: none; height: 42px; border: var(--line); border-radius: var(--radius); padding: 0 12px; min-width: 260px; font-size: 16px; background: var(--paper); }
 @media (max-width: 640px) { .filter { min-width: 0; flex: 1 1 100%; } }
