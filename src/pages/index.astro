@@ -1,5 +1,4 @@
 ---
-import Cta from '../components/Cta.astro';
 import Base from '../layouts/Base.astro';
 import SearchBox from '../components/SearchBox.astro';
 import Thumb from '../components/Thumb.astro';
@@ -96,6 +95,7 @@ const pool: HeroHouse[] = houses.map((h) => ({
       ))}
     </ul>
     {houses.length > HOME_BRANDS && <p class="all-brands"><a class="btn" href="/houses/">See all Malaysian perfume brands</a></p>}
+    <p class="get-listed">Got a local perfume brand? <a href="/contact/">Get listed, free &rarr;</a></p>
     <script>
       import { shuffle } from '../lib/render';
       // a random set of brands goes first (CSS shows only the first HOME_BRANDS), still in A to Z order
@@ -124,16 +124,10 @@ const pool: HeroHouse[] = houses.map((h) => ({
   </section>
 
 
-  <aside class="feature-band" aria-label="For brands">
-    <p><strong>Got a local perfume brand?</strong> Jom, get listed here, free. Let more Malaysians find your scents. Send your shop link and I'll settle the rest.</p>
-    <Cta />
-  </aside>
   </div>
 </Base>
 
 <style>
-  .feature-band { display: flex; align-items: center; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap; padding: 18px 20px; margin: 8px 0 40px; border: var(--line); border-radius: var(--radius); background: var(--soft); }
-  .feature-band p { margin: 0; max-width: 70ch; font-size: 16px; }
   .hero { padding: 56px var(--gutter) 40px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 520px); gap: 56px; align-items: center; }
   :global(.js) .hero-grid:not(.ready) { visibility: hidden; }
   .hero-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 12px; }
@@ -163,6 +157,8 @@ const pool: HeroHouse[] = houses.map((h) => ({
   .house span { font-size: 13.5px; }
   .houses > :nth-child(n+25) { display: none; } /* HOME_BRANDS */
   .all-brands { margin: 20px 0 0; }
+  .get-listed { margin: 22px 0 0; color: var(--muted); }
+  .get-listed a { font-weight: 700; color: var(--ink); }
   .policy { margin: -8px 0 14px; font-size: 14.5px; }
   @media (max-width: 1120px) { .hero { grid-template-columns: 1fr; gap: 32px; } .hero-grid { max-width: 640px; } }
   @media (max-width: 1000px) {
