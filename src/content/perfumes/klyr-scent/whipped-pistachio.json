@@ -1,0 +1,32 @@
+{
+  "name": "Whipped Pistachio",
+  "house": "klyr-scent",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "describedAs": [
+    "citrusy",
+    "gourmand",
+    "musky"
+  ],
+  "notes": {
+    "top": [
+      "Lemon",
+      "Bergamot",
+      "Pistachio Ice Cream"
+    ],
+    "heart": [
+      "Vanilla Ice Cream",
+      "Hazelnut",
+      "Butter"
+    ],
+    "base": [
+      "Vanilla",
+      "Sugar",
+      "Musk"
+    ]
+  },
+  "image": "https://klyrscent.com/wp-content/uploads/2026/05/1-9.png",
+  "source": "https://klyrscent.com/product/whipped-pistachio/"
+}

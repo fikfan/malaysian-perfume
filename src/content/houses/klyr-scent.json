@@ -1,0 +1,16 @@
+{
+  "name": "Klyr Scent",
+  "type": "original",
+  "founded": null,
+  "location": "Kuala Lumpur",
+  "about": "Klyr Scent is a Malaysian perfume brand that sells its own unisex scents from its online store. Its small range leans toward gourmand scents, such as a pistachio-and-vanilla scent and a creamy jasmine green tea.",
+  "website": "https://klyrscent.com",
+  "instagram": "klyrscent",
+  "tiktok": "klyrscent",
+  "shopee": null,
+  "lazada": null,
+  "sources": [
+    "https://klyrscent.com/",
+    "https://klyrscent.com/wp-json/wc/store/v1/products"
+  ]
+}

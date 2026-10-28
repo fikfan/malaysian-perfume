@@ -1,0 +1,32 @@
+{
+  "name": "The Masc",
+  "house": "klyr-scent",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "describedAs": [
+    "citrusy",
+    "soapy",
+    "fresh"
+  ],
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Blood Orange",
+      "Sea Salt",
+      "Ginger"
+    ],
+    "heart": [
+      "Orange Flower",
+      "Pink Pepper"
+    ],
+    "base": [
+      "Vanilla",
+      "Oakmoss",
+      "Patchouli"
+    ]
+  },
+  "image": "https://klyrscent.com/wp-content/uploads/2026/05/1-5.png",
+  "source": "https://klyrscent.com/product/the-masc/"
+}

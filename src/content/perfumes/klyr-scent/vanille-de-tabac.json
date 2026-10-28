@@ -1,0 +1,33 @@
+{
+  "name": "Vanille De Tabac",
+  "house": "klyr-scent",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "describedAs": [
+    "leather",
+    "gourmand"
+  ],
+  "notes": {
+    "top": [
+      "Sugar",
+      "Patchouli",
+      "Tobacco"
+    ],
+    "heart": [
+      "Leather",
+      "Tobacco",
+      "Patchouli"
+    ],
+    "base": [
+      "Vanilla",
+      "Tonka Bean",
+      "Tobacco",
+      "Cedarwood",
+      "Resin"
+    ]
+  },
+  "image": "https://klyrscent.com/wp-content/uploads/2026/05/1-6.png",
+  "source": "https://klyrscent.com/product/vanille-de-tabac/"
+}

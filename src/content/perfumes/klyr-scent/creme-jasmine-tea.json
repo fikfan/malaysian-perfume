@@ -1,0 +1,32 @@
+{
+  "name": "Creme Jasmine Tea",
+  "house": "klyr-scent",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "describedAs": [
+    "floral",
+    "aromatic",
+    "gourmand"
+  ],
+  "notes": {
+    "top": [
+      "Green Tea",
+      "Milk",
+      "Osmanthus",
+      "Pear"
+    ],
+    "heart": [
+      "Malaysian Jasmine",
+      "Green Tea"
+    ],
+    "base": [
+      "Ethyl Vanillin",
+      "Vanilla Ice Cream",
+      "Musk"
+    ]
+  },
+  "image": "https://klyrscent.com/wp-content/uploads/2026/05/1-8.png",
+  "source": "https://klyrscent.com/product/creme-jasmine-tea/"
+}

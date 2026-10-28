@@ -1,0 +1,33 @@
+{
+  "name": "Skinship",
+  "house": "klyr-scent",
+  "gender": "unisex",
+  "concentration": null,
+  "sizesMl": [],
+  "inspiredBy": null,
+  "describedAs": [
+    "green",
+    "citrusy",
+    "musky"
+  ],
+  "notes": {
+    "top": [
+      "Japanese Cucumber",
+      "Blood Orange",
+      "Blackcurrant Leaf"
+    ],
+    "heart": [
+      "Japanese Cucumber",
+      "Orange Sweet Oil",
+      "Freshly Cut Grass"
+    ],
+    "base": [
+      "Ethyl Vanillin",
+      "Musk",
+      "Japanese Cucumber",
+      "Ylang-Ylang"
+    ]
+  },
+  "image": "https://klyrscent.com/wp-content/uploads/2026/05/1-7.png",
+  "source": "https://klyrscent.com/product/skinship/"
+}
