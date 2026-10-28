@@ -95,7 +95,10 @@ const pool: HeroHouse[] = houses.map((h) => ({
       ))}
     </ul>
     {houses.length > HOME_BRANDS && <p class="all-brands"><a class="btn" href="/houses/">See all Malaysian perfume brands</a></p>}
-    <p class="get-listed">Got a local perfume brand? <a href="/contact/">Get listed, free &rarr;</a></p>
+    <aside class="get-listed" aria-label="For brands">
+      <p><strong>Got a local perfume brand?</strong> Get it listed here, free.</p>
+      <a class="btn" href="/contact/">Get listed &rarr;</a>
+    </aside>
     <script>
       import { shuffle } from '../lib/render';
       // a random set of brands goes first (CSS shows only the first HOME_BRANDS), still in A to Z order
@@ -157,8 +160,9 @@ const pool: HeroHouse[] = houses.map((h) => ({
   .house span { font-size: 13.5px; }
   .houses > :nth-child(n+25) { display: none; } /* HOME_BRANDS */
   .all-brands { margin: 20px 0 0; }
-  .get-listed { margin: 22px 0 0; color: var(--muted); }
-  .get-listed a { font-weight: 700; color: var(--ink); }
+  .get-listed { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 10px 16px; margin: 24px 0 0; padding: 12px 12px 12px 16px; border: var(--line); border-radius: var(--radius); background: var(--soft); }
+  .get-listed p { margin: 0; }
+  .get-listed .btn { min-height: 40px; }
   .policy { margin: -8px 0 14px; font-size: 14.5px; }
   @media (max-width: 1120px) { .hero { grid-template-columns: 1fr; gap: 32px; } .hero-grid { max-width: 640px; } }
   @media (max-width: 1000px) {
