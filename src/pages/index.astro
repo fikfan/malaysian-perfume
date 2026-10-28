@@ -16,6 +16,8 @@ const insp = new Map<string, number>();
 for (const p of perfumes) if (p.data.inspiredBy) insp.set(p.data.inspiredBy, (insp.get(p.data.inspiredBy) ?? 0) + 1);
 const inspired = [...insp].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 12);
 const listOf = (id: string) => byHouse.get(id) ?? [];
+// Brands shown on the home page; the rest are on /houses/
+const HOME_BRANDS = 24;
 // A house shows its logo; a house without one falls back to a perfume photo
 const logoOf = new Map(houses.map((h) => [h.id, h.data.logo]));
 const coverOf = (id: string) => logoOf.get(id) ?? currentWithPhoto(listOf(id))[0]?.data.image ?? listOf(id)[0]?.data.image;
@@ -38,10 +40,6 @@ const pool: HeroHouse[] = houses.map((h) => ({
     <!-- says what the meta description says, so Google keeps it instead of rewriting -->
     <p class="intro">Local perfumes from Malaysian brands, with notes, sizes and the designer scent each brand names. No paid listings or rankings.</p>
     <SearchBox big id="hero-q" />
-    <dl class="stats">
-      <div><dt>Houses</dt><dd>{houses.length}</dd></div>
-      <div><dt>Perfumes</dt><dd>{perfumes.length}</dd></div>
-    </dl>
     </div>
     <div class="hero-side">
     <ul class="hero-grid" id="hero-grid" aria-label="A few perfumes and houses in the library">
@@ -103,9 +101,9 @@ const pool: HeroHouse[] = houses.map((h) => ({
   </section>
 
   <section class="section" aria-labelledby="h-houses">
-    <div class="section-head"><h2 id="h-houses">Malaysian perfume brands</h2><a href="/houses/">All {houses.length} brands and who is coming next</a></div>
-    <!-- every house, A to Z: equal listing, one click from the home page -->
-    <ul class="houses">
+    <div class="section-head"><h2 id="h-houses">Malaysian perfume brands</h2><a href="/houses/">All brands and who is coming next</a></div>
+    <!-- every house is in the HTML (one click from home); past HOME_BRANDS, a random set shows on each visit, so no brand ranks above another -->
+    <ul class="houses" id="houses" data-cap={HOME_BRANDS}>
       {houses.map((h) => (
         <li class="house">
           <Thumb src={coverOf(h.id)} name={h.data.name} size={40} />
@@ -114,6 +112,15 @@ const pool: HeroHouse[] = houses.map((h) => ({
         </li>
       ))}
     </ul>
+    {houses.length > HOME_BRANDS && <p class="all-brands"><a class="btn" href="/houses/">See all Malaysian perfume brands</a></p>}
+    <script>
+      import { shuffle } from '../lib/render';
+      // a random set of brands goes first (CSS shows only the first HOME_BRANDS), still in A to Z order
+      const list = document.getElementById('houses')!;
+      const items = [...list.children];
+      const shown = new Set(shuffle([...items]).slice(0, Number(list.dataset.cap)));
+      list.append(...items.filter((i) => shown.has(i)), ...items.filter((i) => !shown.has(i)));
+    </script>
   </section>
 
   <aside class="feature-band" aria-label="For brands">
@@ -144,10 +151,6 @@ const pool: HeroHouse[] = houses.map((h) => ({
   .hero h1 { font-weight: 800; font-size: clamp(38px, 5.4vw, 74px); line-height: .95; letter-spacing: -.03em; max-width: 11ch; }
   .intro { max-width: 46ch; margin: 20px 0 0; font-size: 18px; color: var(--muted); }
   .hero :global(.searchbox) { max-width: 640px; margin-top: 24px; }
-  .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 160px)); margin: 32px 0 0; border-top: var(--line); }
-  .stats div { padding: 12px 16px 0 0; }
-  .stats dt { font-size: 14px; color: var(--muted); }
-  .stats dd { margin: 2px 0 0; font-weight: 800; font-size: 34px; font-variant-numeric: tabular-nums; font-stretch: 125%; font-variation-settings: "wdth" 125; }
   .houses { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px 18px; }
   .house { position: relative; display: grid; grid-template-columns: 40px minmax(0, 1fr); column-gap: 10px; align-items: center; align-content: center; line-height: 1.25; }
   .house :global(.thumb) { grid-row: span 2; }
@@ -157,6 +160,8 @@ const pool: HeroHouse[] = houses.map((h) => ({
   .house:hover a { text-decoration: underline; }
   .house:hover :global(.thumb) { outline-color: var(--ink); }
   .house span { font-size: 13.5px; }
+  .houses > :nth-child(n+25) { display: none; } /* HOME_BRANDS */
+  .all-brands { margin: 20px 0 0; }
   .policy { margin: -8px 0 14px; font-size: 14.5px; }
   @media (max-width: 1120px) { .hero { grid-template-columns: 1fr; gap: 32px; } .hero-grid { max-width: 640px; } }
   @media (max-width: 1000px) {
@@ -165,6 +170,5 @@ const pool: HeroHouse[] = houses.map((h) => ({
   @media (max-width: 640px) {
     .hero { padding-top: 32px; padding-bottom: 28px; }
     .houses { gap: 10px 12px; }
-    .stats dd { font-size: 28px; }
-  }
+    }
 </style>
