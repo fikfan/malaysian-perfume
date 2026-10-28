@@ -83,23 +83,6 @@ const pool: HeroHouse[] = houses.map((h) => ({
   </section>
 
   <div class="wrap">
-  {inspired.length > 0 && (
-    <section class="section" aria-labelledby="h-insp">
-      <div class="section-head"><h2 id="h-insp">Local takes on designer scents</h2><a href="/inspired/">All designer scents</a></div>
-      <p class="muted policy">{INSPIRATION_POLICY}</p>
-      <ul class="chips">
-        {inspired.map(([n, c]) => <li><a class="chip" href={inspiredUrl(n, c)}>{n} <small>{c}</small></a></li>)}
-      </ul>
-    </section>
-  )}
-
-  <section class="section" aria-labelledby="h-notes">
-    <div class="section-head"><h2 id="h-notes">Find by note</h2><span class="muted">The number shows how many perfumes have that note.</span></div>
-    <ul class="chips">
-      {notes.slice(0, 15).map(([n, c]) => <li><a class="chip" href={searchUrl(n)}>{n} <small>{c}</small></a></li>)}
-    </ul>
-  </section>
-
   <section class="section" aria-labelledby="h-houses">
     <div class="section-head"><h2 id="h-houses">Malaysian perfume brands</h2><a href="/houses/">All brands and who is coming next</a></div>
     <!-- every house is in the HTML (one click from home); past HOME_BRANDS, a random set shows on each visit, so no brand ranks above another -->
@@ -122,6 +105,24 @@ const pool: HeroHouse[] = houses.map((h) => ({
       list.append(...items.filter((i) => shown.has(i)), ...items.filter((i) => !shown.has(i)));
     </script>
   </section>
+
+  {inspired.length > 0 && (
+    <section class="section" aria-labelledby="h-insp">
+      <div class="section-head"><h2 id="h-insp">Local takes on designer scents</h2><a href="/inspired/">All designer scents</a></div>
+      <p class="muted policy">{INSPIRATION_POLICY}</p>
+      <ul class="chips">
+        {inspired.map(([n, c]) => <li><a class="chip" href={inspiredUrl(n, c)}>{n} <small>{c}</small></a></li>)}
+      </ul>
+    </section>
+  )}
+
+  <section class="section" aria-labelledby="h-notes">
+    <div class="section-head"><h2 id="h-notes">Find by note</h2><span class="muted">The number shows how many perfumes have that note.</span></div>
+    <ul class="chips">
+      {notes.slice(0, 15).map(([n, c]) => <li><a class="chip" href={searchUrl(n)}>{n} <small>{c}</small></a></li>)}
+    </ul>
+  </section>
+
 
   <aside class="feature-band" aria-label="For brands">
     <p><strong>Got a local perfume brand?</strong> Jom, get listed here, free. Let more Malaysians find your scents. Send your shop link and I'll settle the rest.</p>
