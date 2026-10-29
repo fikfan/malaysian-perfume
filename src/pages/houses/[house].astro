@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import PerfumeRow from '../../components/PerfumeRow.astro';
 import ExtLink from '../../components/ExtLink.astro';
 import Thumb from '../../components/Thumb.astro';
-import { load, host, perfumeUrl, houseUrl, currentWithPhoto, pyramid, ROW_IMG, TYPE_LABEL, GENDER_LABEL, type House } from '../../lib/data';
+import { load, host, perfumeUrl, houseUrl, currentWithPhoto, pyramid, TYPE_LABEL, GENDER_LABEL, type House } from '../../lib/data';
 import { breadcrumbLd, houseLd } from '../../lib/seo';
 import { iconSvg } from '../../lib/icons';
 
@@ -18,7 +18,7 @@ const d = h.data;
 const genders = (['masculine', 'feminine', 'unisex'] as const).filter((g) => list.some((p) => p.data.gender === g));
 const discontinued = list.filter((p) => p.data.discontinued).length;
 const named = list.filter((p) => p.data.inspiredBy).length;
-// Highlights beside the intro on wide screens: two perfumes at a time from up to 12; the shuffle picks another two
+// Highlight beside the intro: one perfume at a time, shown large, from up to 12; the shuffle picks another
 const picks = currentWithPhoto(list).filter((p) => pyramid(p).length).slice(0, 12);
 const link = (href: string | null | undefined, label: string, key: string) => (href ? [{ href, label, key }] : []);
 const links = [
@@ -65,16 +65,17 @@ const links = [
     {picks.length > 0 && (
       <aside class="highlights" aria-labelledby="h-high">
         <div class="high-head">
-          <h2 id="h-high" class="label">Highlights</h2>
-          {picks.length > 2 && <button type="button" class="shuffle" id="shuffle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>Shuffle</button>}
+          <h2 id="h-high" class="label">From the range</h2>
+          {picks.length > 1 && <button type="button" class="shuffle" id="shuffle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>Shuffle</button>}
         </div>
-        <!-- every pick is in the page; the script shows two at random, so it needs no HTML of its own -->
+        <!-- every pick is in the page; the script shows one at random, so it needs no HTML of its own -->
         <ul class="picks" id="picks">
           {picks.map((p, i) => (
-            <li class="pick" hidden={i > 1}>
-              <div class="thumb-wrap"><Thumb src={p.data.image} name={p.data.name} size={ROW_IMG} /></div>
+            <li class="pick" hidden={i > 0}>
+              <Thumb src={p.data.image} name={p.data.name} size={520} eager={i === 0} />
               <div>
                 <h3><a href={perfumeUrl(p)}>{p.data.name}</a></h3>
+                {p.data.inspiredBy && <p class="meta">Inspired by <b>{p.data.inspiredBy}</b></p>}
                 <div class="notes-grid">{pyramid(p).map((l) => <><span class="layer" data-l={l.label}>{l.label}</span><span>{l.notes.join(', ')}</span></>)}</div>
               </div>
             </li>
@@ -113,13 +114,12 @@ const links = [
 <script>
   import { haystack, terms, matches } from '../../lib/match';
   import { shuffle, withFade } from '../../lib/render';
-  // Highlights: show two random picks on each visit and on each shuffle
+  // Highlight: show one random pick on each visit and on each shuffle
   const picks = [...document.querySelectorAll<HTMLElement>('#picks .pick')];
   if (picks.length) {
     let shown: HTMLElement[] = [];
     const draw = () => {
-      const next = shuffle(picks.filter((p) => !shown.includes(p))).slice(0, 2); // never the same two again
-      shown = next.length === 2 ? next : shuffle([...picks]).slice(0, 2);
+      shown = shuffle(picks.filter((p) => !shown.includes(p))).slice(0, 1); // never the same one twice in a row
       picks.forEach((p) => (p.hidden = !shown.includes(p)));
       document.getElementById('picks')!.classList.add('ready');
     };
@@ -172,28 +172,30 @@ const links = [
 </script>
 
 <style>
-  .intro { display: grid; grid-template-columns: minmax(0, 640px) minmax(0, 440px); justify-content: space-between; gap: 48px; align-items: start; }
+  .intro { display: grid; grid-template-columns: minmax(0, 600px) minmax(0, 520px); justify-content: space-between; gap: 48px; align-items: start; }
   .highlights { margin: 40px 0; }
   .brand { display: flex; align-items: center; gap: 16px; }
-  .logo-mark { flex: none; width: clamp(48px, 5vw, 64px); height: auto; aspect-ratio: 1; object-fit: contain; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); }
+  .logo-mark { flex: none; width: clamp(48px, 5vw, 64px); height: auto; aspect-ratio: 1; object-fit: contain; border-radius: var(--radius); background: var(--tile); } /* logos are drawn for white, so they sit on the light tile in both modes */
   .high-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
   .high-head h2 { margin: 0; }
   .picks { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
   :global(.js) .picks:not(.ready) { visibility: hidden; }
-  /* a card: the whole card opens the perfume, and every card has the same height whatever its notes */
-  .pick { position: relative; display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 16px; padding: 14px; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); transition: border-color .2s, background-color .2s; }
-  .pick:hover { border-color: var(--ink); background: var(--soft); }
+  /* the photo large, its name and notes under it; the whole pick opens the perfume */
+  .pick { position: relative; display: grid; gap: 14px; }
+  .pick:hover h3 a { text-decoration: underline; }
   .pick:focus-within { outline: 2px solid var(--ink); outline-offset: 2px; }
-  .pick h3 { font-size: 18px; font-weight: 750; margin: 0 0 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pick h3 { font-size: 24px; font-weight: 800; margin: 0 0 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .pick h3 a { text-decoration: none; outline: none; }
   .pick h3 a::after { content: ""; position: absolute; inset: 0; }
+  .pick .meta { margin: -4px 0 10px; color: var(--muted); }
+  .pick .meta b { color: var(--ink); font-weight: 600; }
   .pick .notes-grid { font-size: 14px; line-height: 1.45; min-height: calc(3 * 1.45em + 12px); align-content: start; }
   .pick .notes-grid > span:not(.layer) { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden; }
   .pick .notes-grid > .layer[data-l="Notes"] + span { -webkit-line-clamp: 3; }
-  .shuffle { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 0 12px; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); font-weight: 600; cursor: pointer; }
-  .shuffle:hover { border-color: var(--ink); }
+  .shuffle { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 0 12px; border: 0; border-radius: var(--radius); background: var(--soft); font-weight: 600; cursor: pointer; }
+  .shuffle:hover { background: var(--rule); }
   .shuffle svg { width: 16px; height: 16px; }
-  @media (max-width: 1000px) { .intro { grid-template-columns: 1fr; } .highlights { display: none; } }
+  @media (max-width: 1000px) { .intro { grid-template-columns: 1fr; } .highlights { margin-top: 0; max-width: 520px; } }
   .top { display: grid; gap: 16px; margin-bottom: 40px; max-width: 640px; }
   .sources { font-size: 14px; margin-top: 24px; overflow-wrap: anywhere; }
   .sources a { color: var(--muted); }

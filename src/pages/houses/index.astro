@@ -41,17 +41,17 @@ const { houses, byHouse } = await load();
 </Base>
 
 <style>
-  .feature-note { margin-top: 16px; font-size: 14.5px; }
-  .table-wrap { overflow-x: auto; border-top: var(--line); }
+  .feature-note { margin-top: 16px; font-size: 16px; }
+  .table-wrap { overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; font-size: 16px; }
   th, td { text-align: left; padding: 14px 16px 14px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
-  thead th { font-size: 13.5px; color: var(--muted); font-weight: 600; padding-block: 10px; }
+  thead th { font-size: 14px; color: var(--muted); font-weight: 600; padding-block: 10px; }
   tbody th { font-weight: 750; font-size: 18px; }
   tbody th a { text-decoration: none; }
   tbody tr:hover th a { text-decoration: underline; }
   .num { text-align: right; font-variant-numeric: tabular-nums; }
   .next { list-style: none; margin: 0; padding: 0; columns: 3 220px; column-gap: 24px; }
-  .next li { padding: 8px 0; border-bottom: 1px solid var(--rule); break-inside: avoid; }
+  .next li { padding: 6px 0; break-inside: avoid; }
   @media (max-width: 640px) {
     thead { display: none; }
     tr { display: grid; grid-template-columns: 1fr auto; padding: 12px 0; border-bottom: 1px solid var(--rule); }
@@ -59,6 +59,6 @@ const { houses, byHouse } = await load();
     tbody th { grid-column: 1; }
     td.num { grid-column: 2; grid-row: 1; align-self: center; font-weight: 700; }
     td.num::after { content: " perfumes"; font-weight: 400; color: var(--muted); }
-    td { grid-column: 1 / -1; font-size: 14.5px; color: var(--muted); }
+    td { grid-column: 1 / -1; font-size: 16px; color: var(--muted); }
   }
 </style>

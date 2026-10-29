@@ -139,17 +139,17 @@ const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy
   .lead a { font-weight: 600; }
   .label { font-size: 16px; font-weight: 750; margin: 28px 0 10px; letter-spacing: 0; }
   .label-row { display: flex; align-items: center; gap: 8px; position: relative; }
-  .about-data summary { list-style: none; cursor: pointer; display: grid; place-items: center; width: 20px; height: 20px; margin-top: 18px; border: 1px solid var(--rule); border-radius: 50%; font: italic 700 12px/1 Georgia, serif; color: var(--muted); }
+  .about-data summary { list-style: none; cursor: pointer; display: grid; place-items: center; width: 20px; height: 20px; margin-top: 18px; border: 0; background: var(--soft); border-radius: 50%; font: italic 700 12px/1 Georgia, serif; color: var(--muted); }
   .about-data summary::-webkit-details-marker { display: none; }
-  .about-data summary:hover, .about-data[open] summary { color: var(--ink); border-color: var(--ink); }
-  .about-data p { position: absolute; z-index: 2; left: 0; top: calc(100% - 4px); max-width: min(320px, 100%); margin: 0; padding: 10px 12px; font-size: 14px; background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: 0 4px 16px rgb(0 0 0 / .08); }
-  .pyramid { margin: 0; border-top: var(--line); }
-  .pyramid > div { display: grid; grid-template-columns: 84px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .about-data summary:hover, .about-data[open] summary { color: var(--on-ink); background: var(--ink); }
+  .about-data p { position: absolute; z-index: 2; left: 0; top: calc(100% - 4px); max-width: min(320px, 100%); margin: 0; padding: 10px 12px; font-size: 14px; background: var(--ink); color: var(--on-ink); border-radius: var(--radius); }
+  .pyramid { margin: 0; display: grid; gap: 4px; }
+  .pyramid > div { display: grid; grid-template-columns: 84px 1fr; gap: 12px; padding: 12px; background: var(--soft); border-radius: var(--radius); }
   .pyramid dt { padding-top: 4px; }
-  .layer.big { font-size: 13.5px; padding: 2px 8px; }
+  .layer.big { font-size: 14px; padding: 2px 8px; }
   .pyramid dd { margin: 0; }
   .hint { font-size: 14px; margin: 8px 0 0; }
-  .src { margin: 10px 0 0; font-size: 14.5px; }
+  .src { margin: 10px 0 0; font-size: 16px; }
   .src a { color: inherit; }
   @media (max-width: 860px) {
     .perfume { grid-template-columns: 1fr; gap: 0; }

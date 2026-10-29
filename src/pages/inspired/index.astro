@@ -65,18 +65,17 @@ const letters = [...new Set(list.map(([n]) => letter(n)))];
 
 <style>
   .tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-bottom: 12px; }
-  .az { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; position: sticky; top: 0; background: var(--paper); padding: 8px 0; z-index: 5; border-bottom: 1px solid var(--rule); }
+  .az { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; position: sticky; top: 0; background: var(--paper); padding: 8px 0; z-index: 5; }
   .n { font-weight: 400; font-size: 14px; white-space: nowrap; }
-  .az a { min-width: 36px; min-height: 36px; display: grid; place-items: center; text-decoration: none; font-weight: 700; border: 1px solid var(--rule); border-radius: var(--radius); }
-  .az a:hover { border-color: var(--ink); }
+  .az a { min-width: 36px; min-height: 36px; display: grid; place-items: center; text-decoration: none; font-weight: 700; background: var(--soft); border-radius: var(--radius); }
+  .az a:hover { background: var(--rule); }
   .az a[aria-disabled] { opacity: .3; pointer-events: none; }
-  .inspired { max-width: 980px; }
   .letter { padding-top: 24px; scroll-margin-top: 56px; }
   .row { scroll-margin-top: 64px; }
   @media (max-width: 640px) { .az { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); padding-right: 32px; } .az a { flex: none; } }
-  .letter h2 { font-size: 32px; font-weight: 800; border-bottom: var(--line); padding-bottom: 6px; }
+  .letter h2 { font-size: 32px; font-weight: 800; padding-bottom: 6px; }
   dl { margin: 0; }
-  .row { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 4px 24px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .row { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 4px 24px; padding: 10px 0; }
   dt { font-weight: 700; }
   dd { margin: 0; }
   @media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
