@@ -15,8 +15,8 @@ const hn = new Map(houses.map((h) => [h.id, h.data.name]));
 const names = [...new Set(ps.map((p) => hn.get(p.data.house)!))];
 const path = inspiredUrl(scent, ps.length);
 const h1 = `Local perfumes inspired by ${scent}`;
-// the first that fits in about 60 characters (the layout adds the site name)
-const title = [`${h1} in Malaysia`, `Perfumes inspired by ${scent} in Malaysia`, h1].find((t) => t.length <= 60) ?? h1;
+// the designer name first: it is what people search for. The first that fits in about 60 characters (the layout adds the site name)
+const title = [`${scent}: Malaysian perfumes inspired by it`, `${scent}: local perfumes inspired by it`, `${scent}: Malaysian takes`].find((t) => t.length <= 60) ?? scent;
 const answer = `${ps.length} Malaysian perfumes from ${names.length} ${names.length === 1 ? 'house' : 'houses'} name ${scent} as their inspiration.`;
 const description = `${answer} ${new Intl.ListFormat('en').format(ps.map((p) => `${p.data.name} by ${hn.get(p.data.house)}`))}, with their notes.`;
 ---
