@@ -31,8 +31,8 @@ const links = [
 ];
 ---
 <Base
-  title={`${d.name} perfumes: notes and full list`}
-  description={`${d.partial ? `${list.length} of the` : `All ${list.length}`} ${d.name} perfumes${d.location ? ` (${d.location})` : ''} with their notes${named ? ', what each one is inspired by,' : ''} and where the brand sells them. ${d.about}`}
+  title={`${d.name} perfume list: notes${named ? ' and inspirations' : ''}`}
+  description={`${d.partial ? `A list of ${list.length}` : `All ${list.length}`} ${d.name} perfumes, from a Malaysian brand${d.founded ? ` founded in ${d.founded}` : ''}${d.founded && d.location ? ' and' : ''}${d.location ? ` based in ${d.location}` : ''}, with their notes${named ? ', what each one is inspired by,' : ''} and where the brand sells them. ${d.about}`}
   jsonLd={[breadcrumbLd([['Houses', '/houses/'], [d.name, houseUrl(h.id)]]), houseLd({ name: d.name, path: houseUrl(h.id), website: d.website, logo: d.logo, sameAs: links.filter((l) => l.key !== 'web').map((l) => l.href) }, list.map((p) => [p.data.name, perfumeUrl(p)]))]}
 >
   <div class="wrap">
@@ -52,6 +52,8 @@ const links = [
         <dt>Makes</dt><dd>{TYPE_LABEL[d.type]}{d.type !== 'original' && named === 0 && <span class="muted">. The brand does not name which scent each perfume is inspired by.</span>}</dd>
         <dt>Founded</dt><dd>{d.founded ?? <span class="muted">Not stated</span>}</dd>
         <dt>Based in</dt><dd>{d.location ?? <span class="muted">Not stated</span>}</dd>
+        {d.founder && <><dt>Founder</dt><dd>{d.founder}</dd></>}
+        {d.company && <><dt>Company</dt><dd>{d.company}</dd></>}
         <dt>Listed here</dt><dd>{d.partial ? <>A selection <span class="muted">(the brand sells more)</span></> : `${list.length} perfumes`}{discontinued > 0 && <span class="muted"> ({discontinued} discontinued)</span>}<br /><span class="muted">We list only details the brand confirms.</span></dd>
       </dl>
       {links.length > 0 && (

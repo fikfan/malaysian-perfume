@@ -17,6 +17,9 @@ const houses = defineCollection({
     type: z.enum(['original', 'inspired', 'both']),
     founded: z.number().nullable().optional(),
     location: z.string().nullable().optional(),
+    // registered company and founder, only as the brand states them on its own site
+    company: z.string().nullable().optional(),
+    founder: z.string().nullable().optional(),
     about: z.string(),
     website: link.nullable().optional(),
     instagram: z.string().regex(/^[\w.]+$/, 'handle only, without @ or a URL').nullable().optional(),

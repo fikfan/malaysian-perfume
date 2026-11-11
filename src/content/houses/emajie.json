@@ -3,6 +3,8 @@
   "type": "inspired",
   "founded": 2023,
   "location": "Ampang, Selangor",
+  "company": "Emajie International Sdn Bhd",
+  "founder": "Suhail",
   "about": "Emajie is a perfume house based in Ampang, Selangor, focused on climate adaptation. Most of its creations are inspired by well-known designer and niche fragrances. Emajie engineers its perfumes for Malaysian weather with EMAJIEAir™ technology, made to stay light and long-lasting in hot, humid conditions.",
   "website": "https://www.emajie.com",
   "instagram": "emajie.my",
@@ -10,7 +12,8 @@
   "shopee": null,
   "sources": [
     "https://www.emajie.com/pages/about",
-    "https://www.emajie.com/collections/fragrance"
+    "https://www.emajie.com/collections/fragrance",
+    "https://www.emajie.com/pages/contact-us"
   ],
   "logo": "/assets/emajie/logo.png"
 }

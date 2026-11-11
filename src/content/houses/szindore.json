@@ -2,7 +2,8 @@
   "name": "Szindore",
   "type": "both",
   "founded": 2018,
-  "location": null,
+  "location": "Ampang, Selangor",
+  "company": "Getlink Resources",
   "about": "Szindore is a Malaysian fragrance brand run by Getlink Resources. It sells designer-inspired extraits (its Refined Series) and its own blends, and it also sells through a second store, perfumemalaya.com.",
   "website": "https://szindore.com",
   "instagram": "szindoremalaysia",
@@ -13,7 +14,8 @@
     "https://szindore.com/about-us/",
     "https://szindore.com/",
     "https://perfumemalaya.com/",
-    "https://heylink.me/Szindorehq"
+    "https://heylink.me/Szindorehq",
+    "https://szindore.com/contact-us/"
   ],
   "logo": "/assets/szindore/logo.png",
   "partial": true

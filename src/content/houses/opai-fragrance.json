@@ -3,6 +3,7 @@
   "type": "both",
   "founded": null,
   "location": "Kuala Lumpur",
+  "company": "Alphadu Legacy Sdn Bhd",
   "about": "Opai Fragrance is a Malaysian perfume brand that sells extraits de parfum from its own online store. Most of its range is original, including local and gourmand scents such as the durian-and-pandan MK197, and it describes some scents as alternatives to well-known designer perfumes.",
   "website": "https://opaifragrance.com",
   "instagram": null,
@@ -12,7 +13,8 @@
   "sources": [
     "https://opaifragrance.com/",
     "https://opaifragrance.com/products.json",
-    "https://opaifragrance.com/policies/shipping-policy"
+    "https://opaifragrance.com/policies/shipping-policy",
+    "https://opaifragrance.com/policies/terms-of-service"
   ],
   "logo": "/assets/opai-fragrance/logo.png"
 }

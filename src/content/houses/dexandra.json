@@ -1,8 +1,10 @@
 {
   "name": "De'Xandra",
   "type": "original",
-  "founded": null,
+  "founded": 2015,
   "location": null,
+  "company": "Oshien2u Sdn Bhd",
+  "founder": "Ernayanee Nur Binti Julaimi",
   "about": "De'Xandra is a Malaysian perfume brand operated by OSHIEN2U SDN BHD. Its range covers eau de parfum for men and women, celebrity collaborations, travel sprays and air fresheners.",
   "website": "https://dexandra.com",
   "instagram": "dexandra_hq",
@@ -10,7 +12,8 @@
   "shopee": null,
   "sources": [
     "https://dexandra.com",
-    "https://dexandra.com/products.json"
+    "https://dexandra.com/products.json",
+    "https://dexandra.com/pages/our-brand"
   ],
   "logo": "/assets/dexandra/logo.png",
   "partial": true

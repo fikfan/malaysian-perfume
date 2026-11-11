@@ -54,7 +54,9 @@ const more = sib.filter((x) => !shown.has(x) && !similar.some((s) => s.x === x))
 // Lead line: only the brand's own words, so it shows only when one of those fields is set
 const hn = house.data.name;
 const described = d.describedAs?.length ? `${hn} describes it as ${new Intl.ListFormat('en').format(d.describedAs)}.` : '';
-const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy ? `. ${house.data.name} names ${d.inspiredBy} as its inspiration` : ''}. Notes: ${[...mine].slice(0, 8).join(', ') || 'not listed'}.`;
+// a house that makes inspired perfumes but names none for this one: say so, since people search "<perfume> inspired by"
+const noneNamed = !d.inspiredBy && house.data.type !== 'original';
+const desc = `${d.name} by ${hn}, a Malaysian perfume${d.inspiredBy ? `. ${hn} names ${d.inspiredBy} as its inspiration` : noneNamed ? `. ${hn} does not name an inspiration for it` : ''}. Notes: ${[...mine].slice(0, 8).join(', ') || 'not listed'}.`;
 ---
 <Base
   searchBand
@@ -73,7 +75,7 @@ const desc = `${d.name} by ${house.data.name}, a Malaysian perfume${d.inspiredBy
       <div class="photo"><Thumb src={d.image} name={d.name} eager size={720} alt={`${d.name} by ${house.data.name}, bottle`} /></div>
       <div class="info">
         <h1><span class="x">{d.name}</span> <span class="by">by <a href={houseUrl(d.house)}>{house.data.name}</a></span></h1>
-        {(d.inspiredBy || described) && <p class="lead">{d.inspiredBy && <>{hn} says it is inspired by <a href={inspiredUrl(d.inspiredBy, sameInspo.length + 1)}>{d.inspiredBy}</a>. </>}{described}</p>}
+        {(d.inspiredBy || noneNamed || described) && <p class="lead">{d.inspiredBy ? <>{hn} says it is inspired by <a href={inspiredUrl(d.inspiredBy, sameInspo.length + 1)}>{d.inspiredBy}</a>. </> : noneNamed && <>{hn} does not name a designer scent that inspired it. </>}{described}</p>}
         <p class="src muted">{d.source ? <>Notes and details from <ExtLink href={d.source}>{host(d.source)} (product page)</ExtLink></> : 'Notes and details sent by the brand'}, checked {DATA_CHECKED}.</p>
         {d.discontinued && <p><span class="tag warn">Discontinued by the brand</span></p>}
 
